@@ -1,0 +1,152 @@
+syntax = "proto3";
+
+package com.xiang.proto;
+
+// 所有时间，都是毫秒级时间戳
+
+///////////////////////////////////   请求和返回中包含的common        /////////////////////
+message RequestCommon {
+  int32 userid = 1;
+  string userkey = 2;
+  int32 cmdid = 3;
+  int64 timestamp = 4;
+  string version = 5;// 版本, 1.0.0a
+  int32 platform = 6;// 1-Android, 2-iOS
+}
+
+message ResponseCommon {
+  int32 code = 1;         //状态码   0：正常  其他数值表示有错误
+  string message = 2;
+  int32 cmdid = 3;
+  int64 timestamp = 4;
+  int32 userid = 5;
+}
+
+// 动态
+message Trend {
+  int32 id = 1;                // 动态id
+
+  BriefUser briefUser = 2;     // 用户信息
+  int64 createTime = 3;        // 创建时间的毫秒时间戳
+
+  int32 gymId = 4;             // 健身房id   可能为空
+  string gymName = 5;           // 健身房名字 可能为空
+
+  string content = 6;          // 内容 内容中可能包含“#SportX#”类型的话题
+  repeated string imgs = 7;    // 图片
+
+  int32 likeCount = 8;         // 点赞量
+  int32 commentCount = 9;      // 评论量
+  bool isLiked = 10;           // 是否点赞了
+}
+
+// banner
+message Banner {
+  int32 id = 1;                // banner id
+  string coverUrl = 2;         // banner cover Url
+  BannerType type = 3;         // banner 的种类
+  string webUrl = 4;           // 如果是Url，则这个是需要跳转的url
+  int32 trendId = 5;           // 如果是动态，这个是跳转的动态的id
+  int32 userId = 6;            // 如果是用户，则这个是用户的id，跳转到用户主页
+
+  enum BannerType{
+    URL = 0;                   // 跳转url
+    TREND = 1;                 // 跳转动态
+    USER = 2;                  // 用户
+  }
+}
+
+// briefUser
+message BriefUser {
+  int32 userId = 1;            // userid
+  string userName = 2;          // 用户名
+  string userAvatar = 3;       // 用户头像
+}
+
+// BriefGym 场馆
+message BriefGym {
+  int32 id = 1;                // 场馆id
+  string gymName = 2;          // 场馆名字
+  repeated string gymCover = 3;// 场馆图片
+  string place = 4;            // 场馆所在位置
+  string gymAvatar = 8;        // 场馆头像
+  
+  float latitude = 5;          // 纬度
+  float longitude = 6;         // 经度
+
+  bool isCoop = 7;             // 是否合作（可以在线购买健身卡）
+}
+
+// DetailGym 场馆详情
+message DetailGym{
+	BriefGym briefGym = 1;     // 场馆简要信息
+
+	// 器材部分
+	repeated Equipment equipments = 2;    // 器材信息
+
+	// 课程
+	repeated Course courses = 3;  // 课程信息
+
+	// 健身卡
+	repeated GymCard gymCards = 4; // 健身卡信息
+}
+
+message Equipment{
+	string name = 1;           // 器材、设施名
+	int32 count = 2;           // 器材数量
+	EquipmentType equipmentType = 3;   // enum
+}
+
+message Course {
+	string name = 1;             // 课程名称
+	int32 week = 2;              // [1-7] [周一 到周日] 0 是每天
+	CourseTime courseTime = 3;   // 课程时间
+}
+
+message CourseTime {
+	int32 fromHour = 1;          // 开始时间 --小时            24小时计时法
+	int32 fromMinite = 2;        // 开始时间 --分钟
+	int32 toHour = 3;            // 结束时间 --小时
+	int32 toMinite = 4;          // 结束时间 --分钟
+}
+
+enum CardType{
+	Once = 0;     // 一次 体验卡
+	Month = 1;    // 月卡
+	Quarter = 2;  // 季度卡
+}
+
+enum EquipmentType {
+	PAO_BU_JI = 0;                // 跑步机
+	LIN_YU_FANG = 1;              // 淋浴房
+}
+
+message GymCard {
+	CardType cardType = 1;     // 卡片类型
+	float price = 2;           // 价格
+}
+
+
+// 评论消息
+message CommentMessage {
+	int32 messageId = 1;             // 消息的id
+	string messageContent = 2;       // 消息的内容
+	string avatar = 3;               // 消息所使用的头像 如果是"sportx"则是官方头像
+	int64 createTime = 4;            // 创建时间 毫秒时间戳
+	int32 trendId = 5;               // 消息对应的trendId
+}
+
+// trend(动态) 的评论
+message Comment {
+	BriefUser briefUser = 1;         // 发评论的人
+	int32 commentId = 2;             // 评论的id
+	string commentContent = 3;       // 评论的内容
+
+	int32 trendId = 4;               // 评论动态的id
+
+	int32 toUserid = 5;              // 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
+	string toUserName = 6;
+
+	int64 createTime = 7;            // 时间
+	string gymName = 8;              // 场馆名 地点
+}
