@@ -486,6 +486,24 @@ typedef GPB_ENUM(Comment_FieldNumber) {
 
 @end
 
+#pragma mark - TrendBriefMessage
+
+typedef GPB_ENUM(TrendBriefMessage_FieldNumber) {
+  TrendBriefMessage_FieldNumber_LastAvatar = 1,
+  TrendBriefMessage_FieldNumber_Count = 2,
+};
+
+// trend 的简要评论信息
+@interface TrendBriefMessage : GPBMessage
+
+// 显示的头像
+@property(nonatomic, readwrite, copy, null_resettable) NSString *lastAvatar;
+
+// 消息数量
+@property(nonatomic, readwrite) int32_t count;
+
+@end
+
 NS_ASSUME_NONNULL_END
 
 CF_EXTERN_C_END

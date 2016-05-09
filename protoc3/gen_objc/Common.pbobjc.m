@@ -1584,5 +1584,75 @@ typedef struct Comment__storage_ {
 
 @end
 
+#pragma mark - TrendBriefMessage
+
+@implementation TrendBriefMessage
+
+@dynamic lastAvatar;
+@dynamic count;
+
+typedef struct TrendBriefMessage__storage_ {
+  uint32_t _has_storage_[1];
+  int32_t count;
+  NSString *lastAvatar;
+} TrendBriefMessage__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "lastAvatar",
+        .number = TrendBriefMessage_FieldNumber_LastAvatar,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(TrendBriefMessage__storage_, lastAvatar),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "count",
+        .number = TrendBriefMessage_FieldNumber_Count,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(TrendBriefMessage__storage_, count),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+    };
+#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    const char *extraTextFormatInfo = NULL;
+#else
+    static const char *extraTextFormatInfo = "\001\001\n\000";
+#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[TrendBriefMessage class]
+                                     rootClass:[CommonRoot class]
+                                          file:CommonRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(TrendBriefMessage__storage_)
+                                    wireFormat:NO
+                           extraTextFormatInfo:extraTextFormatInfo];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 
 // @@protoc_insertion_point(global_scope)

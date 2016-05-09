@@ -13653,6 +13653,578 @@ public final class Common {
 
   }
 
+  public interface TrendBriefMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.TrendBriefMessage)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string lastAvatar = 1;</code>
+     *
+     * <pre>
+     * 显示的头像
+     * </pre>
+     */
+    java.lang.String getLastAvatar();
+    /**
+     * <code>optional string lastAvatar = 1;</code>
+     *
+     * <pre>
+     * 显示的头像
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getLastAvatarBytes();
+
+    /**
+     * <code>optional int32 count = 2;</code>
+     *
+     * <pre>
+     * 消息数量
+     * </pre>
+     */
+    int getCount();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
+   *
+   * <pre>
+   * trend 的简要评论信息
+   * </pre>
+   */
+  public  static final class TrendBriefMessage extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.TrendBriefMessage)
+      TrendBriefMessageOrBuilder {
+    // Use TrendBriefMessage.newBuilder() to construct.
+    private TrendBriefMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private TrendBriefMessage() {
+      lastAvatar_ = "";
+      count_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private TrendBriefMessage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              String s = input.readStringRequireUtf8();
+
+              lastAvatar_ = s;
+              break;
+            }
+            case 16: {
+
+              count_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_TrendBriefMessage_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.Common.TrendBriefMessage.class, com.xiang.proto.Common.TrendBriefMessage.Builder.class);
+    }
+
+    public static final int LASTAVATAR_FIELD_NUMBER = 1;
+    private volatile java.lang.Object lastAvatar_;
+    /**
+     * <code>optional string lastAvatar = 1;</code>
+     *
+     * <pre>
+     * 显示的头像
+     * </pre>
+     */
+    public java.lang.String getLastAvatar() {
+      java.lang.Object ref = lastAvatar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lastAvatar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string lastAvatar = 1;</code>
+     *
+     * <pre>
+     * 显示的头像
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getLastAvatarBytes() {
+      java.lang.Object ref = lastAvatar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lastAvatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNT_FIELD_NUMBER = 2;
+    private int count_;
+    /**
+     * <code>optional int32 count = 2;</code>
+     *
+     * <pre>
+     * 消息数量
+     * </pre>
+     */
+    public int getCount() {
+      return count_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getLastAvatarBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, lastAvatar_);
+      }
+      if (count_ != 0) {
+        output.writeInt32(2, count_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getLastAvatarBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, lastAvatar_);
+      }
+      if (count_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, count_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.Common.TrendBriefMessage prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
+     *
+     * <pre>
+     * trend 的简要评论信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.TrendBriefMessage)
+        com.xiang.proto.Common.TrendBriefMessageOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_TrendBriefMessage_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.Common.TrendBriefMessage.class, com.xiang.proto.Common.TrendBriefMessage.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.Common.TrendBriefMessage.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        lastAvatar_ = "";
+
+        count_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_TrendBriefMessage_descriptor;
+      }
+
+      public com.xiang.proto.Common.TrendBriefMessage getDefaultInstanceForType() {
+        return com.xiang.proto.Common.TrendBriefMessage.getDefaultInstance();
+      }
+
+      public com.xiang.proto.Common.TrendBriefMessage build() {
+        com.xiang.proto.Common.TrendBriefMessage result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.Common.TrendBriefMessage buildPartial() {
+        com.xiang.proto.Common.TrendBriefMessage result = new com.xiang.proto.Common.TrendBriefMessage(this);
+        result.lastAvatar_ = lastAvatar_;
+        result.count_ = count_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.Common.TrendBriefMessage) {
+          return mergeFrom((com.xiang.proto.Common.TrendBriefMessage)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.Common.TrendBriefMessage other) {
+        if (other == com.xiang.proto.Common.TrendBriefMessage.getDefaultInstance()) return this;
+        if (!other.getLastAvatar().isEmpty()) {
+          lastAvatar_ = other.lastAvatar_;
+          onChanged();
+        }
+        if (other.getCount() != 0) {
+          setCount(other.getCount());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.Common.TrendBriefMessage parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.Common.TrendBriefMessage) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object lastAvatar_ = "";
+      /**
+       * <code>optional string lastAvatar = 1;</code>
+       *
+       * <pre>
+       * 显示的头像
+       * </pre>
+       */
+      public java.lang.String getLastAvatar() {
+        java.lang.Object ref = lastAvatar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          lastAvatar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string lastAvatar = 1;</code>
+       *
+       * <pre>
+       * 显示的头像
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getLastAvatarBytes() {
+        java.lang.Object ref = lastAvatar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          lastAvatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string lastAvatar = 1;</code>
+       *
+       * <pre>
+       * 显示的头像
+       * </pre>
+       */
+      public Builder setLastAvatar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        lastAvatar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string lastAvatar = 1;</code>
+       *
+       * <pre>
+       * 显示的头像
+       * </pre>
+       */
+      public Builder clearLastAvatar() {
+        
+        lastAvatar_ = getDefaultInstance().getLastAvatar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string lastAvatar = 1;</code>
+       *
+       * <pre>
+       * 显示的头像
+       * </pre>
+       */
+      public Builder setLastAvatarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        lastAvatar_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int count_ ;
+      /**
+       * <code>optional int32 count = 2;</code>
+       *
+       * <pre>
+       * 消息数量
+       * </pre>
+       */
+      public int getCount() {
+        return count_;
+      }
+      /**
+       * <code>optional int32 count = 2;</code>
+       *
+       * <pre>
+       * 消息数量
+       * </pre>
+       */
+      public Builder setCount(int value) {
+        
+        count_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 count = 2;</code>
+       *
+       * <pre>
+       * 消息数量
+       * </pre>
+       */
+      public Builder clearCount() {
+        
+        count_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.TrendBriefMessage)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.TrendBriefMessage)
+    private static final com.xiang.proto.Common.TrendBriefMessage DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.Common.TrendBriefMessage();
+    }
+
+    public static com.xiang.proto.Common.TrendBriefMessage getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TrendBriefMessage>
+        PARSER = new com.google.protobuf.AbstractParser<TrendBriefMessage>() {
+      public TrendBriefMessage parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new TrendBriefMessage(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<TrendBriefMessage> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TrendBriefMessage> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.Common.TrendBriefMessage getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_RequestCommon_descriptor;
   private static
@@ -13718,6 +14290,11 @@ public final class Common {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Comment_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_TrendBriefMessage_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -13769,10 +14346,11 @@ public final class Common {
       "User\022\021\n\tcommentId\030\002 \001(\005\022\026\n\016commentConten",
       "t\030\003 \001(\t\022\017\n\007trendId\030\004 \001(\005\022\020\n\010toUserid\030\005 \001" +
       "(\005\022\022\n\ntoUserName\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001" +
-      "(\003\022\017\n\007gymName\030\010 \001(\t*,\n\010CardType\022\010\n\004Once\020" +
-      "\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020\002*/\n\rEquipmentTy" +
-      "pe\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN_YU_FANG\020\001b\006prot" +
-      "o3"
+      "(\003\022\017\n\007gymName\030\010 \001(\t\"6\n\021TrendBriefMessage" +
+      "\022\022\n\nlastAvatar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005*,\n\010C" +
+      "ardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020" +
+      "\002*/\n\rEquipmentType\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN" +
+      "_YU_FANG\020\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13864,6 +14442,12 @@ public final class Common {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_Comment_descriptor,
         new java.lang.String[] { "BriefUser", "CommentId", "CommentContent", "TrendId", "ToUserid", "ToUserName", "CreateTime", "GymName", });
+    internal_static_com_xiang_proto_TrendBriefMessage_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_TrendBriefMessage_descriptor,
+        new java.lang.String[] { "LastAvatar", "Count", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -150,3 +150,9 @@ message Comment {
 	int64 createTime = 7;            // 时间
 	string gymName = 8;              // 场馆名 地点
 }
+
+// trend 的简要评论信息
+message TrendBriefMessage{
+  string lastAvatar = 1;               // 显示的头像
+  int32 count = 2;                     // 消息数量
+}

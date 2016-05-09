@@ -2092,4 +2092,103 @@ public interface Common {
       return new Comment().mergeFrom(input);
     }
   }
+
+  public static final class TrendBriefMessage extends
+      com.google.protobuf.nano.MessageNano {
+
+    private static volatile TrendBriefMessage[] _emptyArray;
+    public static TrendBriefMessage[] emptyArray() {
+      // Lazily initializes the empty array
+      if (_emptyArray == null) {
+        synchronized (
+            com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
+          if (_emptyArray == null) {
+            _emptyArray = new TrendBriefMessage[0];
+          }
+        }
+      }
+      return _emptyArray;
+    }
+
+    // optional string lastAvatar = 1;
+    public java.lang.String lastAvatar;
+
+    // optional int32 count = 2;
+    public int count;
+
+    public TrendBriefMessage() {
+      clear();
+    }
+
+    public TrendBriefMessage clear() {
+      lastAvatar = "";
+      count = 0;
+      cachedSize = -1;
+      return this;
+    }
+
+    @Override
+    public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
+        throws java.io.IOException {
+      if (!this.lastAvatar.equals("")) {
+        output.writeString(1, this.lastAvatar);
+      }
+      if (this.count != 0) {
+        output.writeInt32(2, this.count);
+      }
+      super.writeTo(output);
+    }
+
+    @Override
+    protected int computeSerializedSize() {
+      int size = super.computeSerializedSize();
+      if (!this.lastAvatar.equals("")) {
+        size += com.google.protobuf.nano.CodedOutputByteBufferNano
+            .computeStringSize(1, this.lastAvatar);
+      }
+      if (this.count != 0) {
+        size += com.google.protobuf.nano.CodedOutputByteBufferNano
+            .computeInt32Size(2, this.count);
+      }
+      return size;
+    }
+
+    @Override
+    public TrendBriefMessage mergeFrom(
+            com.google.protobuf.nano.CodedInputByteBufferNano input)
+        throws java.io.IOException {
+      while (true) {
+        int tag = input.readTag();
+        switch (tag) {
+          case 0:
+            return this;
+          default: {
+            if (!com.google.protobuf.nano.WireFormatNano.parseUnknownField(input, tag)) {
+              return this;
+            }
+            break;
+          }
+          case 10: {
+            this.lastAvatar = input.readString();
+            break;
+          }
+          case 16: {
+            this.count = input.readInt32();
+            break;
+          }
+        }
+      }
+    }
+
+    public static TrendBriefMessage parseFrom(byte[] data)
+        throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new TrendBriefMessage(), data);
+    }
+
+    public static TrendBriefMessage parseFrom(
+            com.google.protobuf.nano.CodedInputByteBufferNano input)
+        throws java.io.IOException {
+      return new TrendBriefMessage().mergeFrom(input);
+    }
+  }
 }
