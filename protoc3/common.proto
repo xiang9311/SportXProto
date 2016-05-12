@@ -121,6 +121,11 @@ enum EquipmentType {
 	LIN_YU_FANG = 1;              // 淋浴房
 }
 
+enum Sex{
+  MALE = 0;                     // 男性
+  FEMALE = 1;                   // 女性
+}
+
 message GymCard {
 	CardType cardType = 1;     // 卡片类型
 	float price = 2;           // 价格
@@ -155,4 +160,20 @@ message Comment {
 message TrendBriefMessage{
   string lastAvatar = 1;               // 显示的头像
   int32 count = 2;                     // 消息数量
+}
+
+// 一般用作看到的别人的详情
+message DetailUser{
+  int32 userId = 1;                    // 用户id
+  string userName = 2;                 // 用户名
+  string userAvatar = 3;               // 用户头像
+  Sex sex = 4;                         // 性别
+  string sign = 5;                     // 签名
+  repeated Trend trends = 6;           // 最近态列表
+
+  bool isFollowed = 7;                 // 是否已经关注
+
+  int32 guanzhuCount = 8;              // 他关注的人的数量
+  int32 fensiCount = 9;                // 他的粉丝数量
+  int32 trendCount = 10;               // 动态的数量
 }

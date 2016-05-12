@@ -83,6 +83,33 @@ BOOL EquipmentType_IsValidValue(int32_t value__) {
   }
 }
 
+#pragma mark - Enum Sex
+
+GPBEnumDescriptor *Sex_EnumDescriptor(void) {
+  static GPBEnumDescriptor *descriptor = NULL;
+  if (!descriptor) {
+    static GPBMessageEnumValueDescription values[] = {
+      { .name = "Male", .number = Sex_Male },
+      { .name = "Female", .number = Sex_Female },
+    };
+    descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Sex)
+                                                   values:values
+                                               valueCount:sizeof(values) / sizeof(GPBMessageEnumValueDescription)
+                                             enumVerifier:Sex_IsValidValue];
+  }
+  return descriptor;
+}
+
+BOOL Sex_IsValidValue(int32_t value__) {
+  switch (value__) {
+    case Sex_Male:
+    case Sex_Female:
+      return YES;
+    default:
+      return NO;
+  }
+}
+
 #pragma mark - RequestCommon
 
 @implementation RequestCommon
@@ -1653,6 +1680,192 @@ typedef struct TrendBriefMessage__storage_ {
 }
 
 @end
+
+#pragma mark - DetailUser
+
+@implementation DetailUser
+
+@dynamic userId;
+@dynamic userName;
+@dynamic userAvatar;
+@dynamic sex;
+@dynamic sign;
+@dynamic trendsArray, trendsArray_Count;
+@dynamic isFollowed;
+@dynamic guanzhuCount;
+@dynamic fensiCount;
+@dynamic trendCount;
+
+typedef struct DetailUser__storage_ {
+  uint32_t _has_storage_[1];
+  BOOL isFollowed;
+  int32_t userId;
+  Sex sex;
+  int32_t guanzhuCount;
+  int32_t fensiCount;
+  int32_t trendCount;
+  NSString *userName;
+  NSString *userAvatar;
+  NSString *sign;
+  NSMutableArray *trendsArray;
+} DetailUser__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "userId",
+        .number = DetailUser_FieldNumber_UserId,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(DetailUser__storage_, userId),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "userName",
+        .number = DetailUser_FieldNumber_UserName,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(DetailUser__storage_, userName),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "userAvatar",
+        .number = DetailUser_FieldNumber_UserAvatar,
+        .hasIndex = 2,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(DetailUser__storage_, userAvatar),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "sex",
+        .number = DetailUser_FieldNumber_Sex,
+        .hasIndex = 3,
+        .flags = GPBFieldOptional | GPBFieldHasEnumDescriptor,
+        .dataType = GPBDataTypeEnum,
+        .offset = offsetof(DetailUser__storage_, sex),
+        .defaultValue.valueEnum = Sex_Male,
+        .dataTypeSpecific.enumDescFunc = Sex_EnumDescriptor,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "sign",
+        .number = DetailUser_FieldNumber_Sign,
+        .hasIndex = 4,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(DetailUser__storage_, sign),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "trendsArray",
+        .number = DetailUser_FieldNumber_TrendsArray,
+        .hasIndex = GPBNoHasBit,
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(DetailUser__storage_, trendsArray),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(Trend),
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "isFollowed",
+        .number = DetailUser_FieldNumber_IsFollowed,
+        .hasIndex = 6,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeBool,
+        .offset = offsetof(DetailUser__storage_, isFollowed),
+        .defaultValue.valueBool = NO,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "guanzhuCount",
+        .number = DetailUser_FieldNumber_GuanzhuCount,
+        .hasIndex = 7,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(DetailUser__storage_, guanzhuCount),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "fensiCount",
+        .number = DetailUser_FieldNumber_FensiCount,
+        .hasIndex = 8,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(DetailUser__storage_, fensiCount),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "trendCount",
+        .number = DetailUser_FieldNumber_TrendCount,
+        .hasIndex = 9,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(DetailUser__storage_, trendCount),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+    };
+#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    const char *extraTextFormatInfo = NULL;
+#else
+    static const char *extraTextFormatInfo = "\007\001\006\000\002\010\000\003\n\000\007\n\000\010\014\000\t\n\000\n\n\000";
+#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[DetailUser class]
+                                     rootClass:[CommonRoot class]
+                                          file:CommonRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(DetailUser__storage_)
+                                    wireFormat:NO
+                           extraTextFormatInfo:extraTextFormatInfo];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t DetailUser_Sex_RawValue(DetailUser *message) {
+  GPBDescriptor *descriptor = [DetailUser descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:DetailUser_FieldNumber_Sex];
+  return GPBGetMessageInt32Field(message, field);
+}
+
+void SetDetailUser_Sex_RawValue(DetailUser *message, int32_t value) {
+  GPBDescriptor *descriptor = [DetailUser descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:DetailUser_FieldNumber_Sex];
+  GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
+}
 
 
 // @@protoc_insertion_point(global_scope)

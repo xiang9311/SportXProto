@@ -50,6 +50,21 @@ GPBEnumDescriptor *EquipmentType_EnumDescriptor(void);
 
 BOOL EquipmentType_IsValidValue(int32_t value);
 
+#pragma mark - Enum Sex
+
+typedef GPB_ENUM(Sex) {
+  Sex_GPBUnrecognizedEnumeratorValue = kGPBUnrecognizedEnumeratorValue,
+  // 男性
+  Sex_Male = 0,
+
+  // 女性
+  Sex_Female = 1,
+};
+
+GPBEnumDescriptor *Sex_EnumDescriptor(void);
+
+BOOL Sex_IsValidValue(int32_t value);
+
 #pragma mark - Enum Banner_BannerType
 
 typedef GPB_ENUM(Banner_BannerType) {
@@ -503,6 +518,61 @@ typedef GPB_ENUM(TrendBriefMessage_FieldNumber) {
 @property(nonatomic, readwrite) int32_t count;
 
 @end
+
+#pragma mark - DetailUser
+
+typedef GPB_ENUM(DetailUser_FieldNumber) {
+  DetailUser_FieldNumber_UserId = 1,
+  DetailUser_FieldNumber_UserName = 2,
+  DetailUser_FieldNumber_UserAvatar = 3,
+  DetailUser_FieldNumber_Sex = 4,
+  DetailUser_FieldNumber_Sign = 5,
+  DetailUser_FieldNumber_TrendsArray = 6,
+  DetailUser_FieldNumber_IsFollowed = 7,
+  DetailUser_FieldNumber_GuanzhuCount = 8,
+  DetailUser_FieldNumber_FensiCount = 9,
+  DetailUser_FieldNumber_TrendCount = 10,
+};
+
+// 一般用作看到的别人的详情
+@interface DetailUser : GPBMessage
+
+// 用户id
+@property(nonatomic, readwrite) int32_t userId;
+
+// 用户名
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userName;
+
+// 用户头像
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userAvatar;
+
+// 性别
+@property(nonatomic, readwrite) Sex sex;
+
+// 签名
+@property(nonatomic, readwrite, copy, null_resettable) NSString *sign;
+
+// 最近态列表
+// |trendsArray| contains |Trend|
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *trendsArray;
+@property(nonatomic, readonly) NSUInteger trendsArray_Count;
+
+// 是否已经关注
+@property(nonatomic, readwrite) BOOL isFollowed;
+
+// 他关注的人的数量
+@property(nonatomic, readwrite) int32_t guanzhuCount;
+
+// 他的粉丝数量
+@property(nonatomic, readwrite) int32_t fensiCount;
+
+// 动态的数量
+@property(nonatomic, readwrite) int32_t trendCount;
+
+@end
+
+int32_t DetailUser_Sex_RawValue(DetailUser *message);
+void SetDetailUser_Sex_RawValue(DetailUser *message, int32_t value);
 
 NS_ASSUME_NONNULL_END
 

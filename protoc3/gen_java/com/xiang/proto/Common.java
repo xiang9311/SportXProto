@@ -241,6 +241,114 @@ public final class Common {
     // @@protoc_insertion_point(enum_scope:com.xiang.proto.EquipmentType)
   }
 
+  /**
+   * Protobuf enum {@code com.xiang.proto.Sex}
+   */
+  public enum Sex
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>MALE = 0;</code>
+     *
+     * <pre>
+     * 男性
+     * </pre>
+     */
+    MALE(0, 0),
+    /**
+     * <code>FEMALE = 1;</code>
+     *
+     * <pre>
+     * 女性
+     * </pre>
+     */
+    FEMALE(1, 1),
+    UNRECOGNIZED(-1, -1),
+    ;
+
+    /**
+     * <code>MALE = 0;</code>
+     *
+     * <pre>
+     * 男性
+     * </pre>
+     */
+    public static final int MALE_VALUE = 0;
+    /**
+     * <code>FEMALE = 1;</code>
+     *
+     * <pre>
+     * 女性
+     * </pre>
+     */
+    public static final int FEMALE_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (index == -1) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    public static Sex valueOf(int value) {
+      switch (value) {
+        case 0: return MALE;
+        case 1: return FEMALE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<Sex>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        Sex> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<Sex>() {
+            public Sex findValueByNumber(int number) {
+              return Sex.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return com.xiang.proto.Common.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final Sex[] VALUES = values();
+
+    public static Sex valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private Sex(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:com.xiang.proto.Sex)
+  }
+
   public interface RequestCommonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.xiang.proto.RequestCommon)
       com.google.protobuf.MessageOrBuilder {
@@ -14225,6 +14333,1834 @@ public final class Common {
 
   }
 
+  public interface DetailUserOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.DetailUser)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 userId = 1;</code>
+     *
+     * <pre>
+     * 用户id
+     * </pre>
+     */
+    int getUserId();
+
+    /**
+     * <code>optional string userName = 2;</code>
+     *
+     * <pre>
+     * 用户名
+     * </pre>
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>optional string userName = 2;</code>
+     *
+     * <pre>
+     * 用户名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
+
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     *
+     * <pre>
+     * 用户头像
+     * </pre>
+     */
+    java.lang.String getUserAvatar();
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     *
+     * <pre>
+     * 用户头像
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getUserAvatarBytes();
+
+    /**
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+     *
+     * <pre>
+     * 性别
+     * </pre>
+     */
+    int getSexValue();
+    /**
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+     *
+     * <pre>
+     * 性别
+     * </pre>
+     */
+    com.xiang.proto.Common.Sex getSex();
+
+    /**
+     * <code>optional string sign = 5;</code>
+     *
+     * <pre>
+     * 签名
+     * </pre>
+     */
+    java.lang.String getSign();
+    /**
+     * <code>optional string sign = 5;</code>
+     *
+     * <pre>
+     * 签名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignBytes();
+
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    java.util.List<com.xiang.proto.Common.Trend> 
+        getTrendsList();
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    com.xiang.proto.Common.Trend getTrends(int index);
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    int getTrendsCount();
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
+        getTrendsOrBuilderList();
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional bool isFollowed = 7;</code>
+     *
+     * <pre>
+     * 是否已经关注
+     * </pre>
+     */
+    boolean getIsFollowed();
+
+    /**
+     * <code>optional int32 guanzhuCount = 8;</code>
+     *
+     * <pre>
+     * 他关注的人的数量
+     * </pre>
+     */
+    int getGuanzhuCount();
+
+    /**
+     * <code>optional int32 fensiCount = 9;</code>
+     *
+     * <pre>
+     * 他的粉丝数量
+     * </pre>
+     */
+    int getFensiCount();
+
+    /**
+     * <code>optional int32 trendCount = 10;</code>
+     *
+     * <pre>
+     * 动态的数量
+     * </pre>
+     */
+    int getTrendCount();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.DetailUser}
+   *
+   * <pre>
+   * 一般用作看到的别人的详情
+   * </pre>
+   */
+  public  static final class DetailUser extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.DetailUser)
+      DetailUserOrBuilder {
+    // Use DetailUser.newBuilder() to construct.
+    private DetailUser(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private DetailUser() {
+      userId_ = 0;
+      userName_ = "";
+      userAvatar_ = "";
+      sex_ = 0;
+      sign_ = "";
+      trends_ = java.util.Collections.emptyList();
+      isFollowed_ = false;
+      guanzhuCount_ = 0;
+      fensiCount_ = 0;
+      trendCount_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private DetailUser(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              userId_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
+
+              userName_ = s;
+              break;
+            }
+            case 26: {
+              String s = input.readStringRequireUtf8();
+
+              userAvatar_ = s;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              sex_ = rawValue;
+              break;
+            }
+            case 42: {
+              String s = input.readStringRequireUtf8();
+
+              sign_ = s;
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                trends_ = new java.util.ArrayList<com.xiang.proto.Common.Trend>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              trends_.add(input.readMessage(com.xiang.proto.Common.Trend.parser(), extensionRegistry));
+              break;
+            }
+            case 56: {
+
+              isFollowed_ = input.readBool();
+              break;
+            }
+            case 64: {
+
+              guanzhuCount_ = input.readInt32();
+              break;
+            }
+            case 72: {
+
+              fensiCount_ = input.readInt32();
+              break;
+            }
+            case 80: {
+
+              trendCount_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          trends_ = java.util.Collections.unmodifiableList(trends_);
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_DetailUser_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_DetailUser_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.Common.DetailUser.class, com.xiang.proto.Common.DetailUser.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>optional int32 userId = 1;</code>
+     *
+     * <pre>
+     * 用户id
+     * </pre>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object userName_;
+    /**
+     * <code>optional string userName = 2;</code>
+     *
+     * <pre>
+     * 用户名
+     * </pre>
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string userName = 2;</code>
+     *
+     * <pre>
+     * 用户名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERAVATAR_FIELD_NUMBER = 3;
+    private volatile java.lang.Object userAvatar_;
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     *
+     * <pre>
+     * 用户头像
+     * </pre>
+     */
+    public java.lang.String getUserAvatar() {
+      java.lang.Object ref = userAvatar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAvatar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     *
+     * <pre>
+     * 用户头像
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getUserAvatarBytes() {
+      java.lang.Object ref = userAvatar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAvatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SEX_FIELD_NUMBER = 4;
+    private int sex_;
+    /**
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+     *
+     * <pre>
+     * 性别
+     * </pre>
+     */
+    public int getSexValue() {
+      return sex_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+     *
+     * <pre>
+     * 性别
+     * </pre>
+     */
+    public com.xiang.proto.Common.Sex getSex() {
+      com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+      return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
+    }
+
+    public static final int SIGN_FIELD_NUMBER = 5;
+    private volatile java.lang.Object sign_;
+    /**
+     * <code>optional string sign = 5;</code>
+     *
+     * <pre>
+     * 签名
+     * </pre>
+     */
+    public java.lang.String getSign() {
+      java.lang.Object ref = sign_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sign_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sign = 5;</code>
+     *
+     * <pre>
+     * 签名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignBytes() {
+      java.lang.Object ref = sign_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sign_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRENDS_FIELD_NUMBER = 6;
+    private java.util.List<com.xiang.proto.Common.Trend> trends_;
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    public java.util.List<com.xiang.proto.Common.Trend> getTrendsList() {
+      return trends_;
+    }
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    public java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
+        getTrendsOrBuilderList() {
+      return trends_;
+    }
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    public int getTrendsCount() {
+      return trends_.size();
+    }
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    public com.xiang.proto.Common.Trend getTrends(int index) {
+      return trends_.get(index);
+    }
+    /**
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+     *
+     * <pre>
+     * 最近态列表
+     * </pre>
+     */
+    public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
+        int index) {
+      return trends_.get(index);
+    }
+
+    public static final int ISFOLLOWED_FIELD_NUMBER = 7;
+    private boolean isFollowed_;
+    /**
+     * <code>optional bool isFollowed = 7;</code>
+     *
+     * <pre>
+     * 是否已经关注
+     * </pre>
+     */
+    public boolean getIsFollowed() {
+      return isFollowed_;
+    }
+
+    public static final int GUANZHUCOUNT_FIELD_NUMBER = 8;
+    private int guanzhuCount_;
+    /**
+     * <code>optional int32 guanzhuCount = 8;</code>
+     *
+     * <pre>
+     * 他关注的人的数量
+     * </pre>
+     */
+    public int getGuanzhuCount() {
+      return guanzhuCount_;
+    }
+
+    public static final int FENSICOUNT_FIELD_NUMBER = 9;
+    private int fensiCount_;
+    /**
+     * <code>optional int32 fensiCount = 9;</code>
+     *
+     * <pre>
+     * 他的粉丝数量
+     * </pre>
+     */
+    public int getFensiCount() {
+      return fensiCount_;
+    }
+
+    public static final int TRENDCOUNT_FIELD_NUMBER = 10;
+    private int trendCount_;
+    /**
+     * <code>optional int32 trendCount = 10;</code>
+     *
+     * <pre>
+     * 动态的数量
+     * </pre>
+     */
+    public int getTrendCount() {
+      return trendCount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (userId_ != 0) {
+        output.writeInt32(1, userId_);
+      }
+      if (!getUserNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, userName_);
+      }
+      if (!getUserAvatarBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, userAvatar_);
+      }
+      if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
+        output.writeEnum(4, sex_);
+      }
+      if (!getSignBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, sign_);
+      }
+      for (int i = 0; i < trends_.size(); i++) {
+        output.writeMessage(6, trends_.get(i));
+      }
+      if (isFollowed_ != false) {
+        output.writeBool(7, isFollowed_);
+      }
+      if (guanzhuCount_ != 0) {
+        output.writeInt32(8, guanzhuCount_);
+      }
+      if (fensiCount_ != 0) {
+        output.writeInt32(9, fensiCount_);
+      }
+      if (trendCount_ != 0) {
+        output.writeInt32(10, trendCount_);
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (userId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (!getUserNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, userName_);
+      }
+      if (!getUserAvatarBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, userAvatar_);
+      }
+      if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, sex_);
+      }
+      if (!getSignBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(5, sign_);
+      }
+      for (int i = 0; i < trends_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, trends_.get(i));
+      }
+      if (isFollowed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isFollowed_);
+      }
+      if (guanzhuCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, guanzhuCount_);
+      }
+      if (fensiCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, fensiCount_);
+      }
+      if (trendCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, trendCount_);
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.DetailUser parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.Common.DetailUser parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.DetailUser parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.Common.DetailUser prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.DetailUser}
+     *
+     * <pre>
+     * 一般用作看到的别人的详情
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.DetailUser)
+        com.xiang.proto.Common.DetailUserOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_DetailUser_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_DetailUser_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.Common.DetailUser.class, com.xiang.proto.Common.DetailUser.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.Common.DetailUser.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getTrendsFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+
+        userName_ = "";
+
+        userAvatar_ = "";
+
+        sex_ = 0;
+
+        sign_ = "";
+
+        if (trendsBuilder_ == null) {
+          trends_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          trendsBuilder_.clear();
+        }
+        isFollowed_ = false;
+
+        guanzhuCount_ = 0;
+
+        fensiCount_ = 0;
+
+        trendCount_ = 0;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_DetailUser_descriptor;
+      }
+
+      public com.xiang.proto.Common.DetailUser getDefaultInstanceForType() {
+        return com.xiang.proto.Common.DetailUser.getDefaultInstance();
+      }
+
+      public com.xiang.proto.Common.DetailUser build() {
+        com.xiang.proto.Common.DetailUser result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.Common.DetailUser buildPartial() {
+        com.xiang.proto.Common.DetailUser result = new com.xiang.proto.Common.DetailUser(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.userId_ = userId_;
+        result.userName_ = userName_;
+        result.userAvatar_ = userAvatar_;
+        result.sex_ = sex_;
+        result.sign_ = sign_;
+        if (trendsBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            trends_ = java.util.Collections.unmodifiableList(trends_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.trends_ = trends_;
+        } else {
+          result.trends_ = trendsBuilder_.build();
+        }
+        result.isFollowed_ = isFollowed_;
+        result.guanzhuCount_ = guanzhuCount_;
+        result.fensiCount_ = fensiCount_;
+        result.trendCount_ = trendCount_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.Common.DetailUser) {
+          return mergeFrom((com.xiang.proto.Common.DetailUser)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.Common.DetailUser other) {
+        if (other == com.xiang.proto.Common.DetailUser.getDefaultInstance()) return this;
+        if (other.getUserId() != 0) {
+          setUserId(other.getUserId());
+        }
+        if (!other.getUserName().isEmpty()) {
+          userName_ = other.userName_;
+          onChanged();
+        }
+        if (!other.getUserAvatar().isEmpty()) {
+          userAvatar_ = other.userAvatar_;
+          onChanged();
+        }
+        if (other.sex_ != 0) {
+          setSexValue(other.getSexValue());
+        }
+        if (!other.getSign().isEmpty()) {
+          sign_ = other.sign_;
+          onChanged();
+        }
+        if (trendsBuilder_ == null) {
+          if (!other.trends_.isEmpty()) {
+            if (trends_.isEmpty()) {
+              trends_ = other.trends_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureTrendsIsMutable();
+              trends_.addAll(other.trends_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.trends_.isEmpty()) {
+            if (trendsBuilder_.isEmpty()) {
+              trendsBuilder_.dispose();
+              trendsBuilder_ = null;
+              trends_ = other.trends_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              trendsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTrendsFieldBuilder() : null;
+            } else {
+              trendsBuilder_.addAllMessages(other.trends_);
+            }
+          }
+        }
+        if (other.getIsFollowed() != false) {
+          setIsFollowed(other.getIsFollowed());
+        }
+        if (other.getGuanzhuCount() != 0) {
+          setGuanzhuCount(other.getGuanzhuCount());
+        }
+        if (other.getFensiCount() != 0) {
+          setFensiCount(other.getFensiCount());
+        }
+        if (other.getTrendCount() != 0) {
+          setTrendCount(other.getTrendCount());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.Common.DetailUser parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.Common.DetailUser) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int userId_ ;
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * 用户id
+       * </pre>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * 用户id
+       * </pre>
+       */
+      public Builder setUserId(int value) {
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * 用户id
+       * </pre>
+       */
+      public Builder clearUserId() {
+        
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>optional string userName = 2;</code>
+       *
+       * <pre>
+       * 用户名
+       * </pre>
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       *
+       * <pre>
+       * 用户名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       *
+       * <pre>
+       * 用户名
+       * </pre>
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       *
+       * <pre>
+       * 用户名
+       * </pre>
+       */
+      public Builder clearUserName() {
+        
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       *
+       * <pre>
+       * 用户名
+       * </pre>
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userAvatar_ = "";
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       *
+       * <pre>
+       * 用户头像
+       * </pre>
+       */
+      public java.lang.String getUserAvatar() {
+        java.lang.Object ref = userAvatar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAvatar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       *
+       * <pre>
+       * 用户头像
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getUserAvatarBytes() {
+        java.lang.Object ref = userAvatar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAvatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       *
+       * <pre>
+       * 用户头像
+       * </pre>
+       */
+      public Builder setUserAvatar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userAvatar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       *
+       * <pre>
+       * 用户头像
+       * </pre>
+       */
+      public Builder clearUserAvatar() {
+        
+        userAvatar_ = getDefaultInstance().getUserAvatar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       *
+       * <pre>
+       * 用户头像
+       * </pre>
+       */
+      public Builder setUserAvatarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userAvatar_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int sex_ = 0;
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       *
+       * <pre>
+       * 性别
+       * </pre>
+       */
+      public int getSexValue() {
+        return sex_;
+      }
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       *
+       * <pre>
+       * 性别
+       * </pre>
+       */
+      public Builder setSexValue(int value) {
+        sex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       *
+       * <pre>
+       * 性别
+       * </pre>
+       */
+      public com.xiang.proto.Common.Sex getSex() {
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       *
+       * <pre>
+       * 性别
+       * </pre>
+       */
+      public Builder setSex(com.xiang.proto.Common.Sex value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        sex_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       *
+       * <pre>
+       * 性别
+       * </pre>
+       */
+      public Builder clearSex() {
+        
+        sex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sign_ = "";
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 签名
+       * </pre>
+       */
+      public java.lang.String getSign() {
+        java.lang.Object ref = sign_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sign_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 签名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignBytes() {
+        java.lang.Object ref = sign_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sign_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 签名
+       * </pre>
+       */
+      public Builder setSign(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sign_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 签名
+       * </pre>
+       */
+      public Builder clearSign() {
+        
+        sign_ = getDefaultInstance().getSign();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 签名
+       * </pre>
+       */
+      public Builder setSignBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sign_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.xiang.proto.Common.Trend> trends_ =
+        java.util.Collections.emptyList();
+      private void ensureTrendsIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          trends_ = new java.util.ArrayList<com.xiang.proto.Common.Trend>(trends_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> trendsBuilder_;
+
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public java.util.List<com.xiang.proto.Common.Trend> getTrendsList() {
+        if (trendsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trends_);
+        } else {
+          return trendsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public int getTrendsCount() {
+        if (trendsBuilder_ == null) {
+          return trends_.size();
+        } else {
+          return trendsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public com.xiang.proto.Common.Trend getTrends(int index) {
+        if (trendsBuilder_ == null) {
+          return trends_.get(index);
+        } else {
+          return trendsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder setTrends(
+          int index, com.xiang.proto.Common.Trend value) {
+        if (trendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrendsIsMutable();
+          trends_.set(index, value);
+          onChanged();
+        } else {
+          trendsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder setTrends(
+          int index, com.xiang.proto.Common.Trend.Builder builderForValue) {
+        if (trendsBuilder_ == null) {
+          ensureTrendsIsMutable();
+          trends_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          trendsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder addTrends(com.xiang.proto.Common.Trend value) {
+        if (trendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrendsIsMutable();
+          trends_.add(value);
+          onChanged();
+        } else {
+          trendsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder addTrends(
+          int index, com.xiang.proto.Common.Trend value) {
+        if (trendsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTrendsIsMutable();
+          trends_.add(index, value);
+          onChanged();
+        } else {
+          trendsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder addTrends(
+          com.xiang.proto.Common.Trend.Builder builderForValue) {
+        if (trendsBuilder_ == null) {
+          ensureTrendsIsMutable();
+          trends_.add(builderForValue.build());
+          onChanged();
+        } else {
+          trendsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder addTrends(
+          int index, com.xiang.proto.Common.Trend.Builder builderForValue) {
+        if (trendsBuilder_ == null) {
+          ensureTrendsIsMutable();
+          trends_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          trendsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder addAllTrends(
+          java.lang.Iterable<? extends com.xiang.proto.Common.Trend> values) {
+        if (trendsBuilder_ == null) {
+          ensureTrendsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, trends_);
+          onChanged();
+        } else {
+          trendsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder clearTrends() {
+        if (trendsBuilder_ == null) {
+          trends_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          trendsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public Builder removeTrends(int index) {
+        if (trendsBuilder_ == null) {
+          ensureTrendsIsMutable();
+          trends_.remove(index);
+          onChanged();
+        } else {
+          trendsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public com.xiang.proto.Common.Trend.Builder getTrendsBuilder(
+          int index) {
+        return getTrendsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
+          int index) {
+        if (trendsBuilder_ == null) {
+          return trends_.get(index);  } else {
+          return trendsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
+           getTrendsOrBuilderList() {
+        if (trendsBuilder_ != null) {
+          return trendsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(trends_);
+        }
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public com.xiang.proto.Common.Trend.Builder addTrendsBuilder() {
+        return getTrendsFieldBuilder().addBuilder(
+            com.xiang.proto.Common.Trend.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public com.xiang.proto.Common.Trend.Builder addTrendsBuilder(
+          int index) {
+        return getTrendsFieldBuilder().addBuilder(
+            index, com.xiang.proto.Common.Trend.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
+       *
+       * <pre>
+       * 最近态列表
+       * </pre>
+       */
+      public java.util.List<com.xiang.proto.Common.Trend.Builder> 
+           getTrendsBuilderList() {
+        return getTrendsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> 
+          getTrendsFieldBuilder() {
+        if (trendsBuilder_ == null) {
+          trendsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder>(
+                  trends_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          trends_ = null;
+        }
+        return trendsBuilder_;
+      }
+
+      private boolean isFollowed_ ;
+      /**
+       * <code>optional bool isFollowed = 7;</code>
+       *
+       * <pre>
+       * 是否已经关注
+       * </pre>
+       */
+      public boolean getIsFollowed() {
+        return isFollowed_;
+      }
+      /**
+       * <code>optional bool isFollowed = 7;</code>
+       *
+       * <pre>
+       * 是否已经关注
+       * </pre>
+       */
+      public Builder setIsFollowed(boolean value) {
+        
+        isFollowed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool isFollowed = 7;</code>
+       *
+       * <pre>
+       * 是否已经关注
+       * </pre>
+       */
+      public Builder clearIsFollowed() {
+        
+        isFollowed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int guanzhuCount_ ;
+      /**
+       * <code>optional int32 guanzhuCount = 8;</code>
+       *
+       * <pre>
+       * 他关注的人的数量
+       * </pre>
+       */
+      public int getGuanzhuCount() {
+        return guanzhuCount_;
+      }
+      /**
+       * <code>optional int32 guanzhuCount = 8;</code>
+       *
+       * <pre>
+       * 他关注的人的数量
+       * </pre>
+       */
+      public Builder setGuanzhuCount(int value) {
+        
+        guanzhuCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 guanzhuCount = 8;</code>
+       *
+       * <pre>
+       * 他关注的人的数量
+       * </pre>
+       */
+      public Builder clearGuanzhuCount() {
+        
+        guanzhuCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int fensiCount_ ;
+      /**
+       * <code>optional int32 fensiCount = 9;</code>
+       *
+       * <pre>
+       * 他的粉丝数量
+       * </pre>
+       */
+      public int getFensiCount() {
+        return fensiCount_;
+      }
+      /**
+       * <code>optional int32 fensiCount = 9;</code>
+       *
+       * <pre>
+       * 他的粉丝数量
+       * </pre>
+       */
+      public Builder setFensiCount(int value) {
+        
+        fensiCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 fensiCount = 9;</code>
+       *
+       * <pre>
+       * 他的粉丝数量
+       * </pre>
+       */
+      public Builder clearFensiCount() {
+        
+        fensiCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int trendCount_ ;
+      /**
+       * <code>optional int32 trendCount = 10;</code>
+       *
+       * <pre>
+       * 动态的数量
+       * </pre>
+       */
+      public int getTrendCount() {
+        return trendCount_;
+      }
+      /**
+       * <code>optional int32 trendCount = 10;</code>
+       *
+       * <pre>
+       * 动态的数量
+       * </pre>
+       */
+      public Builder setTrendCount(int value) {
+        
+        trendCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 trendCount = 10;</code>
+       *
+       * <pre>
+       * 动态的数量
+       * </pre>
+       */
+      public Builder clearTrendCount() {
+        
+        trendCount_ = 0;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.DetailUser)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.DetailUser)
+    private static final com.xiang.proto.Common.DetailUser DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.Common.DetailUser();
+    }
+
+    public static com.xiang.proto.Common.DetailUser getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DetailUser>
+        PARSER = new com.google.protobuf.AbstractParser<DetailUser>() {
+      public DetailUser parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new DetailUser(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<DetailUser> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DetailUser> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.Common.DetailUser getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_RequestCommon_descriptor;
   private static
@@ -14295,6 +16231,11 @@ public final class Common {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_DetailUser_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_DetailUser_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -14347,10 +16288,17 @@ public final class Common {
       "t\030\003 \001(\t\022\017\n\007trendId\030\004 \001(\005\022\020\n\010toUserid\030\005 \001" +
       "(\005\022\022\n\ntoUserName\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001" +
       "(\003\022\017\n\007gymName\030\010 \001(\t\"6\n\021TrendBriefMessage" +
-      "\022\022\n\nlastAvatar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005*,\n\010C" +
+      "\022\022\n\nlastAvatar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\"\355\001\n\n" +
+      "DetailUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030\002" +
+      " \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024." +
+      "com.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022&\n\006tre" +
+      "nds\030\006 \003(\0132\026.com.xiang.proto.Trend\022\022\n\nisF" +
+      "ollowed\030\007 \001(\010\022\024\n\014guanzhuCount\030\010 \001(\005\022\022\n\nf" +
+      "ensiCount\030\t \001(\005\022\022\n\ntrendCount\030\n \001(\005*,\n\010C",
       "ardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020" +
       "\002*/\n\rEquipmentType\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN" +
-      "_YU_FANG\020\001b\006proto3"
+      "_YU_FANG\020\001*\033\n\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001b" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -14448,6 +16396,12 @@ public final class Common {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_TrendBriefMessage_descriptor,
         new java.lang.String[] { "LastAvatar", "Count", });
+    internal_static_com_xiang_proto_DetailUser_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_com_xiang_proto_DetailUser_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_DetailUser_descriptor,
+        new java.lang.String[] { "UserId", "UserName", "UserAvatar", "Sex", "Sign", "Trends", "IsFollowed", "GuanzhuCount", "FensiCount", "TrendCount", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
