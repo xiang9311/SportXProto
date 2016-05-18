@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package com.xiang.proto.pilot;
+
+import "common.proto";
+
+//服务器根目录 http://www.sportx-park.com/
+
+// 获取七牛token
+// /token/getQiniuToken
+message Request11001 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+
+	}
+}
+
+message Response11001 {
+	RequestCommon common = 1;
+	Data data = 2;
+	message Data {
+		string qiniuToken = 1;
+	}
+}
+
+// 获取融云token
+// /token/getRongyunToken
+message Request11002 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		bool oldTokenCannotUse = 1;          //旧的token不能使用（服务器需要重新从七牛申请token，而不是拿数据库的token）
+	}
+}
+
+message Response11002 {
+	RequestCommon common = 1;
+	Data data = 2;
+	message Data {
+		string rongyunToken = 1;
+	}
+}

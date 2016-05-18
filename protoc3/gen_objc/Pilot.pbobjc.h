@@ -11,6 +11,14 @@
 
 CF_EXTERN_C_BEGIN
 
+@class BriefUser;
+@class Request10001_Params;
+@class Request10002_Params;
+@class RequestCommon;
+@class Response10001_Data;
+@class Response10002_Data;
+GPB_ENUM_FWD_DECLARE(Sex);
+
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - PilotRoot
@@ -21,6 +29,166 @@ NS_ASSUME_NONNULL_BEGIN
 //   + (GPBExtensionRegistry *)extensionRegistry;
 // which is an GPBExtensionRegistry that includes all the extensions defined by
 // this file and all files that it depends on.
+
+@end
+
+#pragma mark - Request10001
+
+typedef GPB_ENUM(Request10001_FieldNumber) {
+  Request10001_FieldNumber_Common = 1,
+  Request10001_FieldNumber_Params = 2,
+};
+
+// 注册
+// /pilot/register
+@interface Request10001 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasParams;
+@property(nonatomic, readwrite, strong, null_resettable) Request10001_Params *params;
+
+@end
+
+#pragma mark - Request10001_Params
+
+typedef GPB_ENUM(Request10001_Params_FieldNumber) {
+  Request10001_Params_FieldNumber_Phone = 1,
+  Request10001_Params_FieldNumber_Username = 2,
+  Request10001_Params_FieldNumber_AvatarKey = 3,
+  Request10001_Params_FieldNumber_BucketName = 4,
+  Request10001_Params_FieldNumber_Password = 5,
+  Request10001_Params_FieldNumber_Sex = 6,
+};
+
+@interface Request10001_Params : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *phone;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *username;
+
+// 上传到七牛的key
+@property(nonatomic, readwrite, copy, null_resettable) NSString *avatarKey;
+
+// 上传到七牛的bucket
+@property(nonatomic, readwrite, copy, null_resettable) NSString *bucketName;
+
+// 密码MD5加密
+@property(nonatomic, readwrite, copy, null_resettable) NSString *password;
+
+@property(nonatomic, readwrite) enum Sex sex;
+
+@end
+
+int32_t Request10001_Params_Sex_RawValue(Request10001_Params *message);
+void SetRequest10001_Params_Sex_RawValue(Request10001_Params *message, int32_t value);
+
+#pragma mark - Response10001
+
+typedef GPB_ENUM(Response10001_FieldNumber) {
+  Response10001_FieldNumber_Common = 1,
+  Response10001_FieldNumber_Data_p = 2,
+};
+
+@interface Response10001 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasData_p;
+@property(nonatomic, readwrite, strong, null_resettable) Response10001_Data *data_p;
+
+@end
+
+#pragma mark - Response10001_Data
+
+typedef GPB_ENUM(Response10001_Data_FieldNumber) {
+  Response10001_Data_FieldNumber_UserId = 1,
+  Response10001_Data_FieldNumber_UserKey = 2,
+};
+
+@interface Response10001_Data : GPBMessage
+
+// 返回的用户id
+@property(nonatomic, readwrite) int32_t userId;
+
+// 用户的私钥
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userKey;
+
+@end
+
+#pragma mark - Request10002
+
+typedef GPB_ENUM(Request10002_FieldNumber) {
+  Request10002_FieldNumber_Common = 1,
+  Request10002_FieldNumber_Params = 2,
+};
+
+// 登录
+// /pilot/login
+@interface Request10002 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasParams;
+@property(nonatomic, readwrite, strong, null_resettable) Request10002_Params *params;
+
+@end
+
+#pragma mark - Request10002_Params
+
+typedef GPB_ENUM(Request10002_Params_FieldNumber) {
+  Request10002_Params_FieldNumber_Phone = 1,
+  Request10002_Params_FieldNumber_Password = 2,
+};
+
+@interface Request10002_Params : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *phone;
+
+// 密码MD5加密
+@property(nonatomic, readwrite, copy, null_resettable) NSString *password;
+
+@end
+
+#pragma mark - Response10002
+
+typedef GPB_ENUM(Response10002_FieldNumber) {
+  Response10002_FieldNumber_Common = 1,
+  Response10002_FieldNumber_Data_p = 2,
+};
+
+@interface Response10002 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasData_p;
+@property(nonatomic, readwrite, strong, null_resettable) Response10002_Data *data_p;
+
+@end
+
+#pragma mark - Response10002_Data
+
+typedef GPB_ENUM(Response10002_Data_FieldNumber) {
+  Response10002_Data_FieldNumber_BriefUser = 1,
+  Response10002_Data_FieldNumber_UserKey = 2,
+  Response10002_Data_FieldNumber_RongyunToken = 3,
+};
+
+@interface Response10002_Data : GPBMessage
+
+// 返回用户简要信息
+@property(nonatomic, readwrite) BOOL hasBriefUser;
+@property(nonatomic, readwrite, strong, null_resettable) BriefUser *briefUser;
+
+// 返回用户私钥
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userKey;
+
+// 融云聊天使用的token
+@property(nonatomic, readwrite, copy, null_resettable) NSString *rongyunToken;
 
 @end
 

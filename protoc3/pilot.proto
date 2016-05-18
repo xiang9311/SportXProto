@@ -2,7 +2,51 @@ syntax = "proto3";
 
 package com.xiang.proto.pilot;
 
-//import "common.proto";
+import "common.proto";
 
-//服务器根目录 http:...:8000/server
+//服务器根目录 http://www.sportx-park.com/
 
+// 注册
+// /pilot/register
+message Request10001 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		string phone = 1;
+		string username = 2;
+		string avatarKey = 3;                        // 上传到七牛的key
+		string bucketName = 4;                       // 上传到七牛的bucket
+		string password = 5;                         // 密码MD5加密
+		Sex sex = 6;
+	}
+}
+
+message Response10001 {
+	RequestCommon common = 1;
+	Data data = 2;
+	message Data {
+		int32 userId = 1;                            // 返回的用户id
+		string userKey = 2;                          // 用户的私钥
+	}
+}
+
+// 登录
+// /pilot/login
+message Request10002 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		string phone = 1;
+		string password = 2;                         // 密码MD5加密
+	}
+}
+
+message Response10002 {
+	RequestCommon common = 1;
+	Data data = 2;
+	message Data {
+		BriefUser briefUser = 1;                     // 返回用户简要信息
+		string userKey = 2;                          // 返回用户私钥
+		string rongyunToken = 3;                     // 融云聊天使用的token
+	}
+}

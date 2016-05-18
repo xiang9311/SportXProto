@@ -3,9 +3,9 @@
 package com.xiang.proto.pilot.nano;
 
 @SuppressWarnings("hiding")
-public interface Pilot {
+public interface Token {
 
-  public static final class Request10001 extends
+  public static final class Request11001 extends
       com.google.protobuf.nano.MessageNano {
 
     public static final class Params extends
@@ -25,91 +25,13 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional string phone = 1;
-      public java.lang.String phone;
-
-      // optional string username = 2;
-      public java.lang.String username;
-
-      // optional string avatarKey = 3;
-      public java.lang.String avatarKey;
-
-      // optional string bucketName = 4;
-      public java.lang.String bucketName;
-
-      // optional string password = 5;
-      public java.lang.String password;
-
-      // optional .com.xiang.proto.Sex sex = 6;
-      public int sex;
-
       public Params() {
         clear();
       }
 
       public Params clear() {
-        phone = "";
-        username = "";
-        avatarKey = "";
-        bucketName = "";
-        password = "";
-        sex = com.xiang.proto.nano.Common.MALE;
         cachedSize = -1;
         return this;
-      }
-
-      @Override
-      public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
-          throws java.io.IOException {
-        if (!this.phone.equals("")) {
-          output.writeString(1, this.phone);
-        }
-        if (!this.username.equals("")) {
-          output.writeString(2, this.username);
-        }
-        if (!this.avatarKey.equals("")) {
-          output.writeString(3, this.avatarKey);
-        }
-        if (!this.bucketName.equals("")) {
-          output.writeString(4, this.bucketName);
-        }
-        if (!this.password.equals("")) {
-          output.writeString(5, this.password);
-        }
-        if (this.sex != com.xiang.proto.nano.Common.MALE) {
-          output.writeInt32(6, this.sex);
-        }
-        super.writeTo(output);
-      }
-
-      @Override
-      protected int computeSerializedSize() {
-        int size = super.computeSerializedSize();
-        if (!this.phone.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(1, this.phone);
-        }
-        if (!this.username.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(2, this.username);
-        }
-        if (!this.avatarKey.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(3, this.avatarKey);
-        }
-        if (!this.bucketName.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(4, this.bucketName);
-        }
-        if (!this.password.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(5, this.password);
-        }
-        if (this.sex != com.xiang.proto.nano.Common.MALE) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-            .computeInt32Size(6, this.sex);
-        }
-        return size;
       }
 
       @Override
@@ -124,36 +46,6 @@ public interface Pilot {
             default: {
               if (!com.google.protobuf.nano.WireFormatNano.parseUnknownField(input, tag)) {
                 return this;
-              }
-              break;
-            }
-            case 10: {
-              this.phone = input.readString();
-              break;
-            }
-            case 18: {
-              this.username = input.readString();
-              break;
-            }
-            case 26: {
-              this.avatarKey = input.readString();
-              break;
-            }
-            case 34: {
-              this.bucketName = input.readString();
-              break;
-            }
-            case 42: {
-              this.password = input.readString();
-              break;
-            }
-            case 48: {
-              int value = input.readInt32();
-              switch (value) {
-                case com.xiang.proto.nano.Common.MALE:
-                case com.xiang.proto.nano.Common.FEMALE:
-                  this.sex = value;
-                  break;
               }
               break;
             }
@@ -173,14 +65,14 @@ public interface Pilot {
       }
     }
 
-    private static volatile Request10001[] _emptyArray;
-    public static Request10001[] emptyArray() {
+    private static volatile Request11001[] _emptyArray;
+    public static Request11001[] emptyArray() {
       // Lazily initializes the empty array
       if (_emptyArray == null) {
         synchronized (
             com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
           if (_emptyArray == null) {
-            _emptyArray = new Request10001[0];
+            _emptyArray = new Request11001[0];
           }
         }
       }
@@ -190,14 +82,14 @@ public interface Pilot {
     // optional .com.xiang.proto.RequestCommon common = 1;
     public com.xiang.proto.nano.Common.RequestCommon common;
 
-    // optional .com.xiang.proto.pilot.Request10001.Params params = 2;
-    public com.xiang.proto.pilot.nano.Pilot.Request10001.Params params;
+    // optional .com.xiang.proto.pilot.Request11001.Params params = 2;
+    public com.xiang.proto.pilot.nano.Token.Request11001.Params params;
 
-    public Request10001() {
+    public Request11001() {
       clear();
     }
 
-    public Request10001 clear() {
+    public Request11001 clear() {
       common = null;
       params = null;
       cachedSize = -1;
@@ -231,7 +123,7 @@ public interface Pilot {
     }
 
     @Override
-    public Request10001 mergeFrom(
+    public Request11001 mergeFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
       while (true) {
@@ -254,7 +146,7 @@ public interface Pilot {
           }
           case 18: {
             if (this.params == null) {
-              this.params = new com.xiang.proto.pilot.nano.Pilot.Request10001.Params();
+              this.params = new com.xiang.proto.pilot.nano.Token.Request11001.Params();
             }
             input.readMessage(this.params);
             break;
@@ -263,19 +155,19 @@ public interface Pilot {
       }
     }
 
-    public static Request10001 parseFrom(byte[] data)
+    public static Request11001 parseFrom(byte[] data)
         throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
-      return com.google.protobuf.nano.MessageNano.mergeFrom(new Request10001(), data);
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new Request11001(), data);
     }
 
-    public static Request10001 parseFrom(
+    public static Request11001 parseFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
-      return new Request10001().mergeFrom(input);
+      return new Request11001().mergeFrom(input);
     }
   }
 
-  public static final class Response10001 extends
+  public static final class Response11001 extends
       com.google.protobuf.nano.MessageNano {
 
     public static final class Data extends
@@ -295,19 +187,15 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional int32 userId = 1;
-      public int userId;
-
-      // optional string userKey = 2;
-      public java.lang.String userKey;
+      // optional string qiniuToken = 1;
+      public java.lang.String qiniuToken;
 
       public Data() {
         clear();
       }
 
       public Data clear() {
-        userId = 0;
-        userKey = "";
+        qiniuToken = "";
         cachedSize = -1;
         return this;
       }
@@ -315,11 +203,8 @@ public interface Pilot {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (this.userId != 0) {
-          output.writeInt32(1, this.userId);
-        }
-        if (!this.userKey.equals("")) {
-          output.writeString(2, this.userKey);
+        if (!this.qiniuToken.equals("")) {
+          output.writeString(1, this.qiniuToken);
         }
         super.writeTo(output);
       }
@@ -327,13 +212,9 @@ public interface Pilot {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (this.userId != 0) {
+        if (!this.qiniuToken.equals("")) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeInt32Size(1, this.userId);
-        }
-        if (!this.userKey.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(2, this.userKey);
+              .computeStringSize(1, this.qiniuToken);
         }
         return size;
       }
@@ -353,12 +234,8 @@ public interface Pilot {
               }
               break;
             }
-            case 8: {
-              this.userId = input.readInt32();
-              break;
-            }
-            case 18: {
-              this.userKey = input.readString();
+            case 10: {
+              this.qiniuToken = input.readString();
               break;
             }
           }
@@ -377,14 +254,14 @@ public interface Pilot {
       }
     }
 
-    private static volatile Response10001[] _emptyArray;
-    public static Response10001[] emptyArray() {
+    private static volatile Response11001[] _emptyArray;
+    public static Response11001[] emptyArray() {
       // Lazily initializes the empty array
       if (_emptyArray == null) {
         synchronized (
             com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
           if (_emptyArray == null) {
-            _emptyArray = new Response10001[0];
+            _emptyArray = new Response11001[0];
           }
         }
       }
@@ -394,14 +271,14 @@ public interface Pilot {
     // optional .com.xiang.proto.RequestCommon common = 1;
     public com.xiang.proto.nano.Common.RequestCommon common;
 
-    // optional .com.xiang.proto.pilot.Response10001.Data data = 2;
-    public com.xiang.proto.pilot.nano.Pilot.Response10001.Data data;
+    // optional .com.xiang.proto.pilot.Response11001.Data data = 2;
+    public com.xiang.proto.pilot.nano.Token.Response11001.Data data;
 
-    public Response10001() {
+    public Response11001() {
       clear();
     }
 
-    public Response10001 clear() {
+    public Response11001 clear() {
       common = null;
       data = null;
       cachedSize = -1;
@@ -435,7 +312,7 @@ public interface Pilot {
     }
 
     @Override
-    public Response10001 mergeFrom(
+    public Response11001 mergeFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
       while (true) {
@@ -458,7 +335,7 @@ public interface Pilot {
           }
           case 18: {
             if (this.data == null) {
-              this.data = new com.xiang.proto.pilot.nano.Pilot.Response10001.Data();
+              this.data = new com.xiang.proto.pilot.nano.Token.Response11001.Data();
             }
             input.readMessage(this.data);
             break;
@@ -467,19 +344,19 @@ public interface Pilot {
       }
     }
 
-    public static Response10001 parseFrom(byte[] data)
+    public static Response11001 parseFrom(byte[] data)
         throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
-      return com.google.protobuf.nano.MessageNano.mergeFrom(new Response10001(), data);
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new Response11001(), data);
     }
 
-    public static Response10001 parseFrom(
+    public static Response11001 parseFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
-      return new Response10001().mergeFrom(input);
+      return new Response11001().mergeFrom(input);
     }
   }
 
-  public static final class Request10002 extends
+  public static final class Request11002 extends
       com.google.protobuf.nano.MessageNano {
 
     public static final class Params extends
@@ -499,19 +376,15 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional string phone = 1;
-      public java.lang.String phone;
-
-      // optional string password = 2;
-      public java.lang.String password;
+      // optional bool oldTokenCannotUse = 1;
+      public boolean oldTokenCannotUse;
 
       public Params() {
         clear();
       }
 
       public Params clear() {
-        phone = "";
-        password = "";
+        oldTokenCannotUse = false;
         cachedSize = -1;
         return this;
       }
@@ -519,11 +392,8 @@ public interface Pilot {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (!this.phone.equals("")) {
-          output.writeString(1, this.phone);
-        }
-        if (!this.password.equals("")) {
-          output.writeString(2, this.password);
+        if (this.oldTokenCannotUse != false) {
+          output.writeBool(1, this.oldTokenCannotUse);
         }
         super.writeTo(output);
       }
@@ -531,13 +401,9 @@ public interface Pilot {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (!this.phone.equals("")) {
+        if (this.oldTokenCannotUse != false) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(1, this.phone);
-        }
-        if (!this.password.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(2, this.password);
+              .computeBoolSize(1, this.oldTokenCannotUse);
         }
         return size;
       }
@@ -557,12 +423,8 @@ public interface Pilot {
               }
               break;
             }
-            case 10: {
-              this.phone = input.readString();
-              break;
-            }
-            case 18: {
-              this.password = input.readString();
+            case 8: {
+              this.oldTokenCannotUse = input.readBool();
               break;
             }
           }
@@ -581,14 +443,14 @@ public interface Pilot {
       }
     }
 
-    private static volatile Request10002[] _emptyArray;
-    public static Request10002[] emptyArray() {
+    private static volatile Request11002[] _emptyArray;
+    public static Request11002[] emptyArray() {
       // Lazily initializes the empty array
       if (_emptyArray == null) {
         synchronized (
             com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
           if (_emptyArray == null) {
-            _emptyArray = new Request10002[0];
+            _emptyArray = new Request11002[0];
           }
         }
       }
@@ -598,14 +460,14 @@ public interface Pilot {
     // optional .com.xiang.proto.RequestCommon common = 1;
     public com.xiang.proto.nano.Common.RequestCommon common;
 
-    // optional .com.xiang.proto.pilot.Request10002.Params params = 2;
-    public com.xiang.proto.pilot.nano.Pilot.Request10002.Params params;
+    // optional .com.xiang.proto.pilot.Request11002.Params params = 2;
+    public com.xiang.proto.pilot.nano.Token.Request11002.Params params;
 
-    public Request10002() {
+    public Request11002() {
       clear();
     }
 
-    public Request10002 clear() {
+    public Request11002 clear() {
       common = null;
       params = null;
       cachedSize = -1;
@@ -639,7 +501,7 @@ public interface Pilot {
     }
 
     @Override
-    public Request10002 mergeFrom(
+    public Request11002 mergeFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
       while (true) {
@@ -662,7 +524,7 @@ public interface Pilot {
           }
           case 18: {
             if (this.params == null) {
-              this.params = new com.xiang.proto.pilot.nano.Pilot.Request10002.Params();
+              this.params = new com.xiang.proto.pilot.nano.Token.Request11002.Params();
             }
             input.readMessage(this.params);
             break;
@@ -671,19 +533,19 @@ public interface Pilot {
       }
     }
 
-    public static Request10002 parseFrom(byte[] data)
+    public static Request11002 parseFrom(byte[] data)
         throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
-      return com.google.protobuf.nano.MessageNano.mergeFrom(new Request10002(), data);
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new Request11002(), data);
     }
 
-    public static Request10002 parseFrom(
+    public static Request11002 parseFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
-      return new Request10002().mergeFrom(input);
+      return new Request11002().mergeFrom(input);
     }
   }
 
-  public static final class Response10002 extends
+  public static final class Response11002 extends
       com.google.protobuf.nano.MessageNano {
 
     public static final class Data extends
@@ -703,13 +565,7 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional .com.xiang.proto.BriefUser briefUser = 1;
-      public com.xiang.proto.nano.Common.BriefUser briefUser;
-
-      // optional string userKey = 2;
-      public java.lang.String userKey;
-
-      // optional string rongyunToken = 3;
+      // optional string rongyunToken = 1;
       public java.lang.String rongyunToken;
 
       public Data() {
@@ -717,8 +573,6 @@ public interface Pilot {
       }
 
       public Data clear() {
-        briefUser = null;
-        userKey = "";
         rongyunToken = "";
         cachedSize = -1;
         return this;
@@ -727,14 +581,8 @@ public interface Pilot {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (this.briefUser != null) {
-          output.writeMessage(1, this.briefUser);
-        }
-        if (!this.userKey.equals("")) {
-          output.writeString(2, this.userKey);
-        }
         if (!this.rongyunToken.equals("")) {
-          output.writeString(3, this.rongyunToken);
+          output.writeString(1, this.rongyunToken);
         }
         super.writeTo(output);
       }
@@ -742,17 +590,9 @@ public interface Pilot {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (this.briefUser != null) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-            .computeMessageSize(1, this.briefUser);
-        }
-        if (!this.userKey.equals("")) {
-          size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(2, this.userKey);
-        }
         if (!this.rongyunToken.equals("")) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(3, this.rongyunToken);
+              .computeStringSize(1, this.rongyunToken);
         }
         return size;
       }
@@ -773,17 +613,6 @@ public interface Pilot {
               break;
             }
             case 10: {
-              if (this.briefUser == null) {
-                this.briefUser = new com.xiang.proto.nano.Common.BriefUser();
-              }
-              input.readMessage(this.briefUser);
-              break;
-            }
-            case 18: {
-              this.userKey = input.readString();
-              break;
-            }
-            case 26: {
               this.rongyunToken = input.readString();
               break;
             }
@@ -803,14 +632,14 @@ public interface Pilot {
       }
     }
 
-    private static volatile Response10002[] _emptyArray;
-    public static Response10002[] emptyArray() {
+    private static volatile Response11002[] _emptyArray;
+    public static Response11002[] emptyArray() {
       // Lazily initializes the empty array
       if (_emptyArray == null) {
         synchronized (
             com.google.protobuf.nano.InternalNano.LAZY_INIT_LOCK) {
           if (_emptyArray == null) {
-            _emptyArray = new Response10002[0];
+            _emptyArray = new Response11002[0];
           }
         }
       }
@@ -820,14 +649,14 @@ public interface Pilot {
     // optional .com.xiang.proto.RequestCommon common = 1;
     public com.xiang.proto.nano.Common.RequestCommon common;
 
-    // optional .com.xiang.proto.pilot.Response10002.Data data = 2;
-    public com.xiang.proto.pilot.nano.Pilot.Response10002.Data data;
+    // optional .com.xiang.proto.pilot.Response11002.Data data = 2;
+    public com.xiang.proto.pilot.nano.Token.Response11002.Data data;
 
-    public Response10002() {
+    public Response11002() {
       clear();
     }
 
-    public Response10002 clear() {
+    public Response11002 clear() {
       common = null;
       data = null;
       cachedSize = -1;
@@ -861,7 +690,7 @@ public interface Pilot {
     }
 
     @Override
-    public Response10002 mergeFrom(
+    public Response11002 mergeFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
       while (true) {
@@ -884,7 +713,7 @@ public interface Pilot {
           }
           case 18: {
             if (this.data == null) {
-              this.data = new com.xiang.proto.pilot.nano.Pilot.Response10002.Data();
+              this.data = new com.xiang.proto.pilot.nano.Token.Response11002.Data();
             }
             input.readMessage(this.data);
             break;
@@ -893,15 +722,15 @@ public interface Pilot {
       }
     }
 
-    public static Response10002 parseFrom(byte[] data)
+    public static Response11002 parseFrom(byte[] data)
         throws com.google.protobuf.nano.InvalidProtocolBufferNanoException {
-      return com.google.protobuf.nano.MessageNano.mergeFrom(new Response10002(), data);
+      return com.google.protobuf.nano.MessageNano.mergeFrom(new Response11002(), data);
     }
 
-    public static Response10002 parseFrom(
+    public static Response11002 parseFrom(
             com.google.protobuf.nano.CodedInputByteBufferNano input)
         throws java.io.IOException {
-      return new Response10002().mergeFrom(input);
+      return new Response11002().mergeFrom(input);
     }
   }
 }
