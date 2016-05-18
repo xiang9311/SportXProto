@@ -574,6 +574,36 @@ typedef GPB_ENUM(DetailUser_FieldNumber) {
 int32_t DetailUser_Sex_RawValue(DetailUser *message);
 void SetDetailUser_Sex_RawValue(DetailUser *message, int32_t value);
 
+#pragma mark - SearchedUser
+
+typedef GPB_ENUM(SearchedUser_FieldNumber) {
+  SearchedUser_FieldNumber_UserId = 1,
+  SearchedUser_FieldNumber_UserName = 2,
+  SearchedUser_FieldNumber_UserAvatar = 3,
+  SearchedUser_FieldNumber_Sign = 4,
+  SearchedUser_FieldNumber_ImagesArray = 5,
+};
+
+// 搜索得到的用户简要信息
+@interface SearchedUser : GPBMessage
+
+// id
+@property(nonatomic, readwrite) int32_t userId;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userName;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *userAvatar;
+
+// 用户签名
+@property(nonatomic, readwrite, copy, null_resettable) NSString *sign;
+
+// 图片数组，一般需要三个，但有可能少于3个
+// |imagesArray| contains |NSString|
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *imagesArray;
+@property(nonatomic, readonly) NSUInteger imagesArray_Count;
+
+@end
+
 NS_ASSUME_NONNULL_END
 
 CF_EXTERN_C_END

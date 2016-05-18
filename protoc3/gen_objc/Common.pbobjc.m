@@ -1867,5 +1867,114 @@ void SetDetailUser_Sex_RawValue(DetailUser *message, int32_t value) {
   GPBSetInt32IvarWithFieldInternal(message, field, value, descriptor.file.syntax);
 }
 
+#pragma mark - SearchedUser
+
+@implementation SearchedUser
+
+@dynamic userId;
+@dynamic userName;
+@dynamic userAvatar;
+@dynamic sign;
+@dynamic imagesArray, imagesArray_Count;
+
+typedef struct SearchedUser__storage_ {
+  uint32_t _has_storage_[1];
+  int32_t userId;
+  NSString *userName;
+  NSString *userAvatar;
+  NSString *sign;
+  NSMutableArray *imagesArray;
+} SearchedUser__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "userId",
+        .number = SearchedUser_FieldNumber_UserId,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(SearchedUser__storage_, userId),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "userName",
+        .number = SearchedUser_FieldNumber_UserName,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(SearchedUser__storage_, userName),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "userAvatar",
+        .number = SearchedUser_FieldNumber_UserAvatar,
+        .hasIndex = 2,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(SearchedUser__storage_, userAvatar),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "sign",
+        .number = SearchedUser_FieldNumber_Sign,
+        .hasIndex = 3,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(SearchedUser__storage_, sign),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "imagesArray",
+        .number = SearchedUser_FieldNumber_ImagesArray,
+        .hasIndex = GPBNoHasBit,
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(SearchedUser__storage_, imagesArray),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+    };
+#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    const char *extraTextFormatInfo = NULL;
+#else
+    static const char *extraTextFormatInfo = "\003\001\006\000\002\010\000\003\n\000";
+#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[SearchedUser class]
+                                     rootClass:[CommonRoot class]
+                                          file:CommonRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(SearchedUser__storage_)
+                                    wireFormat:NO
+                           extraTextFormatInfo:extraTextFormatInfo];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 
 // @@protoc_insertion_point(global_scope)

@@ -177,3 +177,12 @@ message DetailUser{
   int32 fensiCount = 9;                // 他的粉丝数量
   int32 trendCount = 10;               // 动态的数量
 }
+
+// 搜索得到的用户简要信息
+message SearchedUser{
+  int32 userId = 1;                    // id
+  string userName = 2;
+  string userAvatar = 3;
+  string sign = 4;                     // 用户签名
+  repeated string images = 5;          // 图片数组，一般需要三个，但有可能少于3个
+}

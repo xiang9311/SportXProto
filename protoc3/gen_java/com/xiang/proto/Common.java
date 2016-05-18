@@ -16161,6 +16161,1100 @@ public final class Common {
 
   }
 
+  public interface SearchedUserOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.SearchedUser)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 userId = 1;</code>
+     *
+     * <pre>
+     * id
+     * </pre>
+     */
+    int getUserId();
+
+    /**
+     * <code>optional string userName = 2;</code>
+     */
+    java.lang.String getUserName();
+    /**
+     * <code>optional string userName = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getUserNameBytes();
+
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     */
+    java.lang.String getUserAvatar();
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getUserAvatarBytes();
+
+    /**
+     * <code>optional string sign = 4;</code>
+     *
+     * <pre>
+     * 用户签名
+     * </pre>
+     */
+    java.lang.String getSign();
+    /**
+     * <code>optional string sign = 4;</code>
+     *
+     * <pre>
+     * 用户签名
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getSignBytes();
+
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    com.google.protobuf.ProtocolStringList
+        getImagesList();
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    int getImagesCount();
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    java.lang.String getImages(int index);
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    com.google.protobuf.ByteString
+        getImagesBytes(int index);
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.SearchedUser}
+   *
+   * <pre>
+   * 搜索得到的用户简要信息
+   * </pre>
+   */
+  public  static final class SearchedUser extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.SearchedUser)
+      SearchedUserOrBuilder {
+    // Use SearchedUser.newBuilder() to construct.
+    private SearchedUser(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchedUser() {
+      userId_ = 0;
+      userName_ = "";
+      userAvatar_ = "";
+      sign_ = "";
+      images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private SearchedUser(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              userId_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
+
+              userName_ = s;
+              break;
+            }
+            case 26: {
+              String s = input.readStringRequireUtf8();
+
+              userAvatar_ = s;
+              break;
+            }
+            case 34: {
+              String s = input.readStringRequireUtf8();
+
+              sign_ = s;
+              break;
+            }
+            case 42: {
+              String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                images_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              images_.add(s);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          images_ = images_.getUnmodifiableView();
+        }
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_SearchedUser_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.Common.internal_static_com_xiang_proto_SearchedUser_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.Common.SearchedUser.class, com.xiang.proto.Common.SearchedUser.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int USERID_FIELD_NUMBER = 1;
+    private int userId_;
+    /**
+     * <code>optional int32 userId = 1;</code>
+     *
+     * <pre>
+     * id
+     * </pre>
+     */
+    public int getUserId() {
+      return userId_;
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object userName_;
+    /**
+     * <code>optional string userName = 2;</code>
+     */
+    public java.lang.String getUserName() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string userName = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserNameBytes() {
+      java.lang.Object ref = userName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USERAVATAR_FIELD_NUMBER = 3;
+    private volatile java.lang.Object userAvatar_;
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     */
+    public java.lang.String getUserAvatar() {
+      java.lang.Object ref = userAvatar_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userAvatar_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string userAvatar = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUserAvatarBytes() {
+      java.lang.Object ref = userAvatar_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userAvatar_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SIGN_FIELD_NUMBER = 4;
+    private volatile java.lang.Object sign_;
+    /**
+     * <code>optional string sign = 4;</code>
+     *
+     * <pre>
+     * 用户签名
+     * </pre>
+     */
+    public java.lang.String getSign() {
+      java.lang.Object ref = sign_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sign_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sign = 4;</code>
+     *
+     * <pre>
+     * 用户签名
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getSignBytes() {
+      java.lang.Object ref = sign_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sign_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IMAGES_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList images_;
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getImagesList() {
+      return images_;
+    }
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    public int getImagesCount() {
+      return images_.size();
+    }
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    public java.lang.String getImages(int index) {
+      return images_.get(index);
+    }
+    /**
+     * <code>repeated string images = 5;</code>
+     *
+     * <pre>
+     * 图片数组，一般需要三个，但有可能少于3个
+     * </pre>
+     */
+    public com.google.protobuf.ByteString
+        getImagesBytes(int index) {
+      return images_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (userId_ != 0) {
+        output.writeInt32(1, userId_);
+      }
+      if (!getUserNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, userName_);
+      }
+      if (!getUserAvatarBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, userAvatar_);
+      }
+      if (!getSignBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, sign_);
+      }
+      for (int i = 0; i < images_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 5, images_.getRaw(i));
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (userId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, userId_);
+      }
+      if (!getUserNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, userName_);
+      }
+      if (!getUserAvatarBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, userAvatar_);
+      }
+      if (!getSignBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, sign_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < images_.size(); i++) {
+          dataSize += computeStringSizeNoTag(images_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getImagesList().size();
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.Common.SearchedUser parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.Common.SearchedUser prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.SearchedUser}
+     *
+     * <pre>
+     * 搜索得到的用户简要信息
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.SearchedUser)
+        com.xiang.proto.Common.SearchedUserOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_SearchedUser_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_SearchedUser_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.Common.SearchedUser.class, com.xiang.proto.Common.SearchedUser.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.Common.SearchedUser.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        userId_ = 0;
+
+        userName_ = "";
+
+        userAvatar_ = "";
+
+        sign_ = "";
+
+        images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.Common.internal_static_com_xiang_proto_SearchedUser_descriptor;
+      }
+
+      public com.xiang.proto.Common.SearchedUser getDefaultInstanceForType() {
+        return com.xiang.proto.Common.SearchedUser.getDefaultInstance();
+      }
+
+      public com.xiang.proto.Common.SearchedUser build() {
+        com.xiang.proto.Common.SearchedUser result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.Common.SearchedUser buildPartial() {
+        com.xiang.proto.Common.SearchedUser result = new com.xiang.proto.Common.SearchedUser(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.userId_ = userId_;
+        result.userName_ = userName_;
+        result.userAvatar_ = userAvatar_;
+        result.sign_ = sign_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          images_ = images_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.images_ = images_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.Common.SearchedUser) {
+          return mergeFrom((com.xiang.proto.Common.SearchedUser)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.Common.SearchedUser other) {
+        if (other == com.xiang.proto.Common.SearchedUser.getDefaultInstance()) return this;
+        if (other.getUserId() != 0) {
+          setUserId(other.getUserId());
+        }
+        if (!other.getUserName().isEmpty()) {
+          userName_ = other.userName_;
+          onChanged();
+        }
+        if (!other.getUserAvatar().isEmpty()) {
+          userAvatar_ = other.userAvatar_;
+          onChanged();
+        }
+        if (!other.getSign().isEmpty()) {
+          sign_ = other.sign_;
+          onChanged();
+        }
+        if (!other.images_.isEmpty()) {
+          if (images_.isEmpty()) {
+            images_ = other.images_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureImagesIsMutable();
+            images_.addAll(other.images_);
+          }
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.Common.SearchedUser parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.Common.SearchedUser) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int userId_ ;
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public Builder setUserId(int value) {
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 userId = 1;</code>
+       *
+       * <pre>
+       * id
+       * </pre>
+       */
+      public Builder clearUserId() {
+        
+        userId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userName_ = "";
+      /**
+       * <code>optional string userName = 2;</code>
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       */
+      public Builder setUserName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       */
+      public Builder clearUserName() {
+        
+        userName_ = getDefaultInstance().getUserName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userName = 2;</code>
+       */
+      public Builder setUserNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userAvatar_ = "";
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       */
+      public java.lang.String getUserAvatar() {
+        java.lang.Object ref = userAvatar_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userAvatar_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUserAvatarBytes() {
+        java.lang.Object ref = userAvatar_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userAvatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       */
+      public Builder setUserAvatar(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userAvatar_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       */
+      public Builder clearUserAvatar() {
+        
+        userAvatar_ = getDefaultInstance().getUserAvatar();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string userAvatar = 3;</code>
+       */
+      public Builder setUserAvatarBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userAvatar_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sign_ = "";
+      /**
+       * <code>optional string sign = 4;</code>
+       *
+       * <pre>
+       * 用户签名
+       * </pre>
+       */
+      public java.lang.String getSign() {
+        java.lang.Object ref = sign_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sign_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       *
+       * <pre>
+       * 用户签名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignBytes() {
+        java.lang.Object ref = sign_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sign_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       *
+       * <pre>
+       * 用户签名
+       * </pre>
+       */
+      public Builder setSign(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sign_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       *
+       * <pre>
+       * 用户签名
+       * </pre>
+       */
+      public Builder clearSign() {
+        
+        sign_ = getDefaultInstance().getSign();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sign = 4;</code>
+       *
+       * <pre>
+       * 用户签名
+       * </pre>
+       */
+      public Builder setSignBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sign_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureImagesIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          images_ = new com.google.protobuf.LazyStringArrayList(images_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getImagesList() {
+        return images_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public int getImagesCount() {
+        return images_.size();
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public java.lang.String getImages(int index) {
+        return images_.get(index);
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getImagesBytes(int index) {
+        return images_.getByteString(index);
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public Builder setImages(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureImagesIsMutable();
+        images_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public Builder addImages(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureImagesIsMutable();
+        images_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public Builder addAllImages(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureImagesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, images_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public Builder clearImages() {
+        images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string images = 5;</code>
+       *
+       * <pre>
+       * 图片数组，一般需要三个，但有可能少于3个
+       * </pre>
+       */
+      public Builder addImagesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureImagesIsMutable();
+        images_.add(value);
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.SearchedUser)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.SearchedUser)
+    private static final com.xiang.proto.Common.SearchedUser DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.Common.SearchedUser();
+    }
+
+    public static com.xiang.proto.Common.SearchedUser getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchedUser>
+        PARSER = new com.google.protobuf.AbstractParser<SearchedUser>() {
+      public SearchedUser parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new SearchedUser(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchedUser> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchedUser> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.Common.SearchedUser getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_RequestCommon_descriptor;
   private static
@@ -16236,6 +17330,11 @@ public final class Common {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_DetailUser_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_SearchedUser_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_SearchedUser_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -16294,11 +17393,13 @@ public final class Common {
       "com.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022&\n\006tre" +
       "nds\030\006 \003(\0132\026.com.xiang.proto.Trend\022\022\n\nisF" +
       "ollowed\030\007 \001(\010\022\024\n\014guanzhuCount\030\010 \001(\005\022\022\n\nf" +
-      "ensiCount\030\t \001(\005\022\022\n\ntrendCount\030\n \001(\005*,\n\010C",
-      "ardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020" +
-      "\002*/\n\rEquipmentType\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN" +
-      "_YU_FANG\020\001*\033\n\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001b" +
-      "\006proto3"
+      "ensiCount\030\t \001(\005\022\022\n\ntrendCount\030\n \001(\005\"b\n\014S",
+      "earchedUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030" +
+      "\002 \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\022\014\n\004sign\030\004 \001(\t\022" +
+      "\016\n\006images\030\005 \003(\t*,\n\010CardType\022\010\n\004Once\020\000\022\t\n" +
+      "\005Month\020\001\022\013\n\007Quarter\020\002*/\n\rEquipmentType\022\r" +
+      "\n\tPAO_BU_JI\020\000\022\017\n\013LIN_YU_FANG\020\001*\033\n\003Sex\022\010\n" +
+      "\004MALE\020\000\022\n\n\006FEMALE\020\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16402,6 +17503,12 @@ public final class Common {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_DetailUser_descriptor,
         new java.lang.String[] { "UserId", "UserName", "UserAvatar", "Sex", "Sign", "Trends", "IsFollowed", "GuanzhuCount", "FensiCount", "TrendCount", });
+    internal_static_com_xiang_proto_SearchedUser_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_com_xiang_proto_SearchedUser_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_SearchedUser_descriptor,
+        new java.lang.String[] { "UserId", "UserName", "UserAvatar", "Sign", "Images", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
