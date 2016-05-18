@@ -1887,17 +1887,17 @@ public final class Pilot {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     boolean hasCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommon getCommon();
+    com.xiang.proto.Common.ResponseCommon getCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
 
     /**
      * <code>optional .com.xiang.proto.pilot.Response10001.Data data = 2;</code>
@@ -1951,11 +1951,11 @@ public final class Pilot {
               break;
             }
             case 10: {
-              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
               if (common_ != null) {
                 subBuilder = common_.toBuilder();
               }
-              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(common_);
                 common_ = subBuilder.buildPartial();
@@ -2565,23 +2565,23 @@ public final class Pilot {
     }
 
     public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.RequestCommon common_;
+    private com.xiang.proto.Common.ResponseCommon common_;
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     public boolean hasCommon() {
       return common_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
       return getCommon();
     }
 
@@ -2841,29 +2841,29 @@ public final class Pilot {
         return this;
       }
 
-      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public boolean hasCommon() {
         return commonBuilder_ != null || common_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon getCommon() {
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
         if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         } else {
           return commonBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2877,10 +2877,10 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder setCommon(
-          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
         if (commonBuilder_ == null) {
           common_ = builderForValue.build();
           onChanged();
@@ -2891,13 +2891,13 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (common_ != null) {
             common_ =
-              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
           } else {
             common_ = value;
           }
@@ -2909,7 +2909,7 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder clearCommon() {
         if (commonBuilder_ == null) {
@@ -2923,33 +2923,33 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
         
         onChanged();
         return getCommonFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
         if (commonBuilder_ != null) {
           return commonBuilder_.getMessageOrBuilder();
         } else {
           return common_ == null ?
-              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
           getCommonFieldBuilder() {
         if (commonBuilder_ == null) {
           commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
                   getCommon(),
                   getParentForChildren(),
                   isClean());
@@ -4451,17 +4451,17 @@ public final class Pilot {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     boolean hasCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommon getCommon();
+    com.xiang.proto.Common.ResponseCommon getCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
 
     /**
      * <code>optional .com.xiang.proto.pilot.Response10002.Data data = 2;</code>
@@ -4515,11 +4515,11 @@ public final class Pilot {
               break;
             }
             case 10: {
-              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
               if (common_ != null) {
                 subBuilder = common_.toBuilder();
               }
-              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(common_);
                 common_ = subBuilder.buildPartial();
@@ -5464,23 +5464,23 @@ public final class Pilot {
     }
 
     public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.RequestCommon common_;
+    private com.xiang.proto.Common.ResponseCommon common_;
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     public boolean hasCommon() {
       return common_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
       return getCommon();
     }
 
@@ -5740,29 +5740,29 @@ public final class Pilot {
         return this;
       }
 
-      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public boolean hasCommon() {
         return commonBuilder_ != null || common_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon getCommon() {
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
         if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         } else {
           return commonBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5776,10 +5776,10 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder setCommon(
-          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
         if (commonBuilder_ == null) {
           common_ = builderForValue.build();
           onChanged();
@@ -5790,13 +5790,13 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (common_ != null) {
             common_ =
-              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
           } else {
             common_ = value;
           }
@@ -5808,7 +5808,7 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder clearCommon() {
         if (commonBuilder_ == null) {
@@ -5822,33 +5822,33 @@ public final class Pilot {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
         
         onChanged();
         return getCommonFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
         if (commonBuilder_ != null) {
           return commonBuilder_.getMessageOrBuilder();
         } else {
           return common_ == null ?
-              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
           getCommonFieldBuilder() {
         if (commonBuilder_ == null) {
           commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
                   getCommon(),
                   getParentForChildren(),
                   isClean());
@@ -6087,21 +6087,21 @@ public final class Pilot {
       "est10001.Params\032\205\001\n\006Params\022\r\n\005phone\030\001 \001(" +
       "\t\022\020\n\010username\030\002 \001(\t\022\021\n\tavatarKey\030\003 \001(\t\022\022" +
       "\n\nbucketName\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022!\n\003" +
-      "sex\030\006 \001(\0162\024.com.xiang.proto.Sex\"\241\001\n\rResp" +
-      "onse10001\022.\n\006common\030\001 \001(\0132\036.com.xiang.pr" +
-      "oto.RequestCommon\0227\n\004data\030\002 \001(\0132).com.xi",
-      "ang.proto.pilot.Response10001.Data\032\'\n\004Da" +
-      "ta\022\016\n\006userId\030\001 \001(\005\022\017\n\007userKey\030\002 \001(\t\"\245\001\n\014" +
-      "Request10002\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
-      ".proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.c" +
-      "om.xiang.proto.pilot.Request10002.Params" +
-      "\032)\n\006Params\022\r\n\005phone\030\001 \001(\t\022\020\n\010password\030\002 " +
-      "\001(\t\"\326\001\n\rResponse10002\022.\n\006common\030\001 \001(\0132\036." +
-      "com.xiang.proto.RequestCommon\0227\n\004data\030\002 " +
-      "\001(\0132).com.xiang.proto.pilot.Response1000" +
-      "2.Data\032\\\n\004Data\022-\n\tbriefUser\030\001 \001(\0132\032.com.",
-      "xiang.proto.BriefUser\022\017\n\007userKey\030\002 \001(\t\022\024" +
-      "\n\014rongyunToken\030\003 \001(\tb\006proto3"
+      "sex\030\006 \001(\0162\024.com.xiang.proto.Sex\"\242\001\n\rResp" +
+      "onse10001\022/\n\006common\030\001 \001(\0132\037.com.xiang.pr" +
+      "oto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.x",
+      "iang.proto.pilot.Response10001.Data\032\'\n\004D" +
+      "ata\022\016\n\006userId\030\001 \001(\005\022\017\n\007userKey\030\002 \001(\t\"\245\001\n" +
+      "\014Request10002\022.\n\006common\030\001 \001(\0132\036.com.xian" +
+      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
+      "com.xiang.proto.pilot.Request10002.Param" +
+      "s\032)\n\006Params\022\r\n\005phone\030\001 \001(\t\022\020\n\010password\030\002" +
+      " \001(\t\"\327\001\n\rResponse10002\022/\n\006common\030\001 \001(\0132\037" +
+      ".com.xiang.proto.ResponseCommon\0227\n\004data\030" +
+      "\002 \001(\0132).com.xiang.proto.pilot.Response10" +
+      "002.Data\032\\\n\004Data\022-\n\tbriefUser\030\001 \001(\0132\032.co",
+      "m.xiang.proto.BriefUser\022\017\n\007userKey\030\002 \001(\t" +
+      "\022\024\n\014rongyunToken\030\003 \001(\tb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

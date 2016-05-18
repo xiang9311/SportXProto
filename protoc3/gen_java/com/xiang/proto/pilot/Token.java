@@ -14,14 +14,26 @@ public final class Token {
 
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     boolean hasCommon();
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     com.xiang.proto.Common.RequestCommon getCommon();
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
 
@@ -450,18 +462,30 @@ public final class Token {
     private com.xiang.proto.Common.RequestCommon common_;
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     public boolean hasCommon() {
       return common_ != null;
     }
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     public com.xiang.proto.Common.RequestCommon getCommon() {
       return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
     }
     /**
      * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     *
+     * <pre>
+     * 不需要检查userkey，因为用户未注册是也需要token上传头像
+     * </pre>
      */
     public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
       return getCommon();
@@ -733,12 +757,20 @@ public final class Token {
           com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public boolean hasCommon() {
         return commonBuilder_ != null || common_ != null;
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public com.xiang.proto.Common.RequestCommon getCommon() {
         if (commonBuilder_ == null) {
@@ -749,6 +781,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
         if (commonBuilder_ == null) {
@@ -765,6 +801,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public Builder setCommon(
           com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
@@ -779,6 +819,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
         if (commonBuilder_ == null) {
@@ -797,6 +841,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public Builder clearCommon() {
         if (commonBuilder_ == null) {
@@ -811,6 +859,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
         
@@ -819,6 +871,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
         if (commonBuilder_ != null) {
@@ -830,6 +886,10 @@ public final class Token {
       }
       /**
        * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       *
+       * <pre>
+       * 不需要检查userkey，因为用户未注册是也需要token上传头像
+       * </pre>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
@@ -1024,17 +1084,17 @@ public final class Token {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     boolean hasCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommon getCommon();
+    com.xiang.proto.Common.ResponseCommon getCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
 
     /**
      * <code>optional .com.xiang.proto.pilot.Response11001.Data data = 2;</code>
@@ -1088,11 +1148,11 @@ public final class Token {
               break;
             }
             case 10: {
-              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
               if (common_ != null) {
                 subBuilder = common_.toBuilder();
               }
-              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(common_);
                 common_ = subBuilder.buildPartial();
@@ -1587,23 +1647,23 @@ public final class Token {
     }
 
     public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.RequestCommon common_;
+    private com.xiang.proto.Common.ResponseCommon common_;
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     public boolean hasCommon() {
       return common_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
       return getCommon();
     }
 
@@ -1863,29 +1923,29 @@ public final class Token {
         return this;
       }
 
-      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public boolean hasCommon() {
         return commonBuilder_ != null || common_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon getCommon() {
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
         if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         } else {
           return commonBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1899,10 +1959,10 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder setCommon(
-          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
         if (commonBuilder_ == null) {
           common_ = builderForValue.build();
           onChanged();
@@ -1913,13 +1973,13 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (common_ != null) {
             common_ =
-              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
           } else {
             common_ = value;
           }
@@ -1931,7 +1991,7 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder clearCommon() {
         if (commonBuilder_ == null) {
@@ -1945,33 +2005,33 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
         
         onChanged();
         return getCommonFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
         if (commonBuilder_ != null) {
           return commonBuilder_.getMessageOrBuilder();
         } else {
           return common_ == null ?
-              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
           getCommonFieldBuilder() {
         if (commonBuilder_ == null) {
           commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
                   getCommon(),
                   getParentForChildren(),
                   isClean());
@@ -3250,17 +3310,17 @@ public final class Token {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     boolean hasCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommon getCommon();
+    com.xiang.proto.Common.ResponseCommon getCommon();
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
 
     /**
      * <code>optional .com.xiang.proto.pilot.Response11002.Data data = 2;</code>
@@ -3314,11 +3374,11 @@ public final class Token {
               break;
             }
             case 10: {
-              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
               if (common_ != null) {
                 subBuilder = common_.toBuilder();
               }
-              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(common_);
                 common_ = subBuilder.buildPartial();
@@ -3813,23 +3873,23 @@ public final class Token {
     }
 
     public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.RequestCommon common_;
+    private com.xiang.proto.Common.ResponseCommon common_;
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
     public boolean hasCommon() {
       return common_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
     }
     /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
      */
-    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
       return getCommon();
     }
 
@@ -4089,29 +4149,29 @@ public final class Token {
         return this;
       }
 
-      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public boolean hasCommon() {
         return commonBuilder_ != null || common_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon getCommon() {
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
         if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         } else {
           return commonBuilder_.getMessage();
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4125,10 +4185,10 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder setCommon(
-          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
         if (commonBuilder_ == null) {
           common_ = builderForValue.build();
           onChanged();
@@ -4139,13 +4199,13 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
         if (commonBuilder_ == null) {
           if (common_ != null) {
             common_ =
-              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
           } else {
             common_ = value;
           }
@@ -4157,7 +4217,7 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       public Builder clearCommon() {
         if (commonBuilder_ == null) {
@@ -4171,33 +4231,33 @@ public final class Token {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
         
         onChanged();
         return getCommonFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
-      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
         if (commonBuilder_ != null) {
           return commonBuilder_.getMessageOrBuilder();
         } else {
           return common_ == null ?
-              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
         }
       }
       /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
           getCommonFieldBuilder() {
         if (commonBuilder_ == null) {
           commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
                   getCommon(),
                   getParentForChildren(),
                   isClean());
@@ -4433,19 +4493,19 @@ public final class Token {
       "mmon.proto\"\204\001\n\014Request11001\022.\n\006common\030\001 " +
       "\001(\0132\036.com.xiang.proto.RequestCommon\022:\n\006p" +
       "arams\030\002 \001(\0132*.com.xiang.proto.pilot.Requ" +
-      "est11001.Params\032\010\n\006Params\"\224\001\n\rResponse11" +
-      "001\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Re" +
-      "questCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
-      "oto.pilot.Response11001.Data\032\032\n\004Data\022\022\n\n" +
-      "qiniuToken\030\001 \001(\t\"\237\001\n\014Request11002\022.\n\006com" +
-      "mon\030\001 \001(\0132\036.com.xiang.proto.RequestCommo",
-      "n\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilo" +
-      "t.Request11002.Params\032#\n\006Params\022\031\n\021oldTo" +
-      "kenCannotUse\030\001 \001(\010\"\226\001\n\rResponse11002\022.\n\006" +
-      "common\030\001 \001(\0132\036.com.xiang.proto.RequestCo" +
-      "mmon\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pil" +
-      "ot.Response11002.Data\032\034\n\004Data\022\024\n\014rongyun" +
-      "Token\030\001 \001(\tb\006proto3"
+      "est11001.Params\032\010\n\006Params\"\225\001\n\rResponse11" +
+      "001\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
+      "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p" +
+      "roto.pilot.Response11001.Data\032\032\n\004Data\022\022\n" +
+      "\nqiniuToken\030\001 \001(\t\"\237\001\n\014Request11002\022.\n\006co" +
+      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm",
+      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pil" +
+      "ot.Request11002.Params\032#\n\006Params\022\031\n\021oldT" +
+      "okenCannotUse\030\001 \001(\010\"\227\001\n\rResponse11002\022/\n" +
+      "\006common\030\001 \001(\0132\037.com.xiang.proto.Response" +
+      "Common\0227\n\004data\030\002 \001(\0132).com.xiang.proto.p" +
+      "ilot.Response11002.Data\032\034\n\004Data\022\024\n\014rongy" +
+      "unToken\030\001 \001(\tb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

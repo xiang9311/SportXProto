@@ -245,7 +245,7 @@ void SetRequest10001_Params_Sex_RawValue(Request10001_Params *message, int32_t v
 
 typedef struct Response10001__storage_ {
   uint32_t _has_storage_[1];
-  RequestCommon *common;
+  ResponseCommon *common;
   Response10001_Data *data_p;
 } Response10001__storage_;
 
@@ -263,7 +263,7 @@ typedef struct Response10001__storage_ {
         .dataType = GPBDataTypeMessage,
         .offset = offsetof(Response10001__storage_, common),
         .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .fieldOptions = NULL,
       },
       {
@@ -507,7 +507,7 @@ typedef struct Request10002_Params__storage_ {
 
 typedef struct Response10002__storage_ {
   uint32_t _has_storage_[1];
-  RequestCommon *common;
+  ResponseCommon *common;
   Response10002_Data *data_p;
 } Response10002__storage_;
 
@@ -525,7 +525,7 @@ typedef struct Response10002__storage_ {
         .dataType = GPBDataTypeMessage,
         .offset = offsetof(Response10002__storage_, common),
         .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .fieldOptions = NULL,
       },
       {

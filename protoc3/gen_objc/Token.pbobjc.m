@@ -147,7 +147,7 @@ typedef struct Request11001_Params__storage_ {
 
 typedef struct Response11001__storage_ {
   uint32_t _has_storage_[1];
-  RequestCommon *common;
+  ResponseCommon *common;
   Response11001_Data *data_p;
 } Response11001__storage_;
 
@@ -165,7 +165,7 @@ typedef struct Response11001__storage_ {
         .dataType = GPBDataTypeMessage,
         .offset = offsetof(Response11001__storage_, common),
         .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .fieldOptions = NULL,
       },
       {
@@ -389,7 +389,7 @@ typedef struct Request11002_Params__storage_ {
 
 typedef struct Response11002__storage_ {
   uint32_t _has_storage_[1];
-  RequestCommon *common;
+  ResponseCommon *common;
   Response11002_Data *data_p;
 } Response11002__storage_;
 
@@ -407,7 +407,7 @@ typedef struct Response11002__storage_ {
         .dataType = GPBDataTypeMessage,
         .offset = offsetof(Response11002__storage_, common),
         .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .fieldOptions = NULL,
       },
       {

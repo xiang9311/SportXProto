@@ -22,7 +22,7 @@ message Request10001 {
 }
 
 message Response10001 {
-	RequestCommon common = 1;
+	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
 		int32 userId = 1;                            // 返回的用户id
@@ -42,7 +42,7 @@ message Request10002 {
 }
 
 message Response10002 {
-	RequestCommon common = 1;
+	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
 		BriefUser briefUser = 1;                     // 返回用户简要信息

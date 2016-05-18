@@ -17,6 +17,7 @@ CF_EXTERN_C_BEGIN
 @class RequestCommon;
 @class Response10001_Data;
 @class Response10002_Data;
+@class ResponseCommon;
 GPB_ENUM_FWD_DECLARE(Sex);
 
 NS_ASSUME_NONNULL_BEGIN
@@ -94,7 +95,7 @@ typedef GPB_ENUM(Response10001_FieldNumber) {
 @interface Response10001 : GPBMessage
 
 @property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
 
 @property(nonatomic, readwrite) BOOL hasData_p;
 @property(nonatomic, readwrite, strong, null_resettable) Response10001_Data *data_p;
@@ -163,7 +164,7 @@ typedef GPB_ENUM(Response10002_FieldNumber) {
 @interface Response10002 : GPBMessage
 
 @property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
 
 @property(nonatomic, readwrite) BOOL hasData_p;
 @property(nonatomic, readwrite, strong, null_resettable) Response10002_Data *data_p;

@@ -382,7 +382,7 @@ public final class Common {
      * <code>optional string version = 5;</code>
      *
      * <pre>
-     * 版本, 1.0.0a
+     * 版本, 1.0.0
      * </pre>
      */
     java.lang.String getVersion();
@@ -390,7 +390,7 @@ public final class Common {
      * <code>optional string version = 5;</code>
      *
      * <pre>
-     * 版本, 1.0.0a
+     * 版本, 1.0.0
      * </pre>
      */
     com.google.protobuf.ByteString
@@ -576,7 +576,7 @@ public final class Common {
      * <code>optional string version = 5;</code>
      *
      * <pre>
-     * 版本, 1.0.0a
+     * 版本, 1.0.0
      * </pre>
      */
     public java.lang.String getVersion() {
@@ -595,7 +595,7 @@ public final class Common {
      * <code>optional string version = 5;</code>
      *
      * <pre>
-     * 版本, 1.0.0a
+     * 版本, 1.0.0
      * </pre>
      */
     public com.google.protobuf.ByteString
@@ -1052,7 +1052,7 @@ public final class Common {
        * <code>optional string version = 5;</code>
        *
        * <pre>
-       * 版本, 1.0.0a
+       * 版本, 1.0.0
        * </pre>
        */
       public java.lang.String getVersion() {
@@ -1071,7 +1071,7 @@ public final class Common {
        * <code>optional string version = 5;</code>
        *
        * <pre>
-       * 版本, 1.0.0a
+       * 版本, 1.0.0
        * </pre>
        */
       public com.google.protobuf.ByteString
@@ -1091,7 +1091,7 @@ public final class Common {
        * <code>optional string version = 5;</code>
        *
        * <pre>
-       * 版本, 1.0.0a
+       * 版本, 1.0.0
        * </pre>
        */
       public Builder setVersion(
@@ -1108,7 +1108,7 @@ public final class Common {
        * <code>optional string version = 5;</code>
        *
        * <pre>
-       * 版本, 1.0.0a
+       * 版本, 1.0.0
        * </pre>
        */
       public Builder clearVersion() {
@@ -1121,7 +1121,7 @@ public final class Common {
        * <code>optional string version = 5;</code>
        *
        * <pre>
-       * 版本, 1.0.0a
+       * 版本, 1.0.0
        * </pre>
        */
       public Builder setVersionBytes(

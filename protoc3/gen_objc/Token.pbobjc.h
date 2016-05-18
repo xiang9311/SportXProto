@@ -16,6 +16,7 @@ CF_EXTERN_C_BEGIN
 @class RequestCommon;
 @class Response11001_Data;
 @class Response11002_Data;
+@class ResponseCommon;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,6 +42,7 @@ typedef GPB_ENUM(Request11001_FieldNumber) {
 // /token/getQiniuToken
 @interface Request11001 : GPBMessage
 
+// 不需要检查userkey，因为用户未注册是也需要token上传头像
 @property(nonatomic, readwrite) BOOL hasCommon;
 @property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
 
@@ -65,7 +67,7 @@ typedef GPB_ENUM(Response11001_FieldNumber) {
 @interface Response11001 : GPBMessage
 
 @property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
 
 @property(nonatomic, readwrite) BOOL hasData_p;
 @property(nonatomic, readwrite, strong, null_resettable) Response11001_Data *data_p;
@@ -126,7 +128,7 @@ typedef GPB_ENUM(Response11002_FieldNumber) {
 @interface Response11002 : GPBMessage
 
 @property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
 
 @property(nonatomic, readwrite) BOOL hasData_p;
 @property(nonatomic, readwrite, strong, null_resettable) Response11002_Data *data_p;

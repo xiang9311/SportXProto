@@ -391,8 +391,8 @@ public interface Pilot {
       return _emptyArray;
     }
 
-    // optional .com.xiang.proto.RequestCommon common = 1;
-    public com.xiang.proto.nano.Common.RequestCommon common;
+    // optional .com.xiang.proto.ResponseCommon common = 1;
+    public com.xiang.proto.nano.Common.ResponseCommon common;
 
     // optional .com.xiang.proto.pilot.Response10001.Data data = 2;
     public com.xiang.proto.pilot.nano.Pilot.Response10001.Data data;
@@ -451,7 +451,7 @@ public interface Pilot {
           }
           case 10: {
             if (this.common == null) {
-              this.common = new com.xiang.proto.nano.Common.RequestCommon();
+              this.common = new com.xiang.proto.nano.Common.ResponseCommon();
             }
             input.readMessage(this.common);
             break;
@@ -817,8 +817,8 @@ public interface Pilot {
       return _emptyArray;
     }
 
-    // optional .com.xiang.proto.RequestCommon common = 1;
-    public com.xiang.proto.nano.Common.RequestCommon common;
+    // optional .com.xiang.proto.ResponseCommon common = 1;
+    public com.xiang.proto.nano.Common.ResponseCommon common;
 
     // optional .com.xiang.proto.pilot.Response10002.Data data = 2;
     public com.xiang.proto.pilot.nano.Pilot.Response10002.Data data;
@@ -877,7 +877,7 @@ public interface Pilot {
           }
           case 10: {
             if (this.common == null) {
-              this.common = new com.xiang.proto.nano.Common.RequestCommon();
+              this.common = new com.xiang.proto.nano.Common.ResponseCommon();
             }
             input.readMessage(this.common);
             break;

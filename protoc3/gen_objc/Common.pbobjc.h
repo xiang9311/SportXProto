@@ -116,7 +116,7 @@ typedef GPB_ENUM(RequestCommon_FieldNumber) {
 
 @property(nonatomic, readwrite) int64_t timestamp;
 
-// 版本, 1.0.0a
+// 版本, 1.0.0
 @property(nonatomic, readwrite, copy, null_resettable) NSString *version;
 
 // 1-Android, 2-iOS

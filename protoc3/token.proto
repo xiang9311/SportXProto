@@ -9,7 +9,7 @@ import "common.proto";
 // 获取七牛token
 // /token/getQiniuToken
 message Request11001 {
-	RequestCommon common = 1;
+	RequestCommon common = 1;                 // 不需要检查userkey，因为用户未注册是也需要token上传头像
 	Params params = 2;
 	message Params {
 
@@ -17,7 +17,7 @@ message Request11001 {
 }
 
 message Response11001 {
-	RequestCommon common = 1;
+	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
 		string qiniuToken = 1;
@@ -35,7 +35,7 @@ message Request11002 {
 }
 
 message Response11002 {
-	RequestCommon common = 1;
+	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
 		string rongyunToken = 1;

@@ -10,7 +10,7 @@ message RequestCommon {
   string userkey = 2;
   int32 cmdid = 3;
   int64 timestamp = 4;
-  string version = 5;// 版本, 1.0.0a
+  string version = 5;// 版本, 1.0.0
   int32 platform = 6;// 1-Android, 2-iOS
 }
 
