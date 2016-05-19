@@ -1,0 +1,84 @@
+syntax = "proto3";
+package com.xiang.proto.gym;
+import "common.proto";
+
+//服务器根目录 http://www.sportx-park.com/
+
+// 获取附近健身房列表
+// /gym/getGymList
+message Request13001 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		float longitude = 1;
+		float latitude = 2;
+		int32 pageIndex = 3;                            // 从第0页开始
+	}
+}
+
+message Response13001 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		repeated BriefGym briefGyms = 1;
+	}
+}
+
+// 获取健身房详情
+// /gym/getGymDetail
+message Request13002 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 gymId = 1;
+	}
+}
+
+message Response13002 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		DetailGym detailGym = 1;
+		repeated BriefUser briefUsers = 2;                        // 健身房附近的人列表
+	}
+}
+
+// 获取（首页推荐）健身房详情
+// /gym/getRecommendGym
+message Request13003 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		float longitude = 1;
+		float latitude = 2;
+	}
+}
+
+message Response13003 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		DetailGym detailGym = 1;
+		repeated BriefUser briefUsers = 2;                        // 附近的人列表
+	}
+}
+
+// 获取健身房内trend
+// /gym/getRecommendGym
+message Request13004 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 gymId = 1;
+		int32 pageIndex = 2;
+	}
+}
+
+message Response13004 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		repeated Trend trends = 1;
+		int32 maxCountPerPage = 2;
+	}
+}

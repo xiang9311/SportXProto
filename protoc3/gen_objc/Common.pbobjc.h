@@ -272,6 +272,7 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
   BriefGym_FieldNumber_Longitude = 6,
   BriefGym_FieldNumber_IsCoop = 7,
   BriefGym_FieldNumber_GymAvatar = 8,
+  BriefGym_FieldNumber_EquipmentsArray = 9,
 };
 
 // BriefGym 场馆
@@ -303,13 +304,17 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 // 是否合作（可以在线购买健身卡）
 @property(nonatomic, readwrite) BOOL isCoop;
 
+// 设备信息
+// |equipmentsArray| contains |Equipment|
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *equipmentsArray;
+@property(nonatomic, readonly) NSUInteger equipmentsArray_Count;
+
 @end
 
 #pragma mark - DetailGym
 
 typedef GPB_ENUM(DetailGym_FieldNumber) {
   DetailGym_FieldNumber_BriefGym = 1,
-  DetailGym_FieldNumber_EquipmentsArray = 2,
   DetailGym_FieldNumber_CoursesArray = 3,
   DetailGym_FieldNumber_GymCardsArray = 4,
 };
@@ -320,11 +325,6 @@ typedef GPB_ENUM(DetailGym_FieldNumber) {
 // 场馆简要信息
 @property(nonatomic, readwrite) BOOL hasBriefGym;
 @property(nonatomic, readwrite, strong, null_resettable) BriefGym *briefGym;
-
-// 器材部分
-// |equipmentsArray| contains |Equipment|
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *equipmentsArray;
-@property(nonatomic, readonly) NSUInteger equipmentsArray_Count;
 
 // 课程
 // |coursesArray| contains |Course|
@@ -532,6 +532,7 @@ typedef GPB_ENUM(DetailUser_FieldNumber) {
   DetailUser_FieldNumber_GuanzhuCount = 8,
   DetailUser_FieldNumber_FensiCount = 9,
   DetailUser_FieldNumber_TrendCount = 10,
+  DetailUser_FieldNumber_TrendMaxCountPerPage = 11,
 };
 
 // 一般用作看到的别人的详情
@@ -568,6 +569,9 @@ typedef GPB_ENUM(DetailUser_FieldNumber) {
 
 // 动态的数量
 @property(nonatomic, readwrite) int32_t trendCount;
+
+// 判断能否加载更多（加载更多请调用10005）
+@property(nonatomic, readwrite) int32_t trendMaxCountPerPage;
 
 @end
 

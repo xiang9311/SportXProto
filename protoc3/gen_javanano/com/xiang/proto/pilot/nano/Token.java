@@ -190,12 +190,16 @@ public interface Token {
       // optional string qiniuToken = 1;
       public java.lang.String qiniuToken;
 
+      // optional string bucketName = 2;
+      public java.lang.String bucketName;
+
       public Data() {
         clear();
       }
 
       public Data clear() {
         qiniuToken = "";
+        bucketName = "";
         cachedSize = -1;
         return this;
       }
@@ -206,6 +210,9 @@ public interface Token {
         if (!this.qiniuToken.equals("")) {
           output.writeString(1, this.qiniuToken);
         }
+        if (!this.bucketName.equals("")) {
+          output.writeString(2, this.bucketName);
+        }
         super.writeTo(output);
       }
 
@@ -215,6 +222,10 @@ public interface Token {
         if (!this.qiniuToken.equals("")) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
               .computeStringSize(1, this.qiniuToken);
+        }
+        if (!this.bucketName.equals("")) {
+          size += com.google.protobuf.nano.CodedOutputByteBufferNano
+              .computeStringSize(2, this.bucketName);
         }
         return size;
       }
@@ -236,6 +247,10 @@ public interface Token {
             }
             case 10: {
               this.qiniuToken = input.readString();
+              break;
+            }
+            case 18: {
+              this.bucketName = input.readString();
               break;
             }
           }

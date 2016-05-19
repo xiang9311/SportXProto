@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+package com.xiang.proto.trend;
+
+import "common.proto";
+
+//服务器根目录 http://www.sportx-park.com/
+
+// 发布trend
+// /trend/createTrend
+message Request12001 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		string content = 1;                            // 文本内容
+		repeated string imageKey = 2;                  // 图片的七牛key
+		string bucketName = 3;                         // 图片上传的bucket
+		int32 gymId = 4;                               // 所选择的场馆的id
+	}
+}
+
+message Response12001 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+	}
+}
+
+// 获取我关注的人的trend
+// /trend/getMyFollowTrends
+message Request12002 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 pageIndex = 1;
+	}
+}
+
+message Response12002 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		repeated Trend trends = 1;
+		int32 maxCountPerPage = 2;                        // 用于分页。判断能否加载更多
+	}
+}
+
+// 通过id获取trend详情
+// /trend/getTrendById
+message Request12003 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+	}
+}
+
+message Response12003 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		Trend trends = 1;
+	}
+}
+
+// 获取trend的评论列表
+// /trend/getTrendComment
+message Request12004 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+		int32 pageIndex = 2;
+	}
+}
+
+message Response12004 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		repeated Comment comments = 1;
+		int32 maxCountPerPage = 2;                        // 用于分页
+	}
+}
+
+// 给trend点赞或者取消点赞
+// /trend/likeTrend
+message Request12005 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+		bool likeTrend = 2;                              // true:点赞 false：取消点赞
+	}
+}
+
+message Response12005 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+	}
+}
+
+// 评论trend
+// /trend/commentTrend
+message Request12006 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+		int32 toCommentId = 2;                      // 如果回复别人的评论，需要加上这个
+		int32 toUserId = 3;                         // 如果回复别人的评论，需要加上这个
+		string content = 4;
+		int32 gymId = 5;
+	}
+}
+
+message Response12006 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+	}
+}
+
+// 删除自己的评论
+// /trend/deleteComment
+message Request12007 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+		int32 commentId = 2;
+	}
+}
+
+message Response12007 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+	}
+}
+
+// 删除我的trend
+// /trend/deleteTrend
+message Request12008 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 trendId = 1;
+	}
+}
+
+message Response12008 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+	}
+}

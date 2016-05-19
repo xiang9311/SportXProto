@@ -75,14 +75,13 @@ message BriefGym {
   float longitude = 6;         // 经度
 
   bool isCoop = 7;             // 是否合作（可以在线购买健身卡）
+
+  repeated Equipment equipments = 9;    // 设备信息
 }
 
 // DetailGym 场馆详情
 message DetailGym{
 	BriefGym briefGym = 1;     // 场馆简要信息
-
-	// 器材部分
-	repeated Equipment equipments = 2;    // 器材信息
 
 	// 课程
 	repeated Course courses = 3;  // 课程信息
@@ -176,6 +175,8 @@ message DetailUser{
   int32 guanzhuCount = 8;              // 他关注的人的数量
   int32 fensiCount = 9;                // 他的粉丝数量
   int32 trendCount = 10;               // 动态的数量
+
+  int32 trendMaxCountPerPage = 11;     // 判断能否加载更多（加载更多请调用10005）
 }
 
 // 搜索得到的用户简要信息

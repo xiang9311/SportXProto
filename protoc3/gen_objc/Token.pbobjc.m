@@ -207,10 +207,12 @@ typedef struct Response11001__storage_ {
 @implementation Response11001_Data
 
 @dynamic qiniuToken;
+@dynamic bucketName;
 
 typedef struct Response11001_Data__storage_ {
   uint32_t _has_storage_[1];
   NSString *qiniuToken;
+  NSString *bucketName;
 } Response11001_Data__storage_;
 
 // This method is threadsafe because it is initially called
@@ -230,11 +232,22 @@ typedef struct Response11001_Data__storage_ {
         .dataTypeSpecific.className = NULL,
         .fieldOptions = NULL,
       },
+      {
+        .name = "bucketName",
+        .number = Response11001_Data_FieldNumber_BucketName,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+        .offset = offsetof(Response11001_Data__storage_, bucketName),
+        .defaultValue.valueString = nil,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
     };
 #if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     const char *extraTextFormatInfo = NULL;
 #else
-    static const char *extraTextFormatInfo = "\001\001\n\000";
+    static const char *extraTextFormatInfo = "\002\001\n\000\002\n\000";
 #endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response11001_Data class]

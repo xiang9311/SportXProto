@@ -78,11 +78,14 @@ typedef GPB_ENUM(Response11001_FieldNumber) {
 
 typedef GPB_ENUM(Response11001_Data_FieldNumber) {
   Response11001_Data_FieldNumber_QiniuToken = 1,
+  Response11001_Data_FieldNumber_BucketName = 2,
 };
 
 @interface Response11001_Data : GPBMessage
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *qiniuToken;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *bucketName;
 
 @end
 

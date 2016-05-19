@@ -1210,6 +1210,16 @@ public final class Token {
        */
       com.google.protobuf.ByteString
           getQiniuTokenBytes();
+
+      /**
+       * <code>optional string bucketName = 2;</code>
+       */
+      java.lang.String getBucketName();
+      /**
+       * <code>optional string bucketName = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getBucketNameBytes();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Response11001.Data}
@@ -1224,6 +1234,7 @@ public final class Token {
       }
       private Data() {
         qiniuToken_ = "";
+        bucketName_ = "";
       }
 
       @java.lang.Override
@@ -1254,6 +1265,12 @@ public final class Token {
                 String s = input.readStringRequireUtf8();
 
                 qiniuToken_ = s;
+                break;
+              }
+              case 18: {
+                String s = input.readStringRequireUtf8();
+
+                bucketName_ = s;
                 break;
               }
             }
@@ -1314,6 +1331,40 @@ public final class Token {
         }
       }
 
+      public static final int BUCKETNAME_FIELD_NUMBER = 2;
+      private volatile java.lang.Object bucketName_;
+      /**
+       * <code>optional string bucketName = 2;</code>
+       */
+      public java.lang.String getBucketName() {
+        java.lang.Object ref = bucketName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucketName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>optional string bucketName = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBucketNameBytes() {
+        java.lang.Object ref = bucketName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucketName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -1329,6 +1380,9 @@ public final class Token {
         if (!getQiniuTokenBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessage.writeString(output, 1, qiniuToken_);
         }
+        if (!getBucketNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 2, bucketName_);
+        }
       }
 
       public int getSerializedSize() {
@@ -1338,6 +1392,9 @@ public final class Token {
         size = 0;
         if (!getQiniuTokenBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessage.computeStringSize(1, qiniuToken_);
+        }
+        if (!getBucketNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, bucketName_);
         }
         memoizedSize = size;
         return size;
@@ -1452,6 +1509,8 @@ public final class Token {
           super.clear();
           qiniuToken_ = "";
 
+          bucketName_ = "";
+
           return this;
         }
 
@@ -1475,6 +1534,7 @@ public final class Token {
         public com.xiang.proto.pilot.Token.Response11001.Data buildPartial() {
           com.xiang.proto.pilot.Token.Response11001.Data result = new com.xiang.proto.pilot.Token.Response11001.Data(this);
           result.qiniuToken_ = qiniuToken_;
+          result.bucketName_ = bucketName_;
           onBuilt();
           return result;
         }
@@ -1492,6 +1552,10 @@ public final class Token {
           if (other == com.xiang.proto.pilot.Token.Response11001.Data.getDefaultInstance()) return this;
           if (!other.getQiniuToken().isEmpty()) {
             qiniuToken_ = other.qiniuToken_;
+            onChanged();
+          }
+          if (!other.getBucketName().isEmpty()) {
+            bucketName_ = other.bucketName_;
             onChanged();
           }
           onChanged();
@@ -1585,6 +1649,75 @@ public final class Token {
   checkByteStringIsUtf8(value);
           
           qiniuToken_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object bucketName_ = "";
+        /**
+         * <code>optional string bucketName = 2;</code>
+         */
+        public java.lang.String getBucketName() {
+          java.lang.Object ref = bucketName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            bucketName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string bucketName = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getBucketNameBytes() {
+          java.lang.Object ref = bucketName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            bucketName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string bucketName = 2;</code>
+         */
+        public Builder setBucketName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          bucketName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string bucketName = 2;</code>
+         */
+        public Builder clearBucketName() {
+          
+          bucketName_ = getDefaultInstance().getBucketName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string bucketName = 2;</code>
+         */
+        public Builder setBucketNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          bucketName_ = value;
           onChanged();
           return this;
         }
@@ -4493,19 +4626,20 @@ public final class Token {
       "mmon.proto\"\204\001\n\014Request11001\022.\n\006common\030\001 " +
       "\001(\0132\036.com.xiang.proto.RequestCommon\022:\n\006p" +
       "arams\030\002 \001(\0132*.com.xiang.proto.pilot.Requ" +
-      "est11001.Params\032\010\n\006Params\"\225\001\n\rResponse11" +
+      "est11001.Params\032\010\n\006Params\"\251\001\n\rResponse11" +
       "001\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
       "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p" +
-      "roto.pilot.Response11001.Data\032\032\n\004Data\022\022\n" +
-      "\nqiniuToken\030\001 \001(\t\"\237\001\n\014Request11002\022.\n\006co" +
-      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm",
-      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pil" +
-      "ot.Request11002.Params\032#\n\006Params\022\031\n\021oldT" +
-      "okenCannotUse\030\001 \001(\010\"\227\001\n\rResponse11002\022/\n" +
-      "\006common\030\001 \001(\0132\037.com.xiang.proto.Response" +
-      "Common\0227\n\004data\030\002 \001(\0132).com.xiang.proto.p" +
-      "ilot.Response11002.Data\032\034\n\004Data\022\024\n\014rongy" +
-      "unToken\030\001 \001(\tb\006proto3"
+      "roto.pilot.Response11001.Data\032.\n\004Data\022\022\n" +
+      "\nqiniuToken\030\001 \001(\t\022\022\n\nbucketName\030\002 \001(\t\"\237\001" +
+      "\n\014Request11002\022.\n\006common\030\001 \001(\0132\036.com.xia",
+      "ng.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*" +
+      ".com.xiang.proto.pilot.Request11002.Para" +
+      "ms\032#\n\006Params\022\031\n\021oldTokenCannotUse\030\001 \001(\010\"" +
+      "\227\001\n\rResponse11002\022/\n\006common\030\001 \001(\0132\037.com." +
+      "xiang.proto.ResponseCommon\0227\n\004data\030\002 \001(\013" +
+      "2).com.xiang.proto.pilot.Response11002.D" +
+      "ata\032\034\n\004Data\022\024\n\014rongyunToken\030\001 \001(\tb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4543,7 +4677,7 @@ public final class Token {
     internal_static_com_xiang_proto_pilot_Response11001_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response11001_Data_descriptor,
-        new java.lang.String[] { "QiniuToken", });
+        new java.lang.String[] { "QiniuToken", "BucketName", });
     internal_static_com_xiang_proto_pilot_Request11002_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_xiang_proto_pilot_Request11002_fieldAccessorTable = new

@@ -21,6 +21,7 @@ message Response11001 {
 	Data data = 2;
 	message Data {
 		string qiniuToken = 1;
+		string bucketName = 2;
 	}
 }
 
