@@ -107,7 +107,7 @@ typedef struct Request12001__storage_ {
 @implementation Request12001_Params
 
 @dynamic content;
-@dynamic imageKeyArray, imageKeyArray_Count;
+@dynamic imageKeysArray, imageKeysArray_Count;
 @dynamic bucketName;
 @dynamic gymId;
 
@@ -115,7 +115,7 @@ typedef struct Request12001_Params__storage_ {
   uint32_t _has_storage_[1];
   int32_t gymId;
   NSString *content;
-  NSMutableArray *imageKeyArray;
+  NSMutableArray *imageKeysArray;
   NSString *bucketName;
 } Request12001_Params__storage_;
 
@@ -137,12 +137,12 @@ typedef struct Request12001_Params__storage_ {
         .fieldOptions = NULL,
       },
       {
-        .name = "imageKeyArray",
-        .number = Request12001_Params_FieldNumber_ImageKeyArray,
+        .name = "imageKeysArray",
+        .number = Request12001_Params_FieldNumber_ImageKeysArray,
         .hasIndex = GPBNoHasBit,
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Request12001_Params__storage_, imageKeyArray),
+        .offset = offsetof(Request12001_Params__storage_, imageKeysArray),
         .defaultValue.valueMessage = nil,
         .dataTypeSpecific.className = NULL,
         .fieldOptions = NULL,
@@ -173,7 +173,7 @@ typedef struct Request12001_Params__storage_ {
 #if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     const char *extraTextFormatInfo = NULL;
 #else
-    static const char *extraTextFormatInfo = "\003\002\000imageKey\000\003\n\000\004\005\000";
+    static const char *extraTextFormatInfo = "\003\002\000imageKeys\000\003\n\000\004\005\000";
 #endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request12001_Params class]

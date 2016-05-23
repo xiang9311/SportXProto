@@ -28,8 +28,8 @@ public interface Trend {
       // optional string content = 1;
       public java.lang.String content;
 
-      // repeated string imageKey = 2;
-      public java.lang.String[] imageKey;
+      // repeated string imageKeys = 2;
+      public java.lang.String[] imageKeys;
 
       // optional string bucketName = 3;
       public java.lang.String bucketName;
@@ -43,7 +43,7 @@ public interface Trend {
 
       public Params clear() {
         content = "";
-        imageKey = com.google.protobuf.nano.WireFormatNano.EMPTY_STRING_ARRAY;
+        imageKeys = com.google.protobuf.nano.WireFormatNano.EMPTY_STRING_ARRAY;
         bucketName = "";
         gymId = 0;
         cachedSize = -1;
@@ -56,9 +56,9 @@ public interface Trend {
         if (!this.content.equals("")) {
           output.writeString(1, this.content);
         }
-        if (this.imageKey != null && this.imageKey.length > 0) {
-          for (int i = 0; i < this.imageKey.length; i++) {
-            java.lang.String element = this.imageKey[i];
+        if (this.imageKeys != null && this.imageKeys.length > 0) {
+          for (int i = 0; i < this.imageKeys.length; i++) {
+            java.lang.String element = this.imageKeys[i];
             if (element != null) {
               output.writeString(2, element);
             }
@@ -80,11 +80,11 @@ public interface Trend {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
               .computeStringSize(1, this.content);
         }
-        if (this.imageKey != null && this.imageKey.length > 0) {
+        if (this.imageKeys != null && this.imageKeys.length > 0) {
           int dataCount = 0;
           int dataSize = 0;
-          for (int i = 0; i < this.imageKey.length; i++) {
-            java.lang.String element = this.imageKey[i];
+          for (int i = 0; i < this.imageKeys.length; i++) {
+            java.lang.String element = this.imageKeys[i];
             if (element != null) {
               dataCount++;
               dataSize += com.google.protobuf.nano.CodedOutputByteBufferNano
@@ -127,10 +127,10 @@ public interface Trend {
             case 18: {
               int arrayLength = com.google.protobuf.nano.WireFormatNano
                   .getRepeatedFieldArrayLength(input, 18);
-              int i = this.imageKey == null ? 0 : this.imageKey.length;
+              int i = this.imageKeys == null ? 0 : this.imageKeys.length;
               java.lang.String[] newArray = new java.lang.String[i + arrayLength];
               if (i != 0) {
-                java.lang.System.arraycopy(this.imageKey, 0, newArray, 0, i);
+                java.lang.System.arraycopy(this.imageKeys, 0, newArray, 0, i);
               }
               for (; i < newArray.length - 1; i++) {
                 newArray[i] = input.readString();
@@ -138,7 +138,7 @@ public interface Trend {
               }
               // Last one without readTag.
               newArray[i] = input.readString();
-              this.imageKey = newArray;
+              this.imageKeys = newArray;
               break;
             }
             case 26: {

@@ -13,7 +13,7 @@ message Request12001 {
 	Params params = 2;
 	message Params {
 		string content = 1;                            // 文本内容
-		repeated string imageKey = 2;                  // 图片的七牛key
+		repeated string imageKeys = 2;                  // 图片的七牛key
 		string bucketName = 3;                         // 图片上传的bucket
 		int32 gymId = 4;                               // 所选择的场馆的id
 	}

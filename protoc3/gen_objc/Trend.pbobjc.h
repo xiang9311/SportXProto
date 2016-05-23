@@ -67,7 +67,7 @@ typedef GPB_ENUM(Request12001_FieldNumber) {
 
 typedef GPB_ENUM(Request12001_Params_FieldNumber) {
   Request12001_Params_FieldNumber_Content = 1,
-  Request12001_Params_FieldNumber_ImageKeyArray = 2,
+  Request12001_Params_FieldNumber_ImageKeysArray = 2,
   Request12001_Params_FieldNumber_BucketName = 3,
   Request12001_Params_FieldNumber_GymId = 4,
 };
@@ -78,9 +78,9 @@ typedef GPB_ENUM(Request12001_Params_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *content;
 
 // 图片的七牛key
-// |imageKeyArray| contains |NSString|
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *imageKeyArray;
-@property(nonatomic, readonly) NSUInteger imageKeyArray_Count;
+// |imageKeysArray| contains |NSString|
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *imageKeysArray;
+@property(nonatomic, readonly) NSUInteger imageKeysArray_Count;
 
 // 图片上传的bucket
 @property(nonatomic, readwrite, copy, null_resettable) NSString *bucketName;

@@ -154,39 +154,39 @@ public final class Trend {
           getContentBytes();
 
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
       com.google.protobuf.ProtocolStringList
-          getImageKeyList();
+          getImageKeysList();
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
-      int getImageKeyCount();
+      int getImageKeysCount();
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
-      java.lang.String getImageKey(int index);
+      java.lang.String getImageKeys(int index);
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
       com.google.protobuf.ByteString
-          getImageKeyBytes(int index);
+          getImageKeysBytes(int index);
 
       /**
        * <code>optional string bucketName = 3;</code>
@@ -228,7 +228,7 @@ public final class Trend {
       }
       private Params() {
         content_ = "";
-        imageKey_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        imageKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bucketName_ = "";
         gymId_ = 0;
       }
@@ -266,10 +266,10 @@ public final class Trend {
               case 18: {
                 String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  imageKey_ = new com.google.protobuf.LazyStringArrayList();
+                  imageKeys_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000002;
                 }
-                imageKey_.add(s);
+                imageKeys_.add(s);
                 break;
               }
               case 26: {
@@ -293,7 +293,7 @@ public final class Trend {
                   e.getMessage()).setUnfinishedMessage(this));
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            imageKey_ = imageKey_.getUnmodifiableView();
+            imageKeys_ = imageKeys_.getUnmodifiableView();
           }
           makeExtensionsImmutable();
         }
@@ -353,49 +353,49 @@ public final class Trend {
         }
       }
 
-      public static final int IMAGEKEY_FIELD_NUMBER = 2;
-      private com.google.protobuf.LazyStringList imageKey_;
+      public static final int IMAGEKEYS_FIELD_NUMBER = 2;
+      private com.google.protobuf.LazyStringList imageKeys_;
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
       public com.google.protobuf.ProtocolStringList
-          getImageKeyList() {
-        return imageKey_;
+          getImageKeysList() {
+        return imageKeys_;
       }
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
-      public int getImageKeyCount() {
-        return imageKey_.size();
+      public int getImageKeysCount() {
+        return imageKeys_.size();
       }
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
-      public java.lang.String getImageKey(int index) {
-        return imageKey_.get(index);
+      public java.lang.String getImageKeys(int index) {
+        return imageKeys_.get(index);
       }
       /**
-       * <code>repeated string imageKey = 2;</code>
+       * <code>repeated string imageKeys = 2;</code>
        *
        * <pre>
        * 图片的七牛key
        * </pre>
        */
       public com.google.protobuf.ByteString
-          getImageKeyBytes(int index) {
-        return imageKey_.getByteString(index);
+          getImageKeysBytes(int index) {
+        return imageKeys_.getByteString(index);
       }
 
       public static final int BUCKETNAME_FIELD_NUMBER = 3;
@@ -468,8 +468,8 @@ public final class Trend {
         if (!getContentBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessage.writeString(output, 1, content_);
         }
-        for (int i = 0; i < imageKey_.size(); i++) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 2, imageKey_.getRaw(i));
+        for (int i = 0; i < imageKeys_.size(); i++) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 2, imageKeys_.getRaw(i));
         }
         if (!getBucketNameBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessage.writeString(output, 3, bucketName_);
@@ -489,11 +489,11 @@ public final class Trend {
         }
         {
           int dataSize = 0;
-          for (int i = 0; i < imageKey_.size(); i++) {
-            dataSize += computeStringSizeNoTag(imageKey_.getRaw(i));
+          for (int i = 0; i < imageKeys_.size(); i++) {
+            dataSize += computeStringSizeNoTag(imageKeys_.getRaw(i));
           }
           size += dataSize;
-          size += 1 * getImageKeyList().size();
+          size += 1 * getImageKeysList().size();
         }
         if (!getBucketNameBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessage.computeStringSize(3, bucketName_);
@@ -615,7 +615,7 @@ public final class Trend {
           super.clear();
           content_ = "";
 
-          imageKey_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          imageKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000002);
           bucketName_ = "";
 
@@ -647,10 +647,10 @@ public final class Trend {
           int to_bitField0_ = 0;
           result.content_ = content_;
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            imageKey_ = imageKey_.getUnmodifiableView();
+            imageKeys_ = imageKeys_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.imageKey_ = imageKey_;
+          result.imageKeys_ = imageKeys_;
           result.bucketName_ = bucketName_;
           result.gymId_ = gymId_;
           result.bitField0_ = to_bitField0_;
@@ -673,13 +673,13 @@ public final class Trend {
             content_ = other.content_;
             onChanged();
           }
-          if (!other.imageKey_.isEmpty()) {
-            if (imageKey_.isEmpty()) {
-              imageKey_ = other.imageKey_;
+          if (!other.imageKeys_.isEmpty()) {
+            if (imageKeys_.isEmpty()) {
+              imageKeys_ = other.imageKeys_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureImageKeyIsMutable();
-              imageKey_.addAll(other.imageKey_);
+              ensureImageKeysIsMutable();
+              imageKeys_.addAll(other.imageKeys_);
             }
             onChanged();
           }
@@ -806,132 +806,132 @@ public final class Trend {
           return this;
         }
 
-        private com.google.protobuf.LazyStringList imageKey_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        private void ensureImageKeyIsMutable() {
+        private com.google.protobuf.LazyStringList imageKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureImageKeysIsMutable() {
           if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            imageKey_ = new com.google.protobuf.LazyStringArrayList(imageKey_);
+            imageKeys_ = new com.google.protobuf.LazyStringArrayList(imageKeys_);
             bitField0_ |= 0x00000002;
            }
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
         public com.google.protobuf.ProtocolStringList
-            getImageKeyList() {
-          return imageKey_.getUnmodifiableView();
+            getImageKeysList() {
+          return imageKeys_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public int getImageKeyCount() {
-          return imageKey_.size();
+        public int getImageKeysCount() {
+          return imageKeys_.size();
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public java.lang.String getImageKey(int index) {
-          return imageKey_.get(index);
+        public java.lang.String getImageKeys(int index) {
+          return imageKeys_.get(index);
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
         public com.google.protobuf.ByteString
-            getImageKeyBytes(int index) {
-          return imageKey_.getByteString(index);
+            getImageKeysBytes(int index) {
+          return imageKeys_.getByteString(index);
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public Builder setImageKey(
+        public Builder setImageKeys(
             int index, java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  ensureImageKeyIsMutable();
-          imageKey_.set(index, value);
+  ensureImageKeysIsMutable();
+          imageKeys_.set(index, value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public Builder addImageKey(
+        public Builder addImageKeys(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
-  ensureImageKeyIsMutable();
-          imageKey_.add(value);
+  ensureImageKeysIsMutable();
+          imageKeys_.add(value);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public Builder addAllImageKey(
+        public Builder addAllImageKeys(
             java.lang.Iterable<java.lang.String> values) {
-          ensureImageKeyIsMutable();
+          ensureImageKeysIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, imageKey_);
+              values, imageKeys_);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public Builder clearImageKey() {
-          imageKey_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        public Builder clearImageKeys() {
+          imageKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
         /**
-         * <code>repeated string imageKey = 2;</code>
+         * <code>repeated string imageKeys = 2;</code>
          *
          * <pre>
          * 图片的七牛key
          * </pre>
          */
-        public Builder addImageKeyBytes(
+        public Builder addImageKeysBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-          ensureImageKeyIsMutable();
-          imageKey_.add(value);
+          ensureImageKeysIsMutable();
+          imageKeys_.add(value);
           onChanged();
           return this;
         }
@@ -18991,73 +18991,73 @@ public final class Trend {
   static {
     java.lang.String[] descriptorData = {
       "\n\013trend.proto\022\025com.xiang.proto.trend\032\014co" +
-      "mmon.proto\"\312\001\n\014Request12001\022.\n\006common\030\001 " +
+      "mmon.proto\"\313\001\n\014Request12001\022.\n\006common\030\001 " +
       "\001(\0132\036.com.xiang.proto.RequestCommon\022:\n\006p" +
       "arams\030\002 \001(\0132*.com.xiang.proto.trend.Requ" +
-      "est12001.Params\032N\n\006Params\022\017\n\007content\030\001 \001" +
-      "(\t\022\020\n\010imageKey\030\002 \003(\t\022\022\n\nbucketName\030\003 \001(\t" +
-      "\022\r\n\005gymId\030\004 \001(\005\"\201\001\n\rResponse12001\022/\n\006com" +
-      "mon\030\001 \001(\0132\037.com.xiang.proto.ResponseComm" +
-      "on\0227\n\004data\030\002 \001(\0132).com.xiang.proto.trend" +
-      ".Response12001.Data\032\006\n\004Data\"\227\001\n\014Request1",
-      "2002\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.R" +
-      "equestCommon\022:\n\006params\030\002 \001(\0132*.com.xiang" +
-      ".proto.trend.Request12002.Params\032\033\n\006Para" +
-      "ms\022\021\n\tpageIndex\030\001 \001(\005\"\302\001\n\rResponse12002\022" +
-      "/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respon" +
-      "seCommon\0227\n\004data\030\002 \001(\0132).com.xiang.proto" +
-      ".trend.Response12002.Data\032G\n\004Data\022&\n\006tre" +
-      "nds\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n\017max" +
-      "CountPerPage\030\002 \001(\005\"\225\001\n\014Request12003\022.\n\006c" +
-      "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom",
-      "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.tr" +
-      "end.Request12003.Params\032\031\n\006Params\022\017\n\007tre" +
-      "ndId\030\001 \001(\005\"\251\001\n\rResponse12003\022/\n\006common\030\001" +
-      " \001(\0132\037.com.xiang.proto.ResponseCommon\0227\n" +
-      "\004data\030\002 \001(\0132).com.xiang.proto.trend.Resp" +
-      "onse12003.Data\032.\n\004Data\022&\n\006trends\030\001 \001(\0132\026" +
-      ".com.xiang.proto.Trend\"\250\001\n\014Request12004\022" +
-      ".\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reques" +
-      "tCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.prot" +
-      "o.trend.Request12004.Params\032,\n\006Params\022\017\n",
-      "\007trendId\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\306\001\n\rRe" +
-      "sponse12004\022/\n\006common\030\001 \001(\0132\037.com.xiang." +
-      "proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com" +
-      ".xiang.proto.trend.Response12004.Data\032K\n" +
-      "\004Data\022*\n\010comments\030\001 \003(\0132\030.com.xiang.prot" +
-      "o.Comment\022\027\n\017maxCountPerPage\030\002 \001(\005\"\250\001\n\014R" +
-      "equest12005\022.\n\006common\030\001 \001(\0132\036.com.xiang." +
-      "proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.co" +
-      "m.xiang.proto.trend.Request12005.Params\032" +
-      ",\n\006Params\022\017\n\007trendId\030\001 \001(\005\022\021\n\tlikeTrend\030",
-      "\002 \001(\010\"\201\001\n\rResponse12005\022/\n\006common\030\001 \001(\0132" +
-      "\037.com.xiang.proto.ResponseCommon\0227\n\004data" +
-      "\030\002 \001(\0132).com.xiang.proto.trend.Response1" +
-      "2005.Data\032\006\n\004Data\"\334\001\n\014Request12006\022.\n\006co" +
-      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm" +
-      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.tre" +
-      "nd.Request12006.Params\032`\n\006Params\022\017\n\007tren" +
-      "dId\030\001 \001(\005\022\023\n\013toCommentId\030\002 \001(\005\022\020\n\010toUser" +
-      "Id\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\r\n\005gymId\030\005 \001(\005" +
-      "\"\201\001\n\rResponse12006\022/\n\006common\030\001 \001(\0132\037.com",
-      ".xiang.proto.ResponseCommon\0227\n\004data\030\002 \001(" +
-      "\0132).com.xiang.proto.trend.Response12006." +
-      "Data\032\006\n\004Data\"\250\001\n\014Request12007\022.\n\006common\030" +
-      "\001 \001(\0132\036.com.xiang.proto.RequestCommon\022:\n" +
-      "\006params\030\002 \001(\0132*.com.xiang.proto.trend.Re" +
-      "quest12007.Params\032,\n\006Params\022\017\n\007trendId\030\001" +
-      " \001(\005\022\021\n\tcommentId\030\002 \001(\005\"\201\001\n\rResponse1200" +
-      "7\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Resp" +
-      "onseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pro" +
-      "to.trend.Response12007.Data\032\006\n\004Data\"\225\001\n\014",
-      "Request12008\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
+      "est12001.Params\032O\n\006Params\022\017\n\007content\030\001 \001" +
+      "(\t\022\021\n\timageKeys\030\002 \003(\t\022\022\n\nbucketName\030\003 \001(" +
+      "\t\022\r\n\005gymId\030\004 \001(\005\"\201\001\n\rResponse12001\022/\n\006co" +
+      "mmon\030\001 \001(\0132\037.com.xiang.proto.ResponseCom" +
+      "mon\0227\n\004data\030\002 \001(\0132).com.xiang.proto.tren" +
+      "d.Response12001.Data\032\006\n\004Data\"\227\001\n\014Request",
+      "12002\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto." +
+      "RequestCommon\022:\n\006params\030\002 \001(\0132*.com.xian" +
+      "g.proto.trend.Request12002.Params\032\033\n\006Par" +
+      "ams\022\021\n\tpageIndex\030\001 \001(\005\"\302\001\n\rResponse12002" +
+      "\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respo" +
+      "nseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.prot" +
+      "o.trend.Response12002.Data\032G\n\004Data\022&\n\006tr" +
+      "ends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n\017ma" +
+      "xCountPerPage\030\002 \001(\005\"\225\001\n\014Request12003\022.\n\006" +
+      "common\030\001 \001(\0132\036.com.xiang.proto.RequestCo",
+      "mmon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.t" +
+      "rend.Request12003.Params\032\031\n\006Params\022\017\n\007tr" +
+      "endId\030\001 \001(\005\"\251\001\n\rResponse12003\022/\n\006common\030" +
+      "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227" +
+      "\n\004data\030\002 \001(\0132).com.xiang.proto.trend.Res" +
+      "ponse12003.Data\032.\n\004Data\022&\n\006trends\030\001 \001(\0132" +
+      "\026.com.xiang.proto.Trend\"\250\001\n\014Request12004" +
+      "\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reque" +
+      "stCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.pro" +
+      "to.trend.Request12004.Params\032,\n\006Params\022\017",
+      "\n\007trendId\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\306\001\n\rR" +
+      "esponse12004\022/\n\006common\030\001 \001(\0132\037.com.xiang" +
+      ".proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).co" +
+      "m.xiang.proto.trend.Response12004.Data\032K" +
+      "\n\004Data\022*\n\010comments\030\001 \003(\0132\030.com.xiang.pro" +
+      "to.Comment\022\027\n\017maxCountPerPage\030\002 \001(\005\"\250\001\n\014" +
+      "Request12005\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
       ".proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.c" +
-      "om.xiang.proto.trend.Request12008.Params" +
-      "\032\031\n\006Params\022\017\n\007trendId\030\001 \001(\005\"\201\001\n\rResponse" +
-      "12008\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto." +
-      "ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang" +
-      ".proto.trend.Response12008.Data\032\006\n\004Datab" +
-      "\006proto3"
+      "om.xiang.proto.trend.Request12005.Params" +
+      "\032,\n\006Params\022\017\n\007trendId\030\001 \001(\005\022\021\n\tlikeTrend",
+      "\030\002 \001(\010\"\201\001\n\rResponse12005\022/\n\006common\030\001 \001(\013" +
+      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
+      "a\030\002 \001(\0132).com.xiang.proto.trend.Response" +
+      "12005.Data\032\006\n\004Data\"\334\001\n\014Request12006\022.\n\006c" +
+      "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom" +
+      "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.tr" +
+      "end.Request12006.Params\032`\n\006Params\022\017\n\007tre" +
+      "ndId\030\001 \001(\005\022\023\n\013toCommentId\030\002 \001(\005\022\020\n\010toUse" +
+      "rId\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\r\n\005gymId\030\005 \001(" +
+      "\005\"\201\001\n\rResponse12006\022/\n\006common\030\001 \001(\0132\037.co",
+      "m.xiang.proto.ResponseCommon\0227\n\004data\030\002 \001" +
+      "(\0132).com.xiang.proto.trend.Response12006" +
+      ".Data\032\006\n\004Data\"\250\001\n\014Request12007\022.\n\006common" +
+      "\030\001 \001(\0132\036.com.xiang.proto.RequestCommon\022:" +
+      "\n\006params\030\002 \001(\0132*.com.xiang.proto.trend.R" +
+      "equest12007.Params\032,\n\006Params\022\017\n\007trendId\030" +
+      "\001 \001(\005\022\021\n\tcommentId\030\002 \001(\005\"\201\001\n\rResponse120" +
+      "07\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
+      "ponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
+      "oto.trend.Response12007.Data\032\006\n\004Data\"\225\001\n",
+      "\014Request12008\022.\n\006common\030\001 \001(\0132\036.com.xian" +
+      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
+      "com.xiang.proto.trend.Request12008.Param" +
+      "s\032\031\n\006Params\022\017\n\007trendId\030\001 \001(\005\"\201\001\n\rRespons" +
+      "e12008\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto" +
+      ".ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xian" +
+      "g.proto.trend.Response12008.Data\032\006\n\004Data" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19083,7 +19083,7 @@ public final class Trend {
     internal_static_com_xiang_proto_trend_Request12001_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_trend_Request12001_Params_descriptor,
-        new java.lang.String[] { "Content", "ImageKey", "BucketName", "GymId", });
+        new java.lang.String[] { "Content", "ImageKeys", "BucketName", "GymId", });
     internal_static_com_xiang_proto_trend_Response12001_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_xiang_proto_trend_Response12001_fieldAccessorTable = new
