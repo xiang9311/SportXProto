@@ -4628,6 +4628,43 @@ public final class Pilot {
        */
       com.google.protobuf.ByteString
           getRongyunTokenBytes();
+
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       */
+      int getSexValue();
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       */
+      com.xiang.proto.Common.Sex getSex();
+
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 个性签名
+       * </pre>
+       */
+      java.lang.String getSign();
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 个性签名
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getSignBytes();
+
+      /**
+       * <code>optional string phone = 6;</code>
+       */
+      java.lang.String getPhone();
+      /**
+       * <code>optional string phone = 6;</code>
+       */
+      com.google.protobuf.ByteString
+          getPhoneBytes();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Response10002.Data}
@@ -4643,6 +4680,9 @@ public final class Pilot {
       private Data() {
         userKey_ = "";
         rongyunToken_ = "";
+        sex_ = 0;
+        sign_ = "";
+        phone_ = "";
       }
 
       @java.lang.Override
@@ -4692,6 +4732,24 @@ public final class Pilot {
                 String s = input.readStringRequireUtf8();
 
                 rongyunToken_ = s;
+                break;
+              }
+              case 32: {
+                int rawValue = input.readEnum();
+
+                sex_ = rawValue;
+                break;
+              }
+              case 42: {
+                String s = input.readStringRequireUtf8();
+
+                sign_ = s;
+                break;
+              }
+              case 50: {
+                String s = input.readStringRequireUtf8();
+
+                phone_ = s;
                 break;
               }
             }
@@ -4835,6 +4893,98 @@ public final class Pilot {
         }
       }
 
+      public static final int SEX_FIELD_NUMBER = 4;
+      private int sex_;
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       */
+      public int getSexValue() {
+        return sex_;
+      }
+      /**
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+       */
+      public com.xiang.proto.Common.Sex getSex() {
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
+      }
+
+      public static final int SIGN_FIELD_NUMBER = 5;
+      private volatile java.lang.Object sign_;
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 个性签名
+       * </pre>
+       */
+      public java.lang.String getSign() {
+        java.lang.Object ref = sign_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sign_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>optional string sign = 5;</code>
+       *
+       * <pre>
+       * 个性签名
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getSignBytes() {
+        java.lang.Object ref = sign_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sign_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int PHONE_FIELD_NUMBER = 6;
+      private volatile java.lang.Object phone_;
+      /**
+       * <code>optional string phone = 6;</code>
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          phone_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>optional string phone = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -4856,6 +5006,15 @@ public final class Pilot {
         if (!getRongyunTokenBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessage.writeString(output, 3, rongyunToken_);
         }
+        if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
+          output.writeEnum(4, sex_);
+        }
+        if (!getSignBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 5, sign_);
+        }
+        if (!getPhoneBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 6, phone_);
+        }
       }
 
       public int getSerializedSize() {
@@ -4872,6 +5031,16 @@ public final class Pilot {
         }
         if (!getRongyunTokenBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessage.computeStringSize(3, rongyunToken_);
+        }
+        if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(4, sex_);
+        }
+        if (!getSignBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(5, sign_);
+        }
+        if (!getPhoneBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(6, phone_);
         }
         memoizedSize = size;
         return size;
@@ -4994,6 +5163,12 @@ public final class Pilot {
 
           rongyunToken_ = "";
 
+          sex_ = 0;
+
+          sign_ = "";
+
+          phone_ = "";
+
           return this;
         }
 
@@ -5023,6 +5198,9 @@ public final class Pilot {
           }
           result.userKey_ = userKey_;
           result.rongyunToken_ = rongyunToken_;
+          result.sex_ = sex_;
+          result.sign_ = sign_;
+          result.phone_ = phone_;
           onBuilt();
           return result;
         }
@@ -5047,6 +5225,17 @@ public final class Pilot {
           }
           if (!other.getRongyunToken().isEmpty()) {
             rongyunToken_ = other.rongyunToken_;
+            onChanged();
+          }
+          if (other.sex_ != 0) {
+            setSexValue(other.getSexValue());
+          }
+          if (!other.getSign().isEmpty()) {
+            sign_ = other.sign_;
+            onChanged();
+          }
+          if (!other.getPhone().isEmpty()) {
+            phone_ = other.phone_;
             onChanged();
           }
           onChanged();
@@ -5402,6 +5591,208 @@ public final class Pilot {
   checkByteStringIsUtf8(value);
           
           rongyunToken_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int sex_ = 0;
+        /**
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+         */
+        public int getSexValue() {
+          return sex_;
+        }
+        /**
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+         */
+        public Builder setSexValue(int value) {
+          sex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+         */
+        public com.xiang.proto.Common.Sex getSex() {
+          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+          return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+         */
+        public Builder setSex(com.xiang.proto.Common.Sex value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          sex_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
+         */
+        public Builder clearSex() {
+          
+          sex_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object sign_ = "";
+        /**
+         * <code>optional string sign = 5;</code>
+         *
+         * <pre>
+         * 个性签名
+         * </pre>
+         */
+        public java.lang.String getSign() {
+          java.lang.Object ref = sign_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            sign_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string sign = 5;</code>
+         *
+         * <pre>
+         * 个性签名
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getSignBytes() {
+          java.lang.Object ref = sign_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            sign_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string sign = 5;</code>
+         *
+         * <pre>
+         * 个性签名
+         * </pre>
+         */
+        public Builder setSign(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          sign_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string sign = 5;</code>
+         *
+         * <pre>
+         * 个性签名
+         * </pre>
+         */
+        public Builder clearSign() {
+          
+          sign_ = getDefaultInstance().getSign();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string sign = 5;</code>
+         *
+         * <pre>
+         * 个性签名
+         * </pre>
+         */
+        public Builder setSignBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          sign_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object phone_ = "";
+        /**
+         * <code>optional string phone = 6;</code>
+         */
+        public java.lang.String getPhone() {
+          java.lang.Object ref = phone_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            phone_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 6;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPhoneBytes() {
+          java.lang.Object ref = phone_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            phone_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 6;</code>
+         */
+        public Builder setPhone(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          phone_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 6;</code>
+         */
+        public Builder clearPhone() {
+          
+          phone_ = getDefaultInstance().getPhone();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 6;</code>
+         */
+        public Builder setPhoneBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          phone_ = value;
           onChanged();
           return this;
         }
@@ -6026,2676 +6417,6 @@ public final class Pilot {
     }
 
     public com.xiang.proto.pilot.Pilot.Response10002 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface Request10003OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10003)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    boolean hasCommon();
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    com.xiang.proto.Common.RequestCommon getCommon();
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
-
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    boolean hasParams();
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    com.xiang.proto.pilot.Pilot.Request10003.Params getParams();
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder getParamsOrBuilder();
-  }
-  /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10003}
-   *
-   * <pre>
-   * 获取我的个人信息
-   * /pilot/getMyInfo
-   * </pre>
-   */
-  public  static final class Request10003 extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10003)
-      Request10003OrBuilder {
-    // Use Request10003.newBuilder() to construct.
-    private Request10003(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private Request10003() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Request10003(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
-              if (common_ != null) {
-                subBuilder = common_.toBuilder();
-              }
-              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(common_);
-                common_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.xiang.proto.pilot.Pilot.Request10003.Params.Builder subBuilder = null;
-              if (params_ != null) {
-                subBuilder = params_.toBuilder();
-              }
-              params_ = input.readMessage(com.xiang.proto.pilot.Pilot.Request10003.Params.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(params_);
-                params_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.xiang.proto.pilot.Pilot.Request10003.class, com.xiang.proto.pilot.Pilot.Request10003.Builder.class);
-    }
-
-    public interface ParamsOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10003.Params)
-        com.google.protobuf.MessageOrBuilder {
-    }
-    /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10003.Params}
-     */
-    public  static final class Params extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10003.Params)
-        ParamsOrBuilder {
-      // Use Params.newBuilder() to construct.
-      private Params(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-      }
-      private Params() {
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-      }
-      private Params(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-        this();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!input.skipField(tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
-        } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
-        } finally {
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_Params_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.xiang.proto.pilot.Pilot.Request10003.Params.class, com.xiang.proto.pilot.Pilot.Request10003.Params.Builder.class);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        memoizedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10003.Params prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code com.xiang.proto.pilot.Request10003.Params}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10003.Params)
-          com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_Params_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.xiang.proto.pilot.Pilot.Request10003.Params.class, com.xiang.proto.pilot.Pilot.Request10003.Params.Builder.class);
-        }
-
-        // Construct using com.xiang.proto.pilot.Pilot.Request10003.Params.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor;
-        }
-
-        public com.xiang.proto.pilot.Pilot.Request10003.Params getDefaultInstanceForType() {
-          return com.xiang.proto.pilot.Pilot.Request10003.Params.getDefaultInstance();
-        }
-
-        public com.xiang.proto.pilot.Pilot.Request10003.Params build() {
-          com.xiang.proto.pilot.Pilot.Request10003.Params result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.xiang.proto.pilot.Pilot.Request10003.Params buildPartial() {
-          com.xiang.proto.pilot.Pilot.Request10003.Params result = new com.xiang.proto.pilot.Pilot.Request10003.Params(this);
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.xiang.proto.pilot.Pilot.Request10003.Params) {
-            return mergeFrom((com.xiang.proto.pilot.Pilot.Request10003.Params)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10003.Params other) {
-          if (other == com.xiang.proto.pilot.Pilot.Request10003.Params.getDefaultInstance()) return this;
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.xiang.proto.pilot.Pilot.Request10003.Params parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.xiang.proto.pilot.Pilot.Request10003.Params) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return this;
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return this;
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10003.Params)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10003.Params)
-      private static final com.xiang.proto.pilot.Pilot.Request10003.Params DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10003.Params();
-      }
-
-      public static com.xiang.proto.pilot.Pilot.Request10003.Params getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Params>
-          PARSER = new com.google.protobuf.AbstractParser<Params>() {
-        public Params parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
-            return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
-        }
-      };
-
-      public static com.google.protobuf.Parser<Params> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Params> getParserForType() {
-        return PARSER;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Request10003.Params getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.RequestCommon common_;
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    public boolean hasCommon() {
-      return common_ != null;
-    }
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    public com.xiang.proto.Common.RequestCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
-    }
-    /**
-     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-     */
-    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
-      return getCommon();
-    }
-
-    public static final int PARAMS_FIELD_NUMBER = 2;
-    private com.xiang.proto.pilot.Pilot.Request10003.Params params_;
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    public boolean hasParams() {
-      return params_ != null;
-    }
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    public com.xiang.proto.pilot.Pilot.Request10003.Params getParams() {
-      return params_ == null ? com.xiang.proto.pilot.Pilot.Request10003.Params.getDefaultInstance() : params_;
-    }
-    /**
-     * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-     */
-    public com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder getParamsOrBuilder() {
-      return getParams();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (common_ != null) {
-        output.writeMessage(1, getCommon());
-      }
-      if (params_ != null) {
-        output.writeMessage(2, getParams());
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (common_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCommon());
-      }
-      if (params_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getParams());
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Request10003 parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10003 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10003}
-     *
-     * <pre>
-     * 获取我的个人信息
-     * /pilot/getMyInfo
-     * </pre>
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10003)
-        com.xiang.proto.pilot.Pilot.Request10003OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.xiang.proto.pilot.Pilot.Request10003.class, com.xiang.proto.pilot.Pilot.Request10003.Builder.class);
-      }
-
-      // Construct using com.xiang.proto.pilot.Pilot.Request10003.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (commonBuilder_ == null) {
-          common_ = null;
-        } else {
-          common_ = null;
-          commonBuilder_ = null;
-        }
-        if (paramsBuilder_ == null) {
-          params_ = null;
-        } else {
-          params_ = null;
-          paramsBuilder_ = null;
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10003_descriptor;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Request10003 getDefaultInstanceForType() {
-        return com.xiang.proto.pilot.Pilot.Request10003.getDefaultInstance();
-      }
-
-      public com.xiang.proto.pilot.Pilot.Request10003 build() {
-        com.xiang.proto.pilot.Pilot.Request10003 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Request10003 buildPartial() {
-        com.xiang.proto.pilot.Pilot.Request10003 result = new com.xiang.proto.pilot.Pilot.Request10003(this);
-        if (commonBuilder_ == null) {
-          result.common_ = common_;
-        } else {
-          result.common_ = commonBuilder_.build();
-        }
-        if (paramsBuilder_ == null) {
-          result.params_ = params_;
-        } else {
-          result.params_ = paramsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.xiang.proto.pilot.Pilot.Request10003) {
-          return mergeFrom((com.xiang.proto.pilot.Pilot.Request10003)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10003 other) {
-        if (other == com.xiang.proto.pilot.Pilot.Request10003.getDefaultInstance()) return this;
-        if (other.hasCommon()) {
-          mergeCommon(other.getCommon());
-        }
-        if (other.hasParams()) {
-          mergeParams(other.getParams());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.xiang.proto.pilot.Pilot.Request10003 parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.xiang.proto.pilot.Pilot.Request10003) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.xiang.proto.Common.RequestCommon common_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public boolean hasCommon() {
-        return commonBuilder_ != null || common_ != null;
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.RequestCommon getCommon() {
-        if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
-        } else {
-          return commonBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
-        if (commonBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          common_ = value;
-          onChanged();
-        } else {
-          commonBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public Builder setCommon(
-          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
-        if (commonBuilder_ == null) {
-          common_ = builderForValue.build();
-          onChanged();
-        } else {
-          commonBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
-        if (commonBuilder_ == null) {
-          if (common_ != null) {
-            common_ =
-              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
-          } else {
-            common_ = value;
-          }
-          onChanged();
-        } else {
-          commonBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public Builder clearCommon() {
-        if (commonBuilder_ == null) {
-          common_ = null;
-          onChanged();
-        } else {
-          common_ = null;
-          commonBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
-        
-        onChanged();
-        return getCommonFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
-        if (commonBuilder_ != null) {
-          return commonBuilder_.getMessageOrBuilder();
-        } else {
-          return common_ == null ?
-              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
-          getCommonFieldBuilder() {
-        if (commonBuilder_ == null) {
-          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
-                  getCommon(),
-                  getParentForChildren(),
-                  isClean());
-          common_ = null;
-        }
-        return commonBuilder_;
-      }
-
-      private com.xiang.proto.pilot.Pilot.Request10003.Params params_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.pilot.Pilot.Request10003.Params, com.xiang.proto.pilot.Pilot.Request10003.Params.Builder, com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder> paramsBuilder_;
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public boolean hasParams() {
-        return paramsBuilder_ != null || params_ != null;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Request10003.Params getParams() {
-        if (paramsBuilder_ == null) {
-          return params_ == null ? com.xiang.proto.pilot.Pilot.Request10003.Params.getDefaultInstance() : params_;
-        } else {
-          return paramsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public Builder setParams(com.xiang.proto.pilot.Pilot.Request10003.Params value) {
-        if (paramsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          params_ = value;
-          onChanged();
-        } else {
-          paramsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public Builder setParams(
-          com.xiang.proto.pilot.Pilot.Request10003.Params.Builder builderForValue) {
-        if (paramsBuilder_ == null) {
-          params_ = builderForValue.build();
-          onChanged();
-        } else {
-          paramsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public Builder mergeParams(com.xiang.proto.pilot.Pilot.Request10003.Params value) {
-        if (paramsBuilder_ == null) {
-          if (params_ != null) {
-            params_ =
-              com.xiang.proto.pilot.Pilot.Request10003.Params.newBuilder(params_).mergeFrom(value).buildPartial();
-          } else {
-            params_ = value;
-          }
-          onChanged();
-        } else {
-          paramsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public Builder clearParams() {
-        if (paramsBuilder_ == null) {
-          params_ = null;
-          onChanged();
-        } else {
-          params_ = null;
-          paramsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Request10003.Params.Builder getParamsBuilder() {
-        
-        onChanged();
-        return getParamsFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder getParamsOrBuilder() {
-        if (paramsBuilder_ != null) {
-          return paramsBuilder_.getMessageOrBuilder();
-        } else {
-          return params_ == null ?
-              com.xiang.proto.pilot.Pilot.Request10003.Params.getDefaultInstance() : params_;
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Request10003.Params params = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.pilot.Pilot.Request10003.Params, com.xiang.proto.pilot.Pilot.Request10003.Params.Builder, com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder> 
-          getParamsFieldBuilder() {
-        if (paramsBuilder_ == null) {
-          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.pilot.Pilot.Request10003.Params, com.xiang.proto.pilot.Pilot.Request10003.Params.Builder, com.xiang.proto.pilot.Pilot.Request10003.ParamsOrBuilder>(
-                  getParams(),
-                  getParentForChildren(),
-                  isClean());
-          params_ = null;
-        }
-        return paramsBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10003)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10003)
-    private static final com.xiang.proto.pilot.Pilot.Request10003 DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10003();
-    }
-
-    public static com.xiang.proto.pilot.Pilot.Request10003 getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Request10003>
-        PARSER = new com.google.protobuf.AbstractParser<Request10003>() {
-      public Request10003 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new Request10003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<Request10003> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Request10003> getParserForType() {
-      return PARSER;
-    }
-
-    public com.xiang.proto.pilot.Pilot.Request10003 getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface Response10003OrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10003)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    boolean hasCommon();
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    com.xiang.proto.Common.ResponseCommon getCommon();
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
-
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    boolean hasData();
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    com.xiang.proto.pilot.Pilot.Response10003.Data getData();
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder getDataOrBuilder();
-  }
-  /**
-   * Protobuf type {@code com.xiang.proto.pilot.Response10003}
-   */
-  public  static final class Response10003 extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10003)
-      Response10003OrBuilder {
-    // Use Response10003.newBuilder() to construct.
-    private Response10003(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private Response10003() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-    }
-    private Response10003(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-      this();
-      int mutable_bitField0_ = 0;
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!input.skipField(tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 10: {
-              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
-              if (common_ != null) {
-                subBuilder = common_.toBuilder();
-              }
-              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(common_);
-                common_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.xiang.proto.pilot.Pilot.Response10003.Data.Builder subBuilder = null;
-              if (data_ != null) {
-                subBuilder = data_.toBuilder();
-              }
-              data_ = input.readMessage(com.xiang.proto.pilot.Pilot.Response10003.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(data_);
-                data_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
-      } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
-      } finally {
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.xiang.proto.pilot.Pilot.Response10003.class, com.xiang.proto.pilot.Pilot.Response10003.Builder.class);
-    }
-
-    public interface DataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10003.Data)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>optional string userName = 1;</code>
-       */
-      java.lang.String getUserName();
-      /**
-       * <code>optional string userName = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getUserNameBytes();
-
-      /**
-       * <code>optional string userAvatar = 2;</code>
-       */
-      java.lang.String getUserAvatar();
-      /**
-       * <code>optional string userAvatar = 2;</code>
-       */
-      com.google.protobuf.ByteString
-          getUserAvatarBytes();
-
-      /**
-       * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-       */
-      int getSexValue();
-      /**
-       * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-       */
-      com.xiang.proto.Common.Sex getSex();
-
-      /**
-       * <code>optional string sign = 4;</code>
-       *
-       * <pre>
-       * 个性签名
-       * </pre>
-       */
-      java.lang.String getSign();
-      /**
-       * <code>optional string sign = 4;</code>
-       *
-       * <pre>
-       * 个性签名
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getSignBytes();
-
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      java.lang.String getPhone();
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      com.google.protobuf.ByteString
-          getPhoneBytes();
-    }
-    /**
-     * Protobuf type {@code com.xiang.proto.pilot.Response10003.Data}
-     */
-    public  static final class Data extends
-        com.google.protobuf.GeneratedMessage implements
-        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10003.Data)
-        DataOrBuilder {
-      // Use Data.newBuilder() to construct.
-      private Data(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-        super(builder);
-      }
-      private Data() {
-        userName_ = "";
-        userAvatar_ = "";
-        sex_ = 0;
-        sign_ = "";
-        phone_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
-      }
-      private Data(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
-        this();
-        int mutable_bitField0_ = 0;
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!input.skipField(tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                String s = input.readStringRequireUtf8();
-
-                userName_ = s;
-                break;
-              }
-              case 18: {
-                String s = input.readStringRequireUtf8();
-
-                userAvatar_ = s;
-                break;
-              }
-              case 24: {
-                int rawValue = input.readEnum();
-
-                sex_ = rawValue;
-                break;
-              }
-              case 34: {
-                String s = input.readStringRequireUtf8();
-
-                sign_ = s;
-                break;
-              }
-              case 42: {
-                String s = input.readStringRequireUtf8();
-
-                phone_ = s;
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
-        } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
-        } finally {
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_Data_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.xiang.proto.pilot.Pilot.Response10003.Data.class, com.xiang.proto.pilot.Pilot.Response10003.Data.Builder.class);
-      }
-
-      public static final int USERNAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object userName_;
-      /**
-       * <code>optional string userName = 1;</code>
-       */
-      public java.lang.String getUserName() {
-        java.lang.Object ref = userName_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userName_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userName = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getUserNameBytes() {
-        java.lang.Object ref = userName_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int USERAVATAR_FIELD_NUMBER = 2;
-      private volatile java.lang.Object userAvatar_;
-      /**
-       * <code>optional string userAvatar = 2;</code>
-       */
-      public java.lang.String getUserAvatar() {
-        java.lang.Object ref = userAvatar_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userAvatar_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userAvatar = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getUserAvatarBytes() {
-        java.lang.Object ref = userAvatar_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userAvatar_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int SEX_FIELD_NUMBER = 3;
-      private int sex_;
-      /**
-       * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-       */
-      public int getSexValue() {
-        return sex_;
-      }
-      /**
-       * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-       */
-      public com.xiang.proto.Common.Sex getSex() {
-        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
-        return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
-      }
-
-      public static final int SIGN_FIELD_NUMBER = 4;
-      private volatile java.lang.Object sign_;
-      /**
-       * <code>optional string sign = 4;</code>
-       *
-       * <pre>
-       * 个性签名
-       * </pre>
-       */
-      public java.lang.String getSign() {
-        java.lang.Object ref = sign_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          sign_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string sign = 4;</code>
-       *
-       * <pre>
-       * 个性签名
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getSignBytes() {
-        java.lang.Object ref = sign_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          sign_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int PHONE_FIELD_NUMBER = 5;
-      private volatile java.lang.Object phone_;
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      public java.lang.String getPhone() {
-        java.lang.Object ref = phone_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          phone_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string phone = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getPhoneBytes() {
-        java.lang.Object ref = phone_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          phone_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getUserNameBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 1, userName_);
-        }
-        if (!getUserAvatarBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 2, userAvatar_);
-        }
-        if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
-          output.writeEnum(3, sex_);
-        }
-        if (!getSignBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 4, sign_);
-        }
-        if (!getPhoneBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 5, phone_);
-        }
-      }
-
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getUserNameBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, userName_);
-        }
-        if (!getUserAvatarBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, userAvatar_);
-        }
-        if (sex_ != com.xiang.proto.Common.Sex.MALE.getNumber()) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeEnumSize(3, sex_);
-        }
-        if (!getSignBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(4, sign_);
-        }
-        if (!getPhoneBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(5, phone_);
-        }
-        memoizedSize = size;
-        return size;
-      }
-
-      private static final long serialVersionUID = 0L;
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input);
-      }
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
-      }
-
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10003.Data prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code com.xiang.proto.pilot.Response10003.Data}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10003.Data)
-          com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor;
-        }
-
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_Data_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  com.xiang.proto.pilot.Pilot.Response10003.Data.class, com.xiang.proto.pilot.Pilot.Response10003.Data.Builder.class);
-        }
-
-        // Construct using com.xiang.proto.pilot.Pilot.Response10003.Data.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          }
-        }
-        public Builder clear() {
-          super.clear();
-          userName_ = "";
-
-          userAvatar_ = "";
-
-          sex_ = 0;
-
-          sign_ = "";
-
-          phone_ = "";
-
-          return this;
-        }
-
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor;
-        }
-
-        public com.xiang.proto.pilot.Pilot.Response10003.Data getDefaultInstanceForType() {
-          return com.xiang.proto.pilot.Pilot.Response10003.Data.getDefaultInstance();
-        }
-
-        public com.xiang.proto.pilot.Pilot.Response10003.Data build() {
-          com.xiang.proto.pilot.Pilot.Response10003.Data result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        public com.xiang.proto.pilot.Pilot.Response10003.Data buildPartial() {
-          com.xiang.proto.pilot.Pilot.Response10003.Data result = new com.xiang.proto.pilot.Pilot.Response10003.Data(this);
-          result.userName_ = userName_;
-          result.userAvatar_ = userAvatar_;
-          result.sex_ = sex_;
-          result.sign_ = sign_;
-          result.phone_ = phone_;
-          onBuilt();
-          return result;
-        }
-
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.xiang.proto.pilot.Pilot.Response10003.Data) {
-            return mergeFrom((com.xiang.proto.pilot.Pilot.Response10003.Data)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10003.Data other) {
-          if (other == com.xiang.proto.pilot.Pilot.Response10003.Data.getDefaultInstance()) return this;
-          if (!other.getUserName().isEmpty()) {
-            userName_ = other.userName_;
-            onChanged();
-          }
-          if (!other.getUserAvatar().isEmpty()) {
-            userAvatar_ = other.userAvatar_;
-            onChanged();
-          }
-          if (other.sex_ != 0) {
-            setSexValue(other.getSexValue());
-          }
-          if (!other.getSign().isEmpty()) {
-            sign_ = other.sign_;
-            onChanged();
-          }
-          if (!other.getPhone().isEmpty()) {
-            phone_ = other.phone_;
-            onChanged();
-          }
-          onChanged();
-          return this;
-        }
-
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          com.xiang.proto.pilot.Pilot.Response10003.Data parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.xiang.proto.pilot.Pilot.Response10003.Data) e.getUnfinishedMessage();
-            throw e;
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object userName_ = "";
-        /**
-         * <code>optional string userName = 1;</code>
-         */
-        public java.lang.String getUserName() {
-          java.lang.Object ref = userName_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userName_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string userName = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getUserNameBytes() {
-          java.lang.Object ref = userName_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userName = 1;</code>
-         */
-        public Builder setUserName(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          userName_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userName = 1;</code>
-         */
-        public Builder clearUserName() {
-          
-          userName_ = getDefaultInstance().getUserName();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userName = 1;</code>
-         */
-        public Builder setUserNameBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userName_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object userAvatar_ = "";
-        /**
-         * <code>optional string userAvatar = 2;</code>
-         */
-        public java.lang.String getUserAvatar() {
-          java.lang.Object ref = userAvatar_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userAvatar_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string userAvatar = 2;</code>
-         */
-        public com.google.protobuf.ByteString
-            getUserAvatarBytes() {
-          java.lang.Object ref = userAvatar_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userAvatar_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userAvatar = 2;</code>
-         */
-        public Builder setUserAvatar(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          userAvatar_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userAvatar = 2;</code>
-         */
-        public Builder clearUserAvatar() {
-          
-          userAvatar_ = getDefaultInstance().getUserAvatar();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userAvatar = 2;</code>
-         */
-        public Builder setUserAvatarBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userAvatar_ = value;
-          onChanged();
-          return this;
-        }
-
-        private int sex_ = 0;
-        /**
-         * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-         */
-        public int getSexValue() {
-          return sex_;
-        }
-        /**
-         * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-         */
-        public Builder setSexValue(int value) {
-          sex_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-         */
-        public com.xiang.proto.Common.Sex getSex() {
-          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
-          return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
-        }
-        /**
-         * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-         */
-        public Builder setSex(com.xiang.proto.Common.Sex value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          
-          sex_ = value.getNumber();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional .com.xiang.proto.Sex sex = 3;</code>
-         */
-        public Builder clearSex() {
-          
-          sex_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object sign_ = "";
-        /**
-         * <code>optional string sign = 4;</code>
-         *
-         * <pre>
-         * 个性签名
-         * </pre>
-         */
-        public java.lang.String getSign() {
-          java.lang.Object ref = sign_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            sign_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string sign = 4;</code>
-         *
-         * <pre>
-         * 个性签名
-         * </pre>
-         */
-        public com.google.protobuf.ByteString
-            getSignBytes() {
-          java.lang.Object ref = sign_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            sign_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string sign = 4;</code>
-         *
-         * <pre>
-         * 个性签名
-         * </pre>
-         */
-        public Builder setSign(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          sign_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string sign = 4;</code>
-         *
-         * <pre>
-         * 个性签名
-         * </pre>
-         */
-        public Builder clearSign() {
-          
-          sign_ = getDefaultInstance().getSign();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string sign = 4;</code>
-         *
-         * <pre>
-         * 个性签名
-         * </pre>
-         */
-        public Builder setSignBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          sign_ = value;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object phone_ = "";
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public java.lang.String getPhone() {
-          java.lang.Object ref = phone_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            phone_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public com.google.protobuf.ByteString
-            getPhoneBytes() {
-          java.lang.Object ref = phone_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            phone_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder setPhone(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          phone_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder clearPhone() {
-          
-          phone_ = getDefaultInstance().getPhone();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string phone = 5;</code>
-         */
-        public Builder setPhoneBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          phone_ = value;
-          onChanged();
-          return this;
-        }
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return this;
-        }
-
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return this;
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10003.Data)
-      }
-
-      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10003.Data)
-      private static final com.xiang.proto.pilot.Pilot.Response10003.Data DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10003.Data();
-      }
-
-      public static com.xiang.proto.pilot.Pilot.Response10003.Data getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Data>
-          PARSER = new com.google.protobuf.AbstractParser<Data>() {
-        public Data parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
-            return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
-        }
-      };
-
-      public static com.google.protobuf.Parser<Data> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Data> getParserForType() {
-        return PARSER;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Response10003.Data getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    public static final int COMMON_FIELD_NUMBER = 1;
-    private com.xiang.proto.Common.ResponseCommon common_;
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    public boolean hasCommon() {
-      return common_ != null;
-    }
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    public com.xiang.proto.Common.ResponseCommon getCommon() {
-      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
-    }
-    /**
-     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-     */
-    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
-      return getCommon();
-    }
-
-    public static final int DATA_FIELD_NUMBER = 2;
-    private com.xiang.proto.pilot.Pilot.Response10003.Data data_;
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    public boolean hasData() {
-      return data_ != null;
-    }
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    public com.xiang.proto.pilot.Pilot.Response10003.Data getData() {
-      return data_ == null ? com.xiang.proto.pilot.Pilot.Response10003.Data.getDefaultInstance() : data_;
-    }
-    /**
-     * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-     */
-    public com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder getDataOrBuilder() {
-      return getData();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (common_ != null) {
-        output.writeMessage(1, getCommon());
-      }
-      if (data_ != null) {
-        output.writeMessage(2, getData());
-      }
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (common_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getCommon());
-      }
-      if (data_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getData());
-      }
-      memoizedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static com.xiang.proto.pilot.Pilot.Response10003 parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10003 prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.xiang.proto.pilot.Response10003}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10003)
-        com.xiang.proto.pilot.Pilot.Response10003OrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.xiang.proto.pilot.Pilot.Response10003.class, com.xiang.proto.pilot.Pilot.Response10003.Builder.class);
-      }
-
-      // Construct using com.xiang.proto.pilot.Pilot.Response10003.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        if (commonBuilder_ == null) {
-          common_ = null;
-        } else {
-          common_ = null;
-          commonBuilder_ = null;
-        }
-        if (dataBuilder_ == null) {
-          data_ = null;
-        } else {
-          data_ = null;
-          dataBuilder_ = null;
-        }
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10003_descriptor;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Response10003 getDefaultInstanceForType() {
-        return com.xiang.proto.pilot.Pilot.Response10003.getDefaultInstance();
-      }
-
-      public com.xiang.proto.pilot.Pilot.Response10003 build() {
-        com.xiang.proto.pilot.Pilot.Response10003 result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.xiang.proto.pilot.Pilot.Response10003 buildPartial() {
-        com.xiang.proto.pilot.Pilot.Response10003 result = new com.xiang.proto.pilot.Pilot.Response10003(this);
-        if (commonBuilder_ == null) {
-          result.common_ = common_;
-        } else {
-          result.common_ = commonBuilder_.build();
-        }
-        if (dataBuilder_ == null) {
-          result.data_ = data_;
-        } else {
-          result.data_ = dataBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.xiang.proto.pilot.Pilot.Response10003) {
-          return mergeFrom((com.xiang.proto.pilot.Pilot.Response10003)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10003 other) {
-        if (other == com.xiang.proto.pilot.Pilot.Response10003.getDefaultInstance()) return this;
-        if (other.hasCommon()) {
-          mergeCommon(other.getCommon());
-        }
-        if (other.hasData()) {
-          mergeData(other.getData());
-        }
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.xiang.proto.pilot.Pilot.Response10003 parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.xiang.proto.pilot.Pilot.Response10003) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private com.xiang.proto.Common.ResponseCommon common_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public boolean hasCommon() {
-        return commonBuilder_ != null || common_ != null;
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.ResponseCommon getCommon() {
-        if (commonBuilder_ == null) {
-          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
-        } else {
-          return commonBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
-        if (commonBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          common_ = value;
-          onChanged();
-        } else {
-          commonBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public Builder setCommon(
-          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
-        if (commonBuilder_ == null) {
-          common_ = builderForValue.build();
-          onChanged();
-        } else {
-          commonBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
-        if (commonBuilder_ == null) {
-          if (common_ != null) {
-            common_ =
-              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
-          } else {
-            common_ = value;
-          }
-          onChanged();
-        } else {
-          commonBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public Builder clearCommon() {
-        if (commonBuilder_ == null) {
-          common_ = null;
-          onChanged();
-        } else {
-          common_ = null;
-          commonBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
-        
-        onChanged();
-        return getCommonFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
-        if (commonBuilder_ != null) {
-          return commonBuilder_.getMessageOrBuilder();
-        } else {
-          return common_ == null ?
-              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
-          getCommonFieldBuilder() {
-        if (commonBuilder_ == null) {
-          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
-                  getCommon(),
-                  getParentForChildren(),
-                  isClean());
-          common_ = null;
-        }
-        return commonBuilder_;
-      }
-
-      private com.xiang.proto.pilot.Pilot.Response10003.Data data_ = null;
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.pilot.Pilot.Response10003.Data, com.xiang.proto.pilot.Pilot.Response10003.Data.Builder, com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder> dataBuilder_;
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public boolean hasData() {
-        return dataBuilder_ != null || data_ != null;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Response10003.Data getData() {
-        if (dataBuilder_ == null) {
-          return data_ == null ? com.xiang.proto.pilot.Pilot.Response10003.Data.getDefaultInstance() : data_;
-        } else {
-          return dataBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public Builder setData(com.xiang.proto.pilot.Pilot.Response10003.Data value) {
-        if (dataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          data_ = value;
-          onChanged();
-        } else {
-          dataBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public Builder setData(
-          com.xiang.proto.pilot.Pilot.Response10003.Data.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          data_ = builderForValue.build();
-          onChanged();
-        } else {
-          dataBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public Builder mergeData(com.xiang.proto.pilot.Pilot.Response10003.Data value) {
-        if (dataBuilder_ == null) {
-          if (data_ != null) {
-            data_ =
-              com.xiang.proto.pilot.Pilot.Response10003.Data.newBuilder(data_).mergeFrom(value).buildPartial();
-          } else {
-            data_ = value;
-          }
-          onChanged();
-        } else {
-          dataBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public Builder clearData() {
-        if (dataBuilder_ == null) {
-          data_ = null;
-          onChanged();
-        } else {
-          data_ = null;
-          dataBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Response10003.Data.Builder getDataBuilder() {
-        
-        onChanged();
-        return getDataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      public com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder getDataOrBuilder() {
-        if (dataBuilder_ != null) {
-          return dataBuilder_.getMessageOrBuilder();
-        } else {
-          return data_ == null ?
-              com.xiang.proto.pilot.Pilot.Response10003.Data.getDefaultInstance() : data_;
-        }
-      }
-      /**
-       * <code>optional .com.xiang.proto.pilot.Response10003.Data data = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          com.xiang.proto.pilot.Pilot.Response10003.Data, com.xiang.proto.pilot.Pilot.Response10003.Data.Builder, com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder> 
-          getDataFieldBuilder() {
-        if (dataBuilder_ == null) {
-          dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              com.xiang.proto.pilot.Pilot.Response10003.Data, com.xiang.proto.pilot.Pilot.Response10003.Data.Builder, com.xiang.proto.pilot.Pilot.Response10003.DataOrBuilder>(
-                  getData(),
-                  getParentForChildren(),
-                  isClean());
-          data_ = null;
-        }
-        return dataBuilder_;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10003)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10003)
-    private static final com.xiang.proto.pilot.Pilot.Response10003 DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10003();
-    }
-
-    public static com.xiang.proto.pilot.Pilot.Response10003 getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Response10003>
-        PARSER = new com.google.protobuf.AbstractParser<Response10003>() {
-      public Response10003 parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
-          return new Response10003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
-      }
-    };
-
-    public static com.google.protobuf.Parser<Response10003> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Response10003> getParserForType() {
-      return PARSER;
-    }
-
-    public com.xiang.proto.pilot.Pilot.Response10003 getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10696,6 +8417,24 @@ public final class Pilot {
     public interface DataOrBuilder extends
         // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10004.Data)
         com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string avatarUrl = 1;</code>
+       *
+       * <pre>
+       * 如果是更新头像，则会返回用户的新头像url
+       * </pre>
+       */
+      java.lang.String getAvatarUrl();
+      /**
+       * <code>optional string avatarUrl = 1;</code>
+       *
+       * <pre>
+       * 如果是更新头像，则会返回用户的新头像url
+       * </pre>
+       */
+      com.google.protobuf.ByteString
+          getAvatarUrlBytes();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Response10004.Data}
@@ -10709,6 +8448,7 @@ public final class Pilot {
         super(builder);
       }
       private Data() {
+        avatarUrl_ = "";
       }
 
       @java.lang.Override
@@ -10720,6 +8460,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
         this();
+        int mutable_bitField0_ = 0;
         try {
           boolean done = false;
           while (!done) {
@@ -10732,6 +8473,12 @@ public final class Pilot {
                 if (!input.skipField(tag)) {
                   done = true;
                 }
+                break;
+              }
+              case 10: {
+                String s = input.readStringRequireUtf8();
+
+                avatarUrl_ = s;
                 break;
               }
             }
@@ -10758,6 +8505,48 @@ public final class Pilot {
                 com.xiang.proto.pilot.Pilot.Response10004.Data.class, com.xiang.proto.pilot.Pilot.Response10004.Data.Builder.class);
       }
 
+      public static final int AVATARURL_FIELD_NUMBER = 1;
+      private volatile java.lang.Object avatarUrl_;
+      /**
+       * <code>optional string avatarUrl = 1;</code>
+       *
+       * <pre>
+       * 如果是更新头像，则会返回用户的新头像url
+       * </pre>
+       */
+      public java.lang.String getAvatarUrl() {
+        java.lang.Object ref = avatarUrl_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          avatarUrl_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>optional string avatarUrl = 1;</code>
+       *
+       * <pre>
+       * 如果是更新头像，则会返回用户的新头像url
+       * </pre>
+       */
+      public com.google.protobuf.ByteString
+          getAvatarUrlBytes() {
+        java.lang.Object ref = avatarUrl_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          avatarUrl_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -10770,6 +8559,9 @@ public final class Pilot {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
+        if (!getAvatarUrlBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 1, avatarUrl_);
+        }
       }
 
       public int getSerializedSize() {
@@ -10777,6 +8569,9 @@ public final class Pilot {
         if (size != -1) return size;
 
         size = 0;
+        if (!getAvatarUrlBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, avatarUrl_);
+        }
         memoizedSize = size;
         return size;
       }
@@ -10888,6 +8683,8 @@ public final class Pilot {
         }
         public Builder clear() {
           super.clear();
+          avatarUrl_ = "";
+
           return this;
         }
 
@@ -10910,6 +8707,7 @@ public final class Pilot {
 
         public com.xiang.proto.pilot.Pilot.Response10004.Data buildPartial() {
           com.xiang.proto.pilot.Pilot.Response10004.Data result = new com.xiang.proto.pilot.Pilot.Response10004.Data(this);
+          result.avatarUrl_ = avatarUrl_;
           onBuilt();
           return result;
         }
@@ -10925,6 +8723,10 @@ public final class Pilot {
 
         public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10004.Data other) {
           if (other == com.xiang.proto.pilot.Pilot.Response10004.Data.getDefaultInstance()) return this;
+          if (!other.getAvatarUrl().isEmpty()) {
+            avatarUrl_ = other.avatarUrl_;
+            onChanged();
+          }
           onChanged();
           return this;
         }
@@ -10948,6 +8750,95 @@ public final class Pilot {
               mergeFrom(parsedMessage);
             }
           }
+          return this;
+        }
+
+        private java.lang.Object avatarUrl_ = "";
+        /**
+         * <code>optional string avatarUrl = 1;</code>
+         *
+         * <pre>
+         * 如果是更新头像，则会返回用户的新头像url
+         * </pre>
+         */
+        public java.lang.String getAvatarUrl() {
+          java.lang.Object ref = avatarUrl_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            avatarUrl_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string avatarUrl = 1;</code>
+         *
+         * <pre>
+         * 如果是更新头像，则会返回用户的新头像url
+         * </pre>
+         */
+        public com.google.protobuf.ByteString
+            getAvatarUrlBytes() {
+          java.lang.Object ref = avatarUrl_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            avatarUrl_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string avatarUrl = 1;</code>
+         *
+         * <pre>
+         * 如果是更新头像，则会返回用户的新头像url
+         * </pre>
+         */
+        public Builder setAvatarUrl(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          avatarUrl_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string avatarUrl = 1;</code>
+         *
+         * <pre>
+         * 如果是更新头像，则会返回用户的新头像url
+         * </pre>
+         */
+        public Builder clearAvatarUrl() {
+          
+          avatarUrl_ = getDefaultInstance().getAvatarUrl();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string avatarUrl = 1;</code>
+         *
+         * <pre>
+         * 如果是更新头像，则会返回用户的新头像url
+         * </pre>
+         */
+        public Builder setAvatarUrlBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          avatarUrl_ = value;
+          onChanged();
           return this;
         }
         public final Builder setUnknownFields(
@@ -26668,14 +24559,9 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string toUserId = 1;</code>
+       * <code>optional int32 toUserId = 1;</code>
        */
-      java.lang.String getToUserId();
-      /**
-       * <code>optional string toUserId = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getToUserIdBytes();
+      int getToUserId();
 
       /**
        * <code>optional bool isFollow = 2;</code>
@@ -26698,7 +24584,7 @@ public final class Pilot {
         super(builder);
       }
       private Params() {
-        toUserId_ = "";
+        toUserId_ = 0;
         isFollow_ = false;
       }
 
@@ -26726,10 +24612,9 @@ public final class Pilot {
                 }
                 break;
               }
-              case 10: {
-                String s = input.readStringRequireUtf8();
+              case 8: {
 
-                toUserId_ = s;
+                toUserId_ = input.readInt32();
                 break;
               }
               case 16: {
@@ -26762,37 +24647,12 @@ public final class Pilot {
       }
 
       public static final int TOUSERID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object toUserId_;
+      private int toUserId_;
       /**
-       * <code>optional string toUserId = 1;</code>
+       * <code>optional int32 toUserId = 1;</code>
        */
-      public java.lang.String getToUserId() {
-        java.lang.Object ref = toUserId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          toUserId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string toUserId = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getToUserIdBytes() {
-        java.lang.Object ref = toUserId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          toUserId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public int getToUserId() {
+        return toUserId_;
       }
 
       public static final int ISFOLLOW_FIELD_NUMBER = 2;
@@ -26820,8 +24680,8 @@ public final class Pilot {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getToUserIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 1, toUserId_);
+        if (toUserId_ != 0) {
+          output.writeInt32(1, toUserId_);
         }
         if (isFollow_ != false) {
           output.writeBool(2, isFollow_);
@@ -26833,8 +24693,9 @@ public final class Pilot {
         if (size != -1) return size;
 
         size = 0;
-        if (!getToUserIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, toUserId_);
+        if (toUserId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, toUserId_);
         }
         if (isFollow_ != false) {
           size += com.google.protobuf.CodedOutputStream
@@ -26951,7 +24812,7 @@ public final class Pilot {
         }
         public Builder clear() {
           super.clear();
-          toUserId_ = "";
+          toUserId_ = 0;
 
           isFollow_ = false;
 
@@ -26994,9 +24855,8 @@ public final class Pilot {
 
         public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10011.Params other) {
           if (other == com.xiang.proto.pilot.Pilot.Request10011.Params.getDefaultInstance()) return this;
-          if (!other.getToUserId().isEmpty()) {
-            toUserId_ = other.toUserId_;
-            onChanged();
+          if (other.getToUserId() != 0) {
+            setToUserId(other.getToUserId());
           }
           if (other.getIsFollow() != false) {
             setIsFollow(other.getIsFollow());
@@ -27027,71 +24887,28 @@ public final class Pilot {
           return this;
         }
 
-        private java.lang.Object toUserId_ = "";
+        private int toUserId_ ;
         /**
-         * <code>optional string toUserId = 1;</code>
+         * <code>optional int32 toUserId = 1;</code>
          */
-        public java.lang.String getToUserId() {
-          java.lang.Object ref = toUserId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            toUserId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getToUserId() {
+          return toUserId_;
         }
         /**
-         * <code>optional string toUserId = 1;</code>
+         * <code>optional int32 toUserId = 1;</code>
          */
-        public com.google.protobuf.ByteString
-            getToUserIdBytes() {
-          java.lang.Object ref = toUserId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            toUserId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string toUserId = 1;</code>
-         */
-        public Builder setToUserId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setToUserId(int value) {
+          
           toUserId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string toUserId = 1;</code>
+         * <code>optional int32 toUserId = 1;</code>
          */
         public Builder clearToUserId() {
           
-          toUserId_ = getDefaultInstance().getToUserId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string toUserId = 1;</code>
-         */
-        public Builder setToUserIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          toUserId_ = value;
+          toUserId_ = 0;
           onChanged();
           return this;
         }
@@ -28893,14 +26710,9 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        */
-      java.lang.String getUserId();
-      /**
-       * <code>optional string userId = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getUserIdBytes();
+      int getUserId();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Request10012.Params}
@@ -28914,7 +26726,7 @@ public final class Pilot {
         super(builder);
       }
       private Params() {
-        userId_ = "";
+        userId_ = 0;
       }
 
       @java.lang.Override
@@ -28941,10 +26753,9 @@ public final class Pilot {
                 }
                 break;
               }
-              case 10: {
-                String s = input.readStringRequireUtf8();
+              case 8: {
 
-                userId_ = s;
+                userId_ = input.readInt32();
                 break;
               }
             }
@@ -28972,37 +26783,12 @@ public final class Pilot {
       }
 
       public static final int USERID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object userId_;
+      private int userId_;
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userId = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public int getUserId() {
+        return userId_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -29017,8 +26803,8 @@ public final class Pilot {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getUserIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 1, userId_);
+        if (userId_ != 0) {
+          output.writeInt32(1, userId_);
         }
       }
 
@@ -29027,8 +26813,9 @@ public final class Pilot {
         if (size != -1) return size;
 
         size = 0;
-        if (!getUserIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, userId_);
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, userId_);
         }
         memoizedSize = size;
         return size;
@@ -29141,7 +26928,7 @@ public final class Pilot {
         }
         public Builder clear() {
           super.clear();
-          userId_ = "";
+          userId_ = 0;
 
           return this;
         }
@@ -29181,9 +26968,8 @@ public final class Pilot {
 
         public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10012.Params other) {
           if (other == com.xiang.proto.pilot.Pilot.Request10012.Params.getDefaultInstance()) return this;
-          if (!other.getUserId().isEmpty()) {
-            userId_ = other.userId_;
-            onChanged();
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
           }
           onChanged();
           return this;
@@ -29211,71 +26997,28 @@ public final class Pilot {
           return this;
         }
 
-        private java.lang.Object userId_ = "";
+        private int userId_ ;
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          */
-        public java.lang.String getUserId() {
-          java.lang.Object ref = userId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getUserId() {
+          return userId_;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          */
-        public com.google.protobuf.ByteString
-            getUserIdBytes() {
-          java.lang.Object ref = userId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         */
-        public Builder setUserId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setUserId(int value) {
+          
           userId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder clearUserId() {
           
-          userId_ = getDefaultInstance().getUserId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         */
-        public Builder setUserIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userId_ = value;
+          userId_ = 0;
           onChanged();
           return this;
         }
@@ -38555,6 +36298,2212 @@ public final class Pilot {
 
   }
 
+  public interface Request10016OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10016)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    boolean hasCommon();
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.RequestCommon getCommon();
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    boolean hasParams();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Request10016.Params getParams();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.pilot.Request10016}
+   *
+   * <pre>
+   * 验证手机号是否已经注册
+   * /pilot/verifyPhoneCanUse
+   * </pre>
+   */
+  public  static final class Request10016 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10016)
+      Request10016OrBuilder {
+    // Use Request10016.newBuilder() to construct.
+    private Request10016(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Request10016() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Request10016(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              if (common_ != null) {
+                subBuilder = common_.toBuilder();
+              }
+              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(common_);
+                common_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.xiang.proto.pilot.Pilot.Request10016.Params.Builder subBuilder = null;
+              if (params_ != null) {
+                subBuilder = params_.toBuilder();
+              }
+              params_ = input.readMessage(com.xiang.proto.pilot.Pilot.Request10016.Params.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(params_);
+                params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.pilot.Pilot.Request10016.class, com.xiang.proto.pilot.Pilot.Request10016.Builder.class);
+    }
+
+    public interface ParamsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10016.Params)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string phone = 1;</code>
+       */
+      java.lang.String getPhone();
+      /**
+       * <code>optional string phone = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getPhoneBytes();
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Request10016.Params}
+     */
+    public  static final class Params extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10016.Params)
+        ParamsOrBuilder {
+      // Use Params.newBuilder() to construct.
+      private Params(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private Params() {
+        phone_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Params(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                String s = input.readStringRequireUtf8();
+
+                phone_ = s;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw new RuntimeException(e.setUnfinishedMessage(this));
+        } catch (java.io.IOException e) {
+          throw new RuntimeException(
+              new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this));
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Request10016.Params.class, com.xiang.proto.pilot.Pilot.Request10016.Params.Builder.class);
+      }
+
+      public static final int PHONE_FIELD_NUMBER = 1;
+      private volatile java.lang.Object phone_;
+      /**
+       * <code>optional string phone = 1;</code>
+       */
+      public java.lang.String getPhone() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          phone_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>optional string phone = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPhoneBytes() {
+        java.lang.Object ref = phone_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          phone_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getPhoneBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 1, phone_);
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getPhoneBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, phone_);
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10016.Params prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.xiang.proto.pilot.Request10016.Params}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10016.Params)
+          com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_Params_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.xiang.proto.pilot.Pilot.Request10016.Params.class, com.xiang.proto.pilot.Pilot.Request10016.Params.Builder.class);
+        }
+
+        // Construct using com.xiang.proto.pilot.Pilot.Request10016.Params.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          phone_ = "";
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10016.Params getDefaultInstanceForType() {
+          return com.xiang.proto.pilot.Pilot.Request10016.Params.getDefaultInstance();
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10016.Params build() {
+          com.xiang.proto.pilot.Pilot.Request10016.Params result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10016.Params buildPartial() {
+          com.xiang.proto.pilot.Pilot.Request10016.Params result = new com.xiang.proto.pilot.Pilot.Request10016.Params(this);
+          result.phone_ = phone_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.xiang.proto.pilot.Pilot.Request10016.Params) {
+            return mergeFrom((com.xiang.proto.pilot.Pilot.Request10016.Params)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10016.Params other) {
+          if (other == com.xiang.proto.pilot.Pilot.Request10016.Params.getDefaultInstance()) return this;
+          if (!other.getPhone().isEmpty()) {
+            phone_ = other.phone_;
+            onChanged();
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.xiang.proto.pilot.Pilot.Request10016.Params parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.xiang.proto.pilot.Pilot.Request10016.Params) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object phone_ = "";
+        /**
+         * <code>optional string phone = 1;</code>
+         */
+        public java.lang.String getPhone() {
+          java.lang.Object ref = phone_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            phone_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getPhoneBytes() {
+          java.lang.Object ref = phone_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            phone_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string phone = 1;</code>
+         */
+        public Builder setPhone(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          phone_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 1;</code>
+         */
+        public Builder clearPhone() {
+          
+          phone_ = getDefaultInstance().getPhone();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string phone = 1;</code>
+         */
+        public Builder setPhoneBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          phone_ = value;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10016.Params)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10016.Params)
+      private static final com.xiang.proto.pilot.Pilot.Request10016.Params DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10016.Params();
+      }
+
+      public static com.xiang.proto.pilot.Pilot.Request10016.Params getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Params>
+          PARSER = new com.google.protobuf.AbstractParser<Params>() {
+        public Params parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          try {
+            return new Params(input, extensionRegistry);
+          } catch (RuntimeException e) {
+            if (e.getCause() instanceof
+                com.google.protobuf.InvalidProtocolBufferException) {
+              throw (com.google.protobuf.InvalidProtocolBufferException)
+                  e.getCause();
+            }
+            throw e;
+          }
+        }
+      };
+
+      public static com.google.protobuf.Parser<Params> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Params> getParserForType() {
+        return PARSER;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10016.Params getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int COMMON_FIELD_NUMBER = 1;
+    private com.xiang.proto.Common.RequestCommon common_;
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public boolean hasCommon() {
+      return common_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.RequestCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      return getCommon();
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.xiang.proto.pilot.Pilot.Request10016.Params params_;
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Request10016.Params getParams() {
+      return params_ == null ? com.xiang.proto.pilot.Pilot.Request10016.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder getParamsOrBuilder() {
+      return getParams();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (common_ != null) {
+        output.writeMessage(1, getCommon());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (common_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCommon());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10016 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Request10016}
+     *
+     * <pre>
+     * 验证手机号是否已经注册
+     * /pilot/verifyPhoneCanUse
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10016)
+        com.xiang.proto.pilot.Pilot.Request10016OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Request10016.class, com.xiang.proto.pilot.Pilot.Request10016.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.pilot.Pilot.Request10016.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (commonBuilder_ == null) {
+          common_ = null;
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+        if (paramsBuilder_ == null) {
+          params_ = null;
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10016_descriptor;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10016 getDefaultInstanceForType() {
+        return com.xiang.proto.pilot.Pilot.Request10016.getDefaultInstance();
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10016 build() {
+        com.xiang.proto.pilot.Pilot.Request10016 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10016 buildPartial() {
+        com.xiang.proto.pilot.Pilot.Request10016 result = new com.xiang.proto.pilot.Pilot.Request10016(this);
+        if (commonBuilder_ == null) {
+          result.common_ = common_;
+        } else {
+          result.common_ = commonBuilder_.build();
+        }
+        if (paramsBuilder_ == null) {
+          result.params_ = params_;
+        } else {
+          result.params_ = paramsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.pilot.Pilot.Request10016) {
+          return mergeFrom((com.xiang.proto.pilot.Pilot.Request10016)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10016 other) {
+        if (other == com.xiang.proto.pilot.Pilot.Request10016.getDefaultInstance()) return this;
+        if (other.hasCommon()) {
+          mergeCommon(other.getCommon());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.pilot.Pilot.Request10016 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.pilot.Pilot.Request10016) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public boolean hasCommon() {
+        return commonBuilder_ != null || common_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommon getCommon() {
+        if (commonBuilder_ == null) {
+          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+        } else {
+          return commonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+        if (commonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          common_ = value;
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder setCommon(
+          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+        if (commonBuilder_ == null) {
+          common_ = builderForValue.build();
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+        if (commonBuilder_ == null) {
+          if (common_ != null) {
+            common_ =
+              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+          } else {
+            common_ = value;
+          }
+          onChanged();
+        } else {
+          commonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder clearCommon() {
+        if (commonBuilder_ == null) {
+          common_ = null;
+          onChanged();
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+        
+        onChanged();
+        return getCommonFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+        if (commonBuilder_ != null) {
+          return commonBuilder_.getMessageOrBuilder();
+        } else {
+          return common_ == null ?
+              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          getCommonFieldBuilder() {
+        if (commonBuilder_ == null) {
+          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+                  getCommon(),
+                  getParentForChildren(),
+                  isClean());
+          common_ = null;
+        }
+        return commonBuilder_;
+      }
+
+      private com.xiang.proto.pilot.Pilot.Request10016.Params params_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Request10016.Params, com.xiang.proto.pilot.Pilot.Request10016.Params.Builder, com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public boolean hasParams() {
+        return paramsBuilder_ != null || params_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10016.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.xiang.proto.pilot.Pilot.Request10016.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public Builder setParams(com.xiang.proto.pilot.Pilot.Request10016.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public Builder setParams(
+          com.xiang.proto.pilot.Pilot.Request10016.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public Builder mergeParams(com.xiang.proto.pilot.Pilot.Request10016.Params value) {
+        if (paramsBuilder_ == null) {
+          if (params_ != null) {
+            params_ =
+              com.xiang.proto.pilot.Pilot.Request10016.Params.newBuilder(params_).mergeFrom(value).buildPartial();
+          } else {
+            params_ = value;
+          }
+          onChanged();
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public Builder clearParams() {
+        if (paramsBuilder_ == null) {
+          params_ = null;
+          onChanged();
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10016.Params.Builder getParamsBuilder() {
+        
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.xiang.proto.pilot.Pilot.Request10016.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10016.Params params = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Request10016.Params, com.xiang.proto.pilot.Pilot.Request10016.Params.Builder, com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.pilot.Pilot.Request10016.Params, com.xiang.proto.pilot.Pilot.Request10016.Params.Builder, com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10016)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10016)
+    private static final com.xiang.proto.pilot.Pilot.Request10016 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10016();
+    }
+
+    public static com.xiang.proto.pilot.Pilot.Request10016 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Request10016>
+        PARSER = new com.google.protobuf.AbstractParser<Request10016>() {
+      public Request10016 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new Request10016(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<Request10016> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Request10016> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.pilot.Pilot.Request10016 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Response10016OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10016)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    boolean hasCommon();
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.ResponseCommon getCommon();
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
+
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    boolean hasData();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Response10016.Data getData();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder getDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.pilot.Response10016}
+   */
+  public  static final class Response10016 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10016)
+      Response10016OrBuilder {
+    // Use Response10016.newBuilder() to construct.
+    private Response10016(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Response10016() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Response10016(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
+              if (common_ != null) {
+                subBuilder = common_.toBuilder();
+              }
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(common_);
+                common_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.xiang.proto.pilot.Pilot.Response10016.Data.Builder subBuilder = null;
+              if (data_ != null) {
+                subBuilder = data_.toBuilder();
+              }
+              data_ = input.readMessage(com.xiang.proto.pilot.Pilot.Response10016.Data.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(data_);
+                data_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.pilot.Pilot.Response10016.class, com.xiang.proto.pilot.Pilot.Response10016.Builder.class);
+    }
+
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10016.Data)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool canUser = 1;</code>
+       */
+      boolean getCanUser();
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Response10016.Data}
+     */
+    public  static final class Data extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10016.Data)
+        DataOrBuilder {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private Data() {
+        canUser_ = false;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Data(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+
+                canUser_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw new RuntimeException(e.setUnfinishedMessage(this));
+        } catch (java.io.IOException e) {
+          throw new RuntimeException(
+              new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this));
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_Data_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Response10016.Data.class, com.xiang.proto.pilot.Pilot.Response10016.Data.Builder.class);
+      }
+
+      public static final int CANUSER_FIELD_NUMBER = 1;
+      private boolean canUser_;
+      /**
+       * <code>optional bool canUser = 1;</code>
+       */
+      public boolean getCanUser() {
+        return canUser_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (canUser_ != false) {
+          output.writeBool(1, canUser_);
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (canUser_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, canUser_);
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10016.Data prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.xiang.proto.pilot.Response10016.Data}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10016.Data)
+          com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_Data_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.xiang.proto.pilot.Pilot.Response10016.Data.class, com.xiang.proto.pilot.Pilot.Response10016.Data.Builder.class);
+        }
+
+        // Construct using com.xiang.proto.pilot.Pilot.Response10016.Data.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          canUser_ = false;
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10016.Data getDefaultInstanceForType() {
+          return com.xiang.proto.pilot.Pilot.Response10016.Data.getDefaultInstance();
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10016.Data build() {
+          com.xiang.proto.pilot.Pilot.Response10016.Data result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10016.Data buildPartial() {
+          com.xiang.proto.pilot.Pilot.Response10016.Data result = new com.xiang.proto.pilot.Pilot.Response10016.Data(this);
+          result.canUser_ = canUser_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.xiang.proto.pilot.Pilot.Response10016.Data) {
+            return mergeFrom((com.xiang.proto.pilot.Pilot.Response10016.Data)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10016.Data other) {
+          if (other == com.xiang.proto.pilot.Pilot.Response10016.Data.getDefaultInstance()) return this;
+          if (other.getCanUser() != false) {
+            setCanUser(other.getCanUser());
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.xiang.proto.pilot.Pilot.Response10016.Data parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.xiang.proto.pilot.Pilot.Response10016.Data) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean canUser_ ;
+        /**
+         * <code>optional bool canUser = 1;</code>
+         */
+        public boolean getCanUser() {
+          return canUser_;
+        }
+        /**
+         * <code>optional bool canUser = 1;</code>
+         */
+        public Builder setCanUser(boolean value) {
+          
+          canUser_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool canUser = 1;</code>
+         */
+        public Builder clearCanUser() {
+          
+          canUser_ = false;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10016.Data)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10016.Data)
+      private static final com.xiang.proto.pilot.Pilot.Response10016.Data DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10016.Data();
+      }
+
+      public static com.xiang.proto.pilot.Pilot.Response10016.Data getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
+        public Data parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          try {
+            return new Data(input, extensionRegistry);
+          } catch (RuntimeException e) {
+            if (e.getCause() instanceof
+                com.google.protobuf.InvalidProtocolBufferException) {
+              throw (com.google.protobuf.InvalidProtocolBufferException)
+                  e.getCause();
+            }
+            throw e;
+          }
+        }
+      };
+
+      public static com.google.protobuf.Parser<Data> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Data> getParserForType() {
+        return PARSER;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10016.Data getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int COMMON_FIELD_NUMBER = 1;
+    private com.xiang.proto.Common.ResponseCommon common_;
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public boolean hasCommon() {
+      return common_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
+      return getCommon();
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.xiang.proto.pilot.Pilot.Response10016.Data data_;
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    public boolean hasData() {
+      return data_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Response10016.Data getData() {
+      return data_ == null ? com.xiang.proto.pilot.Pilot.Response10016.Data.getDefaultInstance() : data_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder getDataOrBuilder() {
+      return getData();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (common_ != null) {
+        output.writeMessage(1, getCommon());
+      }
+      if (data_ != null) {
+        output.writeMessage(2, getData());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (common_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCommon());
+      }
+      if (data_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getData());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10016 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Response10016}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10016)
+        com.xiang.proto.pilot.Pilot.Response10016OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Response10016.class, com.xiang.proto.pilot.Pilot.Response10016.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.pilot.Pilot.Response10016.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (commonBuilder_ == null) {
+          common_ = null;
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+        if (dataBuilder_ == null) {
+          data_ = null;
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10016_descriptor;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10016 getDefaultInstanceForType() {
+        return com.xiang.proto.pilot.Pilot.Response10016.getDefaultInstance();
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10016 build() {
+        com.xiang.proto.pilot.Pilot.Response10016 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10016 buildPartial() {
+        com.xiang.proto.pilot.Pilot.Response10016 result = new com.xiang.proto.pilot.Pilot.Response10016(this);
+        if (commonBuilder_ == null) {
+          result.common_ = common_;
+        } else {
+          result.common_ = commonBuilder_.build();
+        }
+        if (dataBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = dataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.pilot.Pilot.Response10016) {
+          return mergeFrom((com.xiang.proto.pilot.Pilot.Response10016)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10016 other) {
+        if (other == com.xiang.proto.pilot.Pilot.Response10016.getDefaultInstance()) return this;
+        if (other.hasCommon()) {
+          mergeCommon(other.getCommon());
+        }
+        if (other.hasData()) {
+          mergeData(other.getData());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.pilot.Pilot.Response10016 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.pilot.Pilot.Response10016) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public boolean hasCommon() {
+        return commonBuilder_ != null || common_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
+        if (commonBuilder_ == null) {
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+        } else {
+          return commonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
+        if (commonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          common_ = value;
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder setCommon(
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
+        if (commonBuilder_ == null) {
+          common_ = builderForValue.build();
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
+        if (commonBuilder_ == null) {
+          if (common_ != null) {
+            common_ =
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+          } else {
+            common_ = value;
+          }
+          onChanged();
+        } else {
+          commonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder clearCommon() {
+        if (commonBuilder_ == null) {
+          common_ = null;
+          onChanged();
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
+        
+        onChanged();
+        return getCommonFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
+        if (commonBuilder_ != null) {
+          return commonBuilder_.getMessageOrBuilder();
+        } else {
+          return common_ == null ?
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
+          getCommonFieldBuilder() {
+        if (commonBuilder_ == null) {
+          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
+                  getCommon(),
+                  getParentForChildren(),
+                  isClean());
+          common_ = null;
+        }
+        return commonBuilder_;
+      }
+
+      private com.xiang.proto.pilot.Pilot.Response10016.Data data_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Response10016.Data, com.xiang.proto.pilot.Pilot.Response10016.Data.Builder, com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder> dataBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public boolean hasData() {
+        return dataBuilder_ != null || data_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10016.Data getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? com.xiang.proto.pilot.Pilot.Response10016.Data.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public Builder setData(com.xiang.proto.pilot.Pilot.Response10016.Data value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public Builder setData(
+          com.xiang.proto.pilot.Pilot.Response10016.Data.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public Builder mergeData(com.xiang.proto.pilot.Pilot.Response10016.Data value) {
+        if (dataBuilder_ == null) {
+          if (data_ != null) {
+            data_ =
+              com.xiang.proto.pilot.Pilot.Response10016.Data.newBuilder(data_).mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public Builder clearData() {
+        if (dataBuilder_ == null) {
+          data_ = null;
+          onChanged();
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10016.Data.Builder getDataBuilder() {
+        
+        onChanged();
+        return getDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
+        } else {
+          return data_ == null ?
+              com.xiang.proto.pilot.Pilot.Response10016.Data.getDefaultInstance() : data_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10016.Data data = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Response10016.Data, com.xiang.proto.pilot.Pilot.Response10016.Data.Builder, com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.pilot.Pilot.Response10016.Data, com.xiang.proto.pilot.Pilot.Response10016.Data.Builder, com.xiang.proto.pilot.Pilot.Response10016.DataOrBuilder>(
+                  getData(),
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        return dataBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10016)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10016)
+    private static final com.xiang.proto.pilot.Pilot.Response10016 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10016();
+    }
+
+    public static com.xiang.proto.pilot.Pilot.Response10016 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Response10016>
+        PARSER = new com.google.protobuf.AbstractParser<Response10016>() {
+      public Response10016 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new Response10016(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<Response10016> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Response10016> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.pilot.Pilot.Response10016 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10001_descriptor;
   private static
@@ -38595,26 +38544,6 @@ public final class Pilot {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10002_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_xiang_proto_pilot_Request10003_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_xiang_proto_pilot_Request10003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_xiang_proto_pilot_Request10003_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_xiang_proto_pilot_Response10003_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_xiang_proto_pilot_Response10003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_com_xiang_proto_pilot_Response10003_Data_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10004_descriptor;
   private static
@@ -38855,6 +38784,26 @@ public final class Pilot {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10015_Data_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Request10016_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Request10016_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Request10016_Params_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Response10016_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Response10016_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Response10016_Data_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38880,123 +38829,123 @@ public final class Pilot {
       "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
       "com.xiang.proto.pilot.Request10002.Param" +
       "s\032)\n\006Params\022\r\n\005phone\030\001 \001(\t\022\020\n\010password\030\002" +
-      " \001(\t\"\327\001\n\rResponse10002\022/\n\006common\030\001 \001(\0132\037" +
+      " \001(\t\"\230\002\n\rResponse10002\022/\n\006common\030\001 \001(\0132\037" +
       ".com.xiang.proto.ResponseCommon\0227\n\004data\030" +
       "\002 \001(\0132).com.xiang.proto.pilot.Response10" +
-      "002.Data\032\\\n\004Data\022-\n\tbriefUser\030\001 \001(\0132\032.co",
-      "m.xiang.proto.BriefUser\022\017\n\007userKey\030\002 \001(\t" +
-      "\022\024\n\014rongyunToken\030\003 \001(\t\"\204\001\n\014Request10003\022" +
+      "002.Data\032\234\001\n\004Data\022-\n\tbriefUser\030\001 \001(\0132\032.c",
+      "om.xiang.proto.BriefUser\022\017\n\007userKey\030\002 \001(" +
+      "\t\022\024\n\014rongyunToken\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024.c" +
+      "om.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022\r\n\005phon" +
+      "e\030\006 \001(\t\"\376\001\n\014Request10004\022.\n\006common\030\001 \001(\013" +
+      "2\036.com.xiang.proto.RequestCommon\022:\n\006para" +
+      "ms\030\002 \001(\0132*.com.xiang.proto.pilot.Request" +
+      "10004.Params\032\201\001\n\006Params\022\020\n\010userName\030\001 \001(" +
+      "\t\022\021\n\tavatarKey\030\002 \001(\t\022\022\n\nbucketName\030\003 \001(\t" +
+      "\022!\n\003sex\030\004 \001(\0162\024.com.xiang.proto.Sex\022\014\n\004s" +
+      "ign\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\"\224\001\n\rResponse100",
+      "04\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
+      "ponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
+      "oto.pilot.Response10004.Data\032\031\n\004Data\022\021\n\t" +
+      "avatarUrl\030\001 \001(\t\"\247\001\n\014Request10005\022.\n\006comm" +
+      "on\030\001 \001(\0132\036.com.xiang.proto.RequestCommon" +
+      "\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilot" +
+      ".Request10005.Params\032+\n\006Params\022\021\n\tpageIn" +
+      "dex\030\001 \001(\005\022\016\n\006userId\030\002 \001(\t\"\302\001\n\rResponse10" +
+      "005\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
+      "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p",
+      "roto.pilot.Response10005.Data\032G\n\004Data\022&\n" +
+      "\006trends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n" +
+      "\017maxCountPerPage\030\002 \001(\005\"\227\001\n\014Request10006\022" +
       ".\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reques" +
       "tCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.prot" +
-      "o.pilot.Request10003.Params\032\010\n\006Params\"\347\001" +
-      "\n\rResponse10003\022/\n\006common\030\001 \001(\0132\037.com.xi" +
-      "ang.proto.ResponseCommon\0227\n\004data\030\002 \001(\0132)" +
-      ".com.xiang.proto.pilot.Response10003.Dat" +
-      "a\032l\n\004Data\022\020\n\010userName\030\001 \001(\t\022\022\n\nuserAvata" +
-      "r\030\002 \001(\t\022!\n\003sex\030\003 \001(\0162\024.com.xiang.proto.S",
-      "ex\022\014\n\004sign\030\004 \001(\t\022\r\n\005phone\030\005 \001(\t\"\376\001\n\014Requ" +
-      "est10004\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
-      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x" +
-      "iang.proto.pilot.Request10004.Params\032\201\001\n" +
-      "\006Params\022\020\n\010userName\030\001 \001(\t\022\021\n\tavatarKey\030\002" +
-      " \001(\t\022\022\n\nbucketName\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024." +
-      "com.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022\r\n\005pho" +
-      "ne\030\006 \001(\t\"\201\001\n\rResponse10004\022/\n\006common\030\001 \001" +
-      "(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004d" +
-      "ata\030\002 \001(\0132).com.xiang.proto.pilot.Respon",
-      "se10004.Data\032\006\n\004Data\"\247\001\n\014Request10005\022.\n" +
-      "\006common\030\001 \001(\0132\036.com.xiang.proto.RequestC" +
-      "ommon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto." +
-      "pilot.Request10005.Params\032+\n\006Params\022\021\n\tp" +
-      "ageIndex\030\001 \001(\005\022\016\n\006userId\030\002 \001(\t\"\302\001\n\rRespo" +
-      "nse10005\022/\n\006common\030\001 \001(\0132\037.com.xiang.pro" +
-      "to.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xi" +
-      "ang.proto.pilot.Response10005.Data\032G\n\004Da" +
-      "ta\022&\n\006trends\030\001 \003(\0132\026.com.xiang.proto.Tre" +
-      "nd\022\027\n\017maxCountPerPage\030\002 \001(\005\"\227\001\n\014Request1",
-      "0006\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.R" +
-      "equestCommon\022:\n\006params\030\002 \001(\0132*.com.xiang" +
-      ".proto.pilot.Request10006.Params\032\033\n\006Para" +
-      "ms\022\021\n\tpageIndex\030\001 \001(\005\"\324\001\n\rResponse10006\022" +
-      "/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respon" +
-      "seCommon\0227\n\004data\030\002 \001(\0132).com.xiang.proto" +
-      ".pilot.Response10006.Data\032Y\n\004Data\0228\n\017com" +
-      "mentMessages\030\001 \003(\0132\037.com.xiang.proto.Com" +
-      "mentMessage\022\027\n\017maxCountPerPage\030\002 \001(\005\"\252\001\n" +
-      "\014Request10007\022.\n\006common\030\001 \001(\0132\036.com.xian",
-      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
-      "com.xiang.proto.pilot.Request10007.Param" +
-      "s\032.\n\006Params\022\020\n\010clearAll\030\001 \001(\010\022\022\n\nmessage" +
-      "Ids\030\002 \003(\005\"\201\001\n\rResponse10007\022/\n\006common\030\001 " +
-      "\001(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004" +
-      "data\030\002 \001(\0132).com.xiang.proto.pilot.Respo" +
-      "nse10007.Data\032\006\n\004Data\"\204\001\n\014Request10008\022." +
-      "\n\006common\030\001 \001(\0132\036.com.xiang.proto.Request" +
-      "Common\022:\n\006params\030\002 \001(\0132*.com.xiang.proto" +
-      ".pilot.Request10008.Params\032\010\n\006Params\"\220\001\n",
-      "\rResponse10008\022/\n\006common\030\001 \001(\0132\037.com.xia" +
-      "ng.proto.ResponseCommon\0227\n\004data\030\002 \001(\0132)." +
-      "com.xiang.proto.pilot.Response10008.Data" +
-      "\032\025\n\004Data\022\r\n\005count\030\001 \001(\005\"\224\001\n\014Request10009" +
-      "\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reque" +
-      "stCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.pro" +
-      "to.pilot.Request10009.Params\032\030\n\006Params\022\016" +
-      "\n\006userId\030\001 \001(\t\"\261\001\n\rResponse10009\022/\n\006comm" +
-      "on\030\001 \001(\0132\037.com.xiang.proto.ResponseCommo" +
-      "n\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.",
-      "Response10009.Data\0326\n\004Data\022.\n\nbriefUsers" +
-      "\030\001 \003(\0132\032.com.xiang.proto.BriefUser\"\224\001\n\014R" +
-      "equest10010\022.\n\006common\030\001 \001(\0132\036.com.xiang." +
-      "proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.co" +
-      "m.xiang.proto.pilot.Request10010.Params\032" +
-      "\030\n\006Params\022\016\n\006userId\030\001 \001(\t\"\261\001\n\rResponse10" +
-      "010\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
-      "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p" +
-      "roto.pilot.Response10010.Data\0326\n\004Data\022.\n" +
-      "\nbriefUsers\030\001 \003(\0132\032.com.xiang.proto.Brie",
-      "fUser\"\250\001\n\014Request10011\022.\n\006common\030\001 \001(\0132\036" +
-      ".com.xiang.proto.RequestCommon\022:\n\006params" +
-      "\030\002 \001(\0132*.com.xiang.proto.pilot.Request10" +
-      "011.Params\032,\n\006Params\022\020\n\010toUserId\030\001 \001(\t\022\020" +
-      "\n\010isFollow\030\002 \001(\010\"\201\001\n\rResponse10011\022/\n\006co" +
+      "o.pilot.Request10006.Params\032\033\n\006Params\022\021\n" +
+      "\tpageIndex\030\001 \001(\005\"\324\001\n\rResponse10006\022/\n\006co" +
       "mmon\030\001 \001(\0132\037.com.xiang.proto.ResponseCom" +
       "mon\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pilo" +
-      "t.Response10011.Data\032\006\n\004Data\"\224\001\n\014Request" +
-      "10012\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto." +
-      "RequestCommon\022:\n\006params\030\002 \001(\0132*.com.xian",
-      "g.proto.pilot.Request10012.Params\032\030\n\006Par" +
-      "ams\022\016\n\006userId\030\001 \001(\t\"\262\001\n\rResponse10012\022/\n" +
-      "\006common\030\001 \001(\0132\037.com.xiang.proto.Response" +
-      "Common\0227\n\004data\030\002 \001(\0132).com.xiang.proto.p" +
-      "ilot.Response10012.Data\0327\n\004Data\022/\n\ndetai" +
-      "lUser\030\001 \001(\0132\033.com.xiang.proto.DetailUser" +
-      "\"\250\001\n\014Request10013\022.\n\006common\030\001 \001(\0132\036.com." +
+      "t.Response10006.Data\032Y\n\004Data\0228\n\017commentM",
+      "essages\030\001 \003(\0132\037.com.xiang.proto.CommentM" +
+      "essage\022\027\n\017maxCountPerPage\030\002 \001(\005\"\252\001\n\014Requ" +
+      "est10007\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
+      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x" +
+      "iang.proto.pilot.Request10007.Params\032.\n\006" +
+      "Params\022\020\n\010clearAll\030\001 \001(\010\022\022\n\nmessageIds\030\002" +
+      " \003(\005\"\201\001\n\rResponse10007\022/\n\006common\030\001 \001(\0132\037" +
+      ".com.xiang.proto.ResponseCommon\0227\n\004data\030" +
+      "\002 \001(\0132).com.xiang.proto.pilot.Response10" +
+      "007.Data\032\006\n\004Data\"\204\001\n\014Request10008\022.\n\006com",
+      "mon\030\001 \001(\0132\036.com.xiang.proto.RequestCommo" +
+      "n\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilo" +
+      "t.Request10008.Params\032\010\n\006Params\"\220\001\n\rResp" +
+      "onse10008\022/\n\006common\030\001 \001(\0132\037.com.xiang.pr" +
+      "oto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.x" +
+      "iang.proto.pilot.Response10008.Data\032\025\n\004D" +
+      "ata\022\r\n\005count\030\001 \001(\005\"\224\001\n\014Request10009\022.\n\006c" +
+      "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom" +
+      "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pi" +
+      "lot.Request10009.Params\032\030\n\006Params\022\016\n\006use",
+      "rId\030\001 \001(\t\"\261\001\n\rResponse10009\022/\n\006common\030\001 " +
+      "\001(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004" +
+      "data\030\002 \001(\0132).com.xiang.proto.pilot.Respo" +
+      "nse10009.Data\0326\n\004Data\022.\n\nbriefUsers\030\001 \003(" +
+      "\0132\032.com.xiang.proto.BriefUser\"\224\001\n\014Reques" +
+      "t10010\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto" +
+      ".RequestCommon\022:\n\006params\030\002 \001(\0132*.com.xia" +
+      "ng.proto.pilot.Request10010.Params\032\030\n\006Pa" +
+      "rams\022\016\n\006userId\030\001 \001(\t\"\261\001\n\rResponse10010\022/" +
+      "\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respons",
+      "eCommon\0227\n\004data\030\002 \001(\0132).com.xiang.proto." +
+      "pilot.Response10010.Data\0326\n\004Data\022.\n\nbrie" +
+      "fUsers\030\001 \003(\0132\032.com.xiang.proto.BriefUser" +
+      "\"\250\001\n\014Request10011\022.\n\006common\030\001 \001(\0132\036.com." +
       "xiang.proto.RequestCommon\022:\n\006params\030\002 \001(" +
-      "\0132*.com.xiang.proto.pilot.Request10013.P" +
-      "arams\032,\n\006Params\022\017\n\007keyword\030\001 \001(\t\022\021\n\tpage",
-      "Index\030\002 \001(\005\"\320\001\n\rResponse10013\022/\n\006common\030" +
+      "\0132*.com.xiang.proto.pilot.Request10011.P" +
+      "arams\032,\n\006Params\022\020\n\010toUserId\030\001 \001(\005\022\020\n\010isF" +
+      "ollow\030\002 \001(\010\"\201\001\n\rResponse10011\022/\n\006common\030" +
       "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227" +
-      "\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Res" +
-      "ponse10013.Data\032U\n\004Data\0224\n\rsearchedUsers" +
-      "\030\001 \003(\0132\035.com.xiang.proto.SearchedUser\022\027\n" +
-      "\017maxCountPerPage\030\002 \001(\005\"\250\001\n\014Request10014\022" +
-      ".\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reques" +
-      "tCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.prot" +
-      "o.pilot.Request10014.Params\032,\n\006Params\022\017\n" +
-      "\007keyword\030\001 \001(\t\022\021\n\tpageIndex\030\002 \001(\005\"\310\001\n\rRe",
-      "sponse10014\022/\n\006common\030\001 \001(\0132\037.com.xiang." +
-      "proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com" +
-      ".xiang.proto.pilot.Response10014.Data\032M\n" +
-      "\004Data\022,\n\tbriefGyms\030\001 \003(\0132\031.com.xiang.pro" +
-      "to.BriefGym\022\027\n\017maxCountPerPage\030\002 \001(\005\"\204\001\n" +
-      "\014Request10015\022.\n\006common\030\001 \001(\0132\036.com.xian" +
-      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
-      "com.xiang.proto.pilot.Request10015.Param" +
-      "s\032\010\n\006Params\"\217\001\n\rResponse10015\022/\n\006common\030" +
-      "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227",
-      "\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Res" +
-      "ponse10015.Data\032\024\n\004Data\022\014\n\004keys\030\001 \003(\tb\006p" +
-      "roto3"
+      "\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Res",
+      "ponse10011.Data\032\006\n\004Data\"\224\001\n\014Request10012" +
+      "\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reque" +
+      "stCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.pro" +
+      "to.pilot.Request10012.Params\032\030\n\006Params\022\016" +
+      "\n\006userId\030\001 \001(\005\"\262\001\n\rResponse10012\022/\n\006comm" +
+      "on\030\001 \001(\0132\037.com.xiang.proto.ResponseCommo" +
+      "n\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pilot." +
+      "Response10012.Data\0327\n\004Data\022/\n\ndetailUser" +
+      "\030\001 \001(\0132\033.com.xiang.proto.DetailUser\"\250\001\n\014" +
+      "Request10013\022.\n\006common\030\001 \001(\0132\036.com.xiang",
+      ".proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.c" +
+      "om.xiang.proto.pilot.Request10013.Params" +
+      "\032,\n\006Params\022\017\n\007keyword\030\001 \001(\t\022\021\n\tpageIndex" +
+      "\030\002 \001(\005\"\320\001\n\rResponse10013\022/\n\006common\030\001 \001(\013" +
+      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
+      "a\030\002 \001(\0132).com.xiang.proto.pilot.Response" +
+      "10013.Data\032U\n\004Data\0224\n\rsearchedUsers\030\001 \003(" +
+      "\0132\035.com.xiang.proto.SearchedUser\022\027\n\017maxC" +
+      "ountPerPage\030\002 \001(\005\"\250\001\n\014Request10014\022.\n\006co" +
+      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm",
+      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pil" +
+      "ot.Request10014.Params\032,\n\006Params\022\017\n\007keyw" +
+      "ord\030\001 \001(\t\022\021\n\tpageIndex\030\002 \001(\005\"\310\001\n\rRespons" +
+      "e10014\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto" +
+      ".ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xian" +
+      "g.proto.pilot.Response10014.Data\032M\n\004Data" +
+      "\022,\n\tbriefGyms\030\001 \003(\0132\031.com.xiang.proto.Br" +
+      "iefGym\022\027\n\017maxCountPerPage\030\002 \001(\005\"\204\001\n\014Requ" +
+      "est10015\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
+      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x",
+      "iang.proto.pilot.Request10015.Params\032\010\n\006" +
+      "Params\"\217\001\n\rResponse10015\022/\n\006common\030\001 \001(\013" +
+      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
+      "a\030\002 \001(\0132).com.xiang.proto.pilot.Response" +
+      "10015.Data\032\024\n\004Data\022\014\n\004keys\030\001 \003(\t\"\223\001\n\014Req" +
+      "uest10016\022.\n\006common\030\001 \001(\0132\036.com.xiang.pr" +
+      "oto.RequestCommon\022:\n\006params\030\002 \001(\0132*.com." +
+      "xiang.proto.pilot.Request10016.Params\032\027\n" +
+      "\006Params\022\r\n\005phone\030\001 \001(\t\"\222\001\n\rResponse10016" +
+      "\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respo",
+      "nseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.prot" +
+      "o.pilot.Response10016.Data\032\027\n\004Data\022\017\n\007ca" +
+      "nUser\030\001 \001(\010b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -39058,33 +39007,9 @@ public final class Pilot {
     internal_static_com_xiang_proto_pilot_Response10002_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10002_Data_descriptor,
-        new java.lang.String[] { "BriefUser", "UserKey", "RongyunToken", });
-    internal_static_com_xiang_proto_pilot_Request10003_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_com_xiang_proto_pilot_Request10003_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_xiang_proto_pilot_Request10003_descriptor,
-        new java.lang.String[] { "Common", "Params", });
-    internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor =
-      internal_static_com_xiang_proto_pilot_Request10003_descriptor.getNestedTypes().get(0);
-    internal_static_com_xiang_proto_pilot_Request10003_Params_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_xiang_proto_pilot_Request10003_Params_descriptor,
-        new java.lang.String[] { });
-    internal_static_com_xiang_proto_pilot_Response10003_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_com_xiang_proto_pilot_Response10003_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_xiang_proto_pilot_Response10003_descriptor,
-        new java.lang.String[] { "Common", "Data", });
-    internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor =
-      internal_static_com_xiang_proto_pilot_Response10003_descriptor.getNestedTypes().get(0);
-    internal_static_com_xiang_proto_pilot_Response10003_Data_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_com_xiang_proto_pilot_Response10003_Data_descriptor,
-        new java.lang.String[] { "UserName", "UserAvatar", "Sex", "Sign", "Phone", });
+        new java.lang.String[] { "BriefUser", "UserKey", "RongyunToken", "Sex", "Sign", "Phone", });
     internal_static_com_xiang_proto_pilot_Request10004_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_xiang_proto_pilot_Request10004_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10004_descriptor,
@@ -39096,7 +39021,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10004_Params_descriptor,
         new java.lang.String[] { "UserName", "AvatarKey", "BucketName", "Sex", "Sign", "Phone", });
     internal_static_com_xiang_proto_pilot_Response10004_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_com_xiang_proto_pilot_Response10004_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10004_descriptor,
@@ -39106,9 +39031,9 @@ public final class Pilot {
     internal_static_com_xiang_proto_pilot_Response10004_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10004_Data_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "AvatarUrl", });
     internal_static_com_xiang_proto_pilot_Request10005_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_com_xiang_proto_pilot_Request10005_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10005_descriptor,
@@ -39120,7 +39045,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10005_Params_descriptor,
         new java.lang.String[] { "PageIndex", "UserId", });
     internal_static_com_xiang_proto_pilot_Response10005_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_com_xiang_proto_pilot_Response10005_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10005_descriptor,
@@ -39132,7 +39057,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10005_Data_descriptor,
         new java.lang.String[] { "Trends", "MaxCountPerPage", });
     internal_static_com_xiang_proto_pilot_Request10006_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_com_xiang_proto_pilot_Request10006_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10006_descriptor,
@@ -39144,7 +39069,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10006_Params_descriptor,
         new java.lang.String[] { "PageIndex", });
     internal_static_com_xiang_proto_pilot_Response10006_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_com_xiang_proto_pilot_Response10006_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10006_descriptor,
@@ -39156,7 +39081,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10006_Data_descriptor,
         new java.lang.String[] { "CommentMessages", "MaxCountPerPage", });
     internal_static_com_xiang_proto_pilot_Request10007_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_com_xiang_proto_pilot_Request10007_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10007_descriptor,
@@ -39168,7 +39093,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10007_Params_descriptor,
         new java.lang.String[] { "ClearAll", "MessageIds", });
     internal_static_com_xiang_proto_pilot_Response10007_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_com_xiang_proto_pilot_Response10007_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10007_descriptor,
@@ -39180,7 +39105,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10007_Data_descriptor,
         new java.lang.String[] { });
     internal_static_com_xiang_proto_pilot_Request10008_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_com_xiang_proto_pilot_Request10008_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10008_descriptor,
@@ -39192,7 +39117,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10008_Params_descriptor,
         new java.lang.String[] { });
     internal_static_com_xiang_proto_pilot_Response10008_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_com_xiang_proto_pilot_Response10008_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10008_descriptor,
@@ -39204,7 +39129,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10008_Data_descriptor,
         new java.lang.String[] { "Count", });
     internal_static_com_xiang_proto_pilot_Request10009_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_com_xiang_proto_pilot_Request10009_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10009_descriptor,
@@ -39216,7 +39141,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10009_Params_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_com_xiang_proto_pilot_Response10009_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_com_xiang_proto_pilot_Response10009_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10009_descriptor,
@@ -39228,7 +39153,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10009_Data_descriptor,
         new java.lang.String[] { "BriefUsers", });
     internal_static_com_xiang_proto_pilot_Request10010_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_com_xiang_proto_pilot_Request10010_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10010_descriptor,
@@ -39240,7 +39165,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10010_Params_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_com_xiang_proto_pilot_Response10010_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_com_xiang_proto_pilot_Response10010_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10010_descriptor,
@@ -39252,7 +39177,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10010_Data_descriptor,
         new java.lang.String[] { "BriefUsers", });
     internal_static_com_xiang_proto_pilot_Request10011_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_com_xiang_proto_pilot_Request10011_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10011_descriptor,
@@ -39264,7 +39189,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10011_Params_descriptor,
         new java.lang.String[] { "ToUserId", "IsFollow", });
     internal_static_com_xiang_proto_pilot_Response10011_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_com_xiang_proto_pilot_Response10011_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10011_descriptor,
@@ -39276,7 +39201,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10011_Data_descriptor,
         new java.lang.String[] { });
     internal_static_com_xiang_proto_pilot_Request10012_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_com_xiang_proto_pilot_Request10012_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10012_descriptor,
@@ -39288,7 +39213,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10012_Params_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_com_xiang_proto_pilot_Response10012_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_com_xiang_proto_pilot_Response10012_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10012_descriptor,
@@ -39300,7 +39225,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10012_Data_descriptor,
         new java.lang.String[] { "DetailUser", });
     internal_static_com_xiang_proto_pilot_Request10013_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_com_xiang_proto_pilot_Request10013_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10013_descriptor,
@@ -39312,7 +39237,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10013_Params_descriptor,
         new java.lang.String[] { "Keyword", "PageIndex", });
     internal_static_com_xiang_proto_pilot_Response10013_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_com_xiang_proto_pilot_Response10013_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10013_descriptor,
@@ -39324,7 +39249,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10013_Data_descriptor,
         new java.lang.String[] { "SearchedUsers", "MaxCountPerPage", });
     internal_static_com_xiang_proto_pilot_Request10014_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_com_xiang_proto_pilot_Request10014_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10014_descriptor,
@@ -39336,7 +39261,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10014_Params_descriptor,
         new java.lang.String[] { "Keyword", "PageIndex", });
     internal_static_com_xiang_proto_pilot_Response10014_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_com_xiang_proto_pilot_Response10014_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10014_descriptor,
@@ -39348,7 +39273,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Response10014_Data_descriptor,
         new java.lang.String[] { "BriefGyms", "MaxCountPerPage", });
     internal_static_com_xiang_proto_pilot_Request10015_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_com_xiang_proto_pilot_Request10015_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10015_descriptor,
@@ -39360,7 +39285,7 @@ public final class Pilot {
         internal_static_com_xiang_proto_pilot_Request10015_Params_descriptor,
         new java.lang.String[] { });
     internal_static_com_xiang_proto_pilot_Response10015_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_com_xiang_proto_pilot_Response10015_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10015_descriptor,
@@ -39371,6 +39296,30 @@ public final class Pilot {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10015_Data_descriptor,
         new java.lang.String[] { "Keys", });
+    internal_static_com_xiang_proto_pilot_Request10016_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_com_xiang_proto_pilot_Request10016_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Request10016_descriptor,
+        new java.lang.String[] { "Common", "Params", });
+    internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor =
+      internal_static_com_xiang_proto_pilot_Request10016_descriptor.getNestedTypes().get(0);
+    internal_static_com_xiang_proto_pilot_Request10016_Params_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor,
+        new java.lang.String[] { "Phone", });
+    internal_static_com_xiang_proto_pilot_Response10016_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_com_xiang_proto_pilot_Response10016_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Response10016_descriptor,
+        new java.lang.String[] { "Common", "Data", });
+    internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor =
+      internal_static_com_xiang_proto_pilot_Response10016_descriptor.getNestedTypes().get(0);
+    internal_static_com_xiang_proto_pilot_Response10016_Data_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor,
+        new java.lang.String[] { "CanUser", });
     com.xiang.proto.Common.getDescriptor();
   }
 

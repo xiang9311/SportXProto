@@ -48,28 +48,9 @@ message Response10002 {
 		BriefUser briefUser = 1;                     // 返回用户简要信息
 		string userKey = 2;                          // 返回用户私钥
 		string rongyunToken = 3;                     // 融云聊天使用的token
-	}
-}
-
-// 获取我的个人信息
-// /pilot/getMyInfo
-message Request10003 {
-	RequestCommon common = 1;
-	Params params = 2;
-	message Params {
-		
-	}
-}
-
-message Response10003 {
-	ResponseCommon common = 1;
-	Data data = 2;
-	message Data {
-		string userName = 1;
-		string userAvatar = 2;
-		Sex sex = 3;
-		string sign = 4;                              // 个性签名
-		string phone = 5;
+		Sex sex = 4;
+		string sign = 5;                              // 个性签名
+		string phone = 6;
 	}
 }
 
@@ -92,7 +73,7 @@ message Response10004 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
-		
+		string avatarUrl = 1;                             // 如果是更新头像，则会返回用户的新头像url
 	}
 }
 
@@ -213,7 +194,7 @@ message Request10011 {
 	RequestCommon common = 1;
 	Params params = 2;
 	message Params {
-		string toUserId = 1;
+		int32 toUserId = 1;
 		bool isFollow = 2;                        // true:关注 false：取消关注
 	}
 }
@@ -232,7 +213,7 @@ message Request10012 {
 	RequestCommon common = 1;
 	Params params = 2;
 	message Params {
-		string userId = 1;
+		int32 userId = 1;
 	}
 }
 
@@ -298,5 +279,23 @@ message Response10015 {
 	Data data = 2;
 	message Data {
 		repeated string keys = 1;
+	}
+}
+
+// 验证手机号是否已经注册
+// /pilot/verifyPhoneCanUse
+message Request10016 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		string phone = 1;
+	}
+}
+
+message Response10016 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		bool canUser = 1;
 	}
 }

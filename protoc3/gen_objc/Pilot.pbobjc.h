@@ -15,7 +15,6 @@ CF_EXTERN_C_BEGIN
 @class DetailUser;
 @class Request10001_Params;
 @class Request10002_Params;
-@class Request10003_Params;
 @class Request10004_Params;
 @class Request10005_Params;
 @class Request10006_Params;
@@ -28,10 +27,10 @@ CF_EXTERN_C_BEGIN
 @class Request10013_Params;
 @class Request10014_Params;
 @class Request10015_Params;
+@class Request10016_Params;
 @class RequestCommon;
 @class Response10001_Data;
 @class Response10002_Data;
-@class Response10003_Data;
 @class Response10004_Data;
 @class Response10005_Data;
 @class Response10006_Data;
@@ -44,6 +43,7 @@ CF_EXTERN_C_BEGIN
 @class Response10013_Data;
 @class Response10014_Data;
 @class Response10015_Data;
+@class Response10016_Data;
 @class ResponseCommon;
 GPB_ENUM_FWD_DECLARE(Sex);
 
@@ -204,6 +204,9 @@ typedef GPB_ENUM(Response10002_Data_FieldNumber) {
   Response10002_Data_FieldNumber_BriefUser = 1,
   Response10002_Data_FieldNumber_UserKey = 2,
   Response10002_Data_FieldNumber_RongyunToken = 3,
+  Response10002_Data_FieldNumber_Sex = 4,
+  Response10002_Data_FieldNumber_Sign = 5,
+  Response10002_Data_FieldNumber_Phone = 6,
 };
 
 @interface Response10002_Data : GPBMessage
@@ -218,66 +221,6 @@ typedef GPB_ENUM(Response10002_Data_FieldNumber) {
 // 融云聊天使用的token
 @property(nonatomic, readwrite, copy, null_resettable) NSString *rongyunToken;
 
-@end
-
-#pragma mark - Request10003
-
-typedef GPB_ENUM(Request10003_FieldNumber) {
-  Request10003_FieldNumber_Common = 1,
-  Request10003_FieldNumber_Params = 2,
-};
-
-// 获取我的个人信息
-// /pilot/getMyInfo
-@interface Request10003 : GPBMessage
-
-@property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
-
-@property(nonatomic, readwrite) BOOL hasParams;
-@property(nonatomic, readwrite, strong, null_resettable) Request10003_Params *params;
-
-@end
-
-#pragma mark - Request10003_Params
-
-@interface Request10003_Params : GPBMessage
-
-@end
-
-#pragma mark - Response10003
-
-typedef GPB_ENUM(Response10003_FieldNumber) {
-  Response10003_FieldNumber_Common = 1,
-  Response10003_FieldNumber_Data_p = 2,
-};
-
-@interface Response10003 : GPBMessage
-
-@property(nonatomic, readwrite) BOOL hasCommon;
-@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
-
-@property(nonatomic, readwrite) BOOL hasData_p;
-@property(nonatomic, readwrite, strong, null_resettable) Response10003_Data *data_p;
-
-@end
-
-#pragma mark - Response10003_Data
-
-typedef GPB_ENUM(Response10003_Data_FieldNumber) {
-  Response10003_Data_FieldNumber_UserName = 1,
-  Response10003_Data_FieldNumber_UserAvatar = 2,
-  Response10003_Data_FieldNumber_Sex = 3,
-  Response10003_Data_FieldNumber_Sign = 4,
-  Response10003_Data_FieldNumber_Phone = 5,
-};
-
-@interface Response10003_Data : GPBMessage
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userName;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userAvatar;
-
 @property(nonatomic, readwrite) enum Sex sex;
 
 // 个性签名
@@ -287,8 +230,8 @@ typedef GPB_ENUM(Response10003_Data_FieldNumber) {
 
 @end
 
-int32_t Response10003_Data_Sex_RawValue(Response10003_Data *message);
-void SetResponse10003_Data_Sex_RawValue(Response10003_Data *message, int32_t value);
+int32_t Response10002_Data_Sex_RawValue(Response10002_Data *message);
+void SetResponse10002_Data_Sex_RawValue(Response10002_Data *message, int32_t value);
 
 #pragma mark - Request10004
 
@@ -361,7 +304,14 @@ typedef GPB_ENUM(Response10004_FieldNumber) {
 
 #pragma mark - Response10004_Data
 
+typedef GPB_ENUM(Response10004_Data_FieldNumber) {
+  Response10004_Data_FieldNumber_AvatarURL = 1,
+};
+
 @interface Response10004_Data : GPBMessage
+
+// 如果是更新头像，则会返回用户的新头像url
+@property(nonatomic, readwrite, copy, null_resettable) NSString *avatarURL;
 
 @end
 
@@ -774,7 +724,7 @@ typedef GPB_ENUM(Request10011_Params_FieldNumber) {
 
 @interface Request10011_Params : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *toUserId;
+@property(nonatomic, readwrite) int32_t toUserId;
 
 // true:关注 false：取消关注
 @property(nonatomic, readwrite) BOOL isFollow;
@@ -831,7 +781,7 @@ typedef GPB_ENUM(Request10012_Params_FieldNumber) {
 
 @interface Request10012_Params : GPBMessage
 
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+@property(nonatomic, readwrite) int32_t userId;
 
 @end
 
@@ -1054,6 +1004,66 @@ typedef GPB_ENUM(Response10015_Data_FieldNumber) {
 // |keysArray| contains |NSString|
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray *keysArray;
 @property(nonatomic, readonly) NSUInteger keysArray_Count;
+
+@end
+
+#pragma mark - Request10016
+
+typedef GPB_ENUM(Request10016_FieldNumber) {
+  Request10016_FieldNumber_Common = 1,
+  Request10016_FieldNumber_Params = 2,
+};
+
+// 验证手机号是否已经注册
+// /pilot/verifyPhoneCanUse
+@interface Request10016 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasParams;
+@property(nonatomic, readwrite, strong, null_resettable) Request10016_Params *params;
+
+@end
+
+#pragma mark - Request10016_Params
+
+typedef GPB_ENUM(Request10016_Params_FieldNumber) {
+  Request10016_Params_FieldNumber_Phone = 1,
+};
+
+@interface Request10016_Params : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *phone;
+
+@end
+
+#pragma mark - Response10016
+
+typedef GPB_ENUM(Response10016_FieldNumber) {
+  Response10016_FieldNumber_Common = 1,
+  Response10016_FieldNumber_Data_p = 2,
+};
+
+@interface Response10016 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasData_p;
+@property(nonatomic, readwrite, strong, null_resettable) Response10016_Data *data_p;
+
+@end
+
+#pragma mark - Response10016_Data
+
+typedef GPB_ENUM(Response10016_Data_FieldNumber) {
+  Response10016_Data_FieldNumber_CanUser = 1,
+};
+
+@interface Response10016_Data : GPBMessage
+
+@property(nonatomic, readwrite) BOOL canUser;
 
 @end
 
