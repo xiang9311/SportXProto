@@ -9604,22 +9604,13 @@ public final class Pilot {
       int getPageIndex();
 
       /**
-       * <code>optional string userId = 2;</code>
+       * <code>optional int32 userId = 2;</code>
        *
        * <pre>
        * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
        * </pre>
        */
-      java.lang.String getUserId();
-      /**
-       * <code>optional string userId = 2;</code>
-       *
-       * <pre>
-       * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getUserIdBytes();
+      int getUserId();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Request10005.Params}
@@ -9634,7 +9625,7 @@ public final class Pilot {
       }
       private Params() {
         pageIndex_ = 0;
-        userId_ = "";
+        userId_ = 0;
       }
 
       @java.lang.Override
@@ -9666,10 +9657,9 @@ public final class Pilot {
                 pageIndex_ = input.readInt32();
                 break;
               }
-              case 18: {
-                String s = input.readStringRequireUtf8();
+              case 16: {
 
-                userId_ = s;
+                userId_ = input.readInt32();
                 break;
               }
             }
@@ -9710,45 +9700,16 @@ public final class Pilot {
       }
 
       public static final int USERID_FIELD_NUMBER = 2;
-      private volatile java.lang.Object userId_;
+      private int userId_;
       /**
-       * <code>optional string userId = 2;</code>
+       * <code>optional int32 userId = 2;</code>
        *
        * <pre>
        * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
        * </pre>
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userId = 2;</code>
-       *
-       * <pre>
-       * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public int getUserId() {
+        return userId_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -9766,8 +9727,8 @@ public final class Pilot {
         if (pageIndex_ != 0) {
           output.writeInt32(1, pageIndex_);
         }
-        if (!getUserIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 2, userId_);
+        if (userId_ != 0) {
+          output.writeInt32(2, userId_);
         }
       }
 
@@ -9780,8 +9741,9 @@ public final class Pilot {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(1, pageIndex_);
         }
-        if (!getUserIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(2, userId_);
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, userId_);
         }
         memoizedSize = size;
         return size;
@@ -9896,7 +9858,7 @@ public final class Pilot {
           super.clear();
           pageIndex_ = 0;
 
-          userId_ = "";
+          userId_ = 0;
 
           return this;
         }
@@ -9940,9 +9902,8 @@ public final class Pilot {
           if (other.getPageIndex() != 0) {
             setPageIndex(other.getPageIndex());
           }
-          if (!other.getUserId().isEmpty()) {
-            userId_ = other.userId_;
-            onChanged();
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
           }
           onChanged();
           return this;
@@ -10008,65 +9969,32 @@ public final class Pilot {
           return this;
         }
 
-        private java.lang.Object userId_ = "";
+        private int userId_ ;
         /**
-         * <code>optional string userId = 2;</code>
+         * <code>optional int32 userId = 2;</code>
          *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
          * </pre>
          */
-        public java.lang.String getUserId() {
-          java.lang.Object ref = userId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getUserId() {
+          return userId_;
         }
         /**
-         * <code>optional string userId = 2;</code>
+         * <code>optional int32 userId = 2;</code>
          *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
          * </pre>
          */
-        public com.google.protobuf.ByteString
-            getUserIdBytes() {
-          java.lang.Object ref = userId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userId = 2;</code>
-         *
-         * <pre>
-         * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
-         * </pre>
-         */
-        public Builder setUserId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setUserId(int value) {
+          
           userId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string userId = 2;</code>
+         * <code>optional int32 userId = 2;</code>
          *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
@@ -10074,25 +10002,7 @@ public final class Pilot {
          */
         public Builder clearUserId() {
           
-          userId_ = getDefaultInstance().getUserId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userId = 2;</code>
-         *
-         * <pre>
-         * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
-         * </pre>
-         */
-        public Builder setUserIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userId_ = value;
+          userId_ = 0;
           onChanged();
           return this;
         }
@@ -19245,22 +19155,13 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        *
        * <pre>
        * 如果不传该字段，则获取我的关注列表
        * </pre>
        */
-      java.lang.String getUserId();
-      /**
-       * <code>optional string userId = 1;</code>
-       *
-       * <pre>
-       * 如果不传该字段，则获取我的关注列表
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getUserIdBytes();
+      int getUserId();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Request10009.Params}
@@ -19274,7 +19175,7 @@ public final class Pilot {
         super(builder);
       }
       private Params() {
-        userId_ = "";
+        userId_ = 0;
       }
 
       @java.lang.Override
@@ -19301,10 +19202,9 @@ public final class Pilot {
                 }
                 break;
               }
-              case 10: {
-                String s = input.readStringRequireUtf8();
+              case 8: {
 
-                userId_ = s;
+                userId_ = input.readInt32();
                 break;
               }
             }
@@ -19332,45 +19232,16 @@ public final class Pilot {
       }
 
       public static final int USERID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object userId_;
+      private int userId_;
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        *
        * <pre>
        * 如果不传该字段，则获取我的关注列表
        * </pre>
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userId = 1;</code>
-       *
-       * <pre>
-       * 如果不传该字段，则获取我的关注列表
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public int getUserId() {
+        return userId_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -19385,8 +19256,8 @@ public final class Pilot {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getUserIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 1, userId_);
+        if (userId_ != 0) {
+          output.writeInt32(1, userId_);
         }
       }
 
@@ -19395,8 +19266,9 @@ public final class Pilot {
         if (size != -1) return size;
 
         size = 0;
-        if (!getUserIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, userId_);
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, userId_);
         }
         memoizedSize = size;
         return size;
@@ -19509,7 +19381,7 @@ public final class Pilot {
         }
         public Builder clear() {
           super.clear();
-          userId_ = "";
+          userId_ = 0;
 
           return this;
         }
@@ -19549,9 +19421,8 @@ public final class Pilot {
 
         public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10009.Params other) {
           if (other == com.xiang.proto.pilot.Pilot.Request10009.Params.getDefaultInstance()) return this;
-          if (!other.getUserId().isEmpty()) {
-            userId_ = other.userId_;
-            onChanged();
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
           }
           onChanged();
           return this;
@@ -19579,65 +19450,32 @@ public final class Pilot {
           return this;
         }
 
-        private java.lang.Object userId_ = "";
+        private int userId_ ;
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
          * </pre>
          */
-        public java.lang.String getUserId() {
-          java.lang.Object ref = userId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getUserId() {
+          return userId_;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
          * </pre>
          */
-        public com.google.protobuf.ByteString
-            getUserIdBytes() {
-          java.lang.Object ref = userId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         *
-         * <pre>
-         * 如果不传该字段，则获取我的关注列表
-         * </pre>
-         */
-        public Builder setUserId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setUserId(int value) {
+          
           userId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
@@ -19645,25 +19483,7 @@ public final class Pilot {
          */
         public Builder clearUserId() {
           
-          userId_ = getDefaultInstance().getUserId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         *
-         * <pre>
-         * 如果不传该字段，则获取我的关注列表
-         * </pre>
-         */
-        public Builder setUserIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userId_ = value;
+          userId_ = 0;
           onChanged();
           return this;
         }
@@ -21902,22 +21722,13 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        *
        * <pre>
        * 如果不传该字段，则获取我的粉丝列表
        * </pre>
        */
-      java.lang.String getUserId();
-      /**
-       * <code>optional string userId = 1;</code>
-       *
-       * <pre>
-       * 如果不传该字段，则获取我的粉丝列表
-       * </pre>
-       */
-      com.google.protobuf.ByteString
-          getUserIdBytes();
+      int getUserId();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Request10010.Params}
@@ -21931,7 +21742,7 @@ public final class Pilot {
         super(builder);
       }
       private Params() {
-        userId_ = "";
+        userId_ = 0;
       }
 
       @java.lang.Override
@@ -21958,10 +21769,9 @@ public final class Pilot {
                 }
                 break;
               }
-              case 10: {
-                String s = input.readStringRequireUtf8();
+              case 8: {
 
-                userId_ = s;
+                userId_ = input.readInt32();
                 break;
               }
             }
@@ -21989,45 +21799,16 @@ public final class Pilot {
       }
 
       public static final int USERID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object userId_;
+      private int userId_;
       /**
-       * <code>optional string userId = 1;</code>
+       * <code>optional int32 userId = 1;</code>
        *
        * <pre>
        * 如果不传该字段，则获取我的粉丝列表
        * </pre>
        */
-      public java.lang.String getUserId() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          userId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>optional string userId = 1;</code>
-       *
-       * <pre>
-       * 如果不传该字段，则获取我的粉丝列表
-       * </pre>
-       */
-      public com.google.protobuf.ByteString
-          getUserIdBytes() {
-        java.lang.Object ref = userId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          userId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public int getUserId() {
+        return userId_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -22042,8 +21823,8 @@ public final class Pilot {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getUserIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessage.writeString(output, 1, userId_);
+        if (userId_ != 0) {
+          output.writeInt32(1, userId_);
         }
       }
 
@@ -22052,8 +21833,9 @@ public final class Pilot {
         if (size != -1) return size;
 
         size = 0;
-        if (!getUserIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessage.computeStringSize(1, userId_);
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, userId_);
         }
         memoizedSize = size;
         return size;
@@ -22166,7 +21948,7 @@ public final class Pilot {
         }
         public Builder clear() {
           super.clear();
-          userId_ = "";
+          userId_ = 0;
 
           return this;
         }
@@ -22206,9 +21988,8 @@ public final class Pilot {
 
         public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10010.Params other) {
           if (other == com.xiang.proto.pilot.Pilot.Request10010.Params.getDefaultInstance()) return this;
-          if (!other.getUserId().isEmpty()) {
-            userId_ = other.userId_;
-            onChanged();
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
           }
           onChanged();
           return this;
@@ -22236,65 +22017,32 @@ public final class Pilot {
           return this;
         }
 
-        private java.lang.Object userId_ = "";
+        private int userId_ ;
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
          * </pre>
          */
-        public java.lang.String getUserId() {
-          java.lang.Object ref = userId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            userId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public int getUserId() {
+          return userId_;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
          * </pre>
          */
-        public com.google.protobuf.ByteString
-            getUserIdBytes() {
-          java.lang.Object ref = userId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            userId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         *
-         * <pre>
-         * 如果不传该字段，则获取我的粉丝列表
-         * </pre>
-         */
-        public Builder setUserId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setUserId(int value) {
+          
           userId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional string userId = 1;</code>
+         * <code>optional int32 userId = 1;</code>
          *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
@@ -22302,25 +22050,7 @@ public final class Pilot {
          */
         public Builder clearUserId() {
           
-          userId_ = getDefaultInstance().getUserId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>optional string userId = 1;</code>
-         *
-         * <pre>
-         * 如果不传该字段，则获取我的粉丝列表
-         * </pre>
-         */
-        public Builder setUserIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          userId_ = value;
+          userId_ = 0;
           onChanged();
           return this;
         }
@@ -41068,7 +40798,7 @@ public final class Pilot {
       "on\030\001 \001(\0132\036.com.xiang.proto.RequestCommon" +
       "\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilot" +
       ".Request10005.Params\032+\n\006Params\022\021\n\tpageIn" +
-      "dex\030\001 \001(\005\022\016\n\006userId\030\002 \001(\t\"\302\001\n\rResponse10" +
+      "dex\030\001 \001(\005\022\016\n\006userId\030\002 \001(\005\"\302\001\n\rResponse10" +
       "005\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
       "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p",
       "roto.pilot.Response10005.Data\032G\n\004Data\022&\n" +
@@ -41101,7 +40831,7 @@ public final class Pilot {
       "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom" +
       "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pi" +
       "lot.Request10009.Params\032\030\n\006Params\022\016\n\006use",
-      "rId\030\001 \001(\t\"\261\001\n\rResponse10009\022/\n\006common\030\001 " +
+      "rId\030\001 \001(\005\"\261\001\n\rResponse10009\022/\n\006common\030\001 " +
       "\001(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004" +
       "data\030\002 \001(\0132).com.xiang.proto.pilot.Respo" +
       "nse10009.Data\0326\n\004Data\022.\n\nbriefUsers\030\001 \003(" +
@@ -41109,7 +40839,7 @@ public final class Pilot {
       "t10010\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto" +
       ".RequestCommon\022:\n\006params\030\002 \001(\0132*.com.xia" +
       "ng.proto.pilot.Request10010.Params\032\030\n\006Pa" +
-      "rams\022\016\n\006userId\030\001 \001(\t\"\261\001\n\rResponse10010\022/" +
+      "rams\022\016\n\006userId\030\001 \001(\005\"\261\001\n\rResponse10010\022/" +
       "\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respons",
       "eCommon\0227\n\004data\030\002 \001(\0132).com.xiang.proto." +
       "pilot.Response10010.Data\0326\n\004Data\022.\n\nbrie" +

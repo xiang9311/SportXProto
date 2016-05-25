@@ -1089,7 +1089,7 @@ typedef struct Request10005__storage_ {
 typedef struct Request10005_Params__storage_ {
   uint32_t _has_storage_[1];
   int32_t pageIndex;
-  NSString *userId;
+  int32_t userId;
 } Request10005_Params__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1114,9 +1114,9 @@ typedef struct Request10005_Params__storage_ {
         .number = Request10005_Params_FieldNumber_UserId,
         .hasIndex = 1,
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeString,
+        .dataType = GPBDataTypeInt32,
         .offset = offsetof(Request10005_Params__storage_, userId),
-        .defaultValue.valueString = nil,
+        .defaultValue.valueInt32 = 0,
         .dataTypeSpecific.className = NULL,
         .fieldOptions = NULL,
       },
@@ -2059,7 +2059,7 @@ typedef struct Request10009__storage_ {
 
 typedef struct Request10009_Params__storage_ {
   uint32_t _has_storage_[1];
-  NSString *userId;
+  int32_t userId;
 } Request10009_Params__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2073,9 +2073,9 @@ typedef struct Request10009_Params__storage_ {
         .number = Request10009_Params_FieldNumber_UserId,
         .hasIndex = 0,
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeString,
+        .dataType = GPBDataTypeInt32,
         .offset = offsetof(Request10009_Params__storage_, userId),
-        .defaultValue.valueString = nil,
+        .defaultValue.valueInt32 = 0,
         .dataTypeSpecific.className = NULL,
         .fieldOptions = NULL,
       },
@@ -2301,7 +2301,7 @@ typedef struct Request10010__storage_ {
 
 typedef struct Request10010_Params__storage_ {
   uint32_t _has_storage_[1];
-  NSString *userId;
+  int32_t userId;
 } Request10010_Params__storage_;
 
 // This method is threadsafe because it is initially called
@@ -2315,9 +2315,9 @@ typedef struct Request10010_Params__storage_ {
         .number = Request10010_Params_FieldNumber_UserId,
         .hasIndex = 0,
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeString,
+        .dataType = GPBDataTypeInt32,
         .offset = offsetof(Request10010_Params__storage_, userId),
-        .defaultValue.valueString = nil,
+        .defaultValue.valueInt32 = 0,
         .dataTypeSpecific.className = NULL,
         .fieldOptions = NULL,
       },

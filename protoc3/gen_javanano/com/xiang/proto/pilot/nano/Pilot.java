@@ -1438,8 +1438,8 @@ public interface Pilot {
       // optional int32 pageIndex = 1;
       public int pageIndex;
 
-      // optional string userId = 2;
-      public java.lang.String userId;
+      // optional int32 userId = 2;
+      public int userId;
 
       public Params() {
         clear();
@@ -1447,7 +1447,7 @@ public interface Pilot {
 
       public Params clear() {
         pageIndex = 0;
-        userId = "";
+        userId = 0;
         cachedSize = -1;
         return this;
       }
@@ -1458,8 +1458,8 @@ public interface Pilot {
         if (this.pageIndex != 0) {
           output.writeInt32(1, this.pageIndex);
         }
-        if (!this.userId.equals("")) {
-          output.writeString(2, this.userId);
+        if (this.userId != 0) {
+          output.writeInt32(2, this.userId);
         }
         super.writeTo(output);
       }
@@ -1471,9 +1471,9 @@ public interface Pilot {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
               .computeInt32Size(1, this.pageIndex);
         }
-        if (!this.userId.equals("")) {
+        if (this.userId != 0) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(2, this.userId);
+              .computeInt32Size(2, this.userId);
         }
         return size;
       }
@@ -1497,8 +1497,8 @@ public interface Pilot {
               this.pageIndex = input.readInt32();
               break;
             }
-            case 18: {
-              this.userId = input.readString();
+            case 16: {
+              this.userId = input.readInt32();
               break;
             }
           }
@@ -3049,15 +3049,15 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional string userId = 1;
-      public java.lang.String userId;
+      // optional int32 userId = 1;
+      public int userId;
 
       public Params() {
         clear();
       }
 
       public Params clear() {
-        userId = "";
+        userId = 0;
         cachedSize = -1;
         return this;
       }
@@ -3065,8 +3065,8 @@ public interface Pilot {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (!this.userId.equals("")) {
-          output.writeString(1, this.userId);
+        if (this.userId != 0) {
+          output.writeInt32(1, this.userId);
         }
         super.writeTo(output);
       }
@@ -3074,9 +3074,9 @@ public interface Pilot {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (!this.userId.equals("")) {
+        if (this.userId != 0) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(1, this.userId);
+              .computeInt32Size(1, this.userId);
         }
         return size;
       }
@@ -3096,8 +3096,8 @@ public interface Pilot {
               }
               break;
             }
-            case 10: {
-              this.userId = input.readString();
+            case 8: {
+              this.userId = input.readInt32();
               break;
             }
           }
@@ -3453,15 +3453,15 @@ public interface Pilot {
         return _emptyArray;
       }
 
-      // optional string userId = 1;
-      public java.lang.String userId;
+      // optional int32 userId = 1;
+      public int userId;
 
       public Params() {
         clear();
       }
 
       public Params clear() {
-        userId = "";
+        userId = 0;
         cachedSize = -1;
         return this;
       }
@@ -3469,8 +3469,8 @@ public interface Pilot {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (!this.userId.equals("")) {
-          output.writeString(1, this.userId);
+        if (this.userId != 0) {
+          output.writeInt32(1, this.userId);
         }
         super.writeTo(output);
       }
@@ -3478,9 +3478,9 @@ public interface Pilot {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (!this.userId.equals("")) {
+        if (this.userId != 0) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-              .computeStringSize(1, this.userId);
+              .computeInt32Size(1, this.userId);
         }
         return size;
       }
@@ -3500,8 +3500,8 @@ public interface Pilot {
               }
               break;
             }
-            case 10: {
-              this.userId = input.readString();
+            case 8: {
+              this.userId = input.readInt32();
               break;
             }
           }

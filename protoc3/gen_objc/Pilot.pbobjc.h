@@ -350,7 +350,7 @@ typedef GPB_ENUM(Request10005_Params_FieldNumber) {
 @property(nonatomic, readwrite) int32_t pageIndex;
 
 // 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+@property(nonatomic, readwrite) int32_t userId;
 
 @end
 
@@ -599,7 +599,7 @@ typedef GPB_ENUM(Request10009_Params_FieldNumber) {
 @interface Request10009_Params : GPBMessage
 
 // 如果不传该字段，则获取我的关注列表
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+@property(nonatomic, readwrite) int32_t userId;
 
 @end
 
@@ -663,7 +663,7 @@ typedef GPB_ENUM(Request10010_Params_FieldNumber) {
 @interface Request10010_Params : GPBMessage
 
 // 如果不传该字段，则获取我的粉丝列表
-@property(nonatomic, readwrite, copy, null_resettable) NSString *userId;
+@property(nonatomic, readwrite) int32_t userId;
 
 @end
 
