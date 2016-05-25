@@ -28,6 +28,7 @@ CF_EXTERN_C_BEGIN
 @class Request10014_Params;
 @class Request10015_Params;
 @class Request10016_Params;
+@class Request10017_Params;
 @class RequestCommon;
 @class Response10001_Data;
 @class Response10002_Data;
@@ -44,7 +45,9 @@ CF_EXTERN_C_BEGIN
 @class Response10014_Data;
 @class Response10015_Data;
 @class Response10016_Data;
+@class Response10017_Data;
 @class ResponseCommon;
+@class TrendBriefMessage;
 GPB_ENUM_FWD_DECLARE(Sex);
 
 NS_ASSUME_NONNULL_BEGIN
@@ -1064,6 +1067,61 @@ typedef GPB_ENUM(Response10016_Data_FieldNumber) {
 @interface Response10016_Data : GPBMessage
 
 @property(nonatomic, readwrite) BOOL canUser;
+
+@end
+
+#pragma mark - Request10017
+
+typedef GPB_ENUM(Request10017_FieldNumber) {
+  Request10017_FieldNumber_Common = 1,
+  Request10017_FieldNumber_Params = 2,
+};
+
+// 获取简要消息内容
+// /pilot/getTrendBriefMessage
+@interface Request10017 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasParams;
+@property(nonatomic, readwrite, strong, null_resettable) Request10017_Params *params;
+
+@end
+
+#pragma mark - Request10017_Params
+
+@interface Request10017_Params : GPBMessage
+
+@end
+
+#pragma mark - Response10017
+
+typedef GPB_ENUM(Response10017_FieldNumber) {
+  Response10017_FieldNumber_Common = 1,
+  Response10017_FieldNumber_Data_p = 2,
+};
+
+@interface Response10017 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasData_p;
+@property(nonatomic, readwrite, strong, null_resettable) Response10017_Data *data_p;
+
+@end
+
+#pragma mark - Response10017_Data
+
+typedef GPB_ENUM(Response10017_Data_FieldNumber) {
+  Response10017_Data_FieldNumber_TrendBriefMessage = 1,
+};
+
+@interface Response10017_Data : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasTrendBriefMessage;
+@property(nonatomic, readwrite, strong, null_resettable) TrendBriefMessage *trendBriefMessage;
 
 @end
 

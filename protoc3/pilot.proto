@@ -299,3 +299,21 @@ message Response10016 {
 		bool canUser = 1;
 	}
 }
+
+// 获取简要消息内容
+// /pilot/getTrendBriefMessage
+message Request10017 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		
+	}
+}
+
+message Response10017 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		TrendBriefMessage trendBriefMessage = 1;
+	}
+}

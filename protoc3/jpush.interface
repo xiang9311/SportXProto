@@ -1,0 +1,8 @@
+一下定义的是jpush的一些内容
+
+1. 新评论通知jpush内容及格式
+
+推送内容：（用户名）评论了你的动态
+推送Alias：userId的string格式
+通知标题：新消息
+通知附加信息extra（客户端收到的是json）：{"trendId":"1"}
