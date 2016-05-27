@@ -1057,15 +1057,15 @@ public interface Trend {
         return _emptyArray;
       }
 
-      // optional .com.xiang.proto.Trend trends = 1;
-      public com.xiang.proto.nano.Common.Trend trends;
+      // optional .com.xiang.proto.Trend trend = 1;
+      public com.xiang.proto.nano.Common.Trend trend;
 
       public Data() {
         clear();
       }
 
       public Data clear() {
-        trends = null;
+        trend = null;
         cachedSize = -1;
         return this;
       }
@@ -1073,8 +1073,8 @@ public interface Trend {
       @Override
       public void writeTo(com.google.protobuf.nano.CodedOutputByteBufferNano output)
           throws java.io.IOException {
-        if (this.trends != null) {
-          output.writeMessage(1, this.trends);
+        if (this.trend != null) {
+          output.writeMessage(1, this.trend);
         }
         super.writeTo(output);
       }
@@ -1082,9 +1082,9 @@ public interface Trend {
       @Override
       protected int computeSerializedSize() {
         int size = super.computeSerializedSize();
-        if (this.trends != null) {
+        if (this.trend != null) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
-            .computeMessageSize(1, this.trends);
+            .computeMessageSize(1, this.trend);
         }
         return size;
       }
@@ -1105,10 +1105,10 @@ public interface Trend {
               break;
             }
             case 10: {
-              if (this.trends == null) {
-                this.trends = new com.xiang.proto.nano.Common.Trend();
+              if (this.trend == null) {
+                this.trend = new com.xiang.proto.nano.Common.Trend();
               }
-              input.readMessage(this.trends);
+              input.readMessage(this.trend);
               break;
             }
           }

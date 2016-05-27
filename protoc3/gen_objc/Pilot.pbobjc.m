@@ -4155,5 +4155,247 @@ typedef struct Response10017_Data__storage_ {
 
 @end
 
+#pragma mark - Request10018
+
+@implementation Request10018
+
+@dynamic hasCommon, common;
+@dynamic hasParams, params;
+
+typedef struct Request10018__storage_ {
+  uint32_t _has_storage_[1];
+  RequestCommon *common;
+  Request10018_Params *params;
+} Request10018__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "common",
+        .number = Request10018_FieldNumber_Common,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(Request10018__storage_, common),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "params",
+        .number = Request10018_FieldNumber_Params,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(Request10018__storage_, params),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(Request10018_Params),
+        .fieldOptions = NULL,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Request10018 class]
+                                     rootClass:[PilotRoot class]
+                                          file:PilotRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(Request10018__storage_)
+                                    wireFormat:NO];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Request10018_Params
+
+@implementation Request10018_Params
+
+@dynamic userId;
+
+typedef struct Request10018_Params__storage_ {
+  uint32_t _has_storage_[1];
+  int32_t userId;
+} Request10018_Params__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "userId",
+        .number = Request10018_Params_FieldNumber_UserId,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+        .offset = offsetof(Request10018_Params__storage_, userId),
+        .defaultValue.valueInt32 = 0,
+        .dataTypeSpecific.className = NULL,
+        .fieldOptions = NULL,
+      },
+    };
+#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    const char *extraTextFormatInfo = NULL;
+#else
+    static const char *extraTextFormatInfo = "\001\001\006\000";
+#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Request10018_Params class]
+                                     rootClass:[PilotRoot class]
+                                          file:PilotRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(Request10018_Params__storage_)
+                                    wireFormat:NO
+                           extraTextFormatInfo:extraTextFormatInfo];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Response10018
+
+@implementation Response10018
+
+@dynamic hasCommon, common;
+@dynamic hasData_p, data_p;
+
+typedef struct Response10018__storage_ {
+  uint32_t _has_storage_[1];
+  ResponseCommon *common;
+  Response10018_Data *data_p;
+} Response10018__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "common",
+        .number = Response10018_FieldNumber_Common,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(Response10018__storage_, common),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
+        .fieldOptions = NULL,
+      },
+      {
+        .name = "data_p",
+        .number = Response10018_FieldNumber_Data_p,
+        .hasIndex = 1,
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(Response10018__storage_, data_p),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(Response10018_Data),
+        .fieldOptions = NULL,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Response10018 class]
+                                     rootClass:[PilotRoot class]
+                                          file:PilotRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(Response10018__storage_)
+                                    wireFormat:NO];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+#pragma mark - Response10018_Data
+
+@implementation Response10018_Data
+
+@dynamic hasBriefUser, briefUser;
+
+typedef struct Response10018_Data__storage_ {
+  uint32_t _has_storage_[1];
+  BriefUser *briefUser;
+} Response10018_Data__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "briefUser",
+        .number = Response10018_Data_FieldNumber_BriefUser,
+        .hasIndex = 0,
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeMessage,
+        .offset = offsetof(Response10018_Data__storage_, briefUser),
+        .defaultValue.valueMessage = nil,
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
+        .fieldOptions = NULL,
+      },
+    };
+#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    const char *extraTextFormatInfo = NULL;
+#else
+    static const char *extraTextFormatInfo = "\001\001\t\000";
+#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[Response10018_Data class]
+                                     rootClass:[PilotRoot class]
+                                          file:PilotRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
+                                        oneofs:NULL
+                                    oneofCount:0
+                                         enums:NULL
+                                     enumCount:0
+                                        ranges:NULL
+                                    rangeCount:0
+                                   storageSize:sizeof(Response10018_Data__storage_)
+                                    wireFormat:NO
+                           extraTextFormatInfo:extraTextFormatInfo];
+    NSAssert(descriptor == nil, @"Startup recursed!");
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
 
 // @@protoc_insertion_point(global_scope)

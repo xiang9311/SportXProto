@@ -59,7 +59,7 @@ message Response12003 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
-		Trend trends = 1;
+		Trend trend = 1;
 	}
 }
 

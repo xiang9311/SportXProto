@@ -6405,17 +6405,17 @@ public final class Trend {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      boolean hasTrends();
+      boolean hasTrend();
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      com.xiang.proto.Common.Trend getTrends();
+      com.xiang.proto.Common.Trend getTrend();
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder();
+      com.xiang.proto.Common.TrendOrBuilder getTrendOrBuilder();
     }
     /**
      * Protobuf type {@code com.xiang.proto.trend.Response12003.Data}
@@ -6457,13 +6457,13 @@ public final class Trend {
               }
               case 10: {
                 com.xiang.proto.Common.Trend.Builder subBuilder = null;
-                if (trends_ != null) {
-                  subBuilder = trends_.toBuilder();
+                if (trend_ != null) {
+                  subBuilder = trend_.toBuilder();
                 }
-                trends_ = input.readMessage(com.xiang.proto.Common.Trend.parser(), extensionRegistry);
+                trend_ = input.readMessage(com.xiang.proto.Common.Trend.parser(), extensionRegistry);
                 if (subBuilder != null) {
-                  subBuilder.mergeFrom(trends_);
-                  trends_ = subBuilder.buildPartial();
+                  subBuilder.mergeFrom(trend_);
+                  trend_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -6492,25 +6492,25 @@ public final class Trend {
                 com.xiang.proto.trend.Trend.Response12003.Data.class, com.xiang.proto.trend.Trend.Response12003.Data.Builder.class);
       }
 
-      public static final int TRENDS_FIELD_NUMBER = 1;
-      private com.xiang.proto.Common.Trend trends_;
+      public static final int TREND_FIELD_NUMBER = 1;
+      private com.xiang.proto.Common.Trend trend_;
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      public boolean hasTrends() {
-        return trends_ != null;
+      public boolean hasTrend() {
+        return trend_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      public com.xiang.proto.Common.Trend getTrends() {
-        return trends_ == null ? com.xiang.proto.Common.Trend.getDefaultInstance() : trends_;
+      public com.xiang.proto.Common.Trend getTrend() {
+        return trend_ == null ? com.xiang.proto.Common.Trend.getDefaultInstance() : trend_;
       }
       /**
-       * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+       * <code>optional .com.xiang.proto.Trend trend = 1;</code>
        */
-      public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder() {
-        return getTrends();
+      public com.xiang.proto.Common.TrendOrBuilder getTrendOrBuilder() {
+        return getTrend();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6525,8 +6525,8 @@ public final class Trend {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (trends_ != null) {
-          output.writeMessage(1, getTrends());
+        if (trend_ != null) {
+          output.writeMessage(1, getTrend());
         }
       }
 
@@ -6535,9 +6535,9 @@ public final class Trend {
         if (size != -1) return size;
 
         size = 0;
-        if (trends_ != null) {
+        if (trend_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getTrends());
+            .computeMessageSize(1, getTrend());
         }
         memoizedSize = size;
         return size;
@@ -6650,11 +6650,11 @@ public final class Trend {
         }
         public Builder clear() {
           super.clear();
-          if (trendsBuilder_ == null) {
-            trends_ = null;
+          if (trendBuilder_ == null) {
+            trend_ = null;
           } else {
-            trends_ = null;
-            trendsBuilder_ = null;
+            trend_ = null;
+            trendBuilder_ = null;
           }
           return this;
         }
@@ -6678,10 +6678,10 @@ public final class Trend {
 
         public com.xiang.proto.trend.Trend.Response12003.Data buildPartial() {
           com.xiang.proto.trend.Trend.Response12003.Data result = new com.xiang.proto.trend.Trend.Response12003.Data(this);
-          if (trendsBuilder_ == null) {
-            result.trends_ = trends_;
+          if (trendBuilder_ == null) {
+            result.trend_ = trend_;
           } else {
-            result.trends_ = trendsBuilder_.build();
+            result.trend_ = trendBuilder_.build();
           }
           onBuilt();
           return result;
@@ -6698,8 +6698,8 @@ public final class Trend {
 
         public Builder mergeFrom(com.xiang.proto.trend.Trend.Response12003.Data other) {
           if (other == com.xiang.proto.trend.Trend.Response12003.Data.getDefaultInstance()) return this;
-          if (other.hasTrends()) {
-            mergeTrends(other.getTrends());
+          if (other.hasTrend()) {
+            mergeTrend(other.getTrend());
           }
           onChanged();
           return this;
@@ -6727,121 +6727,121 @@ public final class Trend {
           return this;
         }
 
-        private com.xiang.proto.Common.Trend trends_ = null;
+        private com.xiang.proto.Common.Trend trend_ = null;
         private com.google.protobuf.SingleFieldBuilder<
-            com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> trendsBuilder_;
+            com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> trendBuilder_;
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public boolean hasTrends() {
-          return trendsBuilder_ != null || trends_ != null;
+        public boolean hasTrend() {
+          return trendBuilder_ != null || trend_ != null;
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public com.xiang.proto.Common.Trend getTrends() {
-          if (trendsBuilder_ == null) {
-            return trends_ == null ? com.xiang.proto.Common.Trend.getDefaultInstance() : trends_;
+        public com.xiang.proto.Common.Trend getTrend() {
+          if (trendBuilder_ == null) {
+            return trend_ == null ? com.xiang.proto.Common.Trend.getDefaultInstance() : trend_;
           } else {
-            return trendsBuilder_.getMessage();
+            return trendBuilder_.getMessage();
           }
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public Builder setTrends(com.xiang.proto.Common.Trend value) {
-          if (trendsBuilder_ == null) {
+        public Builder setTrend(com.xiang.proto.Common.Trend value) {
+          if (trendBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            trends_ = value;
+            trend_ = value;
             onChanged();
           } else {
-            trendsBuilder_.setMessage(value);
+            trendBuilder_.setMessage(value);
           }
 
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public Builder setTrends(
+        public Builder setTrend(
             com.xiang.proto.Common.Trend.Builder builderForValue) {
-          if (trendsBuilder_ == null) {
-            trends_ = builderForValue.build();
+          if (trendBuilder_ == null) {
+            trend_ = builderForValue.build();
             onChanged();
           } else {
-            trendsBuilder_.setMessage(builderForValue.build());
+            trendBuilder_.setMessage(builderForValue.build());
           }
 
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public Builder mergeTrends(com.xiang.proto.Common.Trend value) {
-          if (trendsBuilder_ == null) {
-            if (trends_ != null) {
-              trends_ =
-                com.xiang.proto.Common.Trend.newBuilder(trends_).mergeFrom(value).buildPartial();
+        public Builder mergeTrend(com.xiang.proto.Common.Trend value) {
+          if (trendBuilder_ == null) {
+            if (trend_ != null) {
+              trend_ =
+                com.xiang.proto.Common.Trend.newBuilder(trend_).mergeFrom(value).buildPartial();
             } else {
-              trends_ = value;
+              trend_ = value;
             }
             onChanged();
           } else {
-            trendsBuilder_.mergeFrom(value);
+            trendBuilder_.mergeFrom(value);
           }
 
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public Builder clearTrends() {
-          if (trendsBuilder_ == null) {
-            trends_ = null;
+        public Builder clearTrend() {
+          if (trendBuilder_ == null) {
+            trend_ = null;
             onChanged();
           } else {
-            trends_ = null;
-            trendsBuilder_ = null;
+            trend_ = null;
+            trendBuilder_ = null;
           }
 
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public com.xiang.proto.Common.Trend.Builder getTrendsBuilder() {
+        public com.xiang.proto.Common.Trend.Builder getTrendBuilder() {
           
           onChanged();
-          return getTrendsFieldBuilder().getBuilder();
+          return getTrendFieldBuilder().getBuilder();
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
-        public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder() {
-          if (trendsBuilder_ != null) {
-            return trendsBuilder_.getMessageOrBuilder();
+        public com.xiang.proto.Common.TrendOrBuilder getTrendOrBuilder() {
+          if (trendBuilder_ != null) {
+            return trendBuilder_.getMessageOrBuilder();
           } else {
-            return trends_ == null ?
-                com.xiang.proto.Common.Trend.getDefaultInstance() : trends_;
+            return trend_ == null ?
+                com.xiang.proto.Common.Trend.getDefaultInstance() : trend_;
           }
         }
         /**
-         * <code>optional .com.xiang.proto.Trend trends = 1;</code>
+         * <code>optional .com.xiang.proto.Trend trend = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
             com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> 
-            getTrendsFieldBuilder() {
-          if (trendsBuilder_ == null) {
-            trendsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            getTrendFieldBuilder() {
+          if (trendBuilder_ == null) {
+            trendBuilder_ = new com.google.protobuf.SingleFieldBuilder<
                 com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder>(
-                    getTrends(),
+                    getTrend(),
                     getParentForChildren(),
                     isClean());
-            trends_ = null;
+            trend_ = null;
           }
-          return trendsBuilder_;
+          return trendBuilder_;
         }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -19012,52 +19012,52 @@ public final class Trend {
       "common\030\001 \001(\0132\036.com.xiang.proto.RequestCo",
       "mmon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.t" +
       "rend.Request12003.Params\032\031\n\006Params\022\017\n\007tr" +
-      "endId\030\001 \001(\005\"\251\001\n\rResponse12003\022/\n\006common\030" +
+      "endId\030\001 \001(\005\"\250\001\n\rResponse12003\022/\n\006common\030" +
       "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227" +
       "\n\004data\030\002 \001(\0132).com.xiang.proto.trend.Res" +
-      "ponse12003.Data\032.\n\004Data\022&\n\006trends\030\001 \001(\0132" +
-      "\026.com.xiang.proto.Trend\"\250\001\n\014Request12004" +
-      "\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reque" +
-      "stCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.pro" +
-      "to.trend.Request12004.Params\032,\n\006Params\022\017",
-      "\n\007trendId\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\306\001\n\rR" +
-      "esponse12004\022/\n\006common\030\001 \001(\0132\037.com.xiang" +
-      ".proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).co" +
-      "m.xiang.proto.trend.Response12004.Data\032K" +
-      "\n\004Data\022*\n\010comments\030\001 \003(\0132\030.com.xiang.pro" +
-      "to.Comment\022\027\n\017maxCountPerPage\030\002 \001(\005\"\250\001\n\014" +
-      "Request12005\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
+      "ponse12003.Data\032-\n\004Data\022%\n\005trend\030\001 \001(\0132\026" +
+      ".com.xiang.proto.Trend\"\250\001\n\014Request12004\022" +
+      ".\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reques" +
+      "tCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.prot" +
+      "o.trend.Request12004.Params\032,\n\006Params\022\017\n",
+      "\007trendId\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\306\001\n\rRe" +
+      "sponse12004\022/\n\006common\030\001 \001(\0132\037.com.xiang." +
+      "proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com" +
+      ".xiang.proto.trend.Response12004.Data\032K\n" +
+      "\004Data\022*\n\010comments\030\001 \003(\0132\030.com.xiang.prot" +
+      "o.Comment\022\027\n\017maxCountPerPage\030\002 \001(\005\"\250\001\n\014R" +
+      "equest12005\022.\n\006common\030\001 \001(\0132\036.com.xiang." +
+      "proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.co" +
+      "m.xiang.proto.trend.Request12005.Params\032" +
+      ",\n\006Params\022\017\n\007trendId\030\001 \001(\005\022\021\n\tlikeTrend\030",
+      "\002 \001(\010\"\201\001\n\rResponse12005\022/\n\006common\030\001 \001(\0132" +
+      "\037.com.xiang.proto.ResponseCommon\0227\n\004data" +
+      "\030\002 \001(\0132).com.xiang.proto.trend.Response1" +
+      "2005.Data\032\006\n\004Data\"\334\001\n\014Request12006\022.\n\006co" +
+      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm" +
+      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.tre" +
+      "nd.Request12006.Params\032`\n\006Params\022\017\n\007tren" +
+      "dId\030\001 \001(\005\022\023\n\013toCommentId\030\002 \001(\005\022\020\n\010toUser" +
+      "Id\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\r\n\005gymId\030\005 \001(\005" +
+      "\"\201\001\n\rResponse12006\022/\n\006common\030\001 \001(\0132\037.com",
+      ".xiang.proto.ResponseCommon\0227\n\004data\030\002 \001(" +
+      "\0132).com.xiang.proto.trend.Response12006." +
+      "Data\032\006\n\004Data\"\250\001\n\014Request12007\022.\n\006common\030" +
+      "\001 \001(\0132\036.com.xiang.proto.RequestCommon\022:\n" +
+      "\006params\030\002 \001(\0132*.com.xiang.proto.trend.Re" +
+      "quest12007.Params\032,\n\006Params\022\017\n\007trendId\030\001" +
+      " \001(\005\022\021\n\tcommentId\030\002 \001(\005\"\201\001\n\rResponse1200" +
+      "7\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Resp" +
+      "onseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pro" +
+      "to.trend.Response12007.Data\032\006\n\004Data\"\225\001\n\014",
+      "Request12008\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
       ".proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.c" +
-      "om.xiang.proto.trend.Request12005.Params" +
-      "\032,\n\006Params\022\017\n\007trendId\030\001 \001(\005\022\021\n\tlikeTrend",
-      "\030\002 \001(\010\"\201\001\n\rResponse12005\022/\n\006common\030\001 \001(\013" +
-      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
-      "a\030\002 \001(\0132).com.xiang.proto.trend.Response" +
-      "12005.Data\032\006\n\004Data\"\334\001\n\014Request12006\022.\n\006c" +
-      "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom" +
-      "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.tr" +
-      "end.Request12006.Params\032`\n\006Params\022\017\n\007tre" +
-      "ndId\030\001 \001(\005\022\023\n\013toCommentId\030\002 \001(\005\022\020\n\010toUse" +
-      "rId\030\003 \001(\005\022\017\n\007content\030\004 \001(\t\022\r\n\005gymId\030\005 \001(" +
-      "\005\"\201\001\n\rResponse12006\022/\n\006common\030\001 \001(\0132\037.co",
-      "m.xiang.proto.ResponseCommon\0227\n\004data\030\002 \001" +
-      "(\0132).com.xiang.proto.trend.Response12006" +
-      ".Data\032\006\n\004Data\"\250\001\n\014Request12007\022.\n\006common" +
-      "\030\001 \001(\0132\036.com.xiang.proto.RequestCommon\022:" +
-      "\n\006params\030\002 \001(\0132*.com.xiang.proto.trend.R" +
-      "equest12007.Params\032,\n\006Params\022\017\n\007trendId\030" +
-      "\001 \001(\005\022\021\n\tcommentId\030\002 \001(\005\"\201\001\n\rResponse120" +
-      "07\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
-      "ponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
-      "oto.trend.Response12007.Data\032\006\n\004Data\"\225\001\n",
-      "\014Request12008\022.\n\006common\030\001 \001(\0132\036.com.xian" +
-      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
-      "com.xiang.proto.trend.Request12008.Param" +
-      "s\032\031\n\006Params\022\017\n\007trendId\030\001 \001(\005\"\201\001\n\rRespons" +
-      "e12008\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto" +
-      ".ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xian" +
-      "g.proto.trend.Response12008.Data\032\006\n\004Data" +
-      "b\006proto3"
+      "om.xiang.proto.trend.Request12008.Params" +
+      "\032\031\n\006Params\022\017\n\007trendId\030\001 \001(\005\"\201\001\n\rResponse" +
+      "12008\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto." +
+      "ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang" +
+      ".proto.trend.Response12008.Data\032\006\n\004Datab" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19143,7 +19143,7 @@ public final class Trend {
     internal_static_com_xiang_proto_trend_Response12003_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_trend_Response12003_Data_descriptor,
-        new java.lang.String[] { "Trends", });
+        new java.lang.String[] { "Trend", });
     internal_static_com_xiang_proto_trend_Request12004_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_xiang_proto_trend_Request12004_fieldAccessorTable = new

@@ -742,11 +742,11 @@ typedef struct Response12003__storage_ {
 
 @implementation Response12003_Data
 
-@dynamic hasTrends, trends;
+@dynamic hasTrend, trend;
 
 typedef struct Response12003_Data__storage_ {
   uint32_t _has_storage_[1];
-  Trend *trends;
+  Trend *trend;
 } Response12003_Data__storage_;
 
 // This method is threadsafe because it is initially called
@@ -756,12 +756,12 @@ typedef struct Response12003_Data__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "trends",
-        .number = Response12003_Data_FieldNumber_Trends,
+        .name = "trend",
+        .number = Response12003_Data_FieldNumber_Trend,
         .hasIndex = 0,
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response12003_Data__storage_, trends),
+        .offset = offsetof(Response12003_Data__storage_, trend),
         .defaultValue.valueMessage = nil,
         .dataTypeSpecific.className = GPBStringifySymbol(Trend),
         .fieldOptions = NULL,

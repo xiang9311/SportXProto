@@ -230,13 +230,13 @@ typedef GPB_ENUM(Response12003_FieldNumber) {
 #pragma mark - Response12003_Data
 
 typedef GPB_ENUM(Response12003_Data_FieldNumber) {
-  Response12003_Data_FieldNumber_Trends = 1,
+  Response12003_Data_FieldNumber_Trend = 1,
 };
 
 @interface Response12003_Data : GPBMessage
 
-@property(nonatomic, readwrite) BOOL hasTrends;
-@property(nonatomic, readwrite, strong, null_resettable) Trend *trends;
+@property(nonatomic, readwrite) BOOL hasTrend;
+@property(nonatomic, readwrite, strong, null_resettable) Trend *trend;
 
 @end
 

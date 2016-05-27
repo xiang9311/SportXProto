@@ -305,7 +305,7 @@ message Request10017 {
 	RequestCommon common = 1;
 	Params params = 2;
 	message Params {
-		
+	
 	}
 }
 
@@ -314,5 +314,23 @@ message Response10017 {
 	Data data = 2;
 	message Data {
 		TrendBriefMessage trendBriefMessage = 1;
+	}
+}
+
+// 获取用户简要信息
+// /pilot/getBriefUser
+message Request10018 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		int32 userId = 1;
+	}
+}
+
+message Response10018 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		BriefUser briefUser = 1;
 	}
 }

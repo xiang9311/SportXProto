@@ -29,6 +29,7 @@ CF_EXTERN_C_BEGIN
 @class Request10015_Params;
 @class Request10016_Params;
 @class Request10017_Params;
+@class Request10018_Params;
 @class RequestCommon;
 @class Response10001_Data;
 @class Response10002_Data;
@@ -46,6 +47,7 @@ CF_EXTERN_C_BEGIN
 @class Response10015_Data;
 @class Response10016_Data;
 @class Response10017_Data;
+@class Response10018_Data;
 @class ResponseCommon;
 @class TrendBriefMessage;
 GPB_ENUM_FWD_DECLARE(Sex);
@@ -1122,6 +1124,67 @@ typedef GPB_ENUM(Response10017_Data_FieldNumber) {
 
 @property(nonatomic, readwrite) BOOL hasTrendBriefMessage;
 @property(nonatomic, readwrite, strong, null_resettable) TrendBriefMessage *trendBriefMessage;
+
+@end
+
+#pragma mark - Request10018
+
+typedef GPB_ENUM(Request10018_FieldNumber) {
+  Request10018_FieldNumber_Common = 1,
+  Request10018_FieldNumber_Params = 2,
+};
+
+// 获取用户简要信息
+// /pilot/getBriefUser
+@interface Request10018 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasParams;
+@property(nonatomic, readwrite, strong, null_resettable) Request10018_Params *params;
+
+@end
+
+#pragma mark - Request10018_Params
+
+typedef GPB_ENUM(Request10018_Params_FieldNumber) {
+  Request10018_Params_FieldNumber_UserId = 1,
+};
+
+@interface Request10018_Params : GPBMessage
+
+@property(nonatomic, readwrite) int32_t userId;
+
+@end
+
+#pragma mark - Response10018
+
+typedef GPB_ENUM(Response10018_FieldNumber) {
+  Response10018_FieldNumber_Common = 1,
+  Response10018_FieldNumber_Data_p = 2,
+};
+
+@interface Response10018 : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasCommon;
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
+
+@property(nonatomic, readwrite) BOOL hasData_p;
+@property(nonatomic, readwrite, strong, null_resettable) Response10018_Data *data_p;
+
+@end
+
+#pragma mark - Response10018_Data
+
+typedef GPB_ENUM(Response10018_Data_FieldNumber) {
+  Response10018_Data_FieldNumber_BriefUser = 1,
+};
+
+@interface Response10018_Data : GPBMessage
+
+@property(nonatomic, readwrite) BOOL hasBriefUser;
+@property(nonatomic, readwrite, strong, null_resettable) BriefUser *briefUser;
 
 @end
 

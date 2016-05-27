@@ -40432,6 +40432,2264 @@ public final class Pilot {
 
   }
 
+  public interface Request10018OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10018)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    boolean hasCommon();
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.RequestCommon getCommon();
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder();
+
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    boolean hasParams();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Request10018.Params getParams();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.pilot.Request10018}
+   *
+   * <pre>
+   * 获取用户简要信息
+   * /pilot/getBriefUser
+   * </pre>
+   */
+  public  static final class Request10018 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10018)
+      Request10018OrBuilder {
+    // Use Request10018.newBuilder() to construct.
+    private Request10018(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Request10018() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Request10018(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.xiang.proto.Common.RequestCommon.Builder subBuilder = null;
+              if (common_ != null) {
+                subBuilder = common_.toBuilder();
+              }
+              common_ = input.readMessage(com.xiang.proto.Common.RequestCommon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(common_);
+                common_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.xiang.proto.pilot.Pilot.Request10018.Params.Builder subBuilder = null;
+              if (params_ != null) {
+                subBuilder = params_.toBuilder();
+              }
+              params_ = input.readMessage(com.xiang.proto.pilot.Pilot.Request10018.Params.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(params_);
+                params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.pilot.Pilot.Request10018.class, com.xiang.proto.pilot.Pilot.Request10018.Builder.class);
+    }
+
+    public interface ParamsOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Request10018.Params)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 userId = 1;</code>
+       */
+      int getUserId();
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Request10018.Params}
+     */
+    public  static final class Params extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Request10018.Params)
+        ParamsOrBuilder {
+      // Use Params.newBuilder() to construct.
+      private Params(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private Params() {
+        userId_ = 0;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Params(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+
+                userId_ = input.readInt32();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw new RuntimeException(e.setUnfinishedMessage(this));
+        } catch (java.io.IOException e) {
+          throw new RuntimeException(
+              new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this));
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_Params_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Request10018.Params.class, com.xiang.proto.pilot.Pilot.Request10018.Params.Builder.class);
+      }
+
+      public static final int USERID_FIELD_NUMBER = 1;
+      private int userId_;
+      /**
+       * <code>optional int32 userId = 1;</code>
+       */
+      public int getUserId() {
+        return userId_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (userId_ != 0) {
+          output.writeInt32(1, userId_);
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, userId_);
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10018.Params prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.xiang.proto.pilot.Request10018.Params}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10018.Params)
+          com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_Params_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.xiang.proto.pilot.Pilot.Request10018.Params.class, com.xiang.proto.pilot.Pilot.Request10018.Params.Builder.class);
+        }
+
+        // Construct using com.xiang.proto.pilot.Pilot.Request10018.Params.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          userId_ = 0;
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10018.Params getDefaultInstanceForType() {
+          return com.xiang.proto.pilot.Pilot.Request10018.Params.getDefaultInstance();
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10018.Params build() {
+          com.xiang.proto.pilot.Pilot.Request10018.Params result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Request10018.Params buildPartial() {
+          com.xiang.proto.pilot.Pilot.Request10018.Params result = new com.xiang.proto.pilot.Pilot.Request10018.Params(this);
+          result.userId_ = userId_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.xiang.proto.pilot.Pilot.Request10018.Params) {
+            return mergeFrom((com.xiang.proto.pilot.Pilot.Request10018.Params)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10018.Params other) {
+          if (other == com.xiang.proto.pilot.Pilot.Request10018.Params.getDefaultInstance()) return this;
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.xiang.proto.pilot.Pilot.Request10018.Params parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.xiang.proto.pilot.Pilot.Request10018.Params) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int userId_ ;
+        /**
+         * <code>optional int32 userId = 1;</code>
+         */
+        public int getUserId() {
+          return userId_;
+        }
+        /**
+         * <code>optional int32 userId = 1;</code>
+         */
+        public Builder setUserId(int value) {
+          
+          userId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 userId = 1;</code>
+         */
+        public Builder clearUserId() {
+          
+          userId_ = 0;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10018.Params)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10018.Params)
+      private static final com.xiang.proto.pilot.Pilot.Request10018.Params DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10018.Params();
+      }
+
+      public static com.xiang.proto.pilot.Pilot.Request10018.Params getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Params>
+          PARSER = new com.google.protobuf.AbstractParser<Params>() {
+        public Params parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          try {
+            return new Params(input, extensionRegistry);
+          } catch (RuntimeException e) {
+            if (e.getCause() instanceof
+                com.google.protobuf.InvalidProtocolBufferException) {
+              throw (com.google.protobuf.InvalidProtocolBufferException)
+                  e.getCause();
+            }
+            throw e;
+          }
+        }
+      };
+
+      public static com.google.protobuf.Parser<Params> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Params> getParserForType() {
+        return PARSER;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10018.Params getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int COMMON_FIELD_NUMBER = 1;
+    private com.xiang.proto.Common.RequestCommon common_;
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public boolean hasCommon() {
+      return common_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.RequestCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+      return getCommon();
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 2;
+    private com.xiang.proto.pilot.Pilot.Request10018.Params params_;
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Request10018.Params getParams() {
+      return params_ == null ? com.xiang.proto.pilot.Pilot.Request10018.Params.getDefaultInstance() : params_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder getParamsOrBuilder() {
+      return getParams();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (common_ != null) {
+        output.writeMessage(1, getCommon());
+      }
+      if (params_ != null) {
+        output.writeMessage(2, getParams());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (common_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCommon());
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParams());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Request10018 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Request10018}
+     *
+     * <pre>
+     * 获取用户简要信息
+     * /pilot/getBriefUser
+     * </pre>
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Request10018)
+        com.xiang.proto.pilot.Pilot.Request10018OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Request10018.class, com.xiang.proto.pilot.Pilot.Request10018.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.pilot.Pilot.Request10018.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (commonBuilder_ == null) {
+          common_ = null;
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+        if (paramsBuilder_ == null) {
+          params_ = null;
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Request10018_descriptor;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10018 getDefaultInstanceForType() {
+        return com.xiang.proto.pilot.Pilot.Request10018.getDefaultInstance();
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10018 build() {
+        com.xiang.proto.pilot.Pilot.Request10018 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Request10018 buildPartial() {
+        com.xiang.proto.pilot.Pilot.Request10018 result = new com.xiang.proto.pilot.Pilot.Request10018(this);
+        if (commonBuilder_ == null) {
+          result.common_ = common_;
+        } else {
+          result.common_ = commonBuilder_.build();
+        }
+        if (paramsBuilder_ == null) {
+          result.params_ = params_;
+        } else {
+          result.params_ = paramsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.pilot.Pilot.Request10018) {
+          return mergeFrom((com.xiang.proto.pilot.Pilot.Request10018)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Request10018 other) {
+        if (other == com.xiang.proto.pilot.Pilot.Request10018.getDefaultInstance()) return this;
+        if (other.hasCommon()) {
+          mergeCommon(other.getCommon());
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.pilot.Pilot.Request10018 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.pilot.Pilot.Request10018) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.xiang.proto.Common.RequestCommon common_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> commonBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public boolean hasCommon() {
+        return commonBuilder_ != null || common_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommon getCommon() {
+        if (commonBuilder_ == null) {
+          return common_ == null ? com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+        } else {
+          return commonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder setCommon(com.xiang.proto.Common.RequestCommon value) {
+        if (commonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          common_ = value;
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder setCommon(
+          com.xiang.proto.Common.RequestCommon.Builder builderForValue) {
+        if (commonBuilder_ == null) {
+          common_ = builderForValue.build();
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder mergeCommon(com.xiang.proto.Common.RequestCommon value) {
+        if (commonBuilder_ == null) {
+          if (common_ != null) {
+            common_ =
+              com.xiang.proto.Common.RequestCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+          } else {
+            common_ = value;
+          }
+          onChanged();
+        } else {
+          commonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public Builder clearCommon() {
+        if (commonBuilder_ == null) {
+          common_ = null;
+          onChanged();
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommon.Builder getCommonBuilder() {
+        
+        onChanged();
+        return getCommonFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.RequestCommonOrBuilder getCommonOrBuilder() {
+        if (commonBuilder_ != null) {
+          return commonBuilder_.getMessageOrBuilder();
+        } else {
+          return common_ == null ?
+              com.xiang.proto.Common.RequestCommon.getDefaultInstance() : common_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.RequestCommon common = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder> 
+          getCommonFieldBuilder() {
+        if (commonBuilder_ == null) {
+          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.Common.RequestCommon, com.xiang.proto.Common.RequestCommon.Builder, com.xiang.proto.Common.RequestCommonOrBuilder>(
+                  getCommon(),
+                  getParentForChildren(),
+                  isClean());
+          common_ = null;
+        }
+        return commonBuilder_;
+      }
+
+      private com.xiang.proto.pilot.Pilot.Request10018.Params params_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Request10018.Params, com.xiang.proto.pilot.Pilot.Request10018.Params.Builder, com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder> paramsBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public boolean hasParams() {
+        return paramsBuilder_ != null || params_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10018.Params getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? com.xiang.proto.pilot.Pilot.Request10018.Params.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public Builder setParams(com.xiang.proto.pilot.Pilot.Request10018.Params value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public Builder setParams(
+          com.xiang.proto.pilot.Pilot.Request10018.Params.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public Builder mergeParams(com.xiang.proto.pilot.Pilot.Request10018.Params value) {
+        if (paramsBuilder_ == null) {
+          if (params_ != null) {
+            params_ =
+              com.xiang.proto.pilot.Pilot.Request10018.Params.newBuilder(params_).mergeFrom(value).buildPartial();
+          } else {
+            params_ = value;
+          }
+          onChanged();
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public Builder clearParams() {
+        if (paramsBuilder_ == null) {
+          params_ = null;
+          onChanged();
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10018.Params.Builder getParamsBuilder() {
+        
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              com.xiang.proto.pilot.Pilot.Request10018.Params.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Request10018.Params params = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Request10018.Params, com.xiang.proto.pilot.Pilot.Request10018.Params.Builder, com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.pilot.Pilot.Request10018.Params, com.xiang.proto.pilot.Pilot.Request10018.Params.Builder, com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Request10018)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Request10018)
+    private static final com.xiang.proto.pilot.Pilot.Request10018 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Request10018();
+    }
+
+    public static com.xiang.proto.pilot.Pilot.Request10018 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Request10018>
+        PARSER = new com.google.protobuf.AbstractParser<Request10018>() {
+      public Request10018 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new Request10018(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<Request10018> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Request10018> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.pilot.Pilot.Request10018 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface Response10018OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10018)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    boolean hasCommon();
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.ResponseCommon getCommon();
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder();
+
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    boolean hasData();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Response10018.Data getData();
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder getDataOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.xiang.proto.pilot.Response10018}
+   */
+  public  static final class Response10018 extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10018)
+      Response10018OrBuilder {
+    // Use Response10018.newBuilder() to construct.
+    private Response10018(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private Response10018() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private Response10018(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.xiang.proto.Common.ResponseCommon.Builder subBuilder = null;
+              if (common_ != null) {
+                subBuilder = common_.toBuilder();
+              }
+              common_ = input.readMessage(com.xiang.proto.Common.ResponseCommon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(common_);
+                common_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.xiang.proto.pilot.Pilot.Response10018.Data.Builder subBuilder = null;
+              if (data_ != null) {
+                subBuilder = data_.toBuilder();
+              }
+              data_ = input.readMessage(com.xiang.proto.pilot.Pilot.Response10018.Data.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(data_);
+                data_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.xiang.proto.pilot.Pilot.Response10018.class, com.xiang.proto.pilot.Pilot.Response10018.Builder.class);
+    }
+
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:com.xiang.proto.pilot.Response10018.Data)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      boolean hasBriefUser();
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      com.xiang.proto.Common.BriefUser getBriefUser();
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder();
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Response10018.Data}
+     */
+    public  static final class Data extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:com.xiang.proto.pilot.Response10018.Data)
+        DataOrBuilder {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private Data() {
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      }
+      private Data(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        this();
+        int mutable_bitField0_ = 0;
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!input.skipField(tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.xiang.proto.Common.BriefUser.Builder subBuilder = null;
+                if (briefUser_ != null) {
+                  subBuilder = briefUser_.toBuilder();
+                }
+                briefUser_ = input.readMessage(com.xiang.proto.Common.BriefUser.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(briefUser_);
+                  briefUser_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw new RuntimeException(e.setUnfinishedMessage(this));
+        } catch (java.io.IOException e) {
+          throw new RuntimeException(
+              new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this));
+        } finally {
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_Data_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Response10018.Data.class, com.xiang.proto.pilot.Pilot.Response10018.Data.Builder.class);
+      }
+
+      public static final int BRIEFUSER_FIELD_NUMBER = 1;
+      private com.xiang.proto.Common.BriefUser briefUser_;
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      public boolean hasBriefUser() {
+        return briefUser_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      public com.xiang.proto.Common.BriefUser getBriefUser() {
+        return briefUser_ == null ? com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
+      }
+      /**
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+       */
+      public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
+        return getBriefUser();
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (briefUser_ != null) {
+          output.writeMessage(1, getBriefUser());
+        }
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (briefUser_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getBriefUser());
+        }
+        memoizedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10018.Data prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code com.xiang.proto.pilot.Response10018.Data}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10018.Data)
+          com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_Data_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.xiang.proto.pilot.Pilot.Response10018.Data.class, com.xiang.proto.pilot.Pilot.Response10018.Data.Builder.class);
+        }
+
+        // Construct using com.xiang.proto.pilot.Pilot.Response10018.Data.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          if (briefUserBuilder_ == null) {
+            briefUser_ = null;
+          } else {
+            briefUser_ = null;
+            briefUserBuilder_ = null;
+          }
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10018.Data getDefaultInstanceForType() {
+          return com.xiang.proto.pilot.Pilot.Response10018.Data.getDefaultInstance();
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10018.Data build() {
+          com.xiang.proto.pilot.Pilot.Response10018.Data result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.xiang.proto.pilot.Pilot.Response10018.Data buildPartial() {
+          com.xiang.proto.pilot.Pilot.Response10018.Data result = new com.xiang.proto.pilot.Pilot.Response10018.Data(this);
+          if (briefUserBuilder_ == null) {
+            result.briefUser_ = briefUser_;
+          } else {
+            result.briefUser_ = briefUserBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.xiang.proto.pilot.Pilot.Response10018.Data) {
+            return mergeFrom((com.xiang.proto.pilot.Pilot.Response10018.Data)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10018.Data other) {
+          if (other == com.xiang.proto.pilot.Pilot.Response10018.Data.getDefaultInstance()) return this;
+          if (other.hasBriefUser()) {
+            mergeBriefUser(other.getBriefUser());
+          }
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.xiang.proto.pilot.Pilot.Response10018.Data parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.xiang.proto.pilot.Pilot.Response10018.Data) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private com.xiang.proto.Common.BriefUser briefUser_ = null;
+        private com.google.protobuf.SingleFieldBuilder<
+            com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUserBuilder_;
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public boolean hasBriefUser() {
+          return briefUserBuilder_ != null || briefUser_ != null;
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public com.xiang.proto.Common.BriefUser getBriefUser() {
+          if (briefUserBuilder_ == null) {
+            return briefUser_ == null ? com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
+          } else {
+            return briefUserBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public Builder setBriefUser(com.xiang.proto.Common.BriefUser value) {
+          if (briefUserBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            briefUser_ = value;
+            onChanged();
+          } else {
+            briefUserBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public Builder setBriefUser(
+            com.xiang.proto.Common.BriefUser.Builder builderForValue) {
+          if (briefUserBuilder_ == null) {
+            briefUser_ = builderForValue.build();
+            onChanged();
+          } else {
+            briefUserBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public Builder mergeBriefUser(com.xiang.proto.Common.BriefUser value) {
+          if (briefUserBuilder_ == null) {
+            if (briefUser_ != null) {
+              briefUser_ =
+                com.xiang.proto.Common.BriefUser.newBuilder(briefUser_).mergeFrom(value).buildPartial();
+            } else {
+              briefUser_ = value;
+            }
+            onChanged();
+          } else {
+            briefUserBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public Builder clearBriefUser() {
+          if (briefUserBuilder_ == null) {
+            briefUser_ = null;
+            onChanged();
+          } else {
+            briefUser_ = null;
+            briefUserBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public com.xiang.proto.Common.BriefUser.Builder getBriefUserBuilder() {
+          
+          onChanged();
+          return getBriefUserFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
+          if (briefUserBuilder_ != null) {
+            return briefUserBuilder_.getMessageOrBuilder();
+          } else {
+            return briefUser_ == null ?
+                com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
+          }
+        }
+        /**
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> 
+            getBriefUserFieldBuilder() {
+          if (briefUserBuilder_ == null) {
+            briefUserBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder>(
+                    getBriefUser(),
+                    getParentForChildren(),
+                    isClean());
+            briefUser_ = null;
+          }
+          return briefUserBuilder_;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return this;
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10018.Data)
+      }
+
+      // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10018.Data)
+      private static final com.xiang.proto.pilot.Pilot.Response10018.Data DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10018.Data();
+      }
+
+      public static com.xiang.proto.pilot.Pilot.Response10018.Data getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
+        public Data parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          try {
+            return new Data(input, extensionRegistry);
+          } catch (RuntimeException e) {
+            if (e.getCause() instanceof
+                com.google.protobuf.InvalidProtocolBufferException) {
+              throw (com.google.protobuf.InvalidProtocolBufferException)
+                  e.getCause();
+            }
+            throw e;
+          }
+        }
+      };
+
+      public static com.google.protobuf.Parser<Data> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Data> getParserForType() {
+        return PARSER;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10018.Data getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int COMMON_FIELD_NUMBER = 1;
+    private com.xiang.proto.Common.ResponseCommon common_;
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public boolean hasCommon() {
+      return common_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.ResponseCommon getCommon() {
+      return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+     */
+    public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
+      return getCommon();
+    }
+
+    public static final int DATA_FIELD_NUMBER = 2;
+    private com.xiang.proto.pilot.Pilot.Response10018.Data data_;
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    public boolean hasData() {
+      return data_ != null;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Response10018.Data getData() {
+      return data_ == null ? com.xiang.proto.pilot.Pilot.Response10018.Data.getDefaultInstance() : data_;
+    }
+    /**
+     * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+     */
+    public com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder getDataOrBuilder() {
+      return getData();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (common_ != null) {
+        output.writeMessage(1, getCommon());
+      }
+      if (data_ != null) {
+        output.writeMessage(2, getData());
+      }
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (common_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCommon());
+      }
+      if (data_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getData());
+      }
+      memoizedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.xiang.proto.pilot.Pilot.Response10018 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.xiang.proto.pilot.Response10018}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.xiang.proto.pilot.Response10018)
+        com.xiang.proto.pilot.Pilot.Response10018OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.xiang.proto.pilot.Pilot.Response10018.class, com.xiang.proto.pilot.Pilot.Response10018.Builder.class);
+      }
+
+      // Construct using com.xiang.proto.pilot.Pilot.Response10018.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (commonBuilder_ == null) {
+          common_ = null;
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+        if (dataBuilder_ == null) {
+          data_ = null;
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.xiang.proto.pilot.Pilot.internal_static_com_xiang_proto_pilot_Response10018_descriptor;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10018 getDefaultInstanceForType() {
+        return com.xiang.proto.pilot.Pilot.Response10018.getDefaultInstance();
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10018 build() {
+        com.xiang.proto.pilot.Pilot.Response10018 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.xiang.proto.pilot.Pilot.Response10018 buildPartial() {
+        com.xiang.proto.pilot.Pilot.Response10018 result = new com.xiang.proto.pilot.Pilot.Response10018(this);
+        if (commonBuilder_ == null) {
+          result.common_ = common_;
+        } else {
+          result.common_ = commonBuilder_.build();
+        }
+        if (dataBuilder_ == null) {
+          result.data_ = data_;
+        } else {
+          result.data_ = dataBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.xiang.proto.pilot.Pilot.Response10018) {
+          return mergeFrom((com.xiang.proto.pilot.Pilot.Response10018)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.xiang.proto.pilot.Pilot.Response10018 other) {
+        if (other == com.xiang.proto.pilot.Pilot.Response10018.getDefaultInstance()) return this;
+        if (other.hasCommon()) {
+          mergeCommon(other.getCommon());
+        }
+        if (other.hasData()) {
+          mergeData(other.getData());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.xiang.proto.pilot.Pilot.Response10018 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.xiang.proto.pilot.Pilot.Response10018) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.xiang.proto.Common.ResponseCommon common_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> commonBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public boolean hasCommon() {
+        return commonBuilder_ != null || common_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommon getCommon() {
+        if (commonBuilder_ == null) {
+          return common_ == null ? com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+        } else {
+          return commonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder setCommon(com.xiang.proto.Common.ResponseCommon value) {
+        if (commonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          common_ = value;
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder setCommon(
+          com.xiang.proto.Common.ResponseCommon.Builder builderForValue) {
+        if (commonBuilder_ == null) {
+          common_ = builderForValue.build();
+          onChanged();
+        } else {
+          commonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder mergeCommon(com.xiang.proto.Common.ResponseCommon value) {
+        if (commonBuilder_ == null) {
+          if (common_ != null) {
+            common_ =
+              com.xiang.proto.Common.ResponseCommon.newBuilder(common_).mergeFrom(value).buildPartial();
+          } else {
+            common_ = value;
+          }
+          onChanged();
+        } else {
+          commonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public Builder clearCommon() {
+        if (commonBuilder_ == null) {
+          common_ = null;
+          onChanged();
+        } else {
+          common_ = null;
+          commonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommon.Builder getCommonBuilder() {
+        
+        onChanged();
+        return getCommonFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      public com.xiang.proto.Common.ResponseCommonOrBuilder getCommonOrBuilder() {
+        if (commonBuilder_ != null) {
+          return commonBuilder_.getMessageOrBuilder();
+        } else {
+          return common_ == null ?
+              com.xiang.proto.Common.ResponseCommon.getDefaultInstance() : common_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.ResponseCommon common = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder> 
+          getCommonFieldBuilder() {
+        if (commonBuilder_ == null) {
+          commonBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.Common.ResponseCommon, com.xiang.proto.Common.ResponseCommon.Builder, com.xiang.proto.Common.ResponseCommonOrBuilder>(
+                  getCommon(),
+                  getParentForChildren(),
+                  isClean());
+          common_ = null;
+        }
+        return commonBuilder_;
+      }
+
+      private com.xiang.proto.pilot.Pilot.Response10018.Data data_ = null;
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Response10018.Data, com.xiang.proto.pilot.Pilot.Response10018.Data.Builder, com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder> dataBuilder_;
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public boolean hasData() {
+        return dataBuilder_ != null || data_ != null;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10018.Data getData() {
+        if (dataBuilder_ == null) {
+          return data_ == null ? com.xiang.proto.pilot.Pilot.Response10018.Data.getDefaultInstance() : data_;
+        } else {
+          return dataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public Builder setData(com.xiang.proto.pilot.Pilot.Response10018.Data value) {
+        if (dataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          data_ = value;
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public Builder setData(
+          com.xiang.proto.pilot.Pilot.Response10018.Data.Builder builderForValue) {
+        if (dataBuilder_ == null) {
+          data_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public Builder mergeData(com.xiang.proto.pilot.Pilot.Response10018.Data value) {
+        if (dataBuilder_ == null) {
+          if (data_ != null) {
+            data_ =
+              com.xiang.proto.pilot.Pilot.Response10018.Data.newBuilder(data_).mergeFrom(value).buildPartial();
+          } else {
+            data_ = value;
+          }
+          onChanged();
+        } else {
+          dataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public Builder clearData() {
+        if (dataBuilder_ == null) {
+          data_ = null;
+          onChanged();
+        } else {
+          data_ = null;
+          dataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10018.Data.Builder getDataBuilder() {
+        
+        onChanged();
+        return getDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      public com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder getDataOrBuilder() {
+        if (dataBuilder_ != null) {
+          return dataBuilder_.getMessageOrBuilder();
+        } else {
+          return data_ == null ?
+              com.xiang.proto.pilot.Pilot.Response10018.Data.getDefaultInstance() : data_;
+        }
+      }
+      /**
+       * <code>optional .com.xiang.proto.pilot.Response10018.Data data = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          com.xiang.proto.pilot.Pilot.Response10018.Data, com.xiang.proto.pilot.Pilot.Response10018.Data.Builder, com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder> 
+          getDataFieldBuilder() {
+        if (dataBuilder_ == null) {
+          dataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              com.xiang.proto.pilot.Pilot.Response10018.Data, com.xiang.proto.pilot.Pilot.Response10018.Data.Builder, com.xiang.proto.pilot.Pilot.Response10018.DataOrBuilder>(
+                  getData(),
+                  getParentForChildren(),
+                  isClean());
+          data_ = null;
+        }
+        return dataBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.xiang.proto.pilot.Response10018)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.xiang.proto.pilot.Response10018)
+    private static final com.xiang.proto.pilot.Pilot.Response10018 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.xiang.proto.pilot.Pilot.Response10018();
+    }
+
+    public static com.xiang.proto.pilot.Pilot.Response10018 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Response10018>
+        PARSER = new com.google.protobuf.AbstractParser<Response10018>() {
+      public Response10018 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new Response10018(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    public static com.google.protobuf.Parser<Response10018> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Response10018> getParserForType() {
+      return PARSER;
+    }
+
+    public com.xiang.proto.pilot.Pilot.Response10018 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10001_descriptor;
   private static
@@ -40752,6 +43010,26 @@ public final class Pilot {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10017_Data_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Request10018_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Request10018_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Request10018_Params_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Response10018_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Response10018_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_xiang_proto_pilot_Response10018_Data_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -40901,7 +43179,15 @@ public final class Pilot {
       "esponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang." +
       "proto.pilot.Response10017.Data\032E\n\004Data\022=" +
       "\n\021trendBriefMessage\030\001 \001(\0132\".com.xiang.pr",
-      "oto.TrendBriefMessageb\006proto3"
+      "oto.TrendBriefMessage\"\224\001\n\014Request10018\022." +
+      "\n\006common\030\001 \001(\0132\036.com.xiang.proto.Request" +
+      "Common\022:\n\006params\030\002 \001(\0132*.com.xiang.proto" +
+      ".pilot.Request10018.Params\032\030\n\006Params\022\016\n\006" +
+      "userId\030\001 \001(\005\"\260\001\n\rResponse10018\022/\n\006common" +
+      "\030\001 \001(\0132\037.com.xiang.proto.ResponseCommon\022" +
+      "7\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Re" +
+      "sponse10018.Data\0325\n\004Data\022-\n\tbriefUser\030\001 " +
+      "\001(\0132\032.com.xiang.proto.BriefUserb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -41300,6 +43586,30 @@ public final class Pilot {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Response10017_Data_descriptor,
         new java.lang.String[] { "TrendBriefMessage", });
+    internal_static_com_xiang_proto_pilot_Request10018_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_com_xiang_proto_pilot_Request10018_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Request10018_descriptor,
+        new java.lang.String[] { "Common", "Params", });
+    internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor =
+      internal_static_com_xiang_proto_pilot_Request10018_descriptor.getNestedTypes().get(0);
+    internal_static_com_xiang_proto_pilot_Request10018_Params_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor,
+        new java.lang.String[] { "UserId", });
+    internal_static_com_xiang_proto_pilot_Response10018_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_com_xiang_proto_pilot_Response10018_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Response10018_descriptor,
+        new java.lang.String[] { "Common", "Data", });
+    internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor =
+      internal_static_com_xiang_proto_pilot_Response10018_descriptor.getNestedTypes().get(0);
+    internal_static_com_xiang_proto_pilot_Response10018_Data_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor,
+        new java.lang.String[] { "BriefUser", });
     com.xiang.proto.Common.getDescriptor();
   }
 
