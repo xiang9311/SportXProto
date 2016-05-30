@@ -39,12 +39,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12001.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12001}
-   *
    * <pre>
    * 发布trend
    * /trend/createTrend
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12001}
    */
   public  static final class Request12001 extends
       com.google.protobuf.GeneratedMessage implements
@@ -64,7 +64,8 @@ public final class Trend {
     }
     private Request12001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -110,11 +111,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -136,82 +136,82 @@ public final class Trend {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string content = 1;</code>
-       *
        * <pre>
        * 文本内容
        * </pre>
+       *
+       * <code>optional string content = 1;</code>
        */
       java.lang.String getContent();
       /**
-       * <code>optional string content = 1;</code>
-       *
        * <pre>
        * 文本内容
        * </pre>
+       *
+       * <code>optional string content = 1;</code>
        */
       com.google.protobuf.ByteString
           getContentBytes();
 
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       com.google.protobuf.ProtocolStringList
           getImageKeysList();
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       int getImageKeysCount();
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       java.lang.String getImageKeys(int index);
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       com.google.protobuf.ByteString
           getImageKeysBytes(int index);
 
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 图片上传的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       java.lang.String getBucketName();
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 图片上传的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       com.google.protobuf.ByteString
           getBucketNameBytes();
 
       /**
-       * <code>optional int32 gymId = 4;</code>
-       *
        * <pre>
        * 所选择的场馆的id
        * </pre>
+       *
+       * <code>optional int32 gymId = 4;</code>
        */
       int getGymId();
     }
@@ -240,7 +240,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -258,13 +259,13 @@ public final class Trend {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 content_ = s;
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                   imageKeys_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000002;
@@ -273,7 +274,7 @@ public final class Trend {
                 break;
               }
               case 26: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 bucketName_ = s;
                 break;
@@ -286,11 +287,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
             imageKeys_ = imageKeys_.getUnmodifiableView();
@@ -314,11 +314,11 @@ public final class Trend {
       public static final int CONTENT_FIELD_NUMBER = 1;
       private volatile java.lang.Object content_;
       /**
-       * <code>optional string content = 1;</code>
-       *
        * <pre>
        * 文本内容
        * </pre>
+       *
+       * <code>optional string content = 1;</code>
        */
       public java.lang.String getContent() {
         java.lang.Object ref = content_;
@@ -333,11 +333,11 @@ public final class Trend {
         }
       }
       /**
-       * <code>optional string content = 1;</code>
-       *
        * <pre>
        * 文本内容
        * </pre>
+       *
+       * <code>optional string content = 1;</code>
        */
       public com.google.protobuf.ByteString
           getContentBytes() {
@@ -356,42 +356,42 @@ public final class Trend {
       public static final int IMAGEKEYS_FIELD_NUMBER = 2;
       private com.google.protobuf.LazyStringList imageKeys_;
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getImageKeysList() {
         return imageKeys_;
       }
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       public int getImageKeysCount() {
         return imageKeys_.size();
       }
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       public java.lang.String getImageKeys(int index) {
         return imageKeys_.get(index);
       }
       /**
-       * <code>repeated string imageKeys = 2;</code>
-       *
        * <pre>
        * 图片的七牛key
        * </pre>
+       *
+       * <code>repeated string imageKeys = 2;</code>
        */
       public com.google.protobuf.ByteString
           getImageKeysBytes(int index) {
@@ -401,11 +401,11 @@ public final class Trend {
       public static final int BUCKETNAME_FIELD_NUMBER = 3;
       private volatile java.lang.Object bucketName_;
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 图片上传的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       public java.lang.String getBucketName() {
         java.lang.Object ref = bucketName_;
@@ -420,11 +420,11 @@ public final class Trend {
         }
       }
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 图片上传的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       public com.google.protobuf.ByteString
           getBucketNameBytes() {
@@ -443,11 +443,11 @@ public final class Trend {
       public static final int GYMID_FIELD_NUMBER = 4;
       private int gymId_;
       /**
-       * <code>optional int32 gymId = 4;</code>
-       *
        * <pre>
        * 所选择的场馆的id
        * </pre>
+       *
+       * <code>optional int32 gymId = 4;</code>
        */
       public int getGymId() {
         return gymId_;
@@ -530,34 +530,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12001.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -707,7 +713,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12001.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -719,11 +725,11 @@ public final class Trend {
 
         private java.lang.Object content_ = "";
         /**
-         * <code>optional string content = 1;</code>
-         *
          * <pre>
          * 文本内容
          * </pre>
+         *
+         * <code>optional string content = 1;</code>
          */
         public java.lang.String getContent() {
           java.lang.Object ref = content_;
@@ -738,11 +744,11 @@ public final class Trend {
           }
         }
         /**
-         * <code>optional string content = 1;</code>
-         *
          * <pre>
          * 文本内容
          * </pre>
+         *
+         * <code>optional string content = 1;</code>
          */
         public com.google.protobuf.ByteString
             getContentBytes() {
@@ -758,11 +764,11 @@ public final class Trend {
           }
         }
         /**
-         * <code>optional string content = 1;</code>
-         *
          * <pre>
          * 文本内容
          * </pre>
+         *
+         * <code>optional string content = 1;</code>
          */
         public Builder setContent(
             java.lang.String value) {
@@ -775,11 +781,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional string content = 1;</code>
-         *
          * <pre>
          * 文本内容
          * </pre>
+         *
+         * <code>optional string content = 1;</code>
          */
         public Builder clearContent() {
           
@@ -788,11 +794,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional string content = 1;</code>
-         *
          * <pre>
          * 文本内容
          * </pre>
+         *
+         * <code>optional string content = 1;</code>
          */
         public Builder setContentBytes(
             com.google.protobuf.ByteString value) {
@@ -814,53 +820,53 @@ public final class Trend {
            }
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public com.google.protobuf.ProtocolStringList
             getImageKeysList() {
           return imageKeys_.getUnmodifiableView();
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public int getImageKeysCount() {
           return imageKeys_.size();
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public java.lang.String getImageKeys(int index) {
           return imageKeys_.get(index);
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public com.google.protobuf.ByteString
             getImageKeysBytes(int index) {
           return imageKeys_.getByteString(index);
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public Builder setImageKeys(
             int index, java.lang.String value) {
@@ -873,11 +879,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public Builder addImageKeys(
             java.lang.String value) {
@@ -890,11 +896,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public Builder addAllImageKeys(
             java.lang.Iterable<java.lang.String> values) {
@@ -905,11 +911,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public Builder clearImageKeys() {
           imageKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -918,11 +924,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>repeated string imageKeys = 2;</code>
-         *
          * <pre>
          * 图片的七牛key
          * </pre>
+         *
+         * <code>repeated string imageKeys = 2;</code>
          */
         public Builder addImageKeysBytes(
             com.google.protobuf.ByteString value) {
@@ -938,11 +944,11 @@ public final class Trend {
 
         private java.lang.Object bucketName_ = "";
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 图片上传的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public java.lang.String getBucketName() {
           java.lang.Object ref = bucketName_;
@@ -957,11 +963,11 @@ public final class Trend {
           }
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 图片上传的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public com.google.protobuf.ByteString
             getBucketNameBytes() {
@@ -977,11 +983,11 @@ public final class Trend {
           }
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 图片上传的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder setBucketName(
             java.lang.String value) {
@@ -994,11 +1000,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 图片上传的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder clearBucketName() {
           
@@ -1007,11 +1013,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 图片上传的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder setBucketNameBytes(
             com.google.protobuf.ByteString value) {
@@ -1027,21 +1033,21 @@ public final class Trend {
 
         private int gymId_ ;
         /**
-         * <code>optional int32 gymId = 4;</code>
-         *
          * <pre>
          * 所选择的场馆的id
          * </pre>
+         *
+         * <code>optional int32 gymId = 4;</code>
          */
         public int getGymId() {
           return gymId_;
         }
         /**
-         * <code>optional int32 gymId = 4;</code>
-         *
          * <pre>
          * 所选择的场馆的id
          * </pre>
+         *
+         * <code>optional int32 gymId = 4;</code>
          */
         public Builder setGymId(int value) {
           
@@ -1050,11 +1056,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional int32 gymId = 4;</code>
-         *
          * <pre>
          * 所选择的场馆的id
          * </pre>
+         *
+         * <code>optional int32 gymId = 4;</code>
          */
         public Builder clearGymId() {
           
@@ -1092,16 +1098,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -1223,34 +1220,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -1272,12 +1275,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12001}
-     *
      * <pre>
      * 发布trend
      * /trend/createTrend
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12001}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -1393,7 +1396,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -1665,16 +1668,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -1744,7 +1738,8 @@ public final class Trend {
     }
     private Response12001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -1790,11 +1785,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -1836,7 +1830,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -1855,11 +1850,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -1923,34 +1917,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12001.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -2060,7 +2060,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12001.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -2098,16 +2098,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -2229,34 +2220,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -2394,7 +2391,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -2666,16 +2663,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -2725,12 +2713,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12002.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12002}
-   *
    * <pre>
    * 获取我关注的人的trend
    * /trend/getMyFollowTrends
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12002}
    */
   public  static final class Request12002 extends
       com.google.protobuf.GeneratedMessage implements
@@ -2750,7 +2738,8 @@ public final class Trend {
     }
     private Request12002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -2796,11 +2785,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -2848,7 +2836,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -2873,11 +2862,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -2957,34 +2945,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12002.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -3100,7 +3094,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12002.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -3164,16 +3158,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -3295,34 +3280,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -3344,12 +3335,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12002}
-     *
      * <pre>
      * 获取我关注的人的trend
      * /trend/getMyFollowTrends
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12002}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -3465,7 +3456,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -3737,16 +3728,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -3816,7 +3798,8 @@ public final class Trend {
     }
     private Response12002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -3862,11 +3845,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -3912,11 +3894,11 @@ public final class Trend {
           int index);
 
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 用于分页。判断能否加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       int getMaxCountPerPage();
     }
@@ -3943,7 +3925,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -3976,11 +3959,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             trends_ = java.util.Collections.unmodifiableList(trends_);
@@ -4039,11 +4021,11 @@ public final class Trend {
       public static final int MAXCOUNTPERPAGE_FIELD_NUMBER = 2;
       private int maxCountPerPage_;
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 用于分页。判断能否加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       public int getMaxCountPerPage() {
         return maxCountPerPage_;
@@ -4110,34 +4092,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12002.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -4298,7 +4286,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12002.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -4550,21 +4538,21 @@ public final class Trend {
 
         private int maxCountPerPage_ ;
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页。判断能否加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public int getMaxCountPerPage() {
           return maxCountPerPage_;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页。判断能否加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder setMaxCountPerPage(int value) {
           
@@ -4573,11 +4561,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页。判断能否加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder clearMaxCountPerPage() {
           
@@ -4615,16 +4603,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -4746,34 +4725,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -4911,7 +4896,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -5183,16 +5168,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -5242,12 +5218,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12003.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12003}
-   *
    * <pre>
    * 通过id获取trend详情
    * /trend/getTrendById
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12003}
    */
   public  static final class Request12003 extends
       com.google.protobuf.GeneratedMessage implements
@@ -5267,7 +5243,8 @@ public final class Trend {
     }
     private Request12003(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -5313,11 +5290,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -5365,7 +5341,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -5390,11 +5367,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -5474,34 +5450,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12003.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -5617,7 +5599,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12003.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -5681,16 +5663,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -5812,34 +5785,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12003 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -5861,12 +5840,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12003}
-     *
      * <pre>
      * 通过id获取trend详情
      * /trend/getTrendById
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12003}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -5982,7 +5961,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12003) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -6254,16 +6233,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -6333,7 +6303,8 @@ public final class Trend {
     }
     private Response12003(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -6379,11 +6350,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -6438,7 +6408,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -6471,11 +6442,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -6567,34 +6537,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12003.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -6718,7 +6694,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12003.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -6873,16 +6849,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -7004,34 +6971,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12003 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -7169,7 +7142,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12003) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -7441,16 +7414,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -7500,12 +7464,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12004.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12004}
-   *
    * <pre>
    * 获取trend的评论列表
    * /trend/getTrendComment
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12004}
    */
   public  static final class Request12004 extends
       com.google.protobuf.GeneratedMessage implements
@@ -7525,7 +7489,8 @@ public final class Trend {
     }
     private Request12004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -7571,11 +7536,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -7629,7 +7593,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -7659,11 +7624,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -7759,34 +7723,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12004.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -7908,7 +7878,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12004.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -7998,16 +7968,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -8129,34 +8090,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -8178,12 +8145,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12004}
-     *
      * <pre>
      * 获取trend的评论列表
      * /trend/getTrendComment
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12004}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -8299,7 +8266,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -8571,16 +8538,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -8650,7 +8608,8 @@ public final class Trend {
     }
     private Response12004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -8696,11 +8655,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -8746,11 +8704,11 @@ public final class Trend {
           int index);
 
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 用于分页
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       int getMaxCountPerPage();
     }
@@ -8777,7 +8735,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -8810,11 +8769,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             comments_ = java.util.Collections.unmodifiableList(comments_);
@@ -8873,11 +8831,11 @@ public final class Trend {
       public static final int MAXCOUNTPERPAGE_FIELD_NUMBER = 2;
       private int maxCountPerPage_;
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 用于分页
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       public int getMaxCountPerPage() {
         return maxCountPerPage_;
@@ -8944,34 +8902,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12004.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -9132,7 +9096,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12004.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -9384,21 +9348,21 @@ public final class Trend {
 
         private int maxCountPerPage_ ;
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public int getMaxCountPerPage() {
           return maxCountPerPage_;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder setMaxCountPerPage(int value) {
           
@@ -9407,11 +9371,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 用于分页
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder clearMaxCountPerPage() {
           
@@ -9449,16 +9413,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -9580,34 +9535,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -9745,7 +9706,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10017,16 +9978,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -10076,12 +10028,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12005.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12005}
-   *
    * <pre>
    * 给trend点赞或者取消点赞
    * /trend/likeTrend
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12005}
    */
   public  static final class Request12005 extends
       com.google.protobuf.GeneratedMessage implements
@@ -10101,7 +10053,8 @@ public final class Trend {
     }
     private Request12005(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -10147,11 +10100,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -10178,11 +10130,11 @@ public final class Trend {
       int getTrendId();
 
       /**
-       * <code>optional bool likeTrend = 2;</code>
-       *
        * <pre>
        * true:点赞 false：取消点赞
        * </pre>
+       *
+       * <code>optional bool likeTrend = 2;</code>
        */
       boolean getLikeTrend();
     }
@@ -10209,7 +10161,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -10239,11 +10192,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -10272,11 +10224,11 @@ public final class Trend {
       public static final int LIKETREND_FIELD_NUMBER = 2;
       private boolean likeTrend_;
       /**
-       * <code>optional bool likeTrend = 2;</code>
-       *
        * <pre>
        * true:点赞 false：取消点赞
        * </pre>
+       *
+       * <code>optional bool likeTrend = 2;</code>
        */
       public boolean getLikeTrend() {
         return likeTrend_;
@@ -10343,34 +10295,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12005.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -10492,7 +10450,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12005.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -10529,21 +10487,21 @@ public final class Trend {
 
         private boolean likeTrend_ ;
         /**
-         * <code>optional bool likeTrend = 2;</code>
-         *
          * <pre>
          * true:点赞 false：取消点赞
          * </pre>
+         *
+         * <code>optional bool likeTrend = 2;</code>
          */
         public boolean getLikeTrend() {
           return likeTrend_;
         }
         /**
-         * <code>optional bool likeTrend = 2;</code>
-         *
          * <pre>
          * true:点赞 false：取消点赞
          * </pre>
+         *
+         * <code>optional bool likeTrend = 2;</code>
          */
         public Builder setLikeTrend(boolean value) {
           
@@ -10552,11 +10510,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional bool likeTrend = 2;</code>
-         *
          * <pre>
          * true:点赞 false：取消点赞
          * </pre>
+         *
+         * <code>optional bool likeTrend = 2;</code>
          */
         public Builder clearLikeTrend() {
           
@@ -10594,16 +10552,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -10725,34 +10674,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12005 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -10774,12 +10729,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12005}
-     *
      * <pre>
      * 给trend点赞或者取消点赞
      * /trend/likeTrend
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12005}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -10895,7 +10850,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12005) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -11167,16 +11122,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12005(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -11246,7 +11192,8 @@ public final class Trend {
     }
     private Response12005(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -11292,11 +11239,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -11338,7 +11284,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -11357,11 +11304,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -11425,34 +11371,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12005.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -11562,7 +11514,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12005.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -11600,16 +11552,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -11731,34 +11674,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12005 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -11896,7 +11845,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12005) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -12168,16 +12117,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12005(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -12227,12 +12167,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12006.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12006}
-   *
    * <pre>
    * 评论trend
    * /trend/commentTrend
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12006}
    */
   public  static final class Request12006 extends
       com.google.protobuf.GeneratedMessage implements
@@ -12252,7 +12192,8 @@ public final class Trend {
     }
     private Request12006(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -12298,11 +12239,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -12329,20 +12269,20 @@ public final class Trend {
       int getTrendId();
 
       /**
-       * <code>optional int32 toCommentId = 2;</code>
-       *
        * <pre>
        * 如果回复别人的评论，需要加上这个
        * </pre>
+       *
+       * <code>optional int32 toCommentId = 2;</code>
        */
       int getToCommentId();
 
       /**
-       * <code>optional int32 toUserId = 3;</code>
-       *
        * <pre>
        * 如果回复别人的评论，需要加上这个
        * </pre>
+       *
+       * <code>optional int32 toUserId = 3;</code>
        */
       int getToUserId();
 
@@ -12387,7 +12327,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -12420,7 +12361,7 @@ public final class Trend {
                 break;
               }
               case 34: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 content_ = s;
                 break;
@@ -12433,11 +12374,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -12466,11 +12406,11 @@ public final class Trend {
       public static final int TOCOMMENTID_FIELD_NUMBER = 2;
       private int toCommentId_;
       /**
-       * <code>optional int32 toCommentId = 2;</code>
-       *
        * <pre>
        * 如果回复别人的评论，需要加上这个
        * </pre>
+       *
+       * <code>optional int32 toCommentId = 2;</code>
        */
       public int getToCommentId() {
         return toCommentId_;
@@ -12479,11 +12419,11 @@ public final class Trend {
       public static final int TOUSERID_FIELD_NUMBER = 3;
       private int toUserId_;
       /**
-       * <code>optional int32 toUserId = 3;</code>
-       *
        * <pre>
        * 如果回复别人的评论，需要加上这个
        * </pre>
+       *
+       * <code>optional int32 toUserId = 3;</code>
        */
       public int getToUserId() {
         return toUserId_;
@@ -12613,34 +12553,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12006.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -12781,7 +12727,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12006.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -12818,21 +12764,21 @@ public final class Trend {
 
         private int toCommentId_ ;
         /**
-         * <code>optional int32 toCommentId = 2;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toCommentId = 2;</code>
          */
         public int getToCommentId() {
           return toCommentId_;
         }
         /**
-         * <code>optional int32 toCommentId = 2;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toCommentId = 2;</code>
          */
         public Builder setToCommentId(int value) {
           
@@ -12841,11 +12787,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional int32 toCommentId = 2;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toCommentId = 2;</code>
          */
         public Builder clearToCommentId() {
           
@@ -12856,21 +12802,21 @@ public final class Trend {
 
         private int toUserId_ ;
         /**
-         * <code>optional int32 toUserId = 3;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toUserId = 3;</code>
          */
         public int getToUserId() {
           return toUserId_;
         }
         /**
-         * <code>optional int32 toUserId = 3;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toUserId = 3;</code>
          */
         public Builder setToUserId(int value) {
           
@@ -12879,11 +12825,11 @@ public final class Trend {
           return this;
         }
         /**
-         * <code>optional int32 toUserId = 3;</code>
-         *
          * <pre>
          * 如果回复别人的评论，需要加上这个
          * </pre>
+         *
+         * <code>optional int32 toUserId = 3;</code>
          */
         public Builder clearToUserId() {
           
@@ -13016,16 +12962,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -13147,34 +13084,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -13196,12 +13139,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12006}
-     *
      * <pre>
      * 评论trend
      * /trend/commentTrend
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12006}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -13317,7 +13260,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12006) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -13589,16 +13532,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12006(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -13668,7 +13602,8 @@ public final class Trend {
     }
     private Response12006(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -13714,11 +13649,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -13760,7 +13694,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -13779,11 +13714,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -13847,34 +13781,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12006.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -13984,7 +13924,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12006.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -14022,16 +13962,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -14153,34 +14084,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -14318,7 +14255,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12006) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -14590,16 +14527,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12006(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -14649,12 +14577,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12007.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12007}
-   *
    * <pre>
    * 删除自己的评论
    * /trend/deleteComment
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12007}
    */
   public  static final class Request12007 extends
       com.google.protobuf.GeneratedMessage implements
@@ -14674,7 +14602,8 @@ public final class Trend {
     }
     private Request12007(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -14720,11 +14649,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -14778,7 +14706,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -14808,11 +14737,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -14908,34 +14836,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12007.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -15057,7 +14991,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12007.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -15147,16 +15081,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -15278,34 +15203,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -15327,12 +15258,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12007}
-     *
      * <pre>
      * 删除自己的评论
      * /trend/deleteComment
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12007}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -15448,7 +15379,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12007) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -15720,16 +15651,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12007(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -15799,7 +15721,8 @@ public final class Trend {
     }
     private Response12007(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -15845,11 +15768,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -15891,7 +15813,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -15910,11 +15833,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -15978,34 +15900,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12007.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -16115,7 +16043,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12007.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -16153,16 +16081,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -16284,34 +16203,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -16449,7 +16374,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12007) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -16721,16 +16646,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12007(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -16780,12 +16696,12 @@ public final class Trend {
     com.xiang.proto.trend.Trend.Request12008.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.trend.Request12008}
-   *
    * <pre>
    * 删除我的trend
    * /trend/deleteTrend
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.trend.Request12008}
    */
   public  static final class Request12008 extends
       com.google.protobuf.GeneratedMessage implements
@@ -16805,7 +16721,8 @@ public final class Trend {
     }
     private Request12008(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -16851,11 +16768,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -16903,7 +16819,8 @@ public final class Trend {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -16928,11 +16845,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -17012,34 +16928,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Request12008.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -17155,7 +17077,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Request12008.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -17219,16 +17141,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -17350,34 +17263,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Request12008 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -17399,12 +17318,12 @@ public final class Trend {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.trend.Request12008}
-     *
      * <pre>
      * 删除我的trend
      * /trend/deleteTrend
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.trend.Request12008}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -17520,7 +17439,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Request12008) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -17792,16 +17711,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request12008(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -17871,7 +17781,8 @@ public final class Trend {
     }
     private Response12008(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -17917,11 +17828,10 @@ public final class Trend {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -17963,7 +17873,8 @@ public final class Trend {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -17982,11 +17893,10 @@ public final class Trend {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -18050,34 +17960,40 @@ public final class Trend {
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.trend.Trend.Response12008.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -18187,7 +18103,7 @@ public final class Trend {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.trend.Trend.Response12008.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -18225,16 +18141,7 @@ public final class Trend {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -18356,34 +18263,40 @@ public final class Trend {
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.trend.Trend.Response12008 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -18521,7 +18434,7 @@ public final class Trend {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.trend.Trend.Response12008) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -18793,16 +18706,7 @@ public final class Trend {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response12008(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -18821,164 +18725,164 @@ public final class Trend {
 
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12001_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12001_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12001_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12001_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12002_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12002_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12002_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12002_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12003_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12003_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12003_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12003_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12003_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12003_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12004_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12004_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12004_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12004_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12005_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12005_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12005_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12005_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12005_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12005_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12005_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12005_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12006_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12006_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12006_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12006_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12006_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12006_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12006_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12006_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12007_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12007_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12007_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12007_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12007_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12007_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12007_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12007_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12008_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12008_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Request12008_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Request12008_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12008_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12008_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_trend_Response12008_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_trend_Response12008_Data_fieldAccessorTable;
 
@@ -18986,7 +18890,7 @@ public final class Trend {
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {

@@ -39,12 +39,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10001.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10001}
-   *
    * <pre>
    * 注册
    * /pilot/register
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10001}
    */
   public  static final class Request10001 extends
       com.google.protobuf.GeneratedMessage implements
@@ -64,7 +64,8 @@ public final class Pilot {
     }
     private Request10001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -110,11 +111,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -156,55 +156,55 @@ public final class Pilot {
           getUsernameBytes();
 
       /**
-       * <code>optional string avatarKey = 3;</code>
-       *
        * <pre>
        * 上传到七牛的key
        * </pre>
+       *
+       * <code>optional string avatarKey = 3;</code>
        */
       java.lang.String getAvatarKey();
       /**
-       * <code>optional string avatarKey = 3;</code>
-       *
        * <pre>
        * 上传到七牛的key
        * </pre>
+       *
+       * <code>optional string avatarKey = 3;</code>
        */
       com.google.protobuf.ByteString
           getAvatarKeyBytes();
 
       /**
-       * <code>optional string bucketName = 4;</code>
-       *
        * <pre>
        * 上传到七牛的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 4;</code>
        */
       java.lang.String getBucketName();
       /**
-       * <code>optional string bucketName = 4;</code>
-       *
        * <pre>
        * 上传到七牛的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 4;</code>
        */
       com.google.protobuf.ByteString
           getBucketNameBytes();
 
       /**
-       * <code>optional string password = 5;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 5;</code>
        */
       java.lang.String getPassword();
       /**
-       * <code>optional string password = 5;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 5;</code>
        */
       com.google.protobuf.ByteString
           getPasswordBytes();
@@ -245,7 +245,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -263,31 +264,31 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 username_ = s;
                 break;
               }
               case 26: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 avatarKey_ = s;
                 break;
               }
               case 34: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 bucketName_ = s;
                 break;
               }
               case 42: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 password_ = s;
                 break;
@@ -301,11 +302,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -393,11 +393,11 @@ public final class Pilot {
       public static final int AVATARKEY_FIELD_NUMBER = 3;
       private volatile java.lang.Object avatarKey_;
       /**
-       * <code>optional string avatarKey = 3;</code>
-       *
        * <pre>
        * 上传到七牛的key
        * </pre>
+       *
+       * <code>optional string avatarKey = 3;</code>
        */
       public java.lang.String getAvatarKey() {
         java.lang.Object ref = avatarKey_;
@@ -412,11 +412,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string avatarKey = 3;</code>
-       *
        * <pre>
        * 上传到七牛的key
        * </pre>
+       *
+       * <code>optional string avatarKey = 3;</code>
        */
       public com.google.protobuf.ByteString
           getAvatarKeyBytes() {
@@ -435,11 +435,11 @@ public final class Pilot {
       public static final int BUCKETNAME_FIELD_NUMBER = 4;
       private volatile java.lang.Object bucketName_;
       /**
-       * <code>optional string bucketName = 4;</code>
-       *
        * <pre>
        * 上传到七牛的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 4;</code>
        */
       public java.lang.String getBucketName() {
         java.lang.Object ref = bucketName_;
@@ -454,11 +454,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string bucketName = 4;</code>
-       *
        * <pre>
        * 上传到七牛的bucket
        * </pre>
+       *
+       * <code>optional string bucketName = 4;</code>
        */
       public com.google.protobuf.ByteString
           getBucketNameBytes() {
@@ -477,11 +477,11 @@ public final class Pilot {
       public static final int PASSWORD_FIELD_NUMBER = 5;
       private volatile java.lang.Object password_;
       /**
-       * <code>optional string password = 5;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 5;</code>
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -496,11 +496,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string password = 5;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 5;</code>
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -528,7 +528,7 @@ public final class Pilot {
        * <code>optional .com.xiang.proto.Sex sex = 6;</code>
        */
       public com.xiang.proto.Common.Sex getSex() {
-        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
         return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
       }
 
@@ -616,34 +616,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10001.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -794,7 +800,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10001.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -943,11 +949,11 @@ public final class Pilot {
 
         private java.lang.Object avatarKey_ = "";
         /**
-         * <code>optional string avatarKey = 3;</code>
-         *
          * <pre>
          * 上传到七牛的key
          * </pre>
+         *
+         * <code>optional string avatarKey = 3;</code>
          */
         public java.lang.String getAvatarKey() {
           java.lang.Object ref = avatarKey_;
@@ -962,11 +968,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string avatarKey = 3;</code>
-         *
          * <pre>
          * 上传到七牛的key
          * </pre>
+         *
+         * <code>optional string avatarKey = 3;</code>
          */
         public com.google.protobuf.ByteString
             getAvatarKeyBytes() {
@@ -982,11 +988,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string avatarKey = 3;</code>
-         *
          * <pre>
          * 上传到七牛的key
          * </pre>
+         *
+         * <code>optional string avatarKey = 3;</code>
          */
         public Builder setAvatarKey(
             java.lang.String value) {
@@ -999,11 +1005,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string avatarKey = 3;</code>
-         *
          * <pre>
          * 上传到七牛的key
          * </pre>
+         *
+         * <code>optional string avatarKey = 3;</code>
          */
         public Builder clearAvatarKey() {
           
@@ -1012,11 +1018,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string avatarKey = 3;</code>
-         *
          * <pre>
          * 上传到七牛的key
          * </pre>
+         *
+         * <code>optional string avatarKey = 3;</code>
          */
         public Builder setAvatarKeyBytes(
             com.google.protobuf.ByteString value) {
@@ -1032,11 +1038,11 @@ public final class Pilot {
 
         private java.lang.Object bucketName_ = "";
         /**
-         * <code>optional string bucketName = 4;</code>
-         *
          * <pre>
          * 上传到七牛的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 4;</code>
          */
         public java.lang.String getBucketName() {
           java.lang.Object ref = bucketName_;
@@ -1051,11 +1057,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string bucketName = 4;</code>
-         *
          * <pre>
          * 上传到七牛的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 4;</code>
          */
         public com.google.protobuf.ByteString
             getBucketNameBytes() {
@@ -1071,11 +1077,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string bucketName = 4;</code>
-         *
          * <pre>
          * 上传到七牛的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 4;</code>
          */
         public Builder setBucketName(
             java.lang.String value) {
@@ -1088,11 +1094,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string bucketName = 4;</code>
-         *
          * <pre>
          * 上传到七牛的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 4;</code>
          */
         public Builder clearBucketName() {
           
@@ -1101,11 +1107,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string bucketName = 4;</code>
-         *
          * <pre>
          * 上传到七牛的bucket
          * </pre>
+         *
+         * <code>optional string bucketName = 4;</code>
          */
         public Builder setBucketNameBytes(
             com.google.protobuf.ByteString value) {
@@ -1121,11 +1127,11 @@ public final class Pilot {
 
         private java.lang.Object password_ = "";
         /**
-         * <code>optional string password = 5;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 5;</code>
          */
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
@@ -1140,11 +1146,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string password = 5;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 5;</code>
          */
         public com.google.protobuf.ByteString
             getPasswordBytes() {
@@ -1160,11 +1166,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string password = 5;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 5;</code>
          */
         public Builder setPassword(
             java.lang.String value) {
@@ -1177,11 +1183,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string password = 5;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 5;</code>
          */
         public Builder clearPassword() {
           
@@ -1190,11 +1196,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string password = 5;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 5;</code>
          */
         public Builder setPasswordBytes(
             com.google.protobuf.ByteString value) {
@@ -1227,7 +1233,7 @@ public final class Pilot {
          * <code>optional .com.xiang.proto.Sex sex = 6;</code>
          */
         public com.xiang.proto.Common.Sex getSex() {
-          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
           return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
         }
         /**
@@ -1281,16 +1287,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -1412,34 +1409,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -1461,12 +1464,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10001}
-     *
      * <pre>
      * 注册
      * /pilot/register
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10001}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -1582,7 +1585,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -1854,16 +1857,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -1933,7 +1927,8 @@ public final class Pilot {
     }
     private Response10001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -1979,11 +1974,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -2005,28 +1999,28 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 返回的用户id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       int getUserId();
 
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 用户的私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       java.lang.String getUserKey();
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 用户的私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       com.google.protobuf.ByteString
           getUserKeyBytes();
@@ -2054,7 +2048,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -2077,7 +2072,7 @@ public final class Pilot {
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 userKey_ = s;
                 break;
@@ -2085,11 +2080,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -2109,11 +2103,11 @@ public final class Pilot {
       public static final int USERID_FIELD_NUMBER = 1;
       private int userId_;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 返回的用户id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
@@ -2122,11 +2116,11 @@ public final class Pilot {
       public static final int USERKEY_FIELD_NUMBER = 2;
       private volatile java.lang.Object userKey_;
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 用户的私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       public java.lang.String getUserKey() {
         java.lang.Object ref = userKey_;
@@ -2141,11 +2135,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 用户的私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserKeyBytes() {
@@ -2221,34 +2215,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10001.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -2371,7 +2371,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10001.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -2382,21 +2382,21 @@ public final class Pilot {
 
         private int userId_ ;
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 返回的用户id
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public int getUserId() {
           return userId_;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 返回的用户id
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder setUserId(int value) {
           
@@ -2405,11 +2405,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 返回的用户id
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder clearUserId() {
           
@@ -2420,11 +2420,11 @@ public final class Pilot {
 
         private java.lang.Object userKey_ = "";
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 用户的私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public java.lang.String getUserKey() {
           java.lang.Object ref = userKey_;
@@ -2439,11 +2439,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 用户的私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public com.google.protobuf.ByteString
             getUserKeyBytes() {
@@ -2459,11 +2459,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 用户的私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder setUserKey(
             java.lang.String value) {
@@ -2476,11 +2476,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 用户的私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder clearUserKey() {
           
@@ -2489,11 +2489,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 用户的私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder setUserKeyBytes(
             com.google.protobuf.ByteString value) {
@@ -2536,16 +2536,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -2667,34 +2658,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -2832,7 +2829,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -3104,16 +3101,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -3163,12 +3151,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10002.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10002}
-   *
    * <pre>
    * 登录
    * /pilot/login
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10002}
    */
   public  static final class Request10002 extends
       com.google.protobuf.GeneratedMessage implements
@@ -3188,7 +3176,8 @@ public final class Pilot {
     }
     private Request10002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -3234,11 +3223,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -3270,19 +3258,19 @@ public final class Pilot {
           getPhoneBytes();
 
       /**
-       * <code>optional string password = 2;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 2;</code>
        */
       java.lang.String getPassword();
       /**
-       * <code>optional string password = 2;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 2;</code>
        */
       com.google.protobuf.ByteString
           getPasswordBytes();
@@ -3310,7 +3298,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -3328,13 +3317,13 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 password_ = s;
                 break;
@@ -3342,11 +3331,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -3400,11 +3388,11 @@ public final class Pilot {
       public static final int PASSWORD_FIELD_NUMBER = 2;
       private volatile java.lang.Object password_;
       /**
-       * <code>optional string password = 2;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 2;</code>
        */
       public java.lang.String getPassword() {
         java.lang.Object ref = password_;
@@ -3419,11 +3407,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string password = 2;</code>
-       *
        * <pre>
        * 密码MD5加密
        * </pre>
+       *
+       * <code>optional string password = 2;</code>
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
@@ -3498,34 +3486,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10002.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -3649,7 +3643,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10002.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -3729,11 +3723,11 @@ public final class Pilot {
 
         private java.lang.Object password_ = "";
         /**
-         * <code>optional string password = 2;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 2;</code>
          */
         public java.lang.String getPassword() {
           java.lang.Object ref = password_;
@@ -3748,11 +3742,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string password = 2;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 2;</code>
          */
         public com.google.protobuf.ByteString
             getPasswordBytes() {
@@ -3768,11 +3762,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string password = 2;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 2;</code>
          */
         public Builder setPassword(
             java.lang.String value) {
@@ -3785,11 +3779,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string password = 2;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 2;</code>
          */
         public Builder clearPassword() {
           
@@ -3798,11 +3792,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string password = 2;</code>
-         *
          * <pre>
          * 密码MD5加密
          * </pre>
+         *
+         * <code>optional string password = 2;</code>
          */
         public Builder setPasswordBytes(
             com.google.protobuf.ByteString value) {
@@ -3845,16 +3839,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -3976,34 +3961,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -4025,12 +4016,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10002}
-     *
      * <pre>
      * 登录
      * /pilot/login
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10002}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -4146,7 +4137,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -4418,16 +4409,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -4497,7 +4479,8 @@ public final class Pilot {
     }
     private Response10002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -4543,11 +4526,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -4569,62 +4551,62 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       boolean hasBriefUser();
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       com.xiang.proto.Common.BriefUser getBriefUser();
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder();
 
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 返回用户私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       java.lang.String getUserKey();
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 返回用户私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       com.google.protobuf.ByteString
           getUserKeyBytes();
 
       /**
-       * <code>optional string rongyunToken = 3;</code>
-       *
        * <pre>
        * 融云聊天使用的token
        * </pre>
+       *
+       * <code>optional string rongyunToken = 3;</code>
        */
       java.lang.String getRongyunToken();
       /**
-       * <code>optional string rongyunToken = 3;</code>
-       *
        * <pre>
        * 融云聊天使用的token
        * </pre>
+       *
+       * <code>optional string rongyunToken = 3;</code>
        */
       com.google.protobuf.ByteString
           getRongyunTokenBytes();
@@ -4639,19 +4621,19 @@ public final class Pilot {
       com.xiang.proto.Common.Sex getSex();
 
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       java.lang.String getSign();
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       com.google.protobuf.ByteString
           getSignBytes();
@@ -4692,7 +4674,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -4723,13 +4706,13 @@ public final class Pilot {
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 userKey_ = s;
                 break;
               }
               case 26: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 rongyunToken_ = s;
                 break;
@@ -4741,13 +4724,13 @@ public final class Pilot {
                 break;
               }
               case 42: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 sign_ = s;
                 break;
               }
               case 50: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
                 break;
@@ -4755,11 +4738,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -4779,31 +4761,31 @@ public final class Pilot {
       public static final int BRIEFUSER_FIELD_NUMBER = 1;
       private com.xiang.proto.Common.BriefUser briefUser_;
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public boolean hasBriefUser() {
         return briefUser_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUser() {
         return briefUser_ == null ? com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 返回用户简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
         return getBriefUser();
@@ -4812,11 +4794,11 @@ public final class Pilot {
       public static final int USERKEY_FIELD_NUMBER = 2;
       private volatile java.lang.Object userKey_;
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 返回用户私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       public java.lang.String getUserKey() {
         java.lang.Object ref = userKey_;
@@ -4831,11 +4813,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string userKey = 2;</code>
-       *
        * <pre>
        * 返回用户私钥
        * </pre>
+       *
+       * <code>optional string userKey = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserKeyBytes() {
@@ -4854,11 +4836,11 @@ public final class Pilot {
       public static final int RONGYUNTOKEN_FIELD_NUMBER = 3;
       private volatile java.lang.Object rongyunToken_;
       /**
-       * <code>optional string rongyunToken = 3;</code>
-       *
        * <pre>
        * 融云聊天使用的token
        * </pre>
+       *
+       * <code>optional string rongyunToken = 3;</code>
        */
       public java.lang.String getRongyunToken() {
         java.lang.Object ref = rongyunToken_;
@@ -4873,11 +4855,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string rongyunToken = 3;</code>
-       *
        * <pre>
        * 融云聊天使用的token
        * </pre>
+       *
+       * <code>optional string rongyunToken = 3;</code>
        */
       public com.google.protobuf.ByteString
           getRongyunTokenBytes() {
@@ -4905,18 +4887,18 @@ public final class Pilot {
        * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public com.xiang.proto.Common.Sex getSex() {
-        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
         return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
       }
 
       public static final int SIGN_FIELD_NUMBER = 5;
       private volatile java.lang.Object sign_;
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public java.lang.String getSign() {
         java.lang.Object ref = sign_;
@@ -4931,11 +4913,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public com.google.protobuf.ByteString
           getSignBytes() {
@@ -5070,34 +5052,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10002.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -5255,7 +5243,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10002.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -5268,21 +5256,21 @@ public final class Pilot {
         private com.google.protobuf.SingleFieldBuilder<
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUserBuilder_;
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public boolean hasBriefUser() {
           return briefUserBuilder_ != null || briefUser_ != null;
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser getBriefUser() {
           if (briefUserBuilder_ == null) {
@@ -5292,11 +5280,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public Builder setBriefUser(com.xiang.proto.Common.BriefUser value) {
           if (briefUserBuilder_ == null) {
@@ -5312,11 +5300,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public Builder setBriefUser(
             com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -5330,11 +5318,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public Builder mergeBriefUser(com.xiang.proto.Common.BriefUser value) {
           if (briefUserBuilder_ == null) {
@@ -5352,11 +5340,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public Builder clearBriefUser() {
           if (briefUserBuilder_ == null) {
@@ -5370,11 +5358,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder getBriefUserBuilder() {
           
@@ -5382,11 +5370,11 @@ public final class Pilot {
           return getBriefUserFieldBuilder().getBuilder();
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
           if (briefUserBuilder_ != null) {
@@ -5397,11 +5385,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-         *
          * <pre>
          * 返回用户简要信息
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> 
@@ -5419,11 +5407,11 @@ public final class Pilot {
 
         private java.lang.Object userKey_ = "";
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 返回用户私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public java.lang.String getUserKey() {
           java.lang.Object ref = userKey_;
@@ -5438,11 +5426,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 返回用户私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public com.google.protobuf.ByteString
             getUserKeyBytes() {
@@ -5458,11 +5446,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 返回用户私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder setUserKey(
             java.lang.String value) {
@@ -5475,11 +5463,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 返回用户私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder clearUserKey() {
           
@@ -5488,11 +5476,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string userKey = 2;</code>
-         *
          * <pre>
          * 返回用户私钥
          * </pre>
+         *
+         * <code>optional string userKey = 2;</code>
          */
         public Builder setUserKeyBytes(
             com.google.protobuf.ByteString value) {
@@ -5508,11 +5496,11 @@ public final class Pilot {
 
         private java.lang.Object rongyunToken_ = "";
         /**
-         * <code>optional string rongyunToken = 3;</code>
-         *
          * <pre>
          * 融云聊天使用的token
          * </pre>
+         *
+         * <code>optional string rongyunToken = 3;</code>
          */
         public java.lang.String getRongyunToken() {
           java.lang.Object ref = rongyunToken_;
@@ -5527,11 +5515,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string rongyunToken = 3;</code>
-         *
          * <pre>
          * 融云聊天使用的token
          * </pre>
+         *
+         * <code>optional string rongyunToken = 3;</code>
          */
         public com.google.protobuf.ByteString
             getRongyunTokenBytes() {
@@ -5547,11 +5535,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string rongyunToken = 3;</code>
-         *
          * <pre>
          * 融云聊天使用的token
          * </pre>
+         *
+         * <code>optional string rongyunToken = 3;</code>
          */
         public Builder setRongyunToken(
             java.lang.String value) {
@@ -5564,11 +5552,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string rongyunToken = 3;</code>
-         *
          * <pre>
          * 融云聊天使用的token
          * </pre>
+         *
+         * <code>optional string rongyunToken = 3;</code>
          */
         public Builder clearRongyunToken() {
           
@@ -5577,11 +5565,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string rongyunToken = 3;</code>
-         *
          * <pre>
          * 融云聊天使用的token
          * </pre>
+         *
+         * <code>optional string rongyunToken = 3;</code>
          */
         public Builder setRongyunTokenBytes(
             com.google.protobuf.ByteString value) {
@@ -5614,7 +5602,7 @@ public final class Pilot {
          * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public com.xiang.proto.Common.Sex getSex() {
-          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
           return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
         }
         /**
@@ -5641,11 +5629,11 @@ public final class Pilot {
 
         private java.lang.Object sign_ = "";
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public java.lang.String getSign() {
           java.lang.Object ref = sign_;
@@ -5660,11 +5648,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public com.google.protobuf.ByteString
             getSignBytes() {
@@ -5680,11 +5668,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder setSign(
             java.lang.String value) {
@@ -5697,11 +5685,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder clearSign() {
           
@@ -5710,11 +5698,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder setSignBytes(
             com.google.protobuf.ByteString value) {
@@ -5826,16 +5814,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -5957,34 +5936,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -6122,7 +6107,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -6394,16 +6379,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -6453,12 +6429,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10004.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10004}
-   *
    * <pre>
    * 更新我的个人信息
    * /pilot/updateMyInfo
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10004}
    */
   public  static final class Request10004 extends
       com.google.protobuf.GeneratedMessage implements
@@ -6478,7 +6454,8 @@ public final class Pilot {
     }
     private Request10004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -6524,11 +6501,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -6570,54 +6546,54 @@ public final class Pilot {
           getAvatarKeyBytes();
 
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 获取上传token时得到的bucketName
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       java.lang.String getBucketName();
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 获取上传token时得到的bucketName
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       com.google.protobuf.ByteString
           getBucketNameBytes();
 
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 待测试，如果不传性别会不会得到默认为男性
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       int getSexValue();
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 待测试，如果不传性别会不会得到默认为男性
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       com.xiang.proto.Common.Sex getSex();
 
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       java.lang.String getSign();
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       com.google.protobuf.ByteString
           getSignBytes();
@@ -6659,7 +6635,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -6677,19 +6654,19 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 userName_ = s;
                 break;
               }
               case 18: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 avatarKey_ = s;
                 break;
               }
               case 26: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 bucketName_ = s;
                 break;
@@ -6701,13 +6678,13 @@ public final class Pilot {
                 break;
               }
               case 42: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 sign_ = s;
                 break;
               }
               case 50: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
                 break;
@@ -6715,11 +6692,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -6807,11 +6783,11 @@ public final class Pilot {
       public static final int BUCKETNAME_FIELD_NUMBER = 3;
       private volatile java.lang.Object bucketName_;
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 获取上传token时得到的bucketName
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       public java.lang.String getBucketName() {
         java.lang.Object ref = bucketName_;
@@ -6826,11 +6802,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string bucketName = 3;</code>
-       *
        * <pre>
        * 获取上传token时得到的bucketName
        * </pre>
+       *
+       * <code>optional string bucketName = 3;</code>
        */
       public com.google.protobuf.ByteString
           getBucketNameBytes() {
@@ -6849,35 +6825,35 @@ public final class Pilot {
       public static final int SEX_FIELD_NUMBER = 4;
       private int sex_;
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 待测试，如果不传性别会不会得到默认为男性
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public int getSexValue() {
         return sex_;
       }
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 待测试，如果不传性别会不会得到默认为男性
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public com.xiang.proto.Common.Sex getSex() {
-        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
         return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
       }
 
       public static final int SIGN_FIELD_NUMBER = 5;
       private volatile java.lang.Object sign_;
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public java.lang.String getSign() {
         java.lang.Object ref = sign_;
@@ -6892,11 +6868,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 个性签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public com.google.protobuf.ByteString
           getSignBytes() {
@@ -7030,34 +7006,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10004.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -7208,7 +7190,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10004.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -7357,11 +7339,11 @@ public final class Pilot {
 
         private java.lang.Object bucketName_ = "";
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 获取上传token时得到的bucketName
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public java.lang.String getBucketName() {
           java.lang.Object ref = bucketName_;
@@ -7376,11 +7358,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 获取上传token时得到的bucketName
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public com.google.protobuf.ByteString
             getBucketNameBytes() {
@@ -7396,11 +7378,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 获取上传token时得到的bucketName
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder setBucketName(
             java.lang.String value) {
@@ -7413,11 +7395,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 获取上传token时得到的bucketName
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder clearBucketName() {
           
@@ -7426,11 +7408,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string bucketName = 3;</code>
-         *
          * <pre>
          * 获取上传token时得到的bucketName
          * </pre>
+         *
+         * <code>optional string bucketName = 3;</code>
          */
         public Builder setBucketNameBytes(
             com.google.protobuf.ByteString value) {
@@ -7446,21 +7428,21 @@ public final class Pilot {
 
         private int sex_ = 0;
         /**
-         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-         *
          * <pre>
          * 待测试，如果不传性别会不会得到默认为男性
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public int getSexValue() {
           return sex_;
         }
         /**
-         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-         *
          * <pre>
          * 待测试，如果不传性别会不会得到默认为男性
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public Builder setSexValue(int value) {
           sex_ = value;
@@ -7468,22 +7450,22 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-         *
          * <pre>
          * 待测试，如果不传性别会不会得到默认为男性
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public com.xiang.proto.Common.Sex getSex() {
-          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+          com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
           return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
         }
         /**
-         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-         *
          * <pre>
          * 待测试，如果不传性别会不会得到默认为男性
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public Builder setSex(com.xiang.proto.Common.Sex value) {
           if (value == null) {
@@ -7495,11 +7477,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-         *
          * <pre>
          * 待测试，如果不传性别会不会得到默认为男性
          * </pre>
+         *
+         * <code>optional .com.xiang.proto.Sex sex = 4;</code>
          */
         public Builder clearSex() {
           
@@ -7510,11 +7492,11 @@ public final class Pilot {
 
         private java.lang.Object sign_ = "";
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public java.lang.String getSign() {
           java.lang.Object ref = sign_;
@@ -7529,11 +7511,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public com.google.protobuf.ByteString
             getSignBytes() {
@@ -7549,11 +7531,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder setSign(
             java.lang.String value) {
@@ -7566,11 +7548,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder clearSign() {
           
@@ -7579,11 +7561,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string sign = 5;</code>
-         *
          * <pre>
          * 个性签名
          * </pre>
+         *
+         * <code>optional string sign = 5;</code>
          */
         public Builder setSignBytes(
             com.google.protobuf.ByteString value) {
@@ -7695,16 +7677,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -7826,34 +7799,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -7875,12 +7854,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10004}
-     *
      * <pre>
      * 更新我的个人信息
      * /pilot/updateMyInfo
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10004}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -7996,7 +7975,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -8268,16 +8247,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -8347,7 +8317,8 @@ public final class Pilot {
     }
     private Response10004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -8393,11 +8364,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -8419,19 +8389,19 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional string avatarUrl = 1;</code>
-       *
        * <pre>
        * 如果是更新头像，则会返回用户的新头像url
        * </pre>
+       *
+       * <code>optional string avatarUrl = 1;</code>
        */
       java.lang.String getAvatarUrl();
       /**
-       * <code>optional string avatarUrl = 1;</code>
-       *
        * <pre>
        * 如果是更新头像，则会返回用户的新头像url
        * </pre>
+       *
+       * <code>optional string avatarUrl = 1;</code>
        */
       com.google.protobuf.ByteString
           getAvatarUrlBytes();
@@ -8458,7 +8428,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -8476,7 +8447,7 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 avatarUrl_ = s;
                 break;
@@ -8484,11 +8455,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -8508,11 +8478,11 @@ public final class Pilot {
       public static final int AVATARURL_FIELD_NUMBER = 1;
       private volatile java.lang.Object avatarUrl_;
       /**
-       * <code>optional string avatarUrl = 1;</code>
-       *
        * <pre>
        * 如果是更新头像，则会返回用户的新头像url
        * </pre>
+       *
+       * <code>optional string avatarUrl = 1;</code>
        */
       public java.lang.String getAvatarUrl() {
         java.lang.Object ref = avatarUrl_;
@@ -8527,11 +8497,11 @@ public final class Pilot {
         }
       }
       /**
-       * <code>optional string avatarUrl = 1;</code>
-       *
        * <pre>
        * 如果是更新头像，则会返回用户的新头像url
        * </pre>
+       *
+       * <code>optional string avatarUrl = 1;</code>
        */
       public com.google.protobuf.ByteString
           getAvatarUrlBytes() {
@@ -8600,34 +8570,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10004.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -8744,7 +8720,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10004.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -8755,11 +8731,11 @@ public final class Pilot {
 
         private java.lang.Object avatarUrl_ = "";
         /**
-         * <code>optional string avatarUrl = 1;</code>
-         *
          * <pre>
          * 如果是更新头像，则会返回用户的新头像url
          * </pre>
+         *
+         * <code>optional string avatarUrl = 1;</code>
          */
         public java.lang.String getAvatarUrl() {
           java.lang.Object ref = avatarUrl_;
@@ -8774,11 +8750,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string avatarUrl = 1;</code>
-         *
          * <pre>
          * 如果是更新头像，则会返回用户的新头像url
          * </pre>
+         *
+         * <code>optional string avatarUrl = 1;</code>
          */
         public com.google.protobuf.ByteString
             getAvatarUrlBytes() {
@@ -8794,11 +8770,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>optional string avatarUrl = 1;</code>
-         *
          * <pre>
          * 如果是更新头像，则会返回用户的新头像url
          * </pre>
+         *
+         * <code>optional string avatarUrl = 1;</code>
          */
         public Builder setAvatarUrl(
             java.lang.String value) {
@@ -8811,11 +8787,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string avatarUrl = 1;</code>
-         *
          * <pre>
          * 如果是更新头像，则会返回用户的新头像url
          * </pre>
+         *
+         * <code>optional string avatarUrl = 1;</code>
          */
         public Builder clearAvatarUrl() {
           
@@ -8824,11 +8800,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional string avatarUrl = 1;</code>
-         *
          * <pre>
          * 如果是更新头像，则会返回用户的新头像url
          * </pre>
+         *
+         * <code>optional string avatarUrl = 1;</code>
          */
         public Builder setAvatarUrlBytes(
             com.google.protobuf.ByteString value) {
@@ -8871,16 +8847,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -9002,34 +8969,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -9167,7 +9140,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -9439,16 +9412,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -9498,12 +9462,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10005.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10005}
-   *
    * <pre>
    * 获取我（或别人的）的相册（动态列表）
    * /pilot/getMyTrend
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10005}
    */
   public  static final class Request10005 extends
       com.google.protobuf.GeneratedMessage implements
@@ -9523,7 +9487,8 @@ public final class Pilot {
     }
     private Request10005(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -9569,11 +9534,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -9595,20 +9559,20 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 pageIndex = 1;</code>
-       *
        * <pre>
        * 需要获取的页数，从0开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 1;</code>
        */
       int getPageIndex();
 
       /**
-       * <code>optional int32 userId = 2;</code>
-       *
        * <pre>
        * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
        * </pre>
+       *
+       * <code>optional int32 userId = 2;</code>
        */
       int getUserId();
     }
@@ -9635,7 +9599,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -9665,11 +9630,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -9689,11 +9653,11 @@ public final class Pilot {
       public static final int PAGEINDEX_FIELD_NUMBER = 1;
       private int pageIndex_;
       /**
-       * <code>optional int32 pageIndex = 1;</code>
-       *
        * <pre>
        * 需要获取的页数，从0开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 1;</code>
        */
       public int getPageIndex() {
         return pageIndex_;
@@ -9702,11 +9666,11 @@ public final class Pilot {
       public static final int USERID_FIELD_NUMBER = 2;
       private int userId_;
       /**
-       * <code>optional int32 userId = 2;</code>
-       *
        * <pre>
        * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
        * </pre>
+       *
+       * <code>optional int32 userId = 2;</code>
        */
       public int getUserId() {
         return userId_;
@@ -9773,34 +9737,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10005.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -9922,7 +9892,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10005.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -9933,21 +9903,21 @@ public final class Pilot {
 
         private int pageIndex_ ;
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public int getPageIndex() {
           return pageIndex_;
         }
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public Builder setPageIndex(int value) {
           
@@ -9956,11 +9926,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public Builder clearPageIndex() {
           
@@ -9971,21 +9941,21 @@ public final class Pilot {
 
         private int userId_ ;
         /**
-         * <code>optional int32 userId = 2;</code>
-         *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
          * </pre>
+         *
+         * <code>optional int32 userId = 2;</code>
          */
         public int getUserId() {
           return userId_;
         }
         /**
-         * <code>optional int32 userId = 2;</code>
-         *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
          * </pre>
+         *
+         * <code>optional int32 userId = 2;</code>
          */
         public Builder setUserId(int value) {
           
@@ -9994,11 +9964,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 userId = 2;</code>
-         *
          * <pre>
          * 如果传该字段，则是获取该userId对应的用户的相册，否则获取我的
          * </pre>
+         *
+         * <code>optional int32 userId = 2;</code>
          */
         public Builder clearUserId() {
           
@@ -10036,16 +10006,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -10167,34 +10128,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10005 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -10216,12 +10183,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10005}
-     *
      * <pre>
      * 获取我（或别人的）的相册（动态列表）
      * /pilot/getMyTrend
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10005}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -10337,7 +10304,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10005) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10609,16 +10576,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10005(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -10688,7 +10646,8 @@ public final class Pilot {
     }
     private Response10005(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -10734,11 +10693,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -10784,11 +10742,11 @@ public final class Pilot {
           int index);
 
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 每页的最大数量，如果trends小于该数量，则没有加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       int getMaxCountPerPage();
     }
@@ -10815,7 +10773,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -10848,11 +10807,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             trends_ = java.util.Collections.unmodifiableList(trends_);
@@ -10911,11 +10869,11 @@ public final class Pilot {
       public static final int MAXCOUNTPERPAGE_FIELD_NUMBER = 2;
       private int maxCountPerPage_;
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 每页的最大数量，如果trends小于该数量，则没有加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       public int getMaxCountPerPage() {
         return maxCountPerPage_;
@@ -10982,34 +10940,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10005.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -11170,7 +11134,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10005.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -11422,21 +11386,21 @@ public final class Pilot {
 
         private int maxCountPerPage_ ;
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果trends小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public int getMaxCountPerPage() {
           return maxCountPerPage_;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果trends小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder setMaxCountPerPage(int value) {
           
@@ -11445,11 +11409,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果trends小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder clearMaxCountPerPage() {
           
@@ -11487,16 +11451,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -11618,34 +11573,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10005 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -11783,7 +11744,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10005) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -12055,16 +12016,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10005(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -12114,12 +12066,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10006.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10006}
-   *
    * <pre>
    * 获取我的消息列表
    * /pilot/getMyCommentMessage
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10006}
    */
   public  static final class Request10006 extends
       com.google.protobuf.GeneratedMessage implements
@@ -12139,7 +12091,8 @@ public final class Pilot {
     }
     private Request10006(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -12185,11 +12138,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -12211,11 +12163,11 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 pageIndex = 1;</code>
-       *
        * <pre>
        * 需要获取的页数，从0开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 1;</code>
        */
       int getPageIndex();
     }
@@ -12241,7 +12193,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -12266,11 +12219,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -12290,11 +12242,11 @@ public final class Pilot {
       public static final int PAGEINDEX_FIELD_NUMBER = 1;
       private int pageIndex_;
       /**
-       * <code>optional int32 pageIndex = 1;</code>
-       *
        * <pre>
        * 需要获取的页数，从0开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 1;</code>
        */
       public int getPageIndex() {
         return pageIndex_;
@@ -12354,34 +12306,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10006.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -12497,7 +12455,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10006.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -12508,21 +12466,21 @@ public final class Pilot {
 
         private int pageIndex_ ;
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public int getPageIndex() {
           return pageIndex_;
         }
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public Builder setPageIndex(int value) {
           
@@ -12531,11 +12489,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 pageIndex = 1;</code>
-         *
          * <pre>
          * 需要获取的页数，从0开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 1;</code>
          */
         public Builder clearPageIndex() {
           
@@ -12573,16 +12531,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -12704,34 +12653,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -12753,12 +12708,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10006}
-     *
      * <pre>
      * 获取我的消息列表
      * /pilot/getMyCommentMessage
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10006}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -12874,7 +12829,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10006) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -13146,16 +13101,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10006(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -13225,7 +13171,8 @@ public final class Pilot {
     }
     private Response10006(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -13271,11 +13218,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -13321,11 +13267,11 @@ public final class Pilot {
           int index);
 
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 每页的最大数量，如果messages小于该数量，则没有加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       int getMaxCountPerPage();
     }
@@ -13352,7 +13298,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -13385,11 +13332,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             commentMessages_ = java.util.Collections.unmodifiableList(commentMessages_);
@@ -13448,11 +13394,11 @@ public final class Pilot {
       public static final int MAXCOUNTPERPAGE_FIELD_NUMBER = 2;
       private int maxCountPerPage_;
       /**
-       * <code>optional int32 maxCountPerPage = 2;</code>
-       *
        * <pre>
        * 每页的最大数量，如果messages小于该数量，则没有加载更多
        * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
        */
       public int getMaxCountPerPage() {
         return maxCountPerPage_;
@@ -13519,34 +13465,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10006.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -13707,7 +13659,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10006.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -13959,21 +13911,21 @@ public final class Pilot {
 
         private int maxCountPerPage_ ;
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果messages小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public int getMaxCountPerPage() {
           return maxCountPerPage_;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果messages小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder setMaxCountPerPage(int value) {
           
@@ -13982,11 +13934,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 maxCountPerPage = 2;</code>
-         *
          * <pre>
          * 每页的最大数量，如果messages小于该数量，则没有加载更多
          * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
          */
         public Builder clearMaxCountPerPage() {
           
@@ -14024,16 +13976,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -14155,34 +14098,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10006 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -14320,7 +14269,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10006) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -14592,16 +14541,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10006(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -14651,12 +14591,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10007.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10007}
-   *
    * <pre>
    * 删除我的消息
    * /pilot/deleteCommentMessage
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10007}
    */
   public  static final class Request10007 extends
       com.google.protobuf.GeneratedMessage implements
@@ -14676,7 +14616,8 @@ public final class Pilot {
     }
     private Request10007(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -14722,11 +14663,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -14748,36 +14688,36 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional bool clearAll = 1;</code>
-       *
        * <pre>
        * 清空消息，如果是true，则清空所有消息
        * </pre>
+       *
+       * <code>optional bool clearAll = 1;</code>
        */
       boolean getClearAll();
 
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       java.util.List<java.lang.Integer> getMessageIdsList();
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       int getMessageIdsCount();
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       int getMessageIds(int index);
     }
@@ -14804,7 +14744,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -14850,11 +14791,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
             messageIds_ = java.util.Collections.unmodifiableList(messageIds_);
@@ -14878,11 +14818,11 @@ public final class Pilot {
       public static final int CLEARALL_FIELD_NUMBER = 1;
       private boolean clearAll_;
       /**
-       * <code>optional bool clearAll = 1;</code>
-       *
        * <pre>
        * 清空消息，如果是true，则清空所有消息
        * </pre>
+       *
+       * <code>optional bool clearAll = 1;</code>
        */
       public boolean getClearAll() {
         return clearAll_;
@@ -14891,32 +14831,32 @@ public final class Pilot {
       public static final int MESSAGEIDS_FIELD_NUMBER = 2;
       private java.util.List<java.lang.Integer> messageIds_;
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       public java.util.List<java.lang.Integer>
           getMessageIdsList() {
         return messageIds_;
       }
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       public int getMessageIdsCount() {
         return messageIds_.size();
       }
       /**
-       * <code>repeated int32 messageIds = 2;</code>
-       *
        * <pre>
        * 需要删除的消息id
        * </pre>
+       *
+       * <code>repeated int32 messageIds = 2;</code>
        */
       public int getMessageIds(int index) {
         return messageIds_.get(index);
@@ -14999,34 +14939,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10007.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -15162,7 +15108,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10007.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -15174,21 +15120,21 @@ public final class Pilot {
 
         private boolean clearAll_ ;
         /**
-         * <code>optional bool clearAll = 1;</code>
-         *
          * <pre>
          * 清空消息，如果是true，则清空所有消息
          * </pre>
+         *
+         * <code>optional bool clearAll = 1;</code>
          */
         public boolean getClearAll() {
           return clearAll_;
         }
         /**
-         * <code>optional bool clearAll = 1;</code>
-         *
          * <pre>
          * 清空消息，如果是true，则清空所有消息
          * </pre>
+         *
+         * <code>optional bool clearAll = 1;</code>
          */
         public Builder setClearAll(boolean value) {
           
@@ -15197,11 +15143,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional bool clearAll = 1;</code>
-         *
          * <pre>
          * 清空消息，如果是true，则清空所有消息
          * </pre>
+         *
+         * <code>optional bool clearAll = 1;</code>
          */
         public Builder clearClearAll() {
           
@@ -15218,42 +15164,42 @@ public final class Pilot {
            }
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public java.util.List<java.lang.Integer>
             getMessageIdsList() {
           return java.util.Collections.unmodifiableList(messageIds_);
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public int getMessageIdsCount() {
           return messageIds_.size();
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public int getMessageIds(int index) {
           return messageIds_.get(index);
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public Builder setMessageIds(
             int index, int value) {
@@ -15263,11 +15209,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public Builder addMessageIds(int value) {
           ensureMessageIdsIsMutable();
@@ -15276,11 +15222,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public Builder addAllMessageIds(
             java.lang.Iterable<? extends java.lang.Integer> values) {
@@ -15291,11 +15237,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated int32 messageIds = 2;</code>
-         *
          * <pre>
          * 需要删除的消息id
          * </pre>
+         *
+         * <code>repeated int32 messageIds = 2;</code>
          */
         public Builder clearMessageIds() {
           messageIds_ = java.util.Collections.emptyList();
@@ -15333,16 +15279,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -15464,34 +15401,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -15513,12 +15456,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10007}
-     *
      * <pre>
      * 删除我的消息
      * /pilot/deleteCommentMessage
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10007}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -15634,7 +15577,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10007) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -15906,16 +15849,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10007(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -15985,7 +15919,8 @@ public final class Pilot {
     }
     private Response10007(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -16031,11 +15966,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -16077,7 +16011,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -16096,11 +16031,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -16164,34 +16098,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10007.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -16301,7 +16241,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10007.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -16339,16 +16279,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -16470,34 +16401,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10007 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -16635,7 +16572,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10007) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -16907,16 +16844,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10007(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -16966,12 +16894,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10008.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10008}
-   *
    * <pre>
    * 获取我的X币数量
    * /pilot/getMyXMoney
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10008}
    */
   public  static final class Request10008 extends
       com.google.protobuf.GeneratedMessage implements
@@ -16991,7 +16919,8 @@ public final class Pilot {
     }
     private Request10008(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -17037,11 +16966,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -17083,7 +17011,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -17102,11 +17031,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -17170,34 +17098,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10008.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -17307,7 +17241,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10008.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -17345,16 +17279,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -17476,34 +17401,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10008 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -17525,12 +17456,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10008}
-     *
      * <pre>
      * 获取我的X币数量
      * /pilot/getMyXMoney
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10008}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -17646,7 +17577,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10008) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -17918,16 +17849,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10008(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -17997,7 +17919,8 @@ public final class Pilot {
     }
     private Response10008(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -18043,11 +17966,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -18069,11 +17991,11 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 count = 1;</code>
-       *
        * <pre>
        * X币数量
        * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
        */
       int getCount();
     }
@@ -18099,7 +18021,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -18124,11 +18047,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -18148,11 +18070,11 @@ public final class Pilot {
       public static final int COUNT_FIELD_NUMBER = 1;
       private int count_;
       /**
-       * <code>optional int32 count = 1;</code>
-       *
        * <pre>
        * X币数量
        * </pre>
+       *
+       * <code>optional int32 count = 1;</code>
        */
       public int getCount() {
         return count_;
@@ -18212,34 +18134,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10008.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -18355,7 +18283,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10008.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -18366,21 +18294,21 @@ public final class Pilot {
 
         private int count_ ;
         /**
-         * <code>optional int32 count = 1;</code>
-         *
          * <pre>
          * X币数量
          * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
          */
         public int getCount() {
           return count_;
         }
         /**
-         * <code>optional int32 count = 1;</code>
-         *
          * <pre>
          * X币数量
          * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
          */
         public Builder setCount(int value) {
           
@@ -18389,11 +18317,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 count = 1;</code>
-         *
          * <pre>
          * X币数量
          * </pre>
+         *
+         * <code>optional int32 count = 1;</code>
          */
         public Builder clearCount() {
           
@@ -18431,16 +18359,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -18562,34 +18481,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10008 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -18727,7 +18652,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10008) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -18999,16 +18924,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10008(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -19058,12 +18974,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10009.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10009}
-   *
    * <pre>
    * 获取用户关注的列表
    * /pilot/getUserGuanzhu
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10009}
    */
   public  static final class Request10009 extends
       com.google.protobuf.GeneratedMessage implements
@@ -19083,7 +18999,8 @@ public final class Pilot {
     }
     private Request10009(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -19129,11 +19046,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -19155,11 +19071,11 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 如果不传该字段，则获取我的关注列表
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       int getUserId();
     }
@@ -19185,7 +19101,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -19210,11 +19127,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -19234,11 +19150,11 @@ public final class Pilot {
       public static final int USERID_FIELD_NUMBER = 1;
       private int userId_;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 如果不传该字段，则获取我的关注列表
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
@@ -19298,34 +19214,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10009.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -19441,7 +19363,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10009.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -19452,21 +19374,21 @@ public final class Pilot {
 
         private int userId_ ;
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public int getUserId() {
           return userId_;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder setUserId(int value) {
           
@@ -19475,11 +19397,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的关注列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder clearUserId() {
           
@@ -19517,16 +19439,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -19648,34 +19561,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10009 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -19697,12 +19616,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10009}
-     *
      * <pre>
      * 获取用户关注的列表
      * /pilot/getUserGuanzhu
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10009}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -19818,7 +19737,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10009) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -20090,16 +20009,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10009(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -20169,7 +20079,8 @@ public final class Pilot {
     }
     private Response10009(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -20215,11 +20126,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -20241,45 +20151,45 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       java.util.List<com.xiang.proto.Common.BriefUser> 
           getBriefUsersList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       com.xiang.proto.Common.BriefUser getBriefUsers(int index);
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       int getBriefUsersCount();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index);
@@ -20306,7 +20216,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -20334,11 +20245,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
@@ -20361,52 +20271,52 @@ public final class Pilot {
       public static final int BRIEFUSERS_FIELD_NUMBER = 1;
       private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_;
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public int getBriefUsersCount() {
         return briefUsers_.size();
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
         return briefUsers_.get(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 关注列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index) {
@@ -20467,34 +20377,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10009.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -20647,7 +20563,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10009.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -20670,11 +20586,11 @@ public final class Pilot {
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUsersBuilder_;
 
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
           if (briefUsersBuilder_ == null) {
@@ -20684,11 +20600,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public int getBriefUsersCount() {
           if (briefUsersBuilder_ == null) {
@@ -20698,11 +20614,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -20712,11 +20628,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -20733,11 +20649,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -20751,11 +20667,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(com.xiang.proto.Common.BriefUser value) {
           if (briefUsersBuilder_ == null) {
@@ -20771,11 +20687,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -20792,11 +20708,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -20810,11 +20726,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -20828,11 +20744,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addAllBriefUsers(
             java.lang.Iterable<? extends com.xiang.proto.Common.BriefUser> values) {
@@ -20847,11 +20763,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder clearBriefUsers() {
           if (briefUsersBuilder_ == null) {
@@ -20864,11 +20780,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder removeBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -20881,22 +20797,22 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder getBriefUsersBuilder(
             int index) {
           return getBriefUsersFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
             int index) {
@@ -20906,11 +20822,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
              getBriefUsersOrBuilderList() {
@@ -20921,22 +20837,22 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder() {
           return getBriefUsersFieldBuilder().addBuilder(
               com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder(
             int index) {
@@ -20944,11 +20860,11 @@ public final class Pilot {
               index, com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 关注列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser.Builder> 
              getBriefUsersBuilderList() {
@@ -20998,16 +20914,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -21129,34 +21036,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10009 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -21294,7 +21207,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10009) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -21566,16 +21479,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10009(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -21625,12 +21529,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10010.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10010}
-   *
    * <pre>
    * 获取用户粉丝的列表
    * /pilot/getUserFensi
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10010}
    */
   public  static final class Request10010 extends
       com.google.protobuf.GeneratedMessage implements
@@ -21650,7 +21554,8 @@ public final class Pilot {
     }
     private Request10010(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -21696,11 +21601,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -21722,11 +21626,11 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 如果不传该字段，则获取我的粉丝列表
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       int getUserId();
     }
@@ -21752,7 +21656,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -21777,11 +21682,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -21801,11 +21705,11 @@ public final class Pilot {
       public static final int USERID_FIELD_NUMBER = 1;
       private int userId_;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 如果不传该字段，则获取我的粉丝列表
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
@@ -21865,34 +21769,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10010.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -22008,7 +21918,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10010.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -22019,21 +21929,21 @@ public final class Pilot {
 
         private int userId_ ;
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public int getUserId() {
           return userId_;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder setUserId(int value) {
           
@@ -22042,11 +21952,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional int32 userId = 1;</code>
-         *
          * <pre>
          * 如果不传该字段，则获取我的粉丝列表
          * </pre>
+         *
+         * <code>optional int32 userId = 1;</code>
          */
         public Builder clearUserId() {
           
@@ -22084,16 +21994,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -22215,34 +22116,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10010 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -22264,12 +22171,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10010}
-     *
      * <pre>
      * 获取用户粉丝的列表
      * /pilot/getUserFensi
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10010}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -22385,7 +22292,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10010) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -22657,16 +22564,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10010(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -22736,7 +22634,8 @@ public final class Pilot {
     }
     private Response10010(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -22782,11 +22681,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -22808,45 +22706,45 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       java.util.List<com.xiang.proto.Common.BriefUser> 
           getBriefUsersList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       com.xiang.proto.Common.BriefUser getBriefUsers(int index);
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       int getBriefUsersCount();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index);
@@ -22873,7 +22771,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -22901,11 +22800,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
@@ -22928,52 +22826,52 @@ public final class Pilot {
       public static final int BRIEFUSERS_FIELD_NUMBER = 1;
       private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_;
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public int getBriefUsersCount() {
         return briefUsers_.size();
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
         return briefUsers_.get(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-       *
        * <pre>
        * 粉丝列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index) {
@@ -23034,34 +22932,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10010.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -23214,7 +23118,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10010.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -23237,11 +23141,11 @@ public final class Pilot {
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUsersBuilder_;
 
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
           if (briefUsersBuilder_ == null) {
@@ -23251,11 +23155,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public int getBriefUsersCount() {
           if (briefUsersBuilder_ == null) {
@@ -23265,11 +23169,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -23279,11 +23183,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -23300,11 +23204,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -23318,11 +23222,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(com.xiang.proto.Common.BriefUser value) {
           if (briefUsersBuilder_ == null) {
@@ -23338,11 +23242,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -23359,11 +23263,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -23377,11 +23281,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -23395,11 +23299,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder addAllBriefUsers(
             java.lang.Iterable<? extends com.xiang.proto.Common.BriefUser> values) {
@@ -23414,11 +23318,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder clearBriefUsers() {
           if (briefUsersBuilder_ == null) {
@@ -23431,11 +23335,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public Builder removeBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -23448,22 +23352,22 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder getBriefUsersBuilder(
             int index) {
           return getBriefUsersFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
             int index) {
@@ -23473,11 +23377,11 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
              getBriefUsersOrBuilderList() {
@@ -23488,22 +23392,22 @@ public final class Pilot {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder() {
           return getBriefUsersFieldBuilder().addBuilder(
               com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder(
             int index) {
@@ -23511,11 +23415,11 @@ public final class Pilot {
               index, com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
-         *
          * <pre>
          * 粉丝列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser.Builder> 
              getBriefUsersBuilderList() {
@@ -23565,16 +23469,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -23696,34 +23591,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10010 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -23861,7 +23762,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10010) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -24133,16 +24034,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10010(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -24192,12 +24084,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10011.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10011}
-   *
    * <pre>
    * 关注或取消关注别人
    * /pilot/guanzhuUser
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10011}
    */
   public  static final class Request10011 extends
       com.google.protobuf.GeneratedMessage implements
@@ -24217,7 +24109,8 @@ public final class Pilot {
     }
     private Request10011(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -24263,11 +24156,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -24294,11 +24186,11 @@ public final class Pilot {
       int getToUserId();
 
       /**
-       * <code>optional bool isFollow = 2;</code>
-       *
        * <pre>
        * true:关注 false：取消关注
        * </pre>
+       *
+       * <code>optional bool isFollow = 2;</code>
        */
       boolean getIsFollow();
     }
@@ -24325,7 +24217,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -24355,11 +24248,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -24388,11 +24280,11 @@ public final class Pilot {
       public static final int ISFOLLOW_FIELD_NUMBER = 2;
       private boolean isFollow_;
       /**
-       * <code>optional bool isFollow = 2;</code>
-       *
        * <pre>
        * true:关注 false：取消关注
        * </pre>
+       *
+       * <code>optional bool isFollow = 2;</code>
        */
       public boolean getIsFollow() {
         return isFollow_;
@@ -24459,34 +24351,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10011.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -24608,7 +24506,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10011.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -24645,21 +24543,21 @@ public final class Pilot {
 
         private boolean isFollow_ ;
         /**
-         * <code>optional bool isFollow = 2;</code>
-         *
          * <pre>
          * true:关注 false：取消关注
          * </pre>
+         *
+         * <code>optional bool isFollow = 2;</code>
          */
         public boolean getIsFollow() {
           return isFollow_;
         }
         /**
-         * <code>optional bool isFollow = 2;</code>
-         *
          * <pre>
          * true:关注 false：取消关注
          * </pre>
+         *
+         * <code>optional bool isFollow = 2;</code>
          */
         public Builder setIsFollow(boolean value) {
           
@@ -24668,11 +24566,11 @@ public final class Pilot {
           return this;
         }
         /**
-         * <code>optional bool isFollow = 2;</code>
-         *
          * <pre>
          * true:关注 false：取消关注
          * </pre>
+         *
+         * <code>optional bool isFollow = 2;</code>
          */
         public Builder clearIsFollow() {
           
@@ -24710,16 +24608,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -24841,34 +24730,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10011 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -24890,12 +24785,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10011}
-     *
      * <pre>
      * 关注或取消关注别人
      * /pilot/guanzhuUser
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10011}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -25011,7 +24906,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10011) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -25283,16 +25178,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10011(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -25362,7 +25248,8 @@ public final class Pilot {
     }
     private Response10011(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -25408,11 +25295,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -25454,7 +25340,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -25473,11 +25360,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -25541,34 +25427,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10011.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -25678,7 +25570,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10011.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -25716,16 +25608,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -25847,34 +25730,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10011 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -26012,7 +25901,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10011) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -26284,16 +26173,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10011(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -26343,12 +26223,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10012.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10012}
-   *
    * <pre>
    * 获取用户详情
    * /pilot/getUserDetail
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10012}
    */
   public  static final class Request10012 extends
       com.google.protobuf.GeneratedMessage implements
@@ -26368,7 +26248,8 @@ public final class Pilot {
     }
     private Request10012(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -26414,11 +26295,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -26466,7 +26346,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -26491,11 +26372,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -26575,34 +26455,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10012.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -26718,7 +26604,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10012.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -26782,16 +26668,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -26913,34 +26790,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10012 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -26962,12 +26845,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10012}
-     *
      * <pre>
      * 获取用户详情
      * /pilot/getUserDetail
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10012}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -27083,7 +26966,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10012) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -27355,16 +27238,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10012(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -27434,7 +27308,8 @@ public final class Pilot {
     }
     private Response10012(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -27480,11 +27355,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -27539,7 +27413,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -27572,11 +27447,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -27668,34 +27542,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10012.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -27819,7 +27699,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10012.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -27974,16 +27854,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -28105,34 +27976,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10012 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -28270,7 +28147,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10012) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -28542,16 +28419,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10012(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -28601,12 +28469,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10013.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10013}
-   *
    * <pre>
    * 搜索用户
    * /pilot/searchUser
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10013}
    */
   public  static final class Request10013 extends
       com.google.protobuf.GeneratedMessage implements
@@ -28626,7 +28494,8 @@ public final class Pilot {
     }
     private Request10013(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -28672,11 +28541,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -28735,7 +28603,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -28753,7 +28622,7 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 keyword_ = s;
                 break;
@@ -28766,11 +28635,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -28890,34 +28758,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10013.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -29040,7 +28914,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10013.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -29173,16 +29047,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -29304,34 +29169,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10013 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -29353,12 +29224,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10013}
-     *
      * <pre>
      * 搜索用户
      * /pilot/searchUser
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10013}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -29474,7 +29345,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10013) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -29746,16 +29617,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10013(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -29825,7 +29687,8 @@ public final class Pilot {
     }
     private Response10013(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -29871,11 +29734,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -29948,7 +29810,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -29981,11 +29844,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             searchedUsers_ = java.util.Collections.unmodifiableList(searchedUsers_);
@@ -30111,34 +29973,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10013.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -30299,7 +30167,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10013.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -30604,16 +30472,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -30735,34 +30594,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10013 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -30900,7 +30765,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10013) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -31172,16 +31037,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10013(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -31231,12 +31087,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10014.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10014}
-   *
    * <pre>
    * 搜索场馆
    * /pilot/searchGym
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10014}
    */
   public  static final class Request10014 extends
       com.google.protobuf.GeneratedMessage implements
@@ -31256,7 +31112,8 @@ public final class Pilot {
     }
     private Request10014(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -31302,11 +31159,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -31365,7 +31221,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -31383,7 +31240,7 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 keyword_ = s;
                 break;
@@ -31396,11 +31253,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -31520,34 +31376,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10014.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -31670,7 +31532,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10014.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -31803,16 +31665,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -31934,34 +31787,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10014 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -31983,12 +31842,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10014}
-     *
      * <pre>
      * 搜索场馆
      * /pilot/searchGym
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10014}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -32104,7 +31963,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10014) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -32376,16 +32235,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10014(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -32455,7 +32305,8 @@ public final class Pilot {
     }
     private Response10014(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -32501,11 +32352,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -32578,7 +32428,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -32611,11 +32462,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             briefGyms_ = java.util.Collections.unmodifiableList(briefGyms_);
@@ -32741,34 +32591,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10014.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -32929,7 +32785,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10014.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -33234,16 +33090,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -33365,34 +33212,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10014 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -33530,7 +33383,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10014) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -33802,16 +33655,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10014(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -33861,12 +33705,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10015.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10015}
-   *
    * <pre>
    * 获取热门搜索关键字列表
    * /pilot/getSearchKeys
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10015}
    */
   public  static final class Request10015 extends
       com.google.protobuf.GeneratedMessage implements
@@ -33886,7 +33730,8 @@ public final class Pilot {
     }
     private Request10015(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -33932,11 +33777,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -33978,7 +33822,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -33997,11 +33842,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -34065,34 +33909,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10015.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -34202,7 +34052,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10015.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -34240,16 +34090,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -34371,34 +34212,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10015 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -34420,12 +34267,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10015}
-     *
      * <pre>
      * 获取热门搜索关键字列表
      * /pilot/getSearchKeys
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10015}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -34541,7 +34388,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10015) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -34813,16 +34660,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10015(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -34892,7 +34730,8 @@ public final class Pilot {
     }
     private Response10015(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -34938,11 +34777,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -34964,19 +34802,35 @@ public final class Pilot {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       com.google.protobuf.ProtocolStringList
           getKeysList();
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       int getKeysCount();
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       java.lang.String getKeys(int index);
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       com.google.protobuf.ByteString
@@ -35004,7 +34858,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -35022,7 +34877,7 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
                 if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                   keys_ = new com.google.protobuf.LazyStringArrayList();
                   mutable_bitField0_ |= 0x00000001;
@@ -35033,11 +34888,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             keys_ = keys_.getUnmodifiableView();
@@ -35060,6 +34914,10 @@ public final class Pilot {
       public static final int KEYS_FIELD_NUMBER = 1;
       private com.google.protobuf.LazyStringList keys_;
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       public com.google.protobuf.ProtocolStringList
@@ -35067,18 +34925,30 @@ public final class Pilot {
         return keys_;
       }
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       public int getKeysCount() {
         return keys_.size();
       }
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       public java.lang.String getKeys(int index) {
         return keys_.get(index);
       }
       /**
+       * <pre>
+       * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated string keys = 1;</code>
        */
       public com.google.protobuf.ByteString
@@ -35144,34 +35014,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10015.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -35299,7 +35175,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10015.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -35317,6 +35193,10 @@ public final class Pilot {
            }
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public com.google.protobuf.ProtocolStringList
@@ -35324,18 +35204,30 @@ public final class Pilot {
           return keys_.getUnmodifiableView();
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public int getKeysCount() {
           return keys_.size();
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public java.lang.String getKeys(int index) {
           return keys_.get(index);
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public com.google.protobuf.ByteString
@@ -35343,6 +35235,10 @@ public final class Pilot {
           return keys_.getByteString(index);
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public Builder setKeys(
@@ -35356,6 +35252,10 @@ public final class Pilot {
           return this;
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public Builder addKeys(
@@ -35369,6 +35269,10 @@ public final class Pilot {
           return this;
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public Builder addAllKeys(
@@ -35380,6 +35284,10 @@ public final class Pilot {
           return this;
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public Builder clearKeys() {
@@ -35389,6 +35297,10 @@ public final class Pilot {
           return this;
         }
         /**
+         * <pre>
+         * 注意，如果该数组为空，则data会是null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated string keys = 1;</code>
          */
         public Builder addKeysBytes(
@@ -35432,16 +35344,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -35563,34 +35466,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10015 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -35728,7 +35637,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10015) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -36000,16 +35909,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10015(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -36059,12 +35959,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10016.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10016}
-   *
    * <pre>
    * 验证手机号是否已经注册
    * /pilot/verifyPhoneCanUse
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10016}
    */
   public  static final class Request10016 extends
       com.google.protobuf.GeneratedMessage implements
@@ -36084,7 +35984,8 @@ public final class Pilot {
     }
     private Request10016(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -36130,11 +36031,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -36187,7 +36087,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -36205,7 +36106,7 @@ public final class Pilot {
                 break;
               }
               case 10: {
-                String s = input.readStringRequireUtf8();
+                java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
                 break;
@@ -36213,11 +36114,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -36321,34 +36221,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10016.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -36465,7 +36371,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10016.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -36572,16 +36478,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -36703,34 +36600,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10016 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -36752,12 +36655,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10016}
-     *
      * <pre>
      * 验证手机号是否已经注册
      * /pilot/verifyPhoneCanUse
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10016}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -36873,7 +36776,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10016) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -37145,16 +37048,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10016(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -37224,7 +37118,8 @@ public final class Pilot {
     }
     private Response10016(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -37270,11 +37165,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -37322,7 +37216,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -37347,11 +37242,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -37431,34 +37325,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10016.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -37574,7 +37474,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10016.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -37638,16 +37538,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -37769,34 +37660,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10016 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -37934,7 +37831,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10016) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -38206,16 +38103,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10016(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -38265,12 +38153,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10017.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10017}
-   *
    * <pre>
    * 获取简要消息内容
    * /pilot/getTrendBriefMessage
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10017}
    */
   public  static final class Request10017 extends
       com.google.protobuf.GeneratedMessage implements
@@ -38290,7 +38178,8 @@ public final class Pilot {
     }
     private Request10017(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -38336,11 +38225,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -38382,7 +38270,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         try {
           boolean done = false;
@@ -38401,11 +38290,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -38469,34 +38357,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10017.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -38606,7 +38500,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10017.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -38644,16 +38538,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -38775,34 +38660,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10017 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -38824,12 +38715,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10017}
-     *
      * <pre>
      * 获取简要消息内容
      * /pilot/getTrendBriefMessage
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10017}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -38945,7 +38836,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10017) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -39217,16 +39108,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10017(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -39296,7 +39178,8 @@ public final class Pilot {
     }
     private Response10017(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -39342,11 +39225,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -39401,7 +39283,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -39434,11 +39317,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -39530,34 +39412,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10017.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -39681,7 +39569,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10017.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -39836,16 +39724,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -39967,34 +39846,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10017 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -40132,7 +40017,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10017) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -40404,16 +40289,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10017(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -40463,12 +40339,12 @@ public final class Pilot {
     com.xiang.proto.pilot.Pilot.Request10018.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.pilot.Request10018}
-   *
    * <pre>
    * 获取用户简要信息
    * /pilot/getBriefUser
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.pilot.Request10018}
    */
   public  static final class Request10018 extends
       com.google.protobuf.GeneratedMessage implements
@@ -40488,7 +40364,8 @@ public final class Pilot {
     }
     private Request10018(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -40534,11 +40411,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -40586,7 +40462,8 @@ public final class Pilot {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -40611,11 +40488,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -40695,34 +40571,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Request10018.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -40838,7 +40720,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Request10018.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -40902,16 +40784,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -41033,34 +40906,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Request10018 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -41082,12 +40961,12 @@ public final class Pilot {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.pilot.Request10018}
-     *
      * <pre>
      * 获取用户简要信息
      * /pilot/getBriefUser
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.pilot.Request10018}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -41203,7 +41082,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Request10018) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -41475,16 +41354,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request10018(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -41554,7 +41424,8 @@ public final class Pilot {
     }
     private Response10018(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -41600,11 +41471,10 @@ public final class Pilot {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -41659,7 +41529,8 @@ public final class Pilot {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -41692,11 +41563,10 @@ public final class Pilot {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -41788,34 +41658,40 @@ public final class Pilot {
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.pilot.Pilot.Response10018.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -41939,7 +41815,7 @@ public final class Pilot {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.pilot.Pilot.Response10018.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -42094,16 +41970,7 @@ public final class Pilot {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -42225,34 +42092,40 @@ public final class Pilot {
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.pilot.Pilot.Response10018 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -42390,7 +42263,7 @@ public final class Pilot {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.pilot.Pilot.Response10018) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -42662,16 +42535,7 @@ public final class Pilot {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response10018(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -42690,344 +42554,344 @@ public final class Pilot {
 
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10001_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10001_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10001_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10001_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10002_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10002_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10002_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10002_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10004_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10004_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10004_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10004_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10005_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10005_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10005_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10005_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10005_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10005_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10005_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10005_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10006_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10006_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10006_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10006_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10006_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10006_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10006_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10006_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10007_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10007_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10007_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10007_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10007_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10007_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10007_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10007_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10008_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10008_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10008_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10008_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10008_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10008_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10008_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10008_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10009_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10009_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10009_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10009_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10009_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10009_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10009_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10009_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10010_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10010_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10010_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10010_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10010_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10010_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10010_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10010_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10011_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10011_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10011_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10011_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10011_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10011_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10011_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10011_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10012_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10012_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10012_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10012_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10012_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10012_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10012_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10012_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10013_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10013_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10013_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10013_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10013_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10013_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10013_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10013_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10014_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10014_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10014_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10014_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10014_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10014_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10014_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10014_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10015_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10015_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10015_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10015_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10015_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10015_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10015_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10015_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10016_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10016_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10016_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10016_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10016_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10016_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10016_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10016_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10017_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10017_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10017_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10017_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10017_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10017_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10017_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10017_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10018_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10018_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Request10018_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Request10018_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10018_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10018_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_pilot_Response10018_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_pilot_Response10018_Data_fieldAccessorTable;
 
@@ -43035,7 +42899,7 @@ public final class Pilot {
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {

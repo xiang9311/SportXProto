@@ -6,6 +6,9 @@
 #import "Common.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 #pragma mark - GymRoot
 
 @implementation GymRoot
@@ -59,25 +62,21 @@ typedef struct Request13001__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
         .number = Request13001_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13001__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13001__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "params",
+        .dataTypeSpecific.className = GPBStringifySymbol(Request13001_Params),
         .number = Request13001_FieldNumber_Params,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13001__storage_, params),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13001__storage_, params),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Request13001_Params),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -85,15 +84,9 @@ typedef struct Request13001__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13001__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -125,58 +118,45 @@ typedef struct Request13001_Params__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "longitude",
+        .dataTypeSpecific.className = NULL,
         .number = Request13001_Params_FieldNumber_Longitude,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13001_Params__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(Request13001_Params__storage_, longitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "latitude",
+        .dataTypeSpecific.className = NULL,
         .number = Request13001_Params_FieldNumber_Latitude,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13001_Params__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(Request13001_Params__storage_, latitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "pageIndex",
+        .dataTypeSpecific.className = NULL,
         .number = Request13001_Params_FieldNumber_PageIndex,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Request13001_Params__storage_, pageIndex),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Request13001_Params__storage_, pageIndex),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\003\t\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request13001_Params class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13001_Params__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003\t\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -206,25 +186,21 @@ typedef struct Response13001__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .number = Response13001_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13001__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13001__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "data_p",
+        .dataTypeSpecific.className = GPBStringifySymbol(Response13001_Data),
         .number = Response13001_FieldNumber_Data_p,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Response13001__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13001__storage_, data_p),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Response13001_Data),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -232,15 +208,9 @@ typedef struct Response13001__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13001__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -268,36 +238,27 @@ typedef struct Response13001_Data__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "briefGymsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefGym),
         .number = Response13001_Data_FieldNumber_BriefGymsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Response13001_Data__storage_, briefGymsArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13001_Data__storage_, briefGymsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefGym),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\001\000briefGyms\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13001_Data class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13001_Data__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\000briefGyms\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -327,25 +288,21 @@ typedef struct Request13002__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
         .number = Request13002_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13002__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13002__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "params",
+        .dataTypeSpecific.className = GPBStringifySymbol(Request13002_Params),
         .number = Request13002_FieldNumber_Params,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13002__storage_, params),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13002__storage_, params),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Request13002_Params),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -353,15 +310,9 @@ typedef struct Request13002__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13002__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -389,36 +340,27 @@ typedef struct Request13002_Params__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "gymId",
+        .dataTypeSpecific.className = NULL,
         .number = Request13002_Params_FieldNumber_GymId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13002_Params__storage_, gymId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Request13002_Params__storage_, gymId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\001\005\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request13002_Params class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13002_Params__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\005\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -448,25 +390,21 @@ typedef struct Response13002__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .number = Response13002_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13002__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13002__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "data_p",
+        .dataTypeSpecific.className = GPBStringifySymbol(Response13002_Data),
         .number = Response13002_FieldNumber_Data_p,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Response13002__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13002__storage_, data_p),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Response13002_Data),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -474,15 +412,9 @@ typedef struct Response13002__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13002__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -512,47 +444,36 @@ typedef struct Response13002_Data__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "detailGym",
+        .dataTypeSpecific.className = GPBStringifySymbol(DetailGym),
         .number = Response13002_Data_FieldNumber_DetailGym,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13002_Data__storage_, detailGym),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13002_Data__storage_, detailGym),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(DetailGym),
-        .fieldOptions = NULL,
       },
       {
         .name = "briefUsersArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
         .number = Response13002_Data_FieldNumber_BriefUsersArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Response13002_Data__storage_, briefUsersArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13002_Data__storage_, briefUsersArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\002\001\t\000\002\000briefUsers\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13002_Data class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13002_Data__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\002\001\t\000\002\000briefUsers\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -582,25 +503,21 @@ typedef struct Request13003__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
         .number = Request13003_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13003__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13003__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "params",
+        .dataTypeSpecific.className = GPBStringifySymbol(Request13003_Params),
         .number = Request13003_FieldNumber_Params,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13003__storage_, params),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13003__storage_, params),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Request13003_Params),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -608,15 +525,9 @@ typedef struct Request13003__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13003__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -646,25 +557,21 @@ typedef struct Request13003_Params__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "longitude",
+        .dataTypeSpecific.className = NULL,
         .number = Request13003_Params_FieldNumber_Longitude,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13003_Params__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(Request13003_Params__storage_, longitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "latitude",
+        .dataTypeSpecific.className = NULL,
         .number = Request13003_Params_FieldNumber_Latitude,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13003_Params__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(Request13003_Params__storage_, latitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -672,15 +579,9 @@ typedef struct Request13003_Params__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13003_Params__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -710,25 +611,21 @@ typedef struct Response13003__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .number = Response13003_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13003__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13003__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "data_p",
+        .dataTypeSpecific.className = GPBStringifySymbol(Response13003_Data),
         .number = Response13003_FieldNumber_Data_p,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Response13003__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13003__storage_, data_p),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Response13003_Data),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -736,15 +633,9 @@ typedef struct Response13003__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13003__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -774,47 +665,36 @@ typedef struct Response13003_Data__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "detailGym",
+        .dataTypeSpecific.className = GPBStringifySymbol(DetailGym),
         .number = Response13003_Data_FieldNumber_DetailGym,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13003_Data__storage_, detailGym),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13003_Data__storage_, detailGym),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(DetailGym),
-        .fieldOptions = NULL,
       },
       {
         .name = "briefUsersArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
         .number = Response13003_Data_FieldNumber_BriefUsersArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Response13003_Data__storage_, briefUsersArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13003_Data__storage_, briefUsersArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\002\001\t\000\002\000briefUsers\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13003_Data class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13003_Data__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\002\001\t\000\002\000briefUsers\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -844,25 +724,21 @@ typedef struct Request13004__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
         .number = Request13004_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13004__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13004__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(RequestCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "params",
+        .dataTypeSpecific.className = GPBStringifySymbol(Request13004_Params),
         .number = Request13004_FieldNumber_Params,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13004__storage_, params),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Request13004__storage_, params),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Request13004_Params),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -870,15 +746,9 @@ typedef struct Request13004__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13004__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -908,47 +778,36 @@ typedef struct Request13004_Params__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "gymId",
+        .dataTypeSpecific.className = NULL,
         .number = Request13004_Params_FieldNumber_GymId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13004_Params__storage_, gymId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Request13004_Params__storage_, gymId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "pageIndex",
+        .dataTypeSpecific.className = NULL,
         .number = Request13004_Params_FieldNumber_PageIndex,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Request13004_Params__storage_, pageIndex),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Request13004_Params__storage_, pageIndex),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\002\001\005\000\002\t\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request13004_Params class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13004_Params__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\002\001\005\000\002\t\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -978,25 +837,21 @@ typedef struct Response13004__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "common",
+        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
         .number = Response13004_FieldNumber_Common,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13004__storage_, common),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13004__storage_, common),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(ResponseCommon),
-        .fieldOptions = NULL,
       },
       {
         .name = "data_p",
+        .dataTypeSpecific.className = GPBStringifySymbol(Response13004_Data),
         .number = Response13004_FieldNumber_Data_p,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Response13004__storage_, data_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13004__storage_, data_p),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Response13004_Data),
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -1004,15 +859,9 @@ typedef struct Response13004__storage_ {
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13004__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1042,47 +891,36 @@ typedef struct Response13004_Data__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "trendsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(Trend),
         .number = Response13004_Data_FieldNumber_TrendsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Response13004_Data__storage_, trendsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Response13004_Data__storage_, trendsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Trend),
-        .fieldOptions = NULL,
       },
       {
         .name = "maxCountPerPage",
+        .dataTypeSpecific.className = NULL,
         .number = Response13004_Data_FieldNumber_MaxCountPerPage,
-        .hasIndex = 1,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Response13004_Data__storage_, maxCountPerPage),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Response13004_Data__storage_, maxCountPerPage),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\002\017\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13004_Data class]
                                      rootClass:[GymRoot class]
                                           file:GymRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Response13004_Data__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\002\017\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1091,5 +929,7 @@ typedef struct Response13004_Data__storage_ {
 
 @end
 
+
+#pragma clang diagnostic pop
 
 // @@protoc_insertion_point(global_scope)

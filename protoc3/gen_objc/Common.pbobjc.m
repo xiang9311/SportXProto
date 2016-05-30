@@ -5,6 +5,9 @@
 #import "Common.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 #pragma mark - CommonRoot
 
 @implementation CommonRoot
@@ -30,17 +33,24 @@ static GPBFileDescriptor *CommonRoot_FileDescriptor(void) {
 GPBEnumDescriptor *CardType_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
-    static GPBMessageEnumValueDescription values[] = {
-      { .name = "Once", .number = CardType_Once },
-      { .name = "Month", .number = CardType_Month },
-      { .name = "Quarter", .number = CardType_Quarter },
+    static const char *valueNames =
+        "Once\000Month\000Quarter\000";
+    static const int32_t values[] = {
+        CardType_Once,
+        CardType_Month,
+        CardType_Quarter,
     };
     static const char *extraTextFormatInfo = "\003\000\004\000\001\005\000\002\007\000";
-    descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CardType)
-                                                   values:values
-                                               valueCount:sizeof(values) / sizeof(GPBMessageEnumValueDescription)
-                                             enumVerifier:CardType_IsValidValue
-                                      extraTextFormatInfo:extraTextFormatInfo];
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CardType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:CardType_IsValidValue
+                              extraTextFormatInfo:extraTextFormatInfo];
+    if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+      [worker release];
+    }
   }
   return descriptor;
 }
@@ -61,14 +71,21 @@ BOOL CardType_IsValidValue(int32_t value__) {
 GPBEnumDescriptor *EquipmentType_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
-    static GPBMessageEnumValueDescription values[] = {
-      { .name = "PaoBuJi", .number = EquipmentType_PaoBuJi },
-      { .name = "LinYuFang", .number = EquipmentType_LinYuFang },
+    static const char *valueNames =
+        "PaoBuJi\000LinYuFang\000";
+    static const int32_t values[] = {
+        EquipmentType_PaoBuJi,
+        EquipmentType_LinYuFang,
     };
-    descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(EquipmentType)
-                                                   values:values
-                                               valueCount:sizeof(values) / sizeof(GPBMessageEnumValueDescription)
-                                             enumVerifier:EquipmentType_IsValidValue];
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(EquipmentType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:EquipmentType_IsValidValue];
+    if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+      [worker release];
+    }
   }
   return descriptor;
 }
@@ -88,14 +105,21 @@ BOOL EquipmentType_IsValidValue(int32_t value__) {
 GPBEnumDescriptor *Sex_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
-    static GPBMessageEnumValueDescription values[] = {
-      { .name = "Male", .number = Sex_Male },
-      { .name = "Female", .number = Sex_Female },
+    static const char *valueNames =
+        "Male\000Female\000";
+    static const int32_t values[] = {
+        Sex_Male,
+        Sex_Female,
     };
-    descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Sex)
-                                                   values:values
-                                               valueCount:sizeof(values) / sizeof(GPBMessageEnumValueDescription)
-                                             enumVerifier:Sex_IsValidValue];
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Sex)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:Sex_IsValidValue];
+    if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+      [worker release];
+    }
   }
   return descriptor;
 }
@@ -139,69 +163,57 @@ typedef struct RequestCommon__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "userid",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Userid,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, userid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(RequestCommon__storage_, userid),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userkey",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Userkey,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, userkey),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(RequestCommon__storage_, userkey),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "cmdid",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Cmdid,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, cmdid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(RequestCommon__storage_, cmdid),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "timestamp",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Timestamp,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, timestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
-        .offset = offsetof(RequestCommon__storage_, timestamp),
-        .defaultValue.valueInt64 = 0LL,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "version",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Version,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, version),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(RequestCommon__storage_, version),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "platform",
+        .dataTypeSpecific.className = NULL,
         .number = RequestCommon_FieldNumber_Platform,
         .hasIndex = 5,
+        .offset = (uint32_t)offsetof(RequestCommon__storage_, platform),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(RequestCommon__storage_, platform),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -209,15 +221,9 @@ typedef struct RequestCommon__storage_ {
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(RequestCommon__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -253,58 +259,48 @@ typedef struct ResponseCommon__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "code",
+        .dataTypeSpecific.className = NULL,
         .number = ResponseCommon_FieldNumber_Code,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ResponseCommon__storage_, code),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(ResponseCommon__storage_, code),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "message",
+        .dataTypeSpecific.className = NULL,
         .number = ResponseCommon_FieldNumber_Message,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ResponseCommon__storage_, message),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(ResponseCommon__storage_, message),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "cmdid",
+        .dataTypeSpecific.className = NULL,
         .number = ResponseCommon_FieldNumber_Cmdid,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ResponseCommon__storage_, cmdid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(ResponseCommon__storage_, cmdid),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "timestamp",
+        .dataTypeSpecific.className = NULL,
         .number = ResponseCommon_FieldNumber_Timestamp,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ResponseCommon__storage_, timestamp),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt64,
-        .offset = offsetof(ResponseCommon__storage_, timestamp),
-        .defaultValue.valueInt64 = 0LL,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userid",
+        .dataTypeSpecific.className = NULL,
         .number = ResponseCommon_FieldNumber_Userid,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ResponseCommon__storage_, userid),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(ResponseCommon__storage_, userid),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -312,15 +308,9 @@ typedef struct ResponseCommon__storage_ {
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(ResponseCommon__storage_)
-                                    wireFormat:NO];
+                                         flags:0];
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -346,7 +336,6 @@ typedef struct ResponseCommon__storage_ {
 
 typedef struct Trend__storage_ {
   uint32_t _has_storage_[1];
-  BOOL isLiked;
   int32_t id_p;
   int32_t gymId;
   int32_t likeCount;
@@ -366,135 +355,108 @@ typedef struct Trend__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "id_p",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_Id_p,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Trend__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Trend__storage_, id_p),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "briefUser",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
         .number = Trend_FieldNumber_BriefUser,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Trend__storage_, briefUser),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Trend__storage_, briefUser),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
-        .fieldOptions = NULL,
       },
       {
         .name = "createTime",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_CreateTime,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Trend__storage_, createTime),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
-        .offset = offsetof(Trend__storage_, createTime),
-        .defaultValue.valueInt64 = 0LL,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymId",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_GymId,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(Trend__storage_, gymId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Trend__storage_, gymId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymName",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_GymName,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(Trend__storage_, gymName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Trend__storage_, gymName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "content",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_Content,
         .hasIndex = 5,
+        .offset = (uint32_t)offsetof(Trend__storage_, content),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Trend__storage_, content),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "imgsArray",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_ImgsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Trend__storage_, imgsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Trend__storage_, imgsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "likeCount",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_LikeCount,
-        .hasIndex = 7,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(Trend__storage_, likeCount),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Trend__storage_, likeCount),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "commentCount",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_CommentCount,
-        .hasIndex = 8,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(Trend__storage_, commentCount),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Trend__storage_, commentCount),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "isLiked",
+        .dataTypeSpecific.className = NULL,
         .number = Trend_FieldNumber_IsLiked,
-        .hasIndex = 9,
+        .hasIndex = 8,
+        .offset = 9,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeBool,
-        .offset = offsetof(Trend__storage_, isLiked),
-        .defaultValue.valueBool = NO,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\007\002\t\000\003\n\000\004\005\000\005\007\000\010\t\000\t\014\000\n\007\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Trend class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Trend__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\007\002\t\000\003\n\000\004\005\000\005\007\000\010\t\000\t\014\000\n\007\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -532,94 +494,72 @@ typedef struct Banner__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "id_p",
+        .dataTypeSpecific.className = NULL,
         .number = Banner_FieldNumber_Id_p,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Banner__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Banner__storage_, id_p),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "coverURL",
+        .dataTypeSpecific.className = NULL,
         .number = Banner_FieldNumber_CoverURL,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Banner__storage_, coverURL),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Banner__storage_, coverURL),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "type",
+        .dataTypeSpecific.enumDescFunc = Banner_BannerType_EnumDescriptor,
         .number = Banner_FieldNumber_Type,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Banner__storage_, type),
         .flags = GPBFieldOptional | GPBFieldHasEnumDescriptor,
         .dataType = GPBDataTypeEnum,
-        .offset = offsetof(Banner__storage_, type),
-        .defaultValue.valueEnum = Banner_BannerType_URL,
-        .dataTypeSpecific.enumDescFunc = Banner_BannerType_EnumDescriptor,
-        .fieldOptions = NULL,
       },
       {
         .name = "webURL",
+        .dataTypeSpecific.className = NULL,
         .number = Banner_FieldNumber_WebURL,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(Banner__storage_, webURL),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Banner__storage_, webURL),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendId",
+        .dataTypeSpecific.className = NULL,
         .number = Banner_FieldNumber_TrendId,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(Banner__storage_, trendId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Banner__storage_, trendId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userId",
+        .dataTypeSpecific.className = NULL,
         .number = Banner_FieldNumber_UserId,
         .hasIndex = 5,
+        .offset = (uint32_t)offsetof(Banner__storage_, userId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Banner__storage_, userId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-    static GPBMessageEnumDescription enums[] = {
-      { .enumDescriptorFunc = Banner_BannerType_EnumDescriptor },
-    };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\004\002\006!!\000\004\004!!\000\005\007\000\006\006\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Banner class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:enums
-                                     enumCount:sizeof(enums) / sizeof(GPBMessageEnumDescription)
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Banner__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\004\002\006!!\000\004\004!!\000\005\007\000\006\006\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -645,17 +585,24 @@ void SetBanner_Type_RawValue(Banner *message, int32_t value) {
 GPBEnumDescriptor *Banner_BannerType_EnumDescriptor(void) {
   static GPBEnumDescriptor *descriptor = NULL;
   if (!descriptor) {
-    static GPBMessageEnumValueDescription values[] = {
-      { .name = "URL", .number = Banner_BannerType_URL },
-      { .name = "Trend", .number = Banner_BannerType_Trend },
-      { .name = "User", .number = Banner_BannerType_User },
+    static const char *valueNames =
+        "URL\000Trend\000User\000";
+    static const int32_t values[] = {
+        Banner_BannerType_URL,
+        Banner_BannerType_Trend,
+        Banner_BannerType_User,
     };
     static const char *extraTextFormatInfo = "\001\000\003\000";
-    descriptor = [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Banner_BannerType)
-                                                   values:values
-                                               valueCount:sizeof(values) / sizeof(GPBMessageEnumValueDescription)
-                                             enumVerifier:Banner_BannerType_IsValidValue
-                                      extraTextFormatInfo:extraTextFormatInfo];
+    GPBEnumDescriptor *worker =
+        [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(Banner_BannerType)
+                                       valueNames:valueNames
+                                           values:values
+                                            count:(uint32_t)(sizeof(values) / sizeof(int32_t))
+                                     enumVerifier:Banner_BannerType_IsValidValue
+                              extraTextFormatInfo:extraTextFormatInfo];
+    if (!OSAtomicCompareAndSwapPtrBarrier(nil, worker, (void * volatile *)&descriptor)) {
+      [worker release];
+    }
   }
   return descriptor;
 }
@@ -694,58 +641,45 @@ typedef struct BriefUser__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "userId",
+        .dataTypeSpecific.className = NULL,
         .number = BriefUser_FieldNumber_UserId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(BriefUser__storage_, userId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(BriefUser__storage_, userId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userName",
+        .dataTypeSpecific.className = NULL,
         .number = BriefUser_FieldNumber_UserName,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(BriefUser__storage_, userName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefUser__storage_, userName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userAvatar",
+        .dataTypeSpecific.className = NULL,
         .number = BriefUser_FieldNumber_UserAvatar,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(BriefUser__storage_, userAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefUser__storage_, userAvatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\003\001\006\000\002\010\000\003\n\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[BriefUser class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(BriefUser__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\003\001\006\000\002\010\000\003\n\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -770,7 +704,6 @@ typedef struct BriefUser__storage_ {
 
 typedef struct BriefGym__storage_ {
   uint32_t _has_storage_[1];
-  BOOL isCoop;
   int32_t id_p;
   float latitude;
   float longitude;
@@ -789,124 +722,99 @@ typedef struct BriefGym__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "id_p",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Id_p,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, id_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(BriefGym__storage_, id_p),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymName",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_GymName,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, gymName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefGym__storage_, gymName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymCoverArray",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_GymCoverArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, gymCoverArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefGym__storage_, gymCoverArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "place",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Place,
-        .hasIndex = 3,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, place),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefGym__storage_, place),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "latitude",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Latitude,
-        .hasIndex = 5,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(BriefGym__storage_, latitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "longitude",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Longitude,
-        .hasIndex = 6,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(BriefGym__storage_, longitude),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "isCoop",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_IsCoop,
-        .hasIndex = 7,
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeBool,
-        .offset = offsetof(BriefGym__storage_, isCoop),
-        .defaultValue.valueBool = NO,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymAvatar",
+        .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_GymAvatar,
-        .hasIndex = 4,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, gymAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(BriefGym__storage_, gymAvatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "equipmentsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(Equipment),
         .number = BriefGym_FieldNumber_EquipmentsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, equipmentsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(BriefGym__storage_, equipmentsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Equipment),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\004\002\007\000\003\000gymCover\000\007\006\000\010\t\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[BriefGym class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(BriefGym__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\004\002\007\000\003\000gymCover\000\007\006\000\010\t\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -938,58 +846,45 @@ typedef struct DetailGym__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "briefGym",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefGym),
         .number = DetailGym_FieldNumber_BriefGym,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, briefGym),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(DetailGym__storage_, briefGym),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefGym),
-        .fieldOptions = NULL,
       },
       {
         .name = "coursesArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(Course),
         .number = DetailGym_FieldNumber_CoursesArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, coursesArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(DetailGym__storage_, coursesArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Course),
-        .fieldOptions = NULL,
       },
       {
         .name = "gymCardsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(GymCard),
         .number = DetailGym_FieldNumber_GymCardsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, gymCardsArray),
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(DetailGym__storage_, gymCardsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(GymCard),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\002\001\010\000\004\000gymCards\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[DetailGym class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(DetailGym__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\002\001\010\000\004\000gymCards\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1021,58 +916,45 @@ typedef struct Equipment__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "name",
+        .dataTypeSpecific.className = NULL,
         .number = Equipment_FieldNumber_Name,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Equipment__storage_, name),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Equipment__storage_, name),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "count",
+        .dataTypeSpecific.className = NULL,
         .number = Equipment_FieldNumber_Count,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Equipment__storage_, count),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Equipment__storage_, count),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "equipmentType",
+        .dataTypeSpecific.enumDescFunc = EquipmentType_EnumDescriptor,
         .number = Equipment_FieldNumber_EquipmentType,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Equipment__storage_, equipmentType),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom | GPBFieldHasEnumDescriptor,
         .dataType = GPBDataTypeEnum,
-        .offset = offsetof(Equipment__storage_, equipmentType),
-        .defaultValue.valueEnum = EquipmentType_PaoBuJi,
-        .dataTypeSpecific.enumDescFunc = EquipmentType_EnumDescriptor,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\003\r\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Equipment class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Equipment__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003\r\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1116,58 +998,45 @@ typedef struct Course__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "name",
+        .dataTypeSpecific.className = NULL,
         .number = Course_FieldNumber_Name,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Course__storage_, name),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Course__storage_, name),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "week",
+        .dataTypeSpecific.className = NULL,
         .number = Course_FieldNumber_Week,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Course__storage_, week),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Course__storage_, week),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "courseTime",
+        .dataTypeSpecific.className = GPBStringifySymbol(CourseTime),
         .number = Course_FieldNumber_CourseTime,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Course__storage_, courseTime),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Course__storage_, courseTime),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(CourseTime),
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\003\n\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Course class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Course__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003\n\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1201,69 +1070,54 @@ typedef struct CourseTime__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "fromHour",
+        .dataTypeSpecific.className = NULL,
         .number = CourseTime_FieldNumber_FromHour,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CourseTime__storage_, fromHour),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CourseTime__storage_, fromHour),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "fromMinite",
+        .dataTypeSpecific.className = NULL,
         .number = CourseTime_FieldNumber_FromMinite,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CourseTime__storage_, fromMinite),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CourseTime__storage_, fromMinite),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "toHour",
+        .dataTypeSpecific.className = NULL,
         .number = CourseTime_FieldNumber_ToHour,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CourseTime__storage_, toHour),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CourseTime__storage_, toHour),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "toMinite",
+        .dataTypeSpecific.className = NULL,
         .number = CourseTime_FieldNumber_ToMinite,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(CourseTime__storage_, toMinite),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CourseTime__storage_, toMinite),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\004\001\010\000\002\n\000\003\006\000\004\010\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[CourseTime class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CourseTime__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\004\001\010\000\002\n\000\003\006\000\004\010\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1293,47 +1147,36 @@ typedef struct GymCard__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "cardType",
+        .dataTypeSpecific.enumDescFunc = CardType_EnumDescriptor,
         .number = GymCard_FieldNumber_CardType,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(GymCard__storage_, cardType),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom | GPBFieldHasEnumDescriptor,
         .dataType = GPBDataTypeEnum,
-        .offset = offsetof(GymCard__storage_, cardType),
-        .defaultValue.valueEnum = CardType_Once,
-        .dataTypeSpecific.enumDescFunc = CardType_EnumDescriptor,
-        .fieldOptions = NULL,
       },
       {
         .name = "price",
+        .dataTypeSpecific.className = NULL,
         .number = GymCard_FieldNumber_Price,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(GymCard__storage_, price),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
-        .offset = offsetof(GymCard__storage_, price),
-        .defaultValue.valueFloat = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\001\010\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[GymCard class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(GymCard__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\010\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1381,80 +1224,63 @@ typedef struct CommentMessage__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "messageId",
+        .dataTypeSpecific.className = NULL,
         .number = CommentMessage_FieldNumber_MessageId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(CommentMessage__storage_, messageId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CommentMessage__storage_, messageId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "messageContent",
+        .dataTypeSpecific.className = NULL,
         .number = CommentMessage_FieldNumber_MessageContent,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(CommentMessage__storage_, messageContent),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(CommentMessage__storage_, messageContent),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "avatar",
+        .dataTypeSpecific.className = NULL,
         .number = CommentMessage_FieldNumber_Avatar,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(CommentMessage__storage_, avatar),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(CommentMessage__storage_, avatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "createTime",
+        .dataTypeSpecific.className = NULL,
         .number = CommentMessage_FieldNumber_CreateTime,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(CommentMessage__storage_, createTime),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
-        .offset = offsetof(CommentMessage__storage_, createTime),
-        .defaultValue.valueInt64 = 0LL,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendId",
+        .dataTypeSpecific.className = NULL,
         .number = CommentMessage_FieldNumber_TrendId,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(CommentMessage__storage_, trendId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(CommentMessage__storage_, trendId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\004\001\t\000\002\016\000\004\n\000\005\007\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[CommentMessage class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(CommentMessage__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\004\001\t\000\002\016\000\004\n\000\005\007\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1496,113 +1322,90 @@ typedef struct Comment__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "briefUser",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
         .number = Comment_FieldNumber_BriefUser,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Comment__storage_, briefUser),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(Comment__storage_, briefUser),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
-        .fieldOptions = NULL,
       },
       {
         .name = "commentId",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_CommentId,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(Comment__storage_, commentId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Comment__storage_, commentId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "commentContent",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_CommentContent,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Comment__storage_, commentContent),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Comment__storage_, commentContent),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendId",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_TrendId,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(Comment__storage_, trendId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Comment__storage_, trendId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "toUserid",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_ToUserid,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(Comment__storage_, toUserid),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(Comment__storage_, toUserid),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "toUserName",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_ToUserName,
         .hasIndex = 5,
+        .offset = (uint32_t)offsetof(Comment__storage_, toUserName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Comment__storage_, toUserName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "createTime",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_CreateTime,
         .hasIndex = 6,
+        .offset = (uint32_t)offsetof(Comment__storage_, createTime),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt64,
-        .offset = offsetof(Comment__storage_, createTime),
-        .defaultValue.valueInt64 = 0LL,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "gymName",
+        .dataTypeSpecific.className = NULL,
         .number = Comment_FieldNumber_GymName,
         .hasIndex = 7,
+        .offset = (uint32_t)offsetof(Comment__storage_, gymName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(Comment__storage_, gymName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\010\001\t\000\002\t\000\003\016\000\004\007\000\005\010\000\006\n\000\007\n\000\010\007\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Comment class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Comment__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\010\001\t\000\002\t\000\003\016\000\004\007\000\005\010\000\006\n\000\007\n\000\010\007\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1632,47 +1435,36 @@ typedef struct TrendBriefMessage__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "lastAvatar",
+        .dataTypeSpecific.className = NULL,
         .number = TrendBriefMessage_FieldNumber_LastAvatar,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(TrendBriefMessage__storage_, lastAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(TrendBriefMessage__storage_, lastAvatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "count",
+        .dataTypeSpecific.className = NULL,
         .number = TrendBriefMessage_FieldNumber_Count,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(TrendBriefMessage__storage_, count),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(TrendBriefMessage__storage_, count),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\001\001\n\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[TrendBriefMessage class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(TrendBriefMessage__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\001\n\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1699,7 +1491,6 @@ typedef struct TrendBriefMessage__storage_ {
 
 typedef struct DetailUser__storage_ {
   uint32_t _has_storage_[1];
-  BOOL isFollowed;
   int32_t userId;
   Sex sex;
   int32_t guanzhuCount;
@@ -1720,146 +1511,117 @@ typedef struct DetailUser__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "userId",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_UserId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, userId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(DetailUser__storage_, userId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userName",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_UserName,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, userName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(DetailUser__storage_, userName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userAvatar",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_UserAvatar,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, userAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(DetailUser__storage_, userAvatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "sex",
+        .dataTypeSpecific.enumDescFunc = Sex_EnumDescriptor,
         .number = DetailUser_FieldNumber_Sex,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, sex),
         .flags = GPBFieldOptional | GPBFieldHasEnumDescriptor,
         .dataType = GPBDataTypeEnum,
-        .offset = offsetof(DetailUser__storage_, sex),
-        .defaultValue.valueEnum = Sex_Male,
-        .dataTypeSpecific.enumDescFunc = Sex_EnumDescriptor,
-        .fieldOptions = NULL,
       },
       {
         .name = "sign",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_Sign,
         .hasIndex = 4,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, sign),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(DetailUser__storage_, sign),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendsArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(Trend),
         .number = DetailUser_FieldNumber_TrendsArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, trendsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeMessage,
-        .offset = offsetof(DetailUser__storage_, trendsArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = GPBStringifySymbol(Trend),
-        .fieldOptions = NULL,
       },
       {
         .name = "isFollowed",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_IsFollowed,
-        .hasIndex = 6,
+        .hasIndex = 5,
+        .offset = 6,  // Stored in _has_storage_ to save space.
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeBool,
-        .offset = offsetof(DetailUser__storage_, isFollowed),
-        .defaultValue.valueBool = NO,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "guanzhuCount",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_GuanzhuCount,
         .hasIndex = 7,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, guanzhuCount),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(DetailUser__storage_, guanzhuCount),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "fensiCount",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_FensiCount,
         .hasIndex = 8,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, fensiCount),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(DetailUser__storage_, fensiCount),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendCount",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_TrendCount,
         .hasIndex = 9,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, trendCount),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(DetailUser__storage_, trendCount),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "trendMaxCountPerPage",
+        .dataTypeSpecific.className = NULL,
         .number = DetailUser_FieldNumber_TrendMaxCountPerPage,
         .hasIndex = 10,
+        .offset = (uint32_t)offsetof(DetailUser__storage_, trendMaxCountPerPage),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(DetailUser__storage_, trendMaxCountPerPage),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\010\001\006\000\002\010\000\003\n\000\007\n\000\010\014\000\t\n\000\n\n\000\013\024\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[DetailUser class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(DetailUser__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\010\001\006\000\002\010\000\003\n\000\007\n\000\010\014\000\t\n\000\n\n\000\013\024\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1907,80 +1669,63 @@ typedef struct SearchedUser__storage_ {
     static GPBMessageFieldDescription fields[] = {
       {
         .name = "userId",
+        .dataTypeSpecific.className = NULL,
         .number = SearchedUser_FieldNumber_UserId,
         .hasIndex = 0,
+        .offset = (uint32_t)offsetof(SearchedUser__storage_, userId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
-        .offset = offsetof(SearchedUser__storage_, userId),
-        .defaultValue.valueInt32 = 0,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userName",
+        .dataTypeSpecific.className = NULL,
         .number = SearchedUser_FieldNumber_UserName,
         .hasIndex = 1,
+        .offset = (uint32_t)offsetof(SearchedUser__storage_, userName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(SearchedUser__storage_, userName),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "userAvatar",
+        .dataTypeSpecific.className = NULL,
         .number = SearchedUser_FieldNumber_UserAvatar,
         .hasIndex = 2,
+        .offset = (uint32_t)offsetof(SearchedUser__storage_, userAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(SearchedUser__storage_, userAvatar),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "sign",
+        .dataTypeSpecific.className = NULL,
         .number = SearchedUser_FieldNumber_Sign,
         .hasIndex = 3,
+        .offset = (uint32_t)offsetof(SearchedUser__storage_, sign),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(SearchedUser__storage_, sign),
-        .defaultValue.valueString = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
       {
         .name = "imagesArray",
+        .dataTypeSpecific.className = NULL,
         .number = SearchedUser_FieldNumber_ImagesArray,
         .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(SearchedUser__storage_, imagesArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeString,
-        .offset = offsetof(SearchedUser__storage_, imagesArray),
-        .defaultValue.valueMessage = nil,
-        .dataTypeSpecific.className = NULL,
-        .fieldOptions = NULL,
       },
     };
-#if GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
-    const char *extraTextFormatInfo = NULL;
-#else
-    static const char *extraTextFormatInfo = "\003\001\006\000\002\010\000\003\n\000";
-#endif  // GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[SearchedUser class]
                                      rootClass:[CommonRoot class]
                                           file:CommonRoot_FileDescriptor()
                                         fields:fields
-                                    fieldCount:sizeof(fields) / sizeof(GPBMessageFieldDescription)
-                                        oneofs:NULL
-                                    oneofCount:0
-                                         enums:NULL
-                                     enumCount:0
-                                        ranges:NULL
-                                    rangeCount:0
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(SearchedUser__storage_)
-                                    wireFormat:NO
-                           extraTextFormatInfo:extraTextFormatInfo];
+                                         flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\003\001\006\000\002\010\000\003\n\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }
@@ -1989,5 +1734,7 @@ typedef struct SearchedUser__storage_ {
 
 @end
 
+
+#pragma clang diagnostic pop
 
 // @@protoc_insertion_point(global_scope)

@@ -39,12 +39,12 @@ public final class Gym {
     com.xiang.proto.gym.Gym.Request13001.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.gym.Request13001}
-   *
    * <pre>
    * 获取附近健身房列表
    * /gym/getGymList
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.gym.Request13001}
    */
   public  static final class Request13001 extends
       com.google.protobuf.GeneratedMessage implements
@@ -64,7 +64,8 @@ public final class Gym {
     }
     private Request13001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -110,11 +111,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -146,11 +146,11 @@ public final class Gym {
       float getLatitude();
 
       /**
-       * <code>optional int32 pageIndex = 3;</code>
-       *
        * <pre>
        * 从第0页开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 3;</code>
        */
       int getPageIndex();
     }
@@ -178,7 +178,8 @@ public final class Gym {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -213,11 +214,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -255,11 +255,11 @@ public final class Gym {
       public static final int PAGEINDEX_FIELD_NUMBER = 3;
       private int pageIndex_;
       /**
-       * <code>optional int32 pageIndex = 3;</code>
-       *
        * <pre>
        * 从第0页开始
        * </pre>
+       *
+       * <code>optional int32 pageIndex = 3;</code>
        */
       public int getPageIndex() {
         return pageIndex_;
@@ -333,34 +333,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13001.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -488,7 +494,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Request13001.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -551,21 +557,21 @@ public final class Gym {
 
         private int pageIndex_ ;
         /**
-         * <code>optional int32 pageIndex = 3;</code>
-         *
          * <pre>
          * 从第0页开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 3;</code>
          */
         public int getPageIndex() {
           return pageIndex_;
         }
         /**
-         * <code>optional int32 pageIndex = 3;</code>
-         *
          * <pre>
          * 从第0页开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 3;</code>
          */
         public Builder setPageIndex(int value) {
           
@@ -574,11 +580,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>optional int32 pageIndex = 3;</code>
-         *
          * <pre>
          * 从第0页开始
          * </pre>
+         *
+         * <code>optional int32 pageIndex = 3;</code>
          */
         public Builder clearPageIndex() {
           
@@ -616,16 +622,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -747,34 +744,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -796,12 +799,12 @@ public final class Gym {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.gym.Request13001}
-     *
      * <pre>
      * 获取附近健身房列表
      * /gym/getGymList
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.gym.Request13001}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -917,7 +920,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Request13001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -1189,16 +1192,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request13001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -1268,7 +1262,8 @@ public final class Gym {
     }
     private Response13001(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -1314,11 +1309,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -1340,24 +1334,44 @@ public final class Gym {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       java.util.List<com.xiang.proto.Common.BriefGym> 
           getBriefGymsList();
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       com.xiang.proto.Common.BriefGym getBriefGyms(int index);
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       int getBriefGymsCount();
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       java.util.List<? extends com.xiang.proto.Common.BriefGymOrBuilder> 
           getBriefGymsOrBuilderList();
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       com.xiang.proto.Common.BriefGymOrBuilder getBriefGymsOrBuilder(
@@ -1385,7 +1399,8 @@ public final class Gym {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -1413,11 +1428,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             briefGyms_ = java.util.Collections.unmodifiableList(briefGyms_);
@@ -1440,12 +1454,20 @@ public final class Gym {
       public static final int BRIEFGYMS_FIELD_NUMBER = 1;
       private java.util.List<com.xiang.proto.Common.BriefGym> briefGyms_;
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       public java.util.List<com.xiang.proto.Common.BriefGym> getBriefGymsList() {
         return briefGyms_;
       }
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.BriefGymOrBuilder> 
@@ -1453,18 +1475,30 @@ public final class Gym {
         return briefGyms_;
       }
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       public int getBriefGymsCount() {
         return briefGyms_.size();
       }
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       public com.xiang.proto.Common.BriefGym getBriefGyms(int index) {
         return briefGyms_.get(index);
       }
       /**
+       * <pre>
+       * 如果列表为空，data可能为null，客户端做好判空准备
+       * </pre>
+       *
        * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
        */
       public com.xiang.proto.Common.BriefGymOrBuilder getBriefGymsOrBuilder(
@@ -1526,34 +1560,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13001.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -1706,7 +1746,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Response13001.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -1729,6 +1769,10 @@ public final class Gym {
             com.xiang.proto.Common.BriefGym, com.xiang.proto.Common.BriefGym.Builder, com.xiang.proto.Common.BriefGymOrBuilder> briefGymsBuilder_;
 
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefGym> getBriefGymsList() {
@@ -1739,6 +1783,10 @@ public final class Gym {
           }
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public int getBriefGymsCount() {
@@ -1749,6 +1797,10 @@ public final class Gym {
           }
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public com.xiang.proto.Common.BriefGym getBriefGyms(int index) {
@@ -1759,6 +1811,10 @@ public final class Gym {
           }
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder setBriefGyms(
@@ -1776,6 +1832,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder setBriefGyms(
@@ -1790,6 +1850,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder addBriefGyms(com.xiang.proto.Common.BriefGym value) {
@@ -1806,6 +1870,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder addBriefGyms(
@@ -1823,6 +1891,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder addBriefGyms(
@@ -1837,6 +1909,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder addBriefGyms(
@@ -1851,6 +1927,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder addAllBriefGyms(
@@ -1866,6 +1946,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder clearBriefGyms() {
@@ -1879,6 +1963,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public Builder removeBriefGyms(int index) {
@@ -1892,6 +1980,10 @@ public final class Gym {
           return this;
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public com.xiang.proto.Common.BriefGym.Builder getBriefGymsBuilder(
@@ -1899,6 +1991,10 @@ public final class Gym {
           return getBriefGymsFieldBuilder().getBuilder(index);
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public com.xiang.proto.Common.BriefGymOrBuilder getBriefGymsOrBuilder(
@@ -1909,6 +2005,10 @@ public final class Gym {
           }
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public java.util.List<? extends com.xiang.proto.Common.BriefGymOrBuilder> 
@@ -1920,6 +2020,10 @@ public final class Gym {
           }
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public com.xiang.proto.Common.BriefGym.Builder addBriefGymsBuilder() {
@@ -1927,6 +2031,10 @@ public final class Gym {
               com.xiang.proto.Common.BriefGym.getDefaultInstance());
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public com.xiang.proto.Common.BriefGym.Builder addBriefGymsBuilder(
@@ -1935,6 +2043,10 @@ public final class Gym {
               index, com.xiang.proto.Common.BriefGym.getDefaultInstance());
         }
         /**
+         * <pre>
+         * 如果列表为空，data可能为null，客户端做好判空准备
+         * </pre>
+         *
          * <code>repeated .com.xiang.proto.BriefGym briefGyms = 1;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefGym.Builder> 
@@ -1985,16 +2097,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -2116,34 +2219,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13001 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -2281,7 +2390,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Response13001) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -2553,16 +2662,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response13001(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -2612,12 +2712,12 @@ public final class Gym {
     com.xiang.proto.gym.Gym.Request13002.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.gym.Request13002}
-   *
    * <pre>
    * 获取健身房详情
    * /gym/getGymDetail
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.gym.Request13002}
    */
   public  static final class Request13002 extends
       com.google.protobuf.GeneratedMessage implements
@@ -2637,7 +2737,8 @@ public final class Gym {
     }
     private Request13002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -2683,11 +2784,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -2735,7 +2835,8 @@ public final class Gym {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -2760,11 +2861,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -2844,34 +2944,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13002.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -2987,7 +3093,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Request13002.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -3051,16 +3157,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -3182,34 +3279,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -3231,12 +3334,12 @@ public final class Gym {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.gym.Request13002}
-     *
      * <pre>
      * 获取健身房详情
      * /gym/getGymDetail
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.gym.Request13002}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -3352,7 +3455,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Request13002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -3624,16 +3727,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request13002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -3703,7 +3797,8 @@ public final class Gym {
     }
     private Response13002(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -3749,11 +3844,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -3788,45 +3882,45 @@ public final class Gym {
       com.xiang.proto.Common.DetailGymOrBuilder getDetailGymOrBuilder();
 
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       java.util.List<com.xiang.proto.Common.BriefUser> 
           getBriefUsersList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       com.xiang.proto.Common.BriefUser getBriefUsers(int index);
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       int getBriefUsersCount();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index);
@@ -3853,7 +3947,8 @@ public final class Gym {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -3894,11 +3989,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
             briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
@@ -3943,52 +4037,52 @@ public final class Gym {
       public static final int BRIEFUSERS_FIELD_NUMBER = 2;
       private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_;
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public int getBriefUsersCount() {
         return briefUsers_.size();
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
         return briefUsers_.get(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 健身房附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index) {
@@ -4056,34 +4150,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13002.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -4252,7 +4352,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Response13002.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -4392,11 +4492,11 @@ public final class Gym {
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUsersBuilder_;
 
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
           if (briefUsersBuilder_ == null) {
@@ -4406,11 +4506,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public int getBriefUsersCount() {
           if (briefUsersBuilder_ == null) {
@@ -4420,11 +4520,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -4434,11 +4534,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -4455,11 +4555,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -4473,11 +4573,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(com.xiang.proto.Common.BriefUser value) {
           if (briefUsersBuilder_ == null) {
@@ -4493,11 +4593,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -4514,11 +4614,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -4532,11 +4632,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -4550,11 +4650,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addAllBriefUsers(
             java.lang.Iterable<? extends com.xiang.proto.Common.BriefUser> values) {
@@ -4569,11 +4669,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder clearBriefUsers() {
           if (briefUsersBuilder_ == null) {
@@ -4586,11 +4686,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder removeBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -4603,22 +4703,22 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder getBriefUsersBuilder(
             int index) {
           return getBriefUsersFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
             int index) {
@@ -4628,11 +4728,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
              getBriefUsersOrBuilderList() {
@@ -4643,22 +4743,22 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder() {
           return getBriefUsersFieldBuilder().addBuilder(
               com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder(
             int index) {
@@ -4666,11 +4766,11 @@ public final class Gym {
               index, com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 健身房附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser.Builder> 
              getBriefUsersBuilderList() {
@@ -4720,16 +4820,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -4851,34 +4942,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13002 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -5016,7 +5113,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Response13002) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -5288,16 +5385,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response13002(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -5347,12 +5435,12 @@ public final class Gym {
     com.xiang.proto.gym.Gym.Request13003.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.gym.Request13003}
-   *
    * <pre>
    * 获取（首页推荐）健身房详情
    * /gym/getRecommendGym
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.gym.Request13003}
    */
   public  static final class Request13003 extends
       com.google.protobuf.GeneratedMessage implements
@@ -5372,7 +5460,8 @@ public final class Gym {
     }
     private Request13003(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -5418,11 +5507,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -5476,7 +5564,8 @@ public final class Gym {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -5506,11 +5595,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -5606,34 +5694,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13003.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -5755,7 +5849,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Request13003.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -5845,16 +5939,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -5976,34 +6061,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13003 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -6025,12 +6116,12 @@ public final class Gym {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.gym.Request13003}
-     *
      * <pre>
      * 获取（首页推荐）健身房详情
      * /gym/getRecommendGym
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.gym.Request13003}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -6146,7 +6237,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Request13003) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -6418,16 +6509,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request13003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -6497,7 +6579,8 @@ public final class Gym {
     }
     private Response13003(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -6543,11 +6626,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -6582,45 +6664,45 @@ public final class Gym {
       com.xiang.proto.Common.DetailGymOrBuilder getDetailGymOrBuilder();
 
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       java.util.List<com.xiang.proto.Common.BriefUser> 
           getBriefUsersList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       com.xiang.proto.Common.BriefUser getBriefUsers(int index);
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       int getBriefUsersCount();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList();
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index);
@@ -6647,7 +6729,8 @@ public final class Gym {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -6688,11 +6771,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
             briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
@@ -6737,52 +6819,52 @@ public final class Gym {
       public static final int BRIEFUSERS_FIELD_NUMBER = 2;
       private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_;
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
           getBriefUsersOrBuilderList() {
         return briefUsers_;
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public int getBriefUsersCount() {
         return briefUsers_.size();
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
         return briefUsers_.get(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       *
        * <pre>
        * 附近的人列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index) {
@@ -6850,34 +6932,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13003.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -7046,7 +7134,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Response13003.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -7186,11 +7274,11 @@ public final class Gym {
             com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUsersBuilder_;
 
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
           if (briefUsersBuilder_ == null) {
@@ -7200,11 +7288,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public int getBriefUsersCount() {
           if (briefUsersBuilder_ == null) {
@@ -7214,11 +7302,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -7228,11 +7316,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -7249,11 +7337,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder setBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -7267,11 +7355,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(com.xiang.proto.Common.BriefUser value) {
           if (briefUsersBuilder_ == null) {
@@ -7287,11 +7375,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser value) {
@@ -7308,11 +7396,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -7326,11 +7414,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addBriefUsers(
             int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -7344,11 +7432,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder addAllBriefUsers(
             java.lang.Iterable<? extends com.xiang.proto.Common.BriefUser> values) {
@@ -7363,11 +7451,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder clearBriefUsers() {
           if (briefUsersBuilder_ == null) {
@@ -7380,11 +7468,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public Builder removeBriefUsers(int index) {
           if (briefUsersBuilder_ == null) {
@@ -7397,22 +7485,22 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder getBriefUsersBuilder(
             int index) {
           return getBriefUsersFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
             int index) {
@@ -7422,11 +7510,11 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
              getBriefUsersOrBuilderList() {
@@ -7437,22 +7525,22 @@ public final class Gym {
           }
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder() {
           return getBriefUsersFieldBuilder().addBuilder(
               com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder(
             int index) {
@@ -7460,11 +7548,11 @@ public final class Gym {
               index, com.xiang.proto.Common.BriefUser.getDefaultInstance());
         }
         /**
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         *
          * <pre>
          * 附近的人列表
          * </pre>
+         *
+         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
          */
         public java.util.List<com.xiang.proto.Common.BriefUser.Builder> 
              getBriefUsersBuilderList() {
@@ -7514,16 +7602,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -7645,34 +7724,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13003 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -7810,7 +7895,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Response13003) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -8082,16 +8167,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response13003(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -8141,12 +8217,12 @@ public final class Gym {
     com.xiang.proto.gym.Gym.Request13004.ParamsOrBuilder getParamsOrBuilder();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.gym.Request13004}
-   *
    * <pre>
    * 获取健身房内trend
    * /gym/getRecommendGym
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.gym.Request13004}
    */
   public  static final class Request13004 extends
       com.google.protobuf.GeneratedMessage implements
@@ -8166,7 +8242,8 @@ public final class Gym {
     }
     private Request13004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -8212,11 +8289,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -8270,7 +8346,8 @@ public final class Gym {
       }
       private Params(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -8300,11 +8377,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           makeExtensionsImmutable();
         }
@@ -8400,34 +8476,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Request13004.Params parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -8549,7 +8631,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Request13004.Params) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -8639,16 +8721,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Params(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -8770,34 +8843,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Request13004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -8819,12 +8898,12 @@ public final class Gym {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.gym.Request13004}
-     *
      * <pre>
      * 获取健身房内trend
      * /gym/getRecommendGym
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.gym.Request13004}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -8940,7 +9019,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Request13004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -9212,16 +9291,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Request13004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -9291,7 +9361,8 @@ public final class Gym {
     }
     private Response13004(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -9337,11 +9408,10 @@ public final class Gym {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -9414,7 +9484,8 @@ public final class Gym {
       }
       private Data(
           com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
         this();
         int mutable_bitField0_ = 0;
         try {
@@ -9447,11 +9518,10 @@ public final class Gym {
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw new RuntimeException(e.setUnfinishedMessage(this));
+          throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new RuntimeException(
-              new com.google.protobuf.InvalidProtocolBufferException(
-                  e.getMessage()).setUnfinishedMessage(this));
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
             trends_ = java.util.Collections.unmodifiableList(trends_);
@@ -9577,34 +9647,40 @@ public final class Gym {
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
-        return PARSER.parseFrom(input);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
       }
       public static com.xiang.proto.gym.Gym.Response13004.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        return PARSER.parseFrom(input, extensionRegistry);
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
       public Builder newBuilderForType() { return newBuilder(); }
@@ -9765,7 +9841,7 @@ public final class Gym {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (com.xiang.proto.gym.Gym.Response13004.Data) e.getUnfinishedMessage();
-            throw e;
+            throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
               mergeFrom(parsedMessage);
@@ -10070,16 +10146,7 @@ public final class Gym {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          try {
             return new Data(input, extensionRegistry);
-          } catch (RuntimeException e) {
-            if (e.getCause() instanceof
-                com.google.protobuf.InvalidProtocolBufferException) {
-              throw (com.google.protobuf.InvalidProtocolBufferException)
-                  e.getCause();
-            }
-            throw e;
-          }
         }
       };
 
@@ -10201,34 +10268,40 @@ public final class Gym {
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.gym.Gym.Response13004 parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -10366,7 +10439,7 @@ public final class Gym {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.gym.Gym.Response13004) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10638,16 +10711,7 @@ public final class Gym {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Response13004(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -10666,84 +10730,84 @@ public final class Gym {
 
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13001_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13001_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13001_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13001_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13001_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13001_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13002_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13002_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13002_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13002_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13002_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13002_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13003_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13003_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13003_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13003_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13003_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13003_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13003_Data_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Request13004_Params_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Request13004_Params_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13004_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13004_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_gym_Response13004_Data_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_gym_Response13004_Data_fieldAccessorTable;
 
@@ -10751,7 +10815,7 @@ public final class Gym {
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {

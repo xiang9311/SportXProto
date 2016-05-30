@@ -14,67 +14,75 @@ public final class Common {
   public enum CardType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>Once = 0;</code>
-     *
      * <pre>
      * 一次 体验卡
      * </pre>
-     */
-    Once(0, 0),
-    /**
-     * <code>Month = 1;</code>
      *
+     * <code>Once = 0;</code>
+     */
+    Once(0),
+    /**
      * <pre>
      * 月卡
      * </pre>
-     */
-    Month(1, 1),
-    /**
-     * <code>Quarter = 2;</code>
      *
+     * <code>Month = 1;</code>
+     */
+    Month(1),
+    /**
      * <pre>
      * 季度卡
      * </pre>
+     *
+     * <code>Quarter = 2;</code>
      */
-    Quarter(2, 2),
-    UNRECOGNIZED(-1, -1),
+    Quarter(2),
+    UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>Once = 0;</code>
-     *
      * <pre>
      * 一次 体验卡
      * </pre>
+     *
+     * <code>Once = 0;</code>
      */
     public static final int Once_VALUE = 0;
     /**
-     * <code>Month = 1;</code>
-     *
      * <pre>
      * 月卡
      * </pre>
+     *
+     * <code>Month = 1;</code>
      */
     public static final int Month_VALUE = 1;
     /**
-     * <code>Quarter = 2;</code>
-     *
      * <pre>
      * 季度卡
      * </pre>
+     *
+     * <code>Quarter = 2;</code>
      */
     public static final int Quarter_VALUE = 2;
 
 
     public final int getNumber() {
-      if (index == -1) {
+      if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
     }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static CardType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CardType forNumber(int value) {
       switch (value) {
         case 0: return Once;
         case 1: return Month;
@@ -91,13 +99,13 @@ public final class Common {
         CardType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<CardType>() {
             public CardType findValueByNumber(int number) {
-              return CardType.valueOf(number);
+              return CardType.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -122,11 +130,9 @@ public final class Common {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private CardType(int index, int value) {
-      this.index = index;
+    private CardType(int value) {
       this.value = value;
     }
 
@@ -139,51 +145,59 @@ public final class Common {
   public enum EquipmentType
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>PAO_BU_JI = 0;</code>
-     *
      * <pre>
      * 跑步机
      * </pre>
-     */
-    PAO_BU_JI(0, 0),
-    /**
-     * <code>LIN_YU_FANG = 1;</code>
      *
+     * <code>PAO_BU_JI = 0;</code>
+     */
+    PAO_BU_JI(0),
+    /**
      * <pre>
      * 淋浴房
      * </pre>
+     *
+     * <code>LIN_YU_FANG = 1;</code>
      */
-    LIN_YU_FANG(1, 1),
-    UNRECOGNIZED(-1, -1),
+    LIN_YU_FANG(1),
+    UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>PAO_BU_JI = 0;</code>
-     *
      * <pre>
      * 跑步机
      * </pre>
+     *
+     * <code>PAO_BU_JI = 0;</code>
      */
     public static final int PAO_BU_JI_VALUE = 0;
     /**
-     * <code>LIN_YU_FANG = 1;</code>
-     *
      * <pre>
      * 淋浴房
      * </pre>
+     *
+     * <code>LIN_YU_FANG = 1;</code>
      */
     public static final int LIN_YU_FANG_VALUE = 1;
 
 
     public final int getNumber() {
-      if (index == -1) {
+      if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
     }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static EquipmentType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static EquipmentType forNumber(int value) {
       switch (value) {
         case 0: return PAO_BU_JI;
         case 1: return LIN_YU_FANG;
@@ -199,13 +213,13 @@ public final class Common {
         EquipmentType> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<EquipmentType>() {
             public EquipmentType findValueByNumber(int number) {
-              return EquipmentType.valueOf(number);
+              return EquipmentType.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -230,11 +244,9 @@ public final class Common {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private EquipmentType(int index, int value) {
-      this.index = index;
+    private EquipmentType(int value) {
       this.value = value;
     }
 
@@ -247,51 +259,59 @@ public final class Common {
   public enum Sex
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>MALE = 0;</code>
-     *
      * <pre>
      * 男性
      * </pre>
-     */
-    MALE(0, 0),
-    /**
-     * <code>FEMALE = 1;</code>
      *
+     * <code>MALE = 0;</code>
+     */
+    MALE(0),
+    /**
      * <pre>
      * 女性
      * </pre>
+     *
+     * <code>FEMALE = 1;</code>
      */
-    FEMALE(1, 1),
-    UNRECOGNIZED(-1, -1),
+    FEMALE(1),
+    UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>MALE = 0;</code>
-     *
      * <pre>
      * 男性
      * </pre>
+     *
+     * <code>MALE = 0;</code>
      */
     public static final int MALE_VALUE = 0;
     /**
-     * <code>FEMALE = 1;</code>
-     *
      * <pre>
      * 女性
      * </pre>
+     *
+     * <code>FEMALE = 1;</code>
      */
     public static final int FEMALE_VALUE = 1;
 
 
     public final int getNumber() {
-      if (index == -1) {
+      if (this == UNRECOGNIZED) {
         throw new java.lang.IllegalArgumentException(
             "Can't get the number of an unknown enum value.");
       }
       return value;
     }
 
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
     public static Sex valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static Sex forNumber(int value) {
       switch (value) {
         case 0: return MALE;
         case 1: return FEMALE;
@@ -307,13 +327,13 @@ public final class Common {
         Sex> internalValueMap =
           new com.google.protobuf.Internal.EnumLiteMap<Sex>() {
             public Sex findValueByNumber(int number) {
-              return Sex.valueOf(number);
+              return Sex.forNumber(number);
             }
           };
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
+      return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
@@ -338,11 +358,9 @@ public final class Common {
       return VALUES[desc.getIndex()];
     }
 
-    private final int index;
     private final int value;
 
-    private Sex(int index, int value) {
-      this.index = index;
+    private Sex(int value) {
       this.value = value;
     }
 
@@ -379,38 +397,38 @@ public final class Common {
     long getTimestamp();
 
     /**
-     * <code>optional string version = 5;</code>
-     *
      * <pre>
      * 版本, 1.0.0
      * </pre>
+     *
+     * <code>optional string version = 5;</code>
      */
     java.lang.String getVersion();
     /**
-     * <code>optional string version = 5;</code>
-     *
      * <pre>
      * 版本, 1.0.0
      * </pre>
+     *
+     * <code>optional string version = 5;</code>
      */
     com.google.protobuf.ByteString
         getVersionBytes();
 
     /**
-     * <code>optional int32 platform = 6;</code>
-     *
      * <pre>
      * 1-Android, 2-iOS
      * </pre>
+     *
+     * <code>optional int32 platform = 6;</code>
      */
     int getPlatform();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.RequestCommon}
-   *
    * <pre>
    *&#47;////////////////////////////////   请求和返回中包含的common        /////////////////////
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.RequestCommon}
    */
   public  static final class RequestCommon extends
       com.google.protobuf.GeneratedMessage implements
@@ -436,7 +454,8 @@ public final class Common {
     }
     private RequestCommon(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -459,7 +478,7 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userkey_ = s;
               break;
@@ -475,7 +494,7 @@ public final class Common {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               version_ = s;
               break;
@@ -488,11 +507,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -573,11 +591,11 @@ public final class Common {
     public static final int VERSION_FIELD_NUMBER = 5;
     private volatile java.lang.Object version_;
     /**
-     * <code>optional string version = 5;</code>
-     *
      * <pre>
      * 版本, 1.0.0
      * </pre>
+     *
+     * <code>optional string version = 5;</code>
      */
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
@@ -592,11 +610,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string version = 5;</code>
-     *
      * <pre>
      * 版本, 1.0.0
      * </pre>
+     *
+     * <code>optional string version = 5;</code>
      */
     public com.google.protobuf.ByteString
         getVersionBytes() {
@@ -615,11 +633,11 @@ public final class Common {
     public static final int PLATFORM_FIELD_NUMBER = 6;
     private int platform_;
     /**
-     * <code>optional int32 platform = 6;</code>
-     *
      * <pre>
      * 1-Android, 2-iOS
      * </pre>
+     *
+     * <code>optional int32 platform = 6;</code>
      */
     public int getPlatform() {
       return platform_;
@@ -712,34 +730,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.RequestCommon parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.RequestCommon parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.RequestCommon parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.RequestCommon parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.RequestCommon parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.RequestCommon parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -761,11 +785,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.RequestCommon}
-     *
      * <pre>
      *&#47;////////////////////////////////   请求和返回中包含的common        /////////////////////
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.RequestCommon}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -891,7 +915,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.RequestCommon) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -1049,11 +1073,11 @@ public final class Common {
 
       private java.lang.Object version_ = "";
       /**
-       * <code>optional string version = 5;</code>
-       *
        * <pre>
        * 版本, 1.0.0
        * </pre>
+       *
+       * <code>optional string version = 5;</code>
        */
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
@@ -1068,11 +1092,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string version = 5;</code>
-       *
        * <pre>
        * 版本, 1.0.0
        * </pre>
+       *
+       * <code>optional string version = 5;</code>
        */
       public com.google.protobuf.ByteString
           getVersionBytes() {
@@ -1088,11 +1112,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string version = 5;</code>
-       *
        * <pre>
        * 版本, 1.0.0
        * </pre>
+       *
+       * <code>optional string version = 5;</code>
        */
       public Builder setVersion(
           java.lang.String value) {
@@ -1105,11 +1129,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string version = 5;</code>
-       *
        * <pre>
        * 版本, 1.0.0
        * </pre>
+       *
+       * <code>optional string version = 5;</code>
        */
       public Builder clearVersion() {
         
@@ -1118,11 +1142,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string version = 5;</code>
-       *
        * <pre>
        * 版本, 1.0.0
        * </pre>
+       *
+       * <code>optional string version = 5;</code>
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -1138,21 +1162,21 @@ public final class Common {
 
       private int platform_ ;
       /**
-       * <code>optional int32 platform = 6;</code>
-       *
        * <pre>
        * 1-Android, 2-iOS
        * </pre>
+       *
+       * <code>optional int32 platform = 6;</code>
        */
       public int getPlatform() {
         return platform_;
       }
       /**
-       * <code>optional int32 platform = 6;</code>
-       *
        * <pre>
        * 1-Android, 2-iOS
        * </pre>
+       *
+       * <code>optional int32 platform = 6;</code>
        */
       public Builder setPlatform(int value) {
         
@@ -1161,11 +1185,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 platform = 6;</code>
-       *
        * <pre>
        * 1-Android, 2-iOS
        * </pre>
+       *
+       * <code>optional int32 platform = 6;</code>
        */
       public Builder clearPlatform() {
         
@@ -1203,16 +1227,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new RequestCommon(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -1236,11 +1251,11 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 code = 1;</code>
-     *
      * <pre>
      *状态码   0：正常  其他数值表示有错误
      * </pre>
+     *
+     * <code>optional int32 code = 1;</code>
      */
     int getCode();
 
@@ -1295,7 +1310,8 @@ public final class Common {
     }
     private ResponseCommon(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -1318,7 +1334,7 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               message_ = s;
               break;
@@ -1341,11 +1357,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -1365,11 +1380,11 @@ public final class Common {
     public static final int CODE_FIELD_NUMBER = 1;
     private int code_;
     /**
-     * <code>optional int32 code = 1;</code>
-     *
      * <pre>
      *状态码   0：正常  其他数值表示有错误
      * </pre>
+     *
+     * <code>optional int32 code = 1;</code>
      */
     public int getCode() {
       return code_;
@@ -1517,34 +1532,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.ResponseCommon parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.ResponseCommon parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.ResponseCommon parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.ResponseCommon parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.ResponseCommon parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.ResponseCommon parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -1685,7 +1706,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.ResponseCommon) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -1696,21 +1717,21 @@ public final class Common {
 
       private int code_ ;
       /**
-       * <code>optional int32 code = 1;</code>
-       *
        * <pre>
        *状态码   0：正常  其他数值表示有错误
        * </pre>
+       *
+       * <code>optional int32 code = 1;</code>
        */
       public int getCode() {
         return code_;
       }
       /**
-       * <code>optional int32 code = 1;</code>
-       *
        * <pre>
        *状态码   0：正常  其他数值表示有错误
        * </pre>
+       *
+       * <code>optional int32 code = 1;</code>
        */
       public Builder setCode(int value) {
         
@@ -1719,11 +1740,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 code = 1;</code>
-       *
        * <pre>
        *状态码   0：正常  其他数值表示有错误
        * </pre>
+       *
+       * <code>optional int32 code = 1;</code>
        */
       public Builder clearCode() {
         
@@ -1908,16 +1929,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new ResponseCommon(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -1941,161 +1953,161 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * 动态id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     int getId();
 
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     boolean hasBriefUser();
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     com.xiang.proto.Common.BriefUser getBriefUser();
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder();
 
     /**
-     * <code>optional int64 createTime = 3;</code>
-     *
      * <pre>
      * 创建时间的毫秒时间戳
      * </pre>
+     *
+     * <code>optional int64 createTime = 3;</code>
      */
     long getCreateTime();
 
     /**
-     * <code>optional int32 gymId = 4;</code>
-     *
      * <pre>
      * 健身房id   可能为空
      * </pre>
+     *
+     * <code>optional int32 gymId = 4;</code>
      */
     int getGymId();
 
     /**
-     * <code>optional string gymName = 5;</code>
-     *
      * <pre>
      * 健身房名字 可能为空
      * </pre>
+     *
+     * <code>optional string gymName = 5;</code>
      */
     java.lang.String getGymName();
     /**
-     * <code>optional string gymName = 5;</code>
-     *
      * <pre>
      * 健身房名字 可能为空
      * </pre>
+     *
+     * <code>optional string gymName = 5;</code>
      */
     com.google.protobuf.ByteString
         getGymNameBytes();
 
     /**
-     * <code>optional string content = 6;</code>
-     *
      * <pre>
      * 内容 内容中可能包含“#SportX#”类型的话题
      * </pre>
+     *
+     * <code>optional string content = 6;</code>
      */
     java.lang.String getContent();
     /**
-     * <code>optional string content = 6;</code>
-     *
      * <pre>
      * 内容 内容中可能包含“#SportX#”类型的话题
      * </pre>
+     *
+     * <code>optional string content = 6;</code>
      */
     com.google.protobuf.ByteString
         getContentBytes();
 
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     com.google.protobuf.ProtocolStringList
         getImgsList();
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     int getImgsCount();
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     java.lang.String getImgs(int index);
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     com.google.protobuf.ByteString
         getImgsBytes(int index);
 
     /**
-     * <code>optional int32 likeCount = 8;</code>
-     *
      * <pre>
      * 点赞量
      * </pre>
+     *
+     * <code>optional int32 likeCount = 8;</code>
      */
     int getLikeCount();
 
     /**
-     * <code>optional int32 commentCount = 9;</code>
-     *
      * <pre>
      * 评论量
      * </pre>
+     *
+     * <code>optional int32 commentCount = 9;</code>
      */
     int getCommentCount();
 
     /**
-     * <code>optional bool isLiked = 10;</code>
-     *
      * <pre>
      * 是否点赞了
      * </pre>
+     *
+     * <code>optional bool isLiked = 10;</code>
      */
     boolean getIsLiked();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.Trend}
-   *
    * <pre>
    * 动态
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.Trend}
    */
   public  static final class Trend extends
       com.google.protobuf.GeneratedMessage implements
@@ -2124,7 +2136,8 @@ public final class Common {
     }
     private Trend(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -2170,19 +2183,19 @@ public final class Common {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               gymName_ = s;
               break;
             }
             case 50: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               content_ = s;
               break;
             }
             case 58: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
                 imgs_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000040;
@@ -2208,11 +2221,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           imgs_ = imgs_.getUnmodifiableView();
@@ -2236,11 +2248,11 @@ public final class Common {
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * 动态id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     public int getId() {
       return id_;
@@ -2249,31 +2261,31 @@ public final class Common {
     public static final int BRIEFUSER_FIELD_NUMBER = 2;
     private com.xiang.proto.Common.BriefUser briefUser_;
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     public boolean hasBriefUser() {
       return briefUser_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     public com.xiang.proto.Common.BriefUser getBriefUser() {
       return briefUser_ == null ? com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-     *
      * <pre>
      * 用户信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
      */
     public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
       return getBriefUser();
@@ -2282,11 +2294,11 @@ public final class Common {
     public static final int CREATETIME_FIELD_NUMBER = 3;
     private long createTime_;
     /**
-     * <code>optional int64 createTime = 3;</code>
-     *
      * <pre>
      * 创建时间的毫秒时间戳
      * </pre>
+     *
+     * <code>optional int64 createTime = 3;</code>
      */
     public long getCreateTime() {
       return createTime_;
@@ -2295,11 +2307,11 @@ public final class Common {
     public static final int GYMID_FIELD_NUMBER = 4;
     private int gymId_;
     /**
-     * <code>optional int32 gymId = 4;</code>
-     *
      * <pre>
      * 健身房id   可能为空
      * </pre>
+     *
+     * <code>optional int32 gymId = 4;</code>
      */
     public int getGymId() {
       return gymId_;
@@ -2308,11 +2320,11 @@ public final class Common {
     public static final int GYMNAME_FIELD_NUMBER = 5;
     private volatile java.lang.Object gymName_;
     /**
-     * <code>optional string gymName = 5;</code>
-     *
      * <pre>
      * 健身房名字 可能为空
      * </pre>
+     *
+     * <code>optional string gymName = 5;</code>
      */
     public java.lang.String getGymName() {
       java.lang.Object ref = gymName_;
@@ -2327,11 +2339,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string gymName = 5;</code>
-     *
      * <pre>
      * 健身房名字 可能为空
      * </pre>
+     *
+     * <code>optional string gymName = 5;</code>
      */
     public com.google.protobuf.ByteString
         getGymNameBytes() {
@@ -2350,11 +2362,11 @@ public final class Common {
     public static final int CONTENT_FIELD_NUMBER = 6;
     private volatile java.lang.Object content_;
     /**
-     * <code>optional string content = 6;</code>
-     *
      * <pre>
      * 内容 内容中可能包含“#SportX#”类型的话题
      * </pre>
+     *
+     * <code>optional string content = 6;</code>
      */
     public java.lang.String getContent() {
       java.lang.Object ref = content_;
@@ -2369,11 +2381,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string content = 6;</code>
-     *
      * <pre>
      * 内容 内容中可能包含“#SportX#”类型的话题
      * </pre>
+     *
+     * <code>optional string content = 6;</code>
      */
     public com.google.protobuf.ByteString
         getContentBytes() {
@@ -2392,42 +2404,42 @@ public final class Common {
     public static final int IMGS_FIELD_NUMBER = 7;
     private com.google.protobuf.LazyStringList imgs_;
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getImgsList() {
       return imgs_;
     }
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     public int getImgsCount() {
       return imgs_.size();
     }
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     public java.lang.String getImgs(int index) {
       return imgs_.get(index);
     }
     /**
-     * <code>repeated string imgs = 7;</code>
-     *
      * <pre>
      * 图片
      * </pre>
+     *
+     * <code>repeated string imgs = 7;</code>
      */
     public com.google.protobuf.ByteString
         getImgsBytes(int index) {
@@ -2437,11 +2449,11 @@ public final class Common {
     public static final int LIKECOUNT_FIELD_NUMBER = 8;
     private int likeCount_;
     /**
-     * <code>optional int32 likeCount = 8;</code>
-     *
      * <pre>
      * 点赞量
      * </pre>
+     *
+     * <code>optional int32 likeCount = 8;</code>
      */
     public int getLikeCount() {
       return likeCount_;
@@ -2450,11 +2462,11 @@ public final class Common {
     public static final int COMMENTCOUNT_FIELD_NUMBER = 9;
     private int commentCount_;
     /**
-     * <code>optional int32 commentCount = 9;</code>
-     *
      * <pre>
      * 评论量
      * </pre>
+     *
+     * <code>optional int32 commentCount = 9;</code>
      */
     public int getCommentCount() {
       return commentCount_;
@@ -2463,11 +2475,11 @@ public final class Common {
     public static final int ISLIKED_FIELD_NUMBER = 10;
     private boolean isLiked_;
     /**
-     * <code>optional bool isLiked = 10;</code>
-     *
      * <pre>
      * 是否点赞了
      * </pre>
+     *
+     * <code>optional bool isLiked = 10;</code>
      */
     public boolean getIsLiked() {
       return isLiked_;
@@ -2592,34 +2604,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.Trend parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Trend parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Trend parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Trend parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Trend parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Trend parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -2641,11 +2659,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.Trend}
-     *
      * <pre>
      * 动态
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.Trend}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -2817,7 +2835,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.Trend) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -2829,21 +2847,21 @@ public final class Common {
 
       private int id_ ;
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 动态id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public int getId() {
         return id_;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 动态id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder setId(int value) {
         
@@ -2852,11 +2870,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 动态id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder clearId() {
         
@@ -2869,21 +2887,21 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUserBuilder_;
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public boolean hasBriefUser() {
         return briefUserBuilder_ != null || briefUser_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUser() {
         if (briefUserBuilder_ == null) {
@@ -2893,11 +2911,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public Builder setBriefUser(com.xiang.proto.Common.BriefUser value) {
         if (briefUserBuilder_ == null) {
@@ -2913,11 +2931,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public Builder setBriefUser(
           com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -2931,11 +2949,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public Builder mergeBriefUser(com.xiang.proto.Common.BriefUser value) {
         if (briefUserBuilder_ == null) {
@@ -2953,11 +2971,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public Builder clearBriefUser() {
         if (briefUserBuilder_ == null) {
@@ -2971,11 +2989,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public com.xiang.proto.Common.BriefUser.Builder getBriefUserBuilder() {
         
@@ -2983,11 +3001,11 @@ public final class Common {
         return getBriefUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
         if (briefUserBuilder_ != null) {
@@ -2998,11 +3016,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
-       *
        * <pre>
        * 用户信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> 
@@ -3020,21 +3038,21 @@ public final class Common {
 
       private long createTime_ ;
       /**
-       * <code>optional int64 createTime = 3;</code>
-       *
        * <pre>
        * 创建时间的毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 3;</code>
        */
       public long getCreateTime() {
         return createTime_;
       }
       /**
-       * <code>optional int64 createTime = 3;</code>
-       *
        * <pre>
        * 创建时间的毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 3;</code>
        */
       public Builder setCreateTime(long value) {
         
@@ -3043,11 +3061,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int64 createTime = 3;</code>
-       *
        * <pre>
        * 创建时间的毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 3;</code>
        */
       public Builder clearCreateTime() {
         
@@ -3058,21 +3076,21 @@ public final class Common {
 
       private int gymId_ ;
       /**
-       * <code>optional int32 gymId = 4;</code>
-       *
        * <pre>
        * 健身房id   可能为空
        * </pre>
+       *
+       * <code>optional int32 gymId = 4;</code>
        */
       public int getGymId() {
         return gymId_;
       }
       /**
-       * <code>optional int32 gymId = 4;</code>
-       *
        * <pre>
        * 健身房id   可能为空
        * </pre>
+       *
+       * <code>optional int32 gymId = 4;</code>
        */
       public Builder setGymId(int value) {
         
@@ -3081,11 +3099,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 gymId = 4;</code>
-       *
        * <pre>
        * 健身房id   可能为空
        * </pre>
+       *
+       * <code>optional int32 gymId = 4;</code>
        */
       public Builder clearGymId() {
         
@@ -3096,11 +3114,11 @@ public final class Common {
 
       private java.lang.Object gymName_ = "";
       /**
-       * <code>optional string gymName = 5;</code>
-       *
        * <pre>
        * 健身房名字 可能为空
        * </pre>
+       *
+       * <code>optional string gymName = 5;</code>
        */
       public java.lang.String getGymName() {
         java.lang.Object ref = gymName_;
@@ -3115,11 +3133,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 5;</code>
-       *
        * <pre>
        * 健身房名字 可能为空
        * </pre>
+       *
+       * <code>optional string gymName = 5;</code>
        */
       public com.google.protobuf.ByteString
           getGymNameBytes() {
@@ -3135,11 +3153,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 5;</code>
-       *
        * <pre>
        * 健身房名字 可能为空
        * </pre>
+       *
+       * <code>optional string gymName = 5;</code>
        */
       public Builder setGymName(
           java.lang.String value) {
@@ -3152,11 +3170,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 5;</code>
-       *
        * <pre>
        * 健身房名字 可能为空
        * </pre>
+       *
+       * <code>optional string gymName = 5;</code>
        */
       public Builder clearGymName() {
         
@@ -3165,11 +3183,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 5;</code>
-       *
        * <pre>
        * 健身房名字 可能为空
        * </pre>
+       *
+       * <code>optional string gymName = 5;</code>
        */
       public Builder setGymNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3185,11 +3203,11 @@ public final class Common {
 
       private java.lang.Object content_ = "";
       /**
-       * <code>optional string content = 6;</code>
-       *
        * <pre>
        * 内容 内容中可能包含“#SportX#”类型的话题
        * </pre>
+       *
+       * <code>optional string content = 6;</code>
        */
       public java.lang.String getContent() {
         java.lang.Object ref = content_;
@@ -3204,11 +3222,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string content = 6;</code>
-       *
        * <pre>
        * 内容 内容中可能包含“#SportX#”类型的话题
        * </pre>
+       *
+       * <code>optional string content = 6;</code>
        */
       public com.google.protobuf.ByteString
           getContentBytes() {
@@ -3224,11 +3242,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string content = 6;</code>
-       *
        * <pre>
        * 内容 内容中可能包含“#SportX#”类型的话题
        * </pre>
+       *
+       * <code>optional string content = 6;</code>
        */
       public Builder setContent(
           java.lang.String value) {
@@ -3241,11 +3259,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string content = 6;</code>
-       *
        * <pre>
        * 内容 内容中可能包含“#SportX#”类型的话题
        * </pre>
+       *
+       * <code>optional string content = 6;</code>
        */
       public Builder clearContent() {
         
@@ -3254,11 +3272,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string content = 6;</code>
-       *
        * <pre>
        * 内容 内容中可能包含“#SportX#”类型的话题
        * </pre>
+       *
+       * <code>optional string content = 6;</code>
        */
       public Builder setContentBytes(
           com.google.protobuf.ByteString value) {
@@ -3280,53 +3298,53 @@ public final class Common {
          }
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getImgsList() {
         return imgs_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public int getImgsCount() {
         return imgs_.size();
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public java.lang.String getImgs(int index) {
         return imgs_.get(index);
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public com.google.protobuf.ByteString
           getImgsBytes(int index) {
         return imgs_.getByteString(index);
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public Builder setImgs(
           int index, java.lang.String value) {
@@ -3339,11 +3357,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public Builder addImgs(
           java.lang.String value) {
@@ -3356,11 +3374,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public Builder addAllImgs(
           java.lang.Iterable<java.lang.String> values) {
@@ -3371,11 +3389,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public Builder clearImgs() {
         imgs_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -3384,11 +3402,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string imgs = 7;</code>
-       *
        * <pre>
        * 图片
        * </pre>
+       *
+       * <code>repeated string imgs = 7;</code>
        */
       public Builder addImgsBytes(
           com.google.protobuf.ByteString value) {
@@ -3404,21 +3422,21 @@ public final class Common {
 
       private int likeCount_ ;
       /**
-       * <code>optional int32 likeCount = 8;</code>
-       *
        * <pre>
        * 点赞量
        * </pre>
+       *
+       * <code>optional int32 likeCount = 8;</code>
        */
       public int getLikeCount() {
         return likeCount_;
       }
       /**
-       * <code>optional int32 likeCount = 8;</code>
-       *
        * <pre>
        * 点赞量
        * </pre>
+       *
+       * <code>optional int32 likeCount = 8;</code>
        */
       public Builder setLikeCount(int value) {
         
@@ -3427,11 +3445,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 likeCount = 8;</code>
-       *
        * <pre>
        * 点赞量
        * </pre>
+       *
+       * <code>optional int32 likeCount = 8;</code>
        */
       public Builder clearLikeCount() {
         
@@ -3442,21 +3460,21 @@ public final class Common {
 
       private int commentCount_ ;
       /**
-       * <code>optional int32 commentCount = 9;</code>
-       *
        * <pre>
        * 评论量
        * </pre>
+       *
+       * <code>optional int32 commentCount = 9;</code>
        */
       public int getCommentCount() {
         return commentCount_;
       }
       /**
-       * <code>optional int32 commentCount = 9;</code>
-       *
        * <pre>
        * 评论量
        * </pre>
+       *
+       * <code>optional int32 commentCount = 9;</code>
        */
       public Builder setCommentCount(int value) {
         
@@ -3465,11 +3483,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 commentCount = 9;</code>
-       *
        * <pre>
        * 评论量
        * </pre>
+       *
+       * <code>optional int32 commentCount = 9;</code>
        */
       public Builder clearCommentCount() {
         
@@ -3480,21 +3498,21 @@ public final class Common {
 
       private boolean isLiked_ ;
       /**
-       * <code>optional bool isLiked = 10;</code>
-       *
        * <pre>
        * 是否点赞了
        * </pre>
+       *
+       * <code>optional bool isLiked = 10;</code>
        */
       public boolean getIsLiked() {
         return isLiked_;
       }
       /**
-       * <code>optional bool isLiked = 10;</code>
-       *
        * <pre>
        * 是否点赞了
        * </pre>
+       *
+       * <code>optional bool isLiked = 10;</code>
        */
       public Builder setIsLiked(boolean value) {
         
@@ -3503,11 +3521,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional bool isLiked = 10;</code>
-       *
        * <pre>
        * 是否点赞了
        * </pre>
+       *
+       * <code>optional bool isLiked = 10;</code>
        */
       public Builder clearIsLiked() {
         
@@ -3545,16 +3563,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Trend(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -3578,91 +3587,91 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * banner id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     int getId();
 
     /**
-     * <code>optional string coverUrl = 2;</code>
-     *
      * <pre>
      * banner cover Url
      * </pre>
+     *
+     * <code>optional string coverUrl = 2;</code>
      */
     java.lang.String getCoverUrl();
     /**
-     * <code>optional string coverUrl = 2;</code>
-     *
      * <pre>
      * banner cover Url
      * </pre>
+     *
+     * <code>optional string coverUrl = 2;</code>
      */
     com.google.protobuf.ByteString
         getCoverUrlBytes();
 
     /**
-     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-     *
      * <pre>
      * banner 的种类
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
      */
     int getTypeValue();
     /**
-     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-     *
      * <pre>
      * banner 的种类
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
      */
     com.xiang.proto.Common.Banner.BannerType getType();
 
     /**
-     * <code>optional string webUrl = 4;</code>
-     *
      * <pre>
      * 如果是Url，则这个是需要跳转的url
      * </pre>
+     *
+     * <code>optional string webUrl = 4;</code>
      */
     java.lang.String getWebUrl();
     /**
-     * <code>optional string webUrl = 4;</code>
-     *
      * <pre>
      * 如果是Url，则这个是需要跳转的url
      * </pre>
+     *
+     * <code>optional string webUrl = 4;</code>
      */
     com.google.protobuf.ByteString
         getWebUrlBytes();
 
     /**
-     * <code>optional int32 trendId = 5;</code>
-     *
      * <pre>
      * 如果是动态，这个是跳转的动态的id
      * </pre>
+     *
+     * <code>optional int32 trendId = 5;</code>
      */
     int getTrendId();
 
     /**
-     * <code>optional int32 userId = 6;</code>
-     *
      * <pre>
      * 如果是用户，则这个是用户的id，跳转到用户主页
      * </pre>
+     *
+     * <code>optional int32 userId = 6;</code>
      */
     int getUserId();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.Banner}
-   *
    * <pre>
    * banner
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.Banner}
    */
   public  static final class Banner extends
       com.google.protobuf.GeneratedMessage implements
@@ -3688,7 +3697,8 @@ public final class Common {
     }
     private Banner(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -3711,7 +3721,7 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               coverUrl_ = s;
               break;
@@ -3723,7 +3733,7 @@ public final class Common {
               break;
             }
             case 34: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               webUrl_ = s;
               break;
@@ -3741,11 +3751,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -3768,67 +3777,75 @@ public final class Common {
     public enum BannerType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>URL = 0;</code>
-       *
        * <pre>
        * 跳转url
        * </pre>
-       */
-      URL(0, 0),
-      /**
-       * <code>TREND = 1;</code>
        *
+       * <code>URL = 0;</code>
+       */
+      URL(0),
+      /**
        * <pre>
        * 跳转动态
        * </pre>
-       */
-      TREND(1, 1),
-      /**
-       * <code>USER = 2;</code>
        *
+       * <code>TREND = 1;</code>
+       */
+      TREND(1),
+      /**
        * <pre>
        * 用户
        * </pre>
+       *
+       * <code>USER = 2;</code>
        */
-      USER(2, 2),
-      UNRECOGNIZED(-1, -1),
+      USER(2),
+      UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>URL = 0;</code>
-       *
        * <pre>
        * 跳转url
        * </pre>
+       *
+       * <code>URL = 0;</code>
        */
       public static final int URL_VALUE = 0;
       /**
-       * <code>TREND = 1;</code>
-       *
        * <pre>
        * 跳转动态
        * </pre>
+       *
+       * <code>TREND = 1;</code>
        */
       public static final int TREND_VALUE = 1;
       /**
-       * <code>USER = 2;</code>
-       *
        * <pre>
        * 用户
        * </pre>
+       *
+       * <code>USER = 2;</code>
        */
       public static final int USER_VALUE = 2;
 
 
       public final int getNumber() {
-        if (index == -1) {
+        if (this == UNRECOGNIZED) {
           throw new java.lang.IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
       }
 
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
       public static BannerType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static BannerType forNumber(int value) {
         switch (value) {
           case 0: return URL;
           case 1: return TREND;
@@ -3845,13 +3862,13 @@ public final class Common {
           BannerType> internalValueMap =
             new com.google.protobuf.Internal.EnumLiteMap<BannerType>() {
               public BannerType findValueByNumber(int number) {
-                return BannerType.valueOf(number);
+                return BannerType.forNumber(number);
               }
             };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
-        return getDescriptor().getValues().get(index);
+        return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptorForType() {
@@ -3876,11 +3893,9 @@ public final class Common {
         return VALUES[desc.getIndex()];
       }
 
-      private final int index;
       private final int value;
 
-      private BannerType(int index, int value) {
-        this.index = index;
+      private BannerType(int value) {
         this.value = value;
       }
 
@@ -3890,11 +3905,11 @@ public final class Common {
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * banner id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     public int getId() {
       return id_;
@@ -3903,11 +3918,11 @@ public final class Common {
     public static final int COVERURL_FIELD_NUMBER = 2;
     private volatile java.lang.Object coverUrl_;
     /**
-     * <code>optional string coverUrl = 2;</code>
-     *
      * <pre>
      * banner cover Url
      * </pre>
+     *
+     * <code>optional string coverUrl = 2;</code>
      */
     public java.lang.String getCoverUrl() {
       java.lang.Object ref = coverUrl_;
@@ -3922,11 +3937,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string coverUrl = 2;</code>
-     *
      * <pre>
      * banner cover Url
      * </pre>
+     *
+     * <code>optional string coverUrl = 2;</code>
      */
     public com.google.protobuf.ByteString
         getCoverUrlBytes() {
@@ -3945,35 +3960,35 @@ public final class Common {
     public static final int TYPE_FIELD_NUMBER = 3;
     private int type_;
     /**
-     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-     *
      * <pre>
      * banner 的种类
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
      */
     public int getTypeValue() {
       return type_;
     }
     /**
-     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-     *
      * <pre>
      * banner 的种类
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
      */
     public com.xiang.proto.Common.Banner.BannerType getType() {
-      com.xiang.proto.Common.Banner.BannerType result = com.xiang.proto.Common.Banner.BannerType.valueOf(type_);
+      com.xiang.proto.Common.Banner.BannerType result = com.xiang.proto.Common.Banner.BannerType.forNumber(type_);
       return result == null ? com.xiang.proto.Common.Banner.BannerType.UNRECOGNIZED : result;
     }
 
     public static final int WEBURL_FIELD_NUMBER = 4;
     private volatile java.lang.Object webUrl_;
     /**
-     * <code>optional string webUrl = 4;</code>
-     *
      * <pre>
      * 如果是Url，则这个是需要跳转的url
      * </pre>
+     *
+     * <code>optional string webUrl = 4;</code>
      */
     public java.lang.String getWebUrl() {
       java.lang.Object ref = webUrl_;
@@ -3988,11 +4003,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string webUrl = 4;</code>
-     *
      * <pre>
      * 如果是Url，则这个是需要跳转的url
      * </pre>
+     *
+     * <code>optional string webUrl = 4;</code>
      */
     public com.google.protobuf.ByteString
         getWebUrlBytes() {
@@ -4011,11 +4026,11 @@ public final class Common {
     public static final int TRENDID_FIELD_NUMBER = 5;
     private int trendId_;
     /**
-     * <code>optional int32 trendId = 5;</code>
-     *
      * <pre>
      * 如果是动态，这个是跳转的动态的id
      * </pre>
+     *
+     * <code>optional int32 trendId = 5;</code>
      */
     public int getTrendId() {
       return trendId_;
@@ -4024,11 +4039,11 @@ public final class Common {
     public static final int USERID_FIELD_NUMBER = 6;
     private int userId_;
     /**
-     * <code>optional int32 userId = 6;</code>
-     *
      * <pre>
      * 如果是用户，则这个是用户的id，跳转到用户主页
      * </pre>
+     *
+     * <code>optional int32 userId = 6;</code>
      */
     public int getUserId() {
       return userId_;
@@ -4121,34 +4136,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.Banner parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Banner parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Banner parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Banner parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Banner parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Banner parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -4170,11 +4191,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.Banner}
-     *
      * <pre>
      * banner
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.Banner}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -4300,7 +4321,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.Banner) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -4311,21 +4332,21 @@ public final class Common {
 
       private int id_ ;
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * banner id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public int getId() {
         return id_;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * banner id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder setId(int value) {
         
@@ -4334,11 +4355,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * banner id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder clearId() {
         
@@ -4349,11 +4370,11 @@ public final class Common {
 
       private java.lang.Object coverUrl_ = "";
       /**
-       * <code>optional string coverUrl = 2;</code>
-       *
        * <pre>
        * banner cover Url
        * </pre>
+       *
+       * <code>optional string coverUrl = 2;</code>
        */
       public java.lang.String getCoverUrl() {
         java.lang.Object ref = coverUrl_;
@@ -4368,11 +4389,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string coverUrl = 2;</code>
-       *
        * <pre>
        * banner cover Url
        * </pre>
+       *
+       * <code>optional string coverUrl = 2;</code>
        */
       public com.google.protobuf.ByteString
           getCoverUrlBytes() {
@@ -4388,11 +4409,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string coverUrl = 2;</code>
-       *
        * <pre>
        * banner cover Url
        * </pre>
+       *
+       * <code>optional string coverUrl = 2;</code>
        */
       public Builder setCoverUrl(
           java.lang.String value) {
@@ -4405,11 +4426,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string coverUrl = 2;</code>
-       *
        * <pre>
        * banner cover Url
        * </pre>
+       *
+       * <code>optional string coverUrl = 2;</code>
        */
       public Builder clearCoverUrl() {
         
@@ -4418,11 +4439,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string coverUrl = 2;</code>
-       *
        * <pre>
        * banner cover Url
        * </pre>
+       *
+       * <code>optional string coverUrl = 2;</code>
        */
       public Builder setCoverUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -4438,21 +4459,21 @@ public final class Common {
 
       private int type_ = 0;
       /**
-       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-       *
        * <pre>
        * banner 的种类
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
        */
       public int getTypeValue() {
         return type_;
       }
       /**
-       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-       *
        * <pre>
        * banner 的种类
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
        */
       public Builder setTypeValue(int value) {
         type_ = value;
@@ -4460,22 +4481,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-       *
        * <pre>
        * banner 的种类
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
        */
       public com.xiang.proto.Common.Banner.BannerType getType() {
-        com.xiang.proto.Common.Banner.BannerType result = com.xiang.proto.Common.Banner.BannerType.valueOf(type_);
+        com.xiang.proto.Common.Banner.BannerType result = com.xiang.proto.Common.Banner.BannerType.forNumber(type_);
         return result == null ? com.xiang.proto.Common.Banner.BannerType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-       *
        * <pre>
        * banner 的种类
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
        */
       public Builder setType(com.xiang.proto.Common.Banner.BannerType value) {
         if (value == null) {
@@ -4487,11 +4508,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
-       *
        * <pre>
        * banner 的种类
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Banner.BannerType type = 3;</code>
        */
       public Builder clearType() {
         
@@ -4502,11 +4523,11 @@ public final class Common {
 
       private java.lang.Object webUrl_ = "";
       /**
-       * <code>optional string webUrl = 4;</code>
-       *
        * <pre>
        * 如果是Url，则这个是需要跳转的url
        * </pre>
+       *
+       * <code>optional string webUrl = 4;</code>
        */
       public java.lang.String getWebUrl() {
         java.lang.Object ref = webUrl_;
@@ -4521,11 +4542,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string webUrl = 4;</code>
-       *
        * <pre>
        * 如果是Url，则这个是需要跳转的url
        * </pre>
+       *
+       * <code>optional string webUrl = 4;</code>
        */
       public com.google.protobuf.ByteString
           getWebUrlBytes() {
@@ -4541,11 +4562,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string webUrl = 4;</code>
-       *
        * <pre>
        * 如果是Url，则这个是需要跳转的url
        * </pre>
+       *
+       * <code>optional string webUrl = 4;</code>
        */
       public Builder setWebUrl(
           java.lang.String value) {
@@ -4558,11 +4579,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string webUrl = 4;</code>
-       *
        * <pre>
        * 如果是Url，则这个是需要跳转的url
        * </pre>
+       *
+       * <code>optional string webUrl = 4;</code>
        */
       public Builder clearWebUrl() {
         
@@ -4571,11 +4592,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string webUrl = 4;</code>
-       *
        * <pre>
        * 如果是Url，则这个是需要跳转的url
        * </pre>
+       *
+       * <code>optional string webUrl = 4;</code>
        */
       public Builder setWebUrlBytes(
           com.google.protobuf.ByteString value) {
@@ -4591,21 +4612,21 @@ public final class Common {
 
       private int trendId_ ;
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 如果是动态，这个是跳转的动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public int getTrendId() {
         return trendId_;
       }
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 如果是动态，这个是跳转的动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public Builder setTrendId(int value) {
         
@@ -4614,11 +4635,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 如果是动态，这个是跳转的动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public Builder clearTrendId() {
         
@@ -4629,21 +4650,21 @@ public final class Common {
 
       private int userId_ ;
       /**
-       * <code>optional int32 userId = 6;</code>
-       *
        * <pre>
        * 如果是用户，则这个是用户的id，跳转到用户主页
        * </pre>
+       *
+       * <code>optional int32 userId = 6;</code>
        */
       public int getUserId() {
         return userId_;
       }
       /**
-       * <code>optional int32 userId = 6;</code>
-       *
        * <pre>
        * 如果是用户，则这个是用户的id，跳转到用户主页
        * </pre>
+       *
+       * <code>optional int32 userId = 6;</code>
        */
       public Builder setUserId(int value) {
         
@@ -4652,11 +4673,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 userId = 6;</code>
-       *
        * <pre>
        * 如果是用户，则这个是用户的id，跳转到用户主页
        * </pre>
+       *
+       * <code>optional int32 userId = 6;</code>
        */
       public Builder clearUserId() {
         
@@ -4694,16 +4715,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Banner(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -4727,56 +4739,56 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * userid
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     int getUserId();
 
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     java.lang.String getUserName();
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
 
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     java.lang.String getUserAvatar();
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserAvatarBytes();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.BriefUser}
-   *
    * <pre>
    * briefUser
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.BriefUser}
    */
   public  static final class BriefUser extends
       com.google.protobuf.GeneratedMessage implements
@@ -4799,7 +4811,8 @@ public final class Common {
     }
     private BriefUser(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -4822,13 +4835,13 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userName_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userAvatar_ = s;
               break;
@@ -4836,11 +4849,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -4860,11 +4872,11 @@ public final class Common {
     public static final int USERID_FIELD_NUMBER = 1;
     private int userId_;
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * userid
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     public int getUserId() {
       return userId_;
@@ -4873,11 +4885,11 @@ public final class Common {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object userName_;
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -4892,11 +4904,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -4915,11 +4927,11 @@ public final class Common {
     public static final int USERAVATAR_FIELD_NUMBER = 3;
     private volatile java.lang.Object userAvatar_;
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     public java.lang.String getUserAvatar() {
       java.lang.Object ref = userAvatar_;
@@ -4934,11 +4946,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserAvatarBytes() {
@@ -5020,34 +5032,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.BriefUser parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefUser parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.BriefUser parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefUser parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.BriefUser parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefUser parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -5069,11 +5087,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.BriefUser}
-     *
      * <pre>
      * briefUser
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.BriefUser}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -5181,7 +5199,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.BriefUser) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -5192,21 +5210,21 @@ public final class Common {
 
       private int userId_ ;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * userid
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * userid
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder setUserId(int value) {
         
@@ -5215,11 +5233,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * userid
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder clearUserId() {
         
@@ -5230,11 +5248,11 @@ public final class Common {
 
       private java.lang.Object userName_ = "";
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -5249,11 +5267,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -5269,11 +5287,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -5286,11 +5304,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder clearUserName() {
         
@@ -5299,11 +5317,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -5319,11 +5337,11 @@ public final class Common {
 
       private java.lang.Object userAvatar_ = "";
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public java.lang.String getUserAvatar() {
         java.lang.Object ref = userAvatar_;
@@ -5338,11 +5356,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserAvatarBytes() {
@@ -5358,11 +5376,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder setUserAvatar(
           java.lang.String value) {
@@ -5375,11 +5393,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder clearUserAvatar() {
         
@@ -5388,11 +5406,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder setUserAvatarBytes(
           com.google.protobuf.ByteString value) {
@@ -5435,16 +5453,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new BriefUser(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -5468,180 +5477,180 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * 场馆id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     int getId();
 
     /**
-     * <code>optional string gymName = 2;</code>
-     *
      * <pre>
      * 场馆名字
      * </pre>
+     *
+     * <code>optional string gymName = 2;</code>
      */
     java.lang.String getGymName();
     /**
-     * <code>optional string gymName = 2;</code>
-     *
      * <pre>
      * 场馆名字
      * </pre>
+     *
+     * <code>optional string gymName = 2;</code>
      */
     com.google.protobuf.ByteString
         getGymNameBytes();
 
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     com.google.protobuf.ProtocolStringList
         getGymCoverList();
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     int getGymCoverCount();
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     java.lang.String getGymCover(int index);
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     com.google.protobuf.ByteString
         getGymCoverBytes(int index);
 
     /**
-     * <code>optional string place = 4;</code>
-     *
      * <pre>
      * 场馆所在位置
      * </pre>
+     *
+     * <code>optional string place = 4;</code>
      */
     java.lang.String getPlace();
     /**
-     * <code>optional string place = 4;</code>
-     *
      * <pre>
      * 场馆所在位置
      * </pre>
+     *
+     * <code>optional string place = 4;</code>
      */
     com.google.protobuf.ByteString
         getPlaceBytes();
 
     /**
-     * <code>optional string gymAvatar = 8;</code>
-     *
      * <pre>
      * 场馆头像
      * </pre>
+     *
+     * <code>optional string gymAvatar = 8;</code>
      */
     java.lang.String getGymAvatar();
     /**
-     * <code>optional string gymAvatar = 8;</code>
-     *
      * <pre>
      * 场馆头像
      * </pre>
+     *
+     * <code>optional string gymAvatar = 8;</code>
      */
     com.google.protobuf.ByteString
         getGymAvatarBytes();
 
     /**
-     * <code>optional float latitude = 5;</code>
-     *
      * <pre>
      * 纬度
      * </pre>
+     *
+     * <code>optional float latitude = 5;</code>
      */
     float getLatitude();
 
     /**
-     * <code>optional float longitude = 6;</code>
-     *
      * <pre>
      * 经度
      * </pre>
+     *
+     * <code>optional float longitude = 6;</code>
      */
     float getLongitude();
 
     /**
-     * <code>optional bool isCoop = 7;</code>
-     *
      * <pre>
      * 是否合作（可以在线购买健身卡）
      * </pre>
+     *
+     * <code>optional bool isCoop = 7;</code>
      */
     boolean getIsCoop();
 
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     java.util.List<com.xiang.proto.Common.Equipment> 
         getEquipmentsList();
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     com.xiang.proto.Common.Equipment getEquipments(int index);
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     int getEquipmentsCount();
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
         getEquipmentsOrBuilderList();
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.xiang.proto.BriefGym}
-   *
    * <pre>
    * BriefGym 场馆
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.BriefGym}
    */
   public  static final class BriefGym extends
       com.google.protobuf.GeneratedMessage implements
@@ -5670,7 +5679,8 @@ public final class Common {
     }
     private BriefGym(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -5693,13 +5703,13 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               gymName_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 gymCover_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
@@ -5708,7 +5718,7 @@ public final class Common {
               break;
             }
             case 34: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               place_ = s;
               break;
@@ -5729,7 +5739,7 @@ public final class Common {
               break;
             }
             case 66: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               gymAvatar_ = s;
               break;
@@ -5745,11 +5755,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           gymCover_ = gymCover_.getUnmodifiableView();
@@ -5776,11 +5785,11 @@ public final class Common {
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
-     * <code>optional int32 id = 1;</code>
-     *
      * <pre>
      * 场馆id
      * </pre>
+     *
+     * <code>optional int32 id = 1;</code>
      */
     public int getId() {
       return id_;
@@ -5789,11 +5798,11 @@ public final class Common {
     public static final int GYMNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object gymName_;
     /**
-     * <code>optional string gymName = 2;</code>
-     *
      * <pre>
      * 场馆名字
      * </pre>
+     *
+     * <code>optional string gymName = 2;</code>
      */
     public java.lang.String getGymName() {
       java.lang.Object ref = gymName_;
@@ -5808,11 +5817,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string gymName = 2;</code>
-     *
      * <pre>
      * 场馆名字
      * </pre>
+     *
+     * <code>optional string gymName = 2;</code>
      */
     public com.google.protobuf.ByteString
         getGymNameBytes() {
@@ -5831,42 +5840,42 @@ public final class Common {
     public static final int GYMCOVER_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList gymCover_;
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getGymCoverList() {
       return gymCover_;
     }
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     public int getGymCoverCount() {
       return gymCover_.size();
     }
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     public java.lang.String getGymCover(int index) {
       return gymCover_.get(index);
     }
     /**
-     * <code>repeated string gymCover = 3;</code>
-     *
      * <pre>
      * 场馆图片
      * </pre>
+     *
+     * <code>repeated string gymCover = 3;</code>
      */
     public com.google.protobuf.ByteString
         getGymCoverBytes(int index) {
@@ -5876,11 +5885,11 @@ public final class Common {
     public static final int PLACE_FIELD_NUMBER = 4;
     private volatile java.lang.Object place_;
     /**
-     * <code>optional string place = 4;</code>
-     *
      * <pre>
      * 场馆所在位置
      * </pre>
+     *
+     * <code>optional string place = 4;</code>
      */
     public java.lang.String getPlace() {
       java.lang.Object ref = place_;
@@ -5895,11 +5904,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string place = 4;</code>
-     *
      * <pre>
      * 场馆所在位置
      * </pre>
+     *
+     * <code>optional string place = 4;</code>
      */
     public com.google.protobuf.ByteString
         getPlaceBytes() {
@@ -5918,11 +5927,11 @@ public final class Common {
     public static final int GYMAVATAR_FIELD_NUMBER = 8;
     private volatile java.lang.Object gymAvatar_;
     /**
-     * <code>optional string gymAvatar = 8;</code>
-     *
      * <pre>
      * 场馆头像
      * </pre>
+     *
+     * <code>optional string gymAvatar = 8;</code>
      */
     public java.lang.String getGymAvatar() {
       java.lang.Object ref = gymAvatar_;
@@ -5937,11 +5946,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string gymAvatar = 8;</code>
-     *
      * <pre>
      * 场馆头像
      * </pre>
+     *
+     * <code>optional string gymAvatar = 8;</code>
      */
     public com.google.protobuf.ByteString
         getGymAvatarBytes() {
@@ -5960,11 +5969,11 @@ public final class Common {
     public static final int LATITUDE_FIELD_NUMBER = 5;
     private float latitude_;
     /**
-     * <code>optional float latitude = 5;</code>
-     *
      * <pre>
      * 纬度
      * </pre>
+     *
+     * <code>optional float latitude = 5;</code>
      */
     public float getLatitude() {
       return latitude_;
@@ -5973,11 +5982,11 @@ public final class Common {
     public static final int LONGITUDE_FIELD_NUMBER = 6;
     private float longitude_;
     /**
-     * <code>optional float longitude = 6;</code>
-     *
      * <pre>
      * 经度
      * </pre>
+     *
+     * <code>optional float longitude = 6;</code>
      */
     public float getLongitude() {
       return longitude_;
@@ -5986,11 +5995,11 @@ public final class Common {
     public static final int ISCOOP_FIELD_NUMBER = 7;
     private boolean isCoop_;
     /**
-     * <code>optional bool isCoop = 7;</code>
-     *
      * <pre>
      * 是否合作（可以在线购买健身卡）
      * </pre>
+     *
+     * <code>optional bool isCoop = 7;</code>
      */
     public boolean getIsCoop() {
       return isCoop_;
@@ -5999,52 +6008,52 @@ public final class Common {
     public static final int EQUIPMENTS_FIELD_NUMBER = 9;
     private java.util.List<com.xiang.proto.Common.Equipment> equipments_;
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     public java.util.List<com.xiang.proto.Common.Equipment> getEquipmentsList() {
       return equipments_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     public java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
         getEquipmentsOrBuilderList() {
       return equipments_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     public int getEquipmentsCount() {
       return equipments_.size();
     }
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     public com.xiang.proto.Common.Equipment getEquipments(int index) {
       return equipments_.get(index);
     }
     /**
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     *
      * <pre>
      * 设备信息
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
      */
     public com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
         int index) {
@@ -6162,34 +6171,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.BriefGym parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefGym parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.BriefGym parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefGym parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.BriefGym parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.BriefGym parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -6211,11 +6226,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.BriefGym}
-     *
      * <pre>
      * BriefGym 场馆
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.BriefGym}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -6410,7 +6425,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.BriefGym) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -6422,21 +6437,21 @@ public final class Common {
 
       private int id_ ;
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 场馆id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public int getId() {
         return id_;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 场馆id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder setId(int value) {
         
@@ -6445,11 +6460,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 id = 1;</code>
-       *
        * <pre>
        * 场馆id
        * </pre>
+       *
+       * <code>optional int32 id = 1;</code>
        */
       public Builder clearId() {
         
@@ -6460,11 +6475,11 @@ public final class Common {
 
       private java.lang.Object gymName_ = "";
       /**
-       * <code>optional string gymName = 2;</code>
-       *
        * <pre>
        * 场馆名字
        * </pre>
+       *
+       * <code>optional string gymName = 2;</code>
        */
       public java.lang.String getGymName() {
         java.lang.Object ref = gymName_;
@@ -6479,11 +6494,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 2;</code>
-       *
        * <pre>
        * 场馆名字
        * </pre>
+       *
+       * <code>optional string gymName = 2;</code>
        */
       public com.google.protobuf.ByteString
           getGymNameBytes() {
@@ -6499,11 +6514,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 2;</code>
-       *
        * <pre>
        * 场馆名字
        * </pre>
+       *
+       * <code>optional string gymName = 2;</code>
        */
       public Builder setGymName(
           java.lang.String value) {
@@ -6516,11 +6531,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 2;</code>
-       *
        * <pre>
        * 场馆名字
        * </pre>
+       *
+       * <code>optional string gymName = 2;</code>
        */
       public Builder clearGymName() {
         
@@ -6529,11 +6544,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 2;</code>
-       *
        * <pre>
        * 场馆名字
        * </pre>
+       *
+       * <code>optional string gymName = 2;</code>
        */
       public Builder setGymNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6555,53 +6570,53 @@ public final class Common {
          }
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getGymCoverList() {
         return gymCover_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public int getGymCoverCount() {
         return gymCover_.size();
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public java.lang.String getGymCover(int index) {
         return gymCover_.get(index);
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public com.google.protobuf.ByteString
           getGymCoverBytes(int index) {
         return gymCover_.getByteString(index);
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public Builder setGymCover(
           int index, java.lang.String value) {
@@ -6614,11 +6629,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public Builder addGymCover(
           java.lang.String value) {
@@ -6631,11 +6646,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public Builder addAllGymCover(
           java.lang.Iterable<java.lang.String> values) {
@@ -6646,11 +6661,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public Builder clearGymCover() {
         gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -6659,11 +6674,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string gymCover = 3;</code>
-       *
        * <pre>
        * 场馆图片
        * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
        */
       public Builder addGymCoverBytes(
           com.google.protobuf.ByteString value) {
@@ -6679,11 +6694,11 @@ public final class Common {
 
       private java.lang.Object place_ = "";
       /**
-       * <code>optional string place = 4;</code>
-       *
        * <pre>
        * 场馆所在位置
        * </pre>
+       *
+       * <code>optional string place = 4;</code>
        */
       public java.lang.String getPlace() {
         java.lang.Object ref = place_;
@@ -6698,11 +6713,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string place = 4;</code>
-       *
        * <pre>
        * 场馆所在位置
        * </pre>
+       *
+       * <code>optional string place = 4;</code>
        */
       public com.google.protobuf.ByteString
           getPlaceBytes() {
@@ -6718,11 +6733,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string place = 4;</code>
-       *
        * <pre>
        * 场馆所在位置
        * </pre>
+       *
+       * <code>optional string place = 4;</code>
        */
       public Builder setPlace(
           java.lang.String value) {
@@ -6735,11 +6750,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string place = 4;</code>
-       *
        * <pre>
        * 场馆所在位置
        * </pre>
+       *
+       * <code>optional string place = 4;</code>
        */
       public Builder clearPlace() {
         
@@ -6748,11 +6763,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string place = 4;</code>
-       *
        * <pre>
        * 场馆所在位置
        * </pre>
+       *
+       * <code>optional string place = 4;</code>
        */
       public Builder setPlaceBytes(
           com.google.protobuf.ByteString value) {
@@ -6768,11 +6783,11 @@ public final class Common {
 
       private java.lang.Object gymAvatar_ = "";
       /**
-       * <code>optional string gymAvatar = 8;</code>
-       *
        * <pre>
        * 场馆头像
        * </pre>
+       *
+       * <code>optional string gymAvatar = 8;</code>
        */
       public java.lang.String getGymAvatar() {
         java.lang.Object ref = gymAvatar_;
@@ -6787,11 +6802,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymAvatar = 8;</code>
-       *
        * <pre>
        * 场馆头像
        * </pre>
+       *
+       * <code>optional string gymAvatar = 8;</code>
        */
       public com.google.protobuf.ByteString
           getGymAvatarBytes() {
@@ -6807,11 +6822,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymAvatar = 8;</code>
-       *
        * <pre>
        * 场馆头像
        * </pre>
+       *
+       * <code>optional string gymAvatar = 8;</code>
        */
       public Builder setGymAvatar(
           java.lang.String value) {
@@ -6824,11 +6839,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymAvatar = 8;</code>
-       *
        * <pre>
        * 场馆头像
        * </pre>
+       *
+       * <code>optional string gymAvatar = 8;</code>
        */
       public Builder clearGymAvatar() {
         
@@ -6837,11 +6852,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymAvatar = 8;</code>
-       *
        * <pre>
        * 场馆头像
        * </pre>
+       *
+       * <code>optional string gymAvatar = 8;</code>
        */
       public Builder setGymAvatarBytes(
           com.google.protobuf.ByteString value) {
@@ -6857,21 +6872,21 @@ public final class Common {
 
       private float latitude_ ;
       /**
-       * <code>optional float latitude = 5;</code>
-       *
        * <pre>
        * 纬度
        * </pre>
+       *
+       * <code>optional float latitude = 5;</code>
        */
       public float getLatitude() {
         return latitude_;
       }
       /**
-       * <code>optional float latitude = 5;</code>
-       *
        * <pre>
        * 纬度
        * </pre>
+       *
+       * <code>optional float latitude = 5;</code>
        */
       public Builder setLatitude(float value) {
         
@@ -6880,11 +6895,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional float latitude = 5;</code>
-       *
        * <pre>
        * 纬度
        * </pre>
+       *
+       * <code>optional float latitude = 5;</code>
        */
       public Builder clearLatitude() {
         
@@ -6895,21 +6910,21 @@ public final class Common {
 
       private float longitude_ ;
       /**
-       * <code>optional float longitude = 6;</code>
-       *
        * <pre>
        * 经度
        * </pre>
+       *
+       * <code>optional float longitude = 6;</code>
        */
       public float getLongitude() {
         return longitude_;
       }
       /**
-       * <code>optional float longitude = 6;</code>
-       *
        * <pre>
        * 经度
        * </pre>
+       *
+       * <code>optional float longitude = 6;</code>
        */
       public Builder setLongitude(float value) {
         
@@ -6918,11 +6933,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional float longitude = 6;</code>
-       *
        * <pre>
        * 经度
        * </pre>
+       *
+       * <code>optional float longitude = 6;</code>
        */
       public Builder clearLongitude() {
         
@@ -6933,21 +6948,21 @@ public final class Common {
 
       private boolean isCoop_ ;
       /**
-       * <code>optional bool isCoop = 7;</code>
-       *
        * <pre>
        * 是否合作（可以在线购买健身卡）
        * </pre>
+       *
+       * <code>optional bool isCoop = 7;</code>
        */
       public boolean getIsCoop() {
         return isCoop_;
       }
       /**
-       * <code>optional bool isCoop = 7;</code>
-       *
        * <pre>
        * 是否合作（可以在线购买健身卡）
        * </pre>
+       *
+       * <code>optional bool isCoop = 7;</code>
        */
       public Builder setIsCoop(boolean value) {
         
@@ -6956,11 +6971,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional bool isCoop = 7;</code>
-       *
        * <pre>
        * 是否合作（可以在线购买健身卡）
        * </pre>
+       *
+       * <code>optional bool isCoop = 7;</code>
        */
       public Builder clearIsCoop() {
         
@@ -6982,11 +6997,11 @@ public final class Common {
           com.xiang.proto.Common.Equipment, com.xiang.proto.Common.Equipment.Builder, com.xiang.proto.Common.EquipmentOrBuilder> equipmentsBuilder_;
 
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public java.util.List<com.xiang.proto.Common.Equipment> getEquipmentsList() {
         if (equipmentsBuilder_ == null) {
@@ -6996,11 +7011,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public int getEquipmentsCount() {
         if (equipmentsBuilder_ == null) {
@@ -7010,11 +7025,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public com.xiang.proto.Common.Equipment getEquipments(int index) {
         if (equipmentsBuilder_ == null) {
@@ -7024,11 +7039,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder setEquipments(
           int index, com.xiang.proto.Common.Equipment value) {
@@ -7045,11 +7060,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder setEquipments(
           int index, com.xiang.proto.Common.Equipment.Builder builderForValue) {
@@ -7063,11 +7078,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder addEquipments(com.xiang.proto.Common.Equipment value) {
         if (equipmentsBuilder_ == null) {
@@ -7083,11 +7098,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder addEquipments(
           int index, com.xiang.proto.Common.Equipment value) {
@@ -7104,11 +7119,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder addEquipments(
           com.xiang.proto.Common.Equipment.Builder builderForValue) {
@@ -7122,11 +7137,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder addEquipments(
           int index, com.xiang.proto.Common.Equipment.Builder builderForValue) {
@@ -7140,11 +7155,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder addAllEquipments(
           java.lang.Iterable<? extends com.xiang.proto.Common.Equipment> values) {
@@ -7159,11 +7174,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder clearEquipments() {
         if (equipmentsBuilder_ == null) {
@@ -7176,11 +7191,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public Builder removeEquipments(int index) {
         if (equipmentsBuilder_ == null) {
@@ -7193,22 +7208,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public com.xiang.proto.Common.Equipment.Builder getEquipmentsBuilder(
           int index) {
         return getEquipmentsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
           int index) {
@@ -7218,11 +7233,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
            getEquipmentsOrBuilderList() {
@@ -7233,22 +7248,22 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public com.xiang.proto.Common.Equipment.Builder addEquipmentsBuilder() {
         return getEquipmentsFieldBuilder().addBuilder(
             com.xiang.proto.Common.Equipment.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public com.xiang.proto.Common.Equipment.Builder addEquipmentsBuilder(
           int index) {
@@ -7256,11 +7271,11 @@ public final class Common {
             index, com.xiang.proto.Common.Equipment.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       *
        * <pre>
        * 设备信息
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
        */
       public java.util.List<com.xiang.proto.Common.Equipment.Builder> 
            getEquipmentsBuilderList() {
@@ -7310,16 +7325,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new BriefGym(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -7343,124 +7349,124 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     boolean hasBriefGym();
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     com.xiang.proto.Common.BriefGym getBriefGym();
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     com.xiang.proto.Common.BriefGymOrBuilder getBriefGymOrBuilder();
 
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     java.util.List<com.xiang.proto.Common.Course> 
         getCoursesList();
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     com.xiang.proto.Common.Course getCourses(int index);
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     int getCoursesCount();
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
         getCoursesOrBuilderList();
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
         int index);
 
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     java.util.List<com.xiang.proto.Common.GymCard> 
         getGymCardsList();
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     com.xiang.proto.Common.GymCard getGymCards(int index);
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     int getGymCardsCount();
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
         getGymCardsOrBuilderList();
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code com.xiang.proto.DetailGym}
-   *
    * <pre>
    * DetailGym 场馆详情
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.DetailGym}
    */
   public  static final class DetailGym extends
       com.google.protobuf.GeneratedMessage implements
@@ -7482,7 +7488,8 @@ public final class Common {
     }
     private DetailGym(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -7531,11 +7538,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           courses_ = java.util.Collections.unmodifiableList(courses_);
@@ -7562,31 +7568,31 @@ public final class Common {
     public static final int BRIEFGYM_FIELD_NUMBER = 1;
     private com.xiang.proto.Common.BriefGym briefGym_;
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     public boolean hasBriefGym() {
       return briefGym_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     public com.xiang.proto.Common.BriefGym getBriefGym() {
       return briefGym_ == null ? com.xiang.proto.Common.BriefGym.getDefaultInstance() : briefGym_;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-     *
      * <pre>
      * 场馆简要信息
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
      */
     public com.xiang.proto.Common.BriefGymOrBuilder getBriefGymOrBuilder() {
       return getBriefGym();
@@ -7595,52 +7601,52 @@ public final class Common {
     public static final int COURSES_FIELD_NUMBER = 3;
     private java.util.List<com.xiang.proto.Common.Course> courses_;
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     public java.util.List<com.xiang.proto.Common.Course> getCoursesList() {
       return courses_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     public java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
         getCoursesOrBuilderList() {
       return courses_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     public int getCoursesCount() {
       return courses_.size();
     }
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     public com.xiang.proto.Common.Course getCourses(int index) {
       return courses_.get(index);
     }
     /**
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     *
      * <pre>
      * 课程
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
      */
     public com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
         int index) {
@@ -7650,52 +7656,52 @@ public final class Common {
     public static final int GYMCARDS_FIELD_NUMBER = 4;
     private java.util.List<com.xiang.proto.Common.GymCard> gymCards_;
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     public java.util.List<com.xiang.proto.Common.GymCard> getGymCardsList() {
       return gymCards_;
     }
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     public java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
         getGymCardsOrBuilderList() {
       return gymCards_;
     }
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     public int getGymCardsCount() {
       return gymCards_.size();
     }
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     public com.xiang.proto.Common.GymCard getGymCards(int index) {
       return gymCards_.get(index);
     }
     /**
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     *
      * <pre>
      * 健身卡
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
      */
     public com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
         int index) {
@@ -7770,34 +7776,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.DetailGym parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailGym parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.DetailGym parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailGym parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.DetailGym parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailGym parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -7819,11 +7831,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.DetailGym}
-     *
      * <pre>
      * DetailGym 场馆详情
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.DetailGym}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -8012,7 +8024,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.DetailGym) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -8026,21 +8038,21 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefGym, com.xiang.proto.Common.BriefGym.Builder, com.xiang.proto.Common.BriefGymOrBuilder> briefGymBuilder_;
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public boolean hasBriefGym() {
         return briefGymBuilder_ != null || briefGym_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public com.xiang.proto.Common.BriefGym getBriefGym() {
         if (briefGymBuilder_ == null) {
@@ -8050,11 +8062,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public Builder setBriefGym(com.xiang.proto.Common.BriefGym value) {
         if (briefGymBuilder_ == null) {
@@ -8070,11 +8082,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public Builder setBriefGym(
           com.xiang.proto.Common.BriefGym.Builder builderForValue) {
@@ -8088,11 +8100,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public Builder mergeBriefGym(com.xiang.proto.Common.BriefGym value) {
         if (briefGymBuilder_ == null) {
@@ -8110,11 +8122,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public Builder clearBriefGym() {
         if (briefGymBuilder_ == null) {
@@ -8128,11 +8140,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public com.xiang.proto.Common.BriefGym.Builder getBriefGymBuilder() {
         
@@ -8140,11 +8152,11 @@ public final class Common {
         return getBriefGymFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       public com.xiang.proto.Common.BriefGymOrBuilder getBriefGymOrBuilder() {
         if (briefGymBuilder_ != null) {
@@ -8155,11 +8167,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
-       *
        * <pre>
        * 场馆简要信息
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefGym briefGym = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefGym, com.xiang.proto.Common.BriefGym.Builder, com.xiang.proto.Common.BriefGymOrBuilder> 
@@ -8188,11 +8200,11 @@ public final class Common {
           com.xiang.proto.Common.Course, com.xiang.proto.Common.Course.Builder, com.xiang.proto.Common.CourseOrBuilder> coursesBuilder_;
 
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public java.util.List<com.xiang.proto.Common.Course> getCoursesList() {
         if (coursesBuilder_ == null) {
@@ -8202,11 +8214,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public int getCoursesCount() {
         if (coursesBuilder_ == null) {
@@ -8216,11 +8228,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public com.xiang.proto.Common.Course getCourses(int index) {
         if (coursesBuilder_ == null) {
@@ -8230,11 +8242,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder setCourses(
           int index, com.xiang.proto.Common.Course value) {
@@ -8251,11 +8263,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder setCourses(
           int index, com.xiang.proto.Common.Course.Builder builderForValue) {
@@ -8269,11 +8281,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder addCourses(com.xiang.proto.Common.Course value) {
         if (coursesBuilder_ == null) {
@@ -8289,11 +8301,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder addCourses(
           int index, com.xiang.proto.Common.Course value) {
@@ -8310,11 +8322,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder addCourses(
           com.xiang.proto.Common.Course.Builder builderForValue) {
@@ -8328,11 +8340,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder addCourses(
           int index, com.xiang.proto.Common.Course.Builder builderForValue) {
@@ -8346,11 +8358,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder addAllCourses(
           java.lang.Iterable<? extends com.xiang.proto.Common.Course> values) {
@@ -8365,11 +8377,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder clearCourses() {
         if (coursesBuilder_ == null) {
@@ -8382,11 +8394,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public Builder removeCourses(int index) {
         if (coursesBuilder_ == null) {
@@ -8399,22 +8411,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public com.xiang.proto.Common.Course.Builder getCoursesBuilder(
           int index) {
         return getCoursesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
           int index) {
@@ -8424,11 +8436,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
            getCoursesOrBuilderList() {
@@ -8439,22 +8451,22 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public com.xiang.proto.Common.Course.Builder addCoursesBuilder() {
         return getCoursesFieldBuilder().addBuilder(
             com.xiang.proto.Common.Course.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public com.xiang.proto.Common.Course.Builder addCoursesBuilder(
           int index) {
@@ -8462,11 +8474,11 @@ public final class Common {
             index, com.xiang.proto.Common.Course.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       *
        * <pre>
        * 课程
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
        */
       public java.util.List<com.xiang.proto.Common.Course.Builder> 
            getCoursesBuilderList() {
@@ -8500,11 +8512,11 @@ public final class Common {
           com.xiang.proto.Common.GymCard, com.xiang.proto.Common.GymCard.Builder, com.xiang.proto.Common.GymCardOrBuilder> gymCardsBuilder_;
 
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public java.util.List<com.xiang.proto.Common.GymCard> getGymCardsList() {
         if (gymCardsBuilder_ == null) {
@@ -8514,11 +8526,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public int getGymCardsCount() {
         if (gymCardsBuilder_ == null) {
@@ -8528,11 +8540,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public com.xiang.proto.Common.GymCard getGymCards(int index) {
         if (gymCardsBuilder_ == null) {
@@ -8542,11 +8554,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder setGymCards(
           int index, com.xiang.proto.Common.GymCard value) {
@@ -8563,11 +8575,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder setGymCards(
           int index, com.xiang.proto.Common.GymCard.Builder builderForValue) {
@@ -8581,11 +8593,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder addGymCards(com.xiang.proto.Common.GymCard value) {
         if (gymCardsBuilder_ == null) {
@@ -8601,11 +8613,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder addGymCards(
           int index, com.xiang.proto.Common.GymCard value) {
@@ -8622,11 +8634,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder addGymCards(
           com.xiang.proto.Common.GymCard.Builder builderForValue) {
@@ -8640,11 +8652,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder addGymCards(
           int index, com.xiang.proto.Common.GymCard.Builder builderForValue) {
@@ -8658,11 +8670,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder addAllGymCards(
           java.lang.Iterable<? extends com.xiang.proto.Common.GymCard> values) {
@@ -8677,11 +8689,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder clearGymCards() {
         if (gymCardsBuilder_ == null) {
@@ -8694,11 +8706,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public Builder removeGymCards(int index) {
         if (gymCardsBuilder_ == null) {
@@ -8711,22 +8723,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public com.xiang.proto.Common.GymCard.Builder getGymCardsBuilder(
           int index) {
         return getGymCardsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
           int index) {
@@ -8736,11 +8748,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
            getGymCardsOrBuilderList() {
@@ -8751,22 +8763,22 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public com.xiang.proto.Common.GymCard.Builder addGymCardsBuilder() {
         return getGymCardsFieldBuilder().addBuilder(
             com.xiang.proto.Common.GymCard.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public com.xiang.proto.Common.GymCard.Builder addGymCardsBuilder(
           int index) {
@@ -8774,11 +8786,11 @@ public final class Common {
             index, com.xiang.proto.Common.GymCard.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       *
        * <pre>
        * 健身卡
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
        */
       public java.util.List<com.xiang.proto.Common.GymCard.Builder> 
            getGymCardsBuilderList() {
@@ -8828,16 +8840,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new DetailGym(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -8861,46 +8864,46 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 器材、设施名
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     java.lang.String getName();
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 器材、设施名
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>optional int32 count = 2;</code>
-     *
      * <pre>
      * 器材数量
      * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
      */
     int getCount();
 
     /**
-     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-     *
      * <pre>
      * enum
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
      */
     int getEquipmentTypeValue();
     /**
-     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-     *
      * <pre>
      * enum
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
      */
     com.xiang.proto.Common.EquipmentType getEquipmentType();
   }
@@ -8928,7 +8931,8 @@ public final class Common {
     }
     private Equipment(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -8946,7 +8950,7 @@ public final class Common {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -8965,11 +8969,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -8989,11 +8992,11 @@ public final class Common {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 器材、设施名
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -9008,11 +9011,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 器材、设施名
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -9031,11 +9034,11 @@ public final class Common {
     public static final int COUNT_FIELD_NUMBER = 2;
     private int count_;
     /**
-     * <code>optional int32 count = 2;</code>
-     *
      * <pre>
      * 器材数量
      * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
      */
     public int getCount() {
       return count_;
@@ -9044,24 +9047,24 @@ public final class Common {
     public static final int EQUIPMENTTYPE_FIELD_NUMBER = 3;
     private int equipmentType_;
     /**
-     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-     *
      * <pre>
      * enum
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
      */
     public int getEquipmentTypeValue() {
       return equipmentType_;
     }
     /**
-     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-     *
      * <pre>
      * enum
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
      */
     public com.xiang.proto.Common.EquipmentType getEquipmentType() {
-      com.xiang.proto.Common.EquipmentType result = com.xiang.proto.Common.EquipmentType.valueOf(equipmentType_);
+      com.xiang.proto.Common.EquipmentType result = com.xiang.proto.Common.EquipmentType.forNumber(equipmentType_);
       return result == null ? com.xiang.proto.Common.EquipmentType.UNRECOGNIZED : result;
     }
 
@@ -9132,34 +9135,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.Equipment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Equipment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Equipment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Equipment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Equipment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Equipment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -9288,7 +9297,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.Equipment) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -9299,11 +9308,11 @@ public final class Common {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 器材、设施名
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -9318,11 +9327,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 器材、设施名
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -9338,11 +9347,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 器材、设施名
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -9355,11 +9364,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 器材、设施名
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder clearName() {
         
@@ -9368,11 +9377,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 器材、设施名
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -9388,21 +9397,21 @@ public final class Common {
 
       private int count_ ;
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 器材数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public int getCount() {
         return count_;
       }
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 器材数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public Builder setCount(int value) {
         
@@ -9411,11 +9420,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 器材数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public Builder clearCount() {
         
@@ -9426,21 +9435,21 @@ public final class Common {
 
       private int equipmentType_ = 0;
       /**
-       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-       *
        * <pre>
        * enum
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
        */
       public int getEquipmentTypeValue() {
         return equipmentType_;
       }
       /**
-       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-       *
        * <pre>
        * enum
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
        */
       public Builder setEquipmentTypeValue(int value) {
         equipmentType_ = value;
@@ -9448,22 +9457,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-       *
        * <pre>
        * enum
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
        */
       public com.xiang.proto.Common.EquipmentType getEquipmentType() {
-        com.xiang.proto.Common.EquipmentType result = com.xiang.proto.Common.EquipmentType.valueOf(equipmentType_);
+        com.xiang.proto.Common.EquipmentType result = com.xiang.proto.Common.EquipmentType.forNumber(equipmentType_);
         return result == null ? com.xiang.proto.Common.EquipmentType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-       *
        * <pre>
        * enum
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
        */
       public Builder setEquipmentType(com.xiang.proto.Common.EquipmentType value) {
         if (value == null) {
@@ -9475,11 +9484,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
-       *
        * <pre>
        * enum
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.EquipmentType equipmentType = 3;</code>
        */
       public Builder clearEquipmentType() {
         
@@ -9517,16 +9526,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Equipment(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -9550,54 +9550,54 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 课程名称
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     java.lang.String getName();
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 课程名称
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>optional int32 week = 2;</code>
-     *
      * <pre>
      * [1-7] [周一 到周日] 0 是每天
      * </pre>
+     *
+     * <code>optional int32 week = 2;</code>
      */
     int getWeek();
 
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     boolean hasCourseTime();
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     com.xiang.proto.Common.CourseTime getCourseTime();
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     com.xiang.proto.Common.CourseTimeOrBuilder getCourseTimeOrBuilder();
   }
@@ -9624,7 +9624,8 @@ public final class Common {
     }
     private Course(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -9642,7 +9643,7 @@ public final class Common {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               name_ = s;
               break;
@@ -9668,11 +9669,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -9692,11 +9692,11 @@ public final class Common {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 课程名称
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -9711,11 +9711,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string name = 1;</code>
-     *
      * <pre>
      * 课程名称
      * </pre>
+     *
+     * <code>optional string name = 1;</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -9734,11 +9734,11 @@ public final class Common {
     public static final int WEEK_FIELD_NUMBER = 2;
     private int week_;
     /**
-     * <code>optional int32 week = 2;</code>
-     *
      * <pre>
      * [1-7] [周一 到周日] 0 是每天
      * </pre>
+     *
+     * <code>optional int32 week = 2;</code>
      */
     public int getWeek() {
       return week_;
@@ -9747,31 +9747,31 @@ public final class Common {
     public static final int COURSETIME_FIELD_NUMBER = 3;
     private com.xiang.proto.Common.CourseTime courseTime_;
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     public boolean hasCourseTime() {
       return courseTime_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     public com.xiang.proto.Common.CourseTime getCourseTime() {
       return courseTime_ == null ? com.xiang.proto.Common.CourseTime.getDefaultInstance() : courseTime_;
     }
     /**
-     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-     *
      * <pre>
      * 课程时间
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
      */
     public com.xiang.proto.Common.CourseTimeOrBuilder getCourseTimeOrBuilder() {
       return getCourseTime();
@@ -9844,34 +9844,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.Course parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Course parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Course parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Course parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Course parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Course parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -10008,7 +10014,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.Course) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10019,11 +10025,11 @@ public final class Common {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 课程名称
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -10038,11 +10044,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 课程名称
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -10058,11 +10064,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 课程名称
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -10075,11 +10081,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 课程名称
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder clearName() {
         
@@ -10088,11 +10094,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string name = 1;</code>
-       *
        * <pre>
        * 课程名称
        * </pre>
+       *
+       * <code>optional string name = 1;</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -10108,21 +10114,21 @@ public final class Common {
 
       private int week_ ;
       /**
-       * <code>optional int32 week = 2;</code>
-       *
        * <pre>
        * [1-7] [周一 到周日] 0 是每天
        * </pre>
+       *
+       * <code>optional int32 week = 2;</code>
        */
       public int getWeek() {
         return week_;
       }
       /**
-       * <code>optional int32 week = 2;</code>
-       *
        * <pre>
        * [1-7] [周一 到周日] 0 是每天
        * </pre>
+       *
+       * <code>optional int32 week = 2;</code>
        */
       public Builder setWeek(int value) {
         
@@ -10131,11 +10137,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 week = 2;</code>
-       *
        * <pre>
        * [1-7] [周一 到周日] 0 是每天
        * </pre>
+       *
+       * <code>optional int32 week = 2;</code>
        */
       public Builder clearWeek() {
         
@@ -10148,21 +10154,21 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.CourseTime, com.xiang.proto.Common.CourseTime.Builder, com.xiang.proto.Common.CourseTimeOrBuilder> courseTimeBuilder_;
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public boolean hasCourseTime() {
         return courseTimeBuilder_ != null || courseTime_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public com.xiang.proto.Common.CourseTime getCourseTime() {
         if (courseTimeBuilder_ == null) {
@@ -10172,11 +10178,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public Builder setCourseTime(com.xiang.proto.Common.CourseTime value) {
         if (courseTimeBuilder_ == null) {
@@ -10192,11 +10198,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public Builder setCourseTime(
           com.xiang.proto.Common.CourseTime.Builder builderForValue) {
@@ -10210,11 +10216,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public Builder mergeCourseTime(com.xiang.proto.Common.CourseTime value) {
         if (courseTimeBuilder_ == null) {
@@ -10232,11 +10238,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public Builder clearCourseTime() {
         if (courseTimeBuilder_ == null) {
@@ -10250,11 +10256,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public com.xiang.proto.Common.CourseTime.Builder getCourseTimeBuilder() {
         
@@ -10262,11 +10268,11 @@ public final class Common {
         return getCourseTimeFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       public com.xiang.proto.Common.CourseTimeOrBuilder getCourseTimeOrBuilder() {
         if (courseTimeBuilder_ != null) {
@@ -10277,11 +10283,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
-       *
        * <pre>
        * 课程时间
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CourseTime courseTime = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.CourseTime, com.xiang.proto.Common.CourseTime.Builder, com.xiang.proto.Common.CourseTimeOrBuilder> 
@@ -10326,16 +10332,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Course(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -10359,38 +10356,38 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 fromHour = 1;</code>
-     *
      * <pre>
      * 开始时间 --小时            24小时计时法
      * </pre>
+     *
+     * <code>optional int32 fromHour = 1;</code>
      */
     int getFromHour();
 
     /**
-     * <code>optional int32 fromMinite = 2;</code>
-     *
      * <pre>
      * 开始时间 --分钟
      * </pre>
+     *
+     * <code>optional int32 fromMinite = 2;</code>
      */
     int getFromMinite();
 
     /**
-     * <code>optional int32 toHour = 3;</code>
-     *
      * <pre>
      * 结束时间 --小时
      * </pre>
+     *
+     * <code>optional int32 toHour = 3;</code>
      */
     int getToHour();
 
     /**
-     * <code>optional int32 toMinite = 4;</code>
-     *
      * <pre>
      * 结束时间 --分钟
      * </pre>
+     *
+     * <code>optional int32 toMinite = 4;</code>
      */
     int getToMinite();
   }
@@ -10419,7 +10416,8 @@ public final class Common {
     }
     private CourseTime(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -10459,11 +10457,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -10483,11 +10480,11 @@ public final class Common {
     public static final int FROMHOUR_FIELD_NUMBER = 1;
     private int fromHour_;
     /**
-     * <code>optional int32 fromHour = 1;</code>
-     *
      * <pre>
      * 开始时间 --小时            24小时计时法
      * </pre>
+     *
+     * <code>optional int32 fromHour = 1;</code>
      */
     public int getFromHour() {
       return fromHour_;
@@ -10496,11 +10493,11 @@ public final class Common {
     public static final int FROMMINITE_FIELD_NUMBER = 2;
     private int fromMinite_;
     /**
-     * <code>optional int32 fromMinite = 2;</code>
-     *
      * <pre>
      * 开始时间 --分钟
      * </pre>
+     *
+     * <code>optional int32 fromMinite = 2;</code>
      */
     public int getFromMinite() {
       return fromMinite_;
@@ -10509,11 +10506,11 @@ public final class Common {
     public static final int TOHOUR_FIELD_NUMBER = 3;
     private int toHour_;
     /**
-     * <code>optional int32 toHour = 3;</code>
-     *
      * <pre>
      * 结束时间 --小时
      * </pre>
+     *
+     * <code>optional int32 toHour = 3;</code>
      */
     public int getToHour() {
       return toHour_;
@@ -10522,11 +10519,11 @@ public final class Common {
     public static final int TOMINITE_FIELD_NUMBER = 4;
     private int toMinite_;
     /**
-     * <code>optional int32 toMinite = 4;</code>
-     *
      * <pre>
      * 结束时间 --分钟
      * </pre>
+     *
+     * <code>optional int32 toMinite = 4;</code>
      */
     public int getToMinite() {
       return toMinite_;
@@ -10607,34 +10604,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.CourseTime parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CourseTime parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.CourseTime parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CourseTime parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.CourseTime parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CourseTime parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -10768,7 +10771,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.CourseTime) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -10779,21 +10782,21 @@ public final class Common {
 
       private int fromHour_ ;
       /**
-       * <code>optional int32 fromHour = 1;</code>
-       *
        * <pre>
        * 开始时间 --小时            24小时计时法
        * </pre>
+       *
+       * <code>optional int32 fromHour = 1;</code>
        */
       public int getFromHour() {
         return fromHour_;
       }
       /**
-       * <code>optional int32 fromHour = 1;</code>
-       *
        * <pre>
        * 开始时间 --小时            24小时计时法
        * </pre>
+       *
+       * <code>optional int32 fromHour = 1;</code>
        */
       public Builder setFromHour(int value) {
         
@@ -10802,11 +10805,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 fromHour = 1;</code>
-       *
        * <pre>
        * 开始时间 --小时            24小时计时法
        * </pre>
+       *
+       * <code>optional int32 fromHour = 1;</code>
        */
       public Builder clearFromHour() {
         
@@ -10817,21 +10820,21 @@ public final class Common {
 
       private int fromMinite_ ;
       /**
-       * <code>optional int32 fromMinite = 2;</code>
-       *
        * <pre>
        * 开始时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 fromMinite = 2;</code>
        */
       public int getFromMinite() {
         return fromMinite_;
       }
       /**
-       * <code>optional int32 fromMinite = 2;</code>
-       *
        * <pre>
        * 开始时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 fromMinite = 2;</code>
        */
       public Builder setFromMinite(int value) {
         
@@ -10840,11 +10843,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 fromMinite = 2;</code>
-       *
        * <pre>
        * 开始时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 fromMinite = 2;</code>
        */
       public Builder clearFromMinite() {
         
@@ -10855,21 +10858,21 @@ public final class Common {
 
       private int toHour_ ;
       /**
-       * <code>optional int32 toHour = 3;</code>
-       *
        * <pre>
        * 结束时间 --小时
        * </pre>
+       *
+       * <code>optional int32 toHour = 3;</code>
        */
       public int getToHour() {
         return toHour_;
       }
       /**
-       * <code>optional int32 toHour = 3;</code>
-       *
        * <pre>
        * 结束时间 --小时
        * </pre>
+       *
+       * <code>optional int32 toHour = 3;</code>
        */
       public Builder setToHour(int value) {
         
@@ -10878,11 +10881,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 toHour = 3;</code>
-       *
        * <pre>
        * 结束时间 --小时
        * </pre>
+       *
+       * <code>optional int32 toHour = 3;</code>
        */
       public Builder clearToHour() {
         
@@ -10893,21 +10896,21 @@ public final class Common {
 
       private int toMinite_ ;
       /**
-       * <code>optional int32 toMinite = 4;</code>
-       *
        * <pre>
        * 结束时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 toMinite = 4;</code>
        */
       public int getToMinite() {
         return toMinite_;
       }
       /**
-       * <code>optional int32 toMinite = 4;</code>
-       *
        * <pre>
        * 结束时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 toMinite = 4;</code>
        */
       public Builder setToMinite(int value) {
         
@@ -10916,11 +10919,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 toMinite = 4;</code>
-       *
        * <pre>
        * 结束时间 --分钟
        * </pre>
+       *
+       * <code>optional int32 toMinite = 4;</code>
        */
       public Builder clearToMinite() {
         
@@ -10958,16 +10961,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new CourseTime(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -10991,28 +10985,28 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-     *
      * <pre>
      * 卡片类型
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
      */
     int getCardTypeValue();
     /**
-     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-     *
      * <pre>
      * 卡片类型
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
      */
     com.xiang.proto.Common.CardType getCardType();
 
     /**
-     * <code>optional float price = 2;</code>
-     *
      * <pre>
      * 价格
      * </pre>
+     *
+     * <code>optional float price = 2;</code>
      */
     float getPrice();
   }
@@ -11039,7 +11033,8 @@ public final class Common {
     }
     private GymCard(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -11070,11 +11065,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -11094,35 +11088,35 @@ public final class Common {
     public static final int CARDTYPE_FIELD_NUMBER = 1;
     private int cardType_;
     /**
-     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-     *
      * <pre>
      * 卡片类型
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
      */
     public int getCardTypeValue() {
       return cardType_;
     }
     /**
-     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-     *
      * <pre>
      * 卡片类型
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
      */
     public com.xiang.proto.Common.CardType getCardType() {
-      com.xiang.proto.Common.CardType result = com.xiang.proto.Common.CardType.valueOf(cardType_);
+      com.xiang.proto.Common.CardType result = com.xiang.proto.Common.CardType.forNumber(cardType_);
       return result == null ? com.xiang.proto.Common.CardType.UNRECOGNIZED : result;
     }
 
     public static final int PRICE_FIELD_NUMBER = 2;
     private float price_;
     /**
-     * <code>optional float price = 2;</code>
-     *
      * <pre>
      * 价格
      * </pre>
+     *
+     * <code>optional float price = 2;</code>
      */
     public float getPrice() {
       return price_;
@@ -11189,34 +11183,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.GymCard parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.GymCard parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.GymCard parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.GymCard parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.GymCard parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.GymCard parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -11338,7 +11338,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.GymCard) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -11349,21 +11349,21 @@ public final class Common {
 
       private int cardType_ = 0;
       /**
-       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-       *
        * <pre>
        * 卡片类型
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
        */
       public int getCardTypeValue() {
         return cardType_;
       }
       /**
-       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-       *
        * <pre>
        * 卡片类型
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
        */
       public Builder setCardTypeValue(int value) {
         cardType_ = value;
@@ -11371,22 +11371,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-       *
        * <pre>
        * 卡片类型
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
        */
       public com.xiang.proto.Common.CardType getCardType() {
-        com.xiang.proto.Common.CardType result = com.xiang.proto.Common.CardType.valueOf(cardType_);
+        com.xiang.proto.Common.CardType result = com.xiang.proto.Common.CardType.forNumber(cardType_);
         return result == null ? com.xiang.proto.Common.CardType.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-       *
        * <pre>
        * 卡片类型
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
        */
       public Builder setCardType(com.xiang.proto.Common.CardType value) {
         if (value == null) {
@@ -11398,11 +11398,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
-       *
        * <pre>
        * 卡片类型
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.CardType cardType = 1;</code>
        */
       public Builder clearCardType() {
         
@@ -11413,21 +11413,21 @@ public final class Common {
 
       private float price_ ;
       /**
-       * <code>optional float price = 2;</code>
-       *
        * <pre>
        * 价格
        * </pre>
+       *
+       * <code>optional float price = 2;</code>
        */
       public float getPrice() {
         return price_;
       }
       /**
-       * <code>optional float price = 2;</code>
-       *
        * <pre>
        * 价格
        * </pre>
+       *
+       * <code>optional float price = 2;</code>
        */
       public Builder setPrice(float value) {
         
@@ -11436,11 +11436,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional float price = 2;</code>
-       *
        * <pre>
        * 价格
        * </pre>
+       *
+       * <code>optional float price = 2;</code>
        */
       public Builder clearPrice() {
         
@@ -11478,16 +11478,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new GymCard(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -11511,74 +11502,74 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 messageId = 1;</code>
-     *
      * <pre>
      * 消息的id
      * </pre>
+     *
+     * <code>optional int32 messageId = 1;</code>
      */
     int getMessageId();
 
     /**
-     * <code>optional string messageContent = 2;</code>
-     *
      * <pre>
      * 消息的内容
      * </pre>
+     *
+     * <code>optional string messageContent = 2;</code>
      */
     java.lang.String getMessageContent();
     /**
-     * <code>optional string messageContent = 2;</code>
-     *
      * <pre>
      * 消息的内容
      * </pre>
+     *
+     * <code>optional string messageContent = 2;</code>
      */
     com.google.protobuf.ByteString
         getMessageContentBytes();
 
     /**
-     * <code>optional string avatar = 3;</code>
-     *
      * <pre>
      * 消息所使用的头像 如果是"sportx"则是官方头像
      * </pre>
+     *
+     * <code>optional string avatar = 3;</code>
      */
     java.lang.String getAvatar();
     /**
-     * <code>optional string avatar = 3;</code>
-     *
      * <pre>
      * 消息所使用的头像 如果是"sportx"则是官方头像
      * </pre>
+     *
+     * <code>optional string avatar = 3;</code>
      */
     com.google.protobuf.ByteString
         getAvatarBytes();
 
     /**
-     * <code>optional int64 createTime = 4;</code>
-     *
      * <pre>
      * 创建时间 毫秒时间戳
      * </pre>
+     *
+     * <code>optional int64 createTime = 4;</code>
      */
     long getCreateTime();
 
     /**
-     * <code>optional int32 trendId = 5;</code>
-     *
      * <pre>
      * 消息对应的trendId
      * </pre>
+     *
+     * <code>optional int32 trendId = 5;</code>
      */
     int getTrendId();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.CommentMessage}
-   *
    * <pre>
    * 评论消息
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.CommentMessage}
    */
   public  static final class CommentMessage extends
       com.google.protobuf.GeneratedMessage implements
@@ -11603,7 +11594,8 @@ public final class Common {
     }
     private CommentMessage(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -11626,13 +11618,13 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               messageContent_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               avatar_ = s;
               break;
@@ -11650,11 +11642,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -11674,11 +11665,11 @@ public final class Common {
     public static final int MESSAGEID_FIELD_NUMBER = 1;
     private int messageId_;
     /**
-     * <code>optional int32 messageId = 1;</code>
-     *
      * <pre>
      * 消息的id
      * </pre>
+     *
+     * <code>optional int32 messageId = 1;</code>
      */
     public int getMessageId() {
       return messageId_;
@@ -11687,11 +11678,11 @@ public final class Common {
     public static final int MESSAGECONTENT_FIELD_NUMBER = 2;
     private volatile java.lang.Object messageContent_;
     /**
-     * <code>optional string messageContent = 2;</code>
-     *
      * <pre>
      * 消息的内容
      * </pre>
+     *
+     * <code>optional string messageContent = 2;</code>
      */
     public java.lang.String getMessageContent() {
       java.lang.Object ref = messageContent_;
@@ -11706,11 +11697,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string messageContent = 2;</code>
-     *
      * <pre>
      * 消息的内容
      * </pre>
+     *
+     * <code>optional string messageContent = 2;</code>
      */
     public com.google.protobuf.ByteString
         getMessageContentBytes() {
@@ -11729,11 +11720,11 @@ public final class Common {
     public static final int AVATAR_FIELD_NUMBER = 3;
     private volatile java.lang.Object avatar_;
     /**
-     * <code>optional string avatar = 3;</code>
-     *
      * <pre>
      * 消息所使用的头像 如果是"sportx"则是官方头像
      * </pre>
+     *
+     * <code>optional string avatar = 3;</code>
      */
     public java.lang.String getAvatar() {
       java.lang.Object ref = avatar_;
@@ -11748,11 +11739,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string avatar = 3;</code>
-     *
      * <pre>
      * 消息所使用的头像 如果是"sportx"则是官方头像
      * </pre>
+     *
+     * <code>optional string avatar = 3;</code>
      */
     public com.google.protobuf.ByteString
         getAvatarBytes() {
@@ -11771,11 +11762,11 @@ public final class Common {
     public static final int CREATETIME_FIELD_NUMBER = 4;
     private long createTime_;
     /**
-     * <code>optional int64 createTime = 4;</code>
-     *
      * <pre>
      * 创建时间 毫秒时间戳
      * </pre>
+     *
+     * <code>optional int64 createTime = 4;</code>
      */
     public long getCreateTime() {
       return createTime_;
@@ -11784,11 +11775,11 @@ public final class Common {
     public static final int TRENDID_FIELD_NUMBER = 5;
     private int trendId_;
     /**
-     * <code>optional int32 trendId = 5;</code>
-     *
      * <pre>
      * 消息对应的trendId
      * </pre>
+     *
+     * <code>optional int32 trendId = 5;</code>
      */
     public int getTrendId() {
       return trendId_;
@@ -11874,34 +11865,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.CommentMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CommentMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.CommentMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CommentMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.CommentMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.CommentMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -11923,11 +11920,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.CommentMessage}
-     *
      * <pre>
      * 评论消息
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.CommentMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -12047,7 +12044,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.CommentMessage) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -12058,21 +12055,21 @@ public final class Common {
 
       private int messageId_ ;
       /**
-       * <code>optional int32 messageId = 1;</code>
-       *
        * <pre>
        * 消息的id
        * </pre>
+       *
+       * <code>optional int32 messageId = 1;</code>
        */
       public int getMessageId() {
         return messageId_;
       }
       /**
-       * <code>optional int32 messageId = 1;</code>
-       *
        * <pre>
        * 消息的id
        * </pre>
+       *
+       * <code>optional int32 messageId = 1;</code>
        */
       public Builder setMessageId(int value) {
         
@@ -12081,11 +12078,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 messageId = 1;</code>
-       *
        * <pre>
        * 消息的id
        * </pre>
+       *
+       * <code>optional int32 messageId = 1;</code>
        */
       public Builder clearMessageId() {
         
@@ -12096,11 +12093,11 @@ public final class Common {
 
       private java.lang.Object messageContent_ = "";
       /**
-       * <code>optional string messageContent = 2;</code>
-       *
        * <pre>
        * 消息的内容
        * </pre>
+       *
+       * <code>optional string messageContent = 2;</code>
        */
       public java.lang.String getMessageContent() {
         java.lang.Object ref = messageContent_;
@@ -12115,11 +12112,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string messageContent = 2;</code>
-       *
        * <pre>
        * 消息的内容
        * </pre>
+       *
+       * <code>optional string messageContent = 2;</code>
        */
       public com.google.protobuf.ByteString
           getMessageContentBytes() {
@@ -12135,11 +12132,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string messageContent = 2;</code>
-       *
        * <pre>
        * 消息的内容
        * </pre>
+       *
+       * <code>optional string messageContent = 2;</code>
        */
       public Builder setMessageContent(
           java.lang.String value) {
@@ -12152,11 +12149,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string messageContent = 2;</code>
-       *
        * <pre>
        * 消息的内容
        * </pre>
+       *
+       * <code>optional string messageContent = 2;</code>
        */
       public Builder clearMessageContent() {
         
@@ -12165,11 +12162,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string messageContent = 2;</code>
-       *
        * <pre>
        * 消息的内容
        * </pre>
+       *
+       * <code>optional string messageContent = 2;</code>
        */
       public Builder setMessageContentBytes(
           com.google.protobuf.ByteString value) {
@@ -12185,11 +12182,11 @@ public final class Common {
 
       private java.lang.Object avatar_ = "";
       /**
-       * <code>optional string avatar = 3;</code>
-       *
        * <pre>
        * 消息所使用的头像 如果是"sportx"则是官方头像
        * </pre>
+       *
+       * <code>optional string avatar = 3;</code>
        */
       public java.lang.String getAvatar() {
         java.lang.Object ref = avatar_;
@@ -12204,11 +12201,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string avatar = 3;</code>
-       *
        * <pre>
        * 消息所使用的头像 如果是"sportx"则是官方头像
        * </pre>
+       *
+       * <code>optional string avatar = 3;</code>
        */
       public com.google.protobuf.ByteString
           getAvatarBytes() {
@@ -12224,11 +12221,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string avatar = 3;</code>
-       *
        * <pre>
        * 消息所使用的头像 如果是"sportx"则是官方头像
        * </pre>
+       *
+       * <code>optional string avatar = 3;</code>
        */
       public Builder setAvatar(
           java.lang.String value) {
@@ -12241,11 +12238,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string avatar = 3;</code>
-       *
        * <pre>
        * 消息所使用的头像 如果是"sportx"则是官方头像
        * </pre>
+       *
+       * <code>optional string avatar = 3;</code>
        */
       public Builder clearAvatar() {
         
@@ -12254,11 +12251,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string avatar = 3;</code>
-       *
        * <pre>
        * 消息所使用的头像 如果是"sportx"则是官方头像
        * </pre>
+       *
+       * <code>optional string avatar = 3;</code>
        */
       public Builder setAvatarBytes(
           com.google.protobuf.ByteString value) {
@@ -12274,21 +12271,21 @@ public final class Common {
 
       private long createTime_ ;
       /**
-       * <code>optional int64 createTime = 4;</code>
-       *
        * <pre>
        * 创建时间 毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 4;</code>
        */
       public long getCreateTime() {
         return createTime_;
       }
       /**
-       * <code>optional int64 createTime = 4;</code>
-       *
        * <pre>
        * 创建时间 毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 4;</code>
        */
       public Builder setCreateTime(long value) {
         
@@ -12297,11 +12294,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int64 createTime = 4;</code>
-       *
        * <pre>
        * 创建时间 毫秒时间戳
        * </pre>
+       *
+       * <code>optional int64 createTime = 4;</code>
        */
       public Builder clearCreateTime() {
         
@@ -12312,21 +12309,21 @@ public final class Common {
 
       private int trendId_ ;
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 消息对应的trendId
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public int getTrendId() {
         return trendId_;
       }
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 消息对应的trendId
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public Builder setTrendId(int value) {
         
@@ -12335,11 +12332,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 trendId = 5;</code>
-       *
        * <pre>
        * 消息对应的trendId
        * </pre>
+       *
+       * <code>optional int32 trendId = 5;</code>
        */
       public Builder clearTrendId() {
         
@@ -12377,16 +12374,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new CommentMessage(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -12410,72 +12398,72 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     boolean hasBriefUser();
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     com.xiang.proto.Common.BriefUser getBriefUser();
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder();
 
     /**
-     * <code>optional int32 commentId = 2;</code>
-     *
      * <pre>
      * 评论的id
      * </pre>
+     *
+     * <code>optional int32 commentId = 2;</code>
      */
     int getCommentId();
 
     /**
-     * <code>optional string commentContent = 3;</code>
-     *
      * <pre>
      * 评论的内容
      * </pre>
+     *
+     * <code>optional string commentContent = 3;</code>
      */
     java.lang.String getCommentContent();
     /**
-     * <code>optional string commentContent = 3;</code>
-     *
      * <pre>
      * 评论的内容
      * </pre>
+     *
+     * <code>optional string commentContent = 3;</code>
      */
     com.google.protobuf.ByteString
         getCommentContentBytes();
 
     /**
-     * <code>optional int32 trendId = 4;</code>
-     *
      * <pre>
      * 评论动态的id
      * </pre>
+     *
+     * <code>optional int32 trendId = 4;</code>
      */
     int getTrendId();
 
     /**
-     * <code>optional int32 toUserid = 5;</code>
-     *
      * <pre>
      * 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
      * </pre>
+     *
+     * <code>optional int32 toUserid = 5;</code>
      */
     int getToUserid();
 
@@ -12490,38 +12478,38 @@ public final class Common {
         getToUserNameBytes();
 
     /**
-     * <code>optional int64 createTime = 7;</code>
-     *
      * <pre>
      * 时间
      * </pre>
+     *
+     * <code>optional int64 createTime = 7;</code>
      */
     long getCreateTime();
 
     /**
-     * <code>optional string gymName = 8;</code>
-     *
      * <pre>
      * 场馆名 地点
      * </pre>
+     *
+     * <code>optional string gymName = 8;</code>
      */
     java.lang.String getGymName();
     /**
-     * <code>optional string gymName = 8;</code>
-     *
      * <pre>
      * 场馆名 地点
      * </pre>
+     *
+     * <code>optional string gymName = 8;</code>
      */
     com.google.protobuf.ByteString
         getGymNameBytes();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.Comment}
-   *
    * <pre>
    * trend(动态) 的评论
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.Comment}
    */
   public  static final class Comment extends
       com.google.protobuf.GeneratedMessage implements
@@ -12548,7 +12536,8 @@ public final class Common {
     }
     private Comment(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -12584,7 +12573,7 @@ public final class Common {
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               commentContent_ = s;
               break;
@@ -12600,7 +12589,7 @@ public final class Common {
               break;
             }
             case 50: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               toUserName_ = s;
               break;
@@ -12611,7 +12600,7 @@ public final class Common {
               break;
             }
             case 66: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               gymName_ = s;
               break;
@@ -12619,11 +12608,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -12643,31 +12631,31 @@ public final class Common {
     public static final int BRIEFUSER_FIELD_NUMBER = 1;
     private com.xiang.proto.Common.BriefUser briefUser_;
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     public boolean hasBriefUser() {
       return briefUser_ != null;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     public com.xiang.proto.Common.BriefUser getBriefUser() {
       return briefUser_ == null ? com.xiang.proto.Common.BriefUser.getDefaultInstance() : briefUser_;
     }
     /**
-     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-     *
      * <pre>
      * 发评论的人
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
      */
     public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
       return getBriefUser();
@@ -12676,11 +12664,11 @@ public final class Common {
     public static final int COMMENTID_FIELD_NUMBER = 2;
     private int commentId_;
     /**
-     * <code>optional int32 commentId = 2;</code>
-     *
      * <pre>
      * 评论的id
      * </pre>
+     *
+     * <code>optional int32 commentId = 2;</code>
      */
     public int getCommentId() {
       return commentId_;
@@ -12689,11 +12677,11 @@ public final class Common {
     public static final int COMMENTCONTENT_FIELD_NUMBER = 3;
     private volatile java.lang.Object commentContent_;
     /**
-     * <code>optional string commentContent = 3;</code>
-     *
      * <pre>
      * 评论的内容
      * </pre>
+     *
+     * <code>optional string commentContent = 3;</code>
      */
     public java.lang.String getCommentContent() {
       java.lang.Object ref = commentContent_;
@@ -12708,11 +12696,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string commentContent = 3;</code>
-     *
      * <pre>
      * 评论的内容
      * </pre>
+     *
+     * <code>optional string commentContent = 3;</code>
      */
     public com.google.protobuf.ByteString
         getCommentContentBytes() {
@@ -12731,11 +12719,11 @@ public final class Common {
     public static final int TRENDID_FIELD_NUMBER = 4;
     private int trendId_;
     /**
-     * <code>optional int32 trendId = 4;</code>
-     *
      * <pre>
      * 评论动态的id
      * </pre>
+     *
+     * <code>optional int32 trendId = 4;</code>
      */
     public int getTrendId() {
       return trendId_;
@@ -12744,11 +12732,11 @@ public final class Common {
     public static final int TOUSERID_FIELD_NUMBER = 5;
     private int toUserid_;
     /**
-     * <code>optional int32 toUserid = 5;</code>
-     *
      * <pre>
      * 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
      * </pre>
+     *
+     * <code>optional int32 toUserid = 5;</code>
      */
     public int getToUserid() {
       return toUserid_;
@@ -12791,11 +12779,11 @@ public final class Common {
     public static final int CREATETIME_FIELD_NUMBER = 7;
     private long createTime_;
     /**
-     * <code>optional int64 createTime = 7;</code>
-     *
      * <pre>
      * 时间
      * </pre>
+     *
+     * <code>optional int64 createTime = 7;</code>
      */
     public long getCreateTime() {
       return createTime_;
@@ -12804,11 +12792,11 @@ public final class Common {
     public static final int GYMNAME_FIELD_NUMBER = 8;
     private volatile java.lang.Object gymName_;
     /**
-     * <code>optional string gymName = 8;</code>
-     *
      * <pre>
      * 场馆名 地点
      * </pre>
+     *
+     * <code>optional string gymName = 8;</code>
      */
     public java.lang.String getGymName() {
       java.lang.Object ref = gymName_;
@@ -12823,11 +12811,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string gymName = 8;</code>
-     *
      * <pre>
      * 场馆名 地点
      * </pre>
+     *
+     * <code>optional string gymName = 8;</code>
      */
     public com.google.protobuf.ByteString
         getGymNameBytes() {
@@ -12943,34 +12931,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.Comment parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Comment parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Comment parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Comment parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.Comment parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.Comment parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -12992,11 +12986,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.Comment}
-     *
      * <pre>
      * trend(动态) 的评论
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.Comment}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -13143,7 +13137,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.Comment) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -13156,21 +13150,21 @@ public final class Common {
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUserBuilder_;
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public boolean hasBriefUser() {
         return briefUserBuilder_ != null || briefUser_ != null;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public com.xiang.proto.Common.BriefUser getBriefUser() {
         if (briefUserBuilder_ == null) {
@@ -13180,11 +13174,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public Builder setBriefUser(com.xiang.proto.Common.BriefUser value) {
         if (briefUserBuilder_ == null) {
@@ -13200,11 +13194,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public Builder setBriefUser(
           com.xiang.proto.Common.BriefUser.Builder builderForValue) {
@@ -13218,11 +13212,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public Builder mergeBriefUser(com.xiang.proto.Common.BriefUser value) {
         if (briefUserBuilder_ == null) {
@@ -13240,11 +13234,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public Builder clearBriefUser() {
         if (briefUserBuilder_ == null) {
@@ -13258,11 +13252,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public com.xiang.proto.Common.BriefUser.Builder getBriefUserBuilder() {
         
@@ -13270,11 +13264,11 @@ public final class Common {
         return getBriefUserFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       public com.xiang.proto.Common.BriefUserOrBuilder getBriefUserOrBuilder() {
         if (briefUserBuilder_ != null) {
@@ -13285,11 +13279,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
-       *
        * <pre>
        * 发评论的人
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.BriefUser briefUser = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> 
@@ -13307,21 +13301,21 @@ public final class Common {
 
       private int commentId_ ;
       /**
-       * <code>optional int32 commentId = 2;</code>
-       *
        * <pre>
        * 评论的id
        * </pre>
+       *
+       * <code>optional int32 commentId = 2;</code>
        */
       public int getCommentId() {
         return commentId_;
       }
       /**
-       * <code>optional int32 commentId = 2;</code>
-       *
        * <pre>
        * 评论的id
        * </pre>
+       *
+       * <code>optional int32 commentId = 2;</code>
        */
       public Builder setCommentId(int value) {
         
@@ -13330,11 +13324,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 commentId = 2;</code>
-       *
        * <pre>
        * 评论的id
        * </pre>
+       *
+       * <code>optional int32 commentId = 2;</code>
        */
       public Builder clearCommentId() {
         
@@ -13345,11 +13339,11 @@ public final class Common {
 
       private java.lang.Object commentContent_ = "";
       /**
-       * <code>optional string commentContent = 3;</code>
-       *
        * <pre>
        * 评论的内容
        * </pre>
+       *
+       * <code>optional string commentContent = 3;</code>
        */
       public java.lang.String getCommentContent() {
         java.lang.Object ref = commentContent_;
@@ -13364,11 +13358,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string commentContent = 3;</code>
-       *
        * <pre>
        * 评论的内容
        * </pre>
+       *
+       * <code>optional string commentContent = 3;</code>
        */
       public com.google.protobuf.ByteString
           getCommentContentBytes() {
@@ -13384,11 +13378,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string commentContent = 3;</code>
-       *
        * <pre>
        * 评论的内容
        * </pre>
+       *
+       * <code>optional string commentContent = 3;</code>
        */
       public Builder setCommentContent(
           java.lang.String value) {
@@ -13401,11 +13395,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string commentContent = 3;</code>
-       *
        * <pre>
        * 评论的内容
        * </pre>
+       *
+       * <code>optional string commentContent = 3;</code>
        */
       public Builder clearCommentContent() {
         
@@ -13414,11 +13408,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string commentContent = 3;</code>
-       *
        * <pre>
        * 评论的内容
        * </pre>
+       *
+       * <code>optional string commentContent = 3;</code>
        */
       public Builder setCommentContentBytes(
           com.google.protobuf.ByteString value) {
@@ -13434,21 +13428,21 @@ public final class Common {
 
       private int trendId_ ;
       /**
-       * <code>optional int32 trendId = 4;</code>
-       *
        * <pre>
        * 评论动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 4;</code>
        */
       public int getTrendId() {
         return trendId_;
       }
       /**
-       * <code>optional int32 trendId = 4;</code>
-       *
        * <pre>
        * 评论动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 4;</code>
        */
       public Builder setTrendId(int value) {
         
@@ -13457,11 +13451,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 trendId = 4;</code>
-       *
        * <pre>
        * 评论动态的id
        * </pre>
+       *
+       * <code>optional int32 trendId = 4;</code>
        */
       public Builder clearTrendId() {
         
@@ -13472,21 +13466,21 @@ public final class Common {
 
       private int toUserid_ ;
       /**
-       * <code>optional int32 toUserid = 5;</code>
-       *
        * <pre>
        * 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
        * </pre>
+       *
+       * <code>optional int32 toUserid = 5;</code>
        */
       public int getToUserid() {
         return toUserid_;
       }
       /**
-       * <code>optional int32 toUserid = 5;</code>
-       *
        * <pre>
        * 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
        * </pre>
+       *
+       * <code>optional int32 toUserid = 5;</code>
        */
       public Builder setToUserid(int value) {
         
@@ -13495,11 +13489,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 toUserid = 5;</code>
-       *
        * <pre>
        * 回复某人的评论时需要加上对应的user的id和name，如果没有，则是直接评论动态
        * </pre>
+       *
+       * <code>optional int32 toUserid = 5;</code>
        */
       public Builder clearToUserid() {
         
@@ -13579,21 +13573,21 @@ public final class Common {
 
       private long createTime_ ;
       /**
-       * <code>optional int64 createTime = 7;</code>
-       *
        * <pre>
        * 时间
        * </pre>
+       *
+       * <code>optional int64 createTime = 7;</code>
        */
       public long getCreateTime() {
         return createTime_;
       }
       /**
-       * <code>optional int64 createTime = 7;</code>
-       *
        * <pre>
        * 时间
        * </pre>
+       *
+       * <code>optional int64 createTime = 7;</code>
        */
       public Builder setCreateTime(long value) {
         
@@ -13602,11 +13596,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int64 createTime = 7;</code>
-       *
        * <pre>
        * 时间
        * </pre>
+       *
+       * <code>optional int64 createTime = 7;</code>
        */
       public Builder clearCreateTime() {
         
@@ -13617,11 +13611,11 @@ public final class Common {
 
       private java.lang.Object gymName_ = "";
       /**
-       * <code>optional string gymName = 8;</code>
-       *
        * <pre>
        * 场馆名 地点
        * </pre>
+       *
+       * <code>optional string gymName = 8;</code>
        */
       public java.lang.String getGymName() {
         java.lang.Object ref = gymName_;
@@ -13636,11 +13630,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 8;</code>
-       *
        * <pre>
        * 场馆名 地点
        * </pre>
+       *
+       * <code>optional string gymName = 8;</code>
        */
       public com.google.protobuf.ByteString
           getGymNameBytes() {
@@ -13656,11 +13650,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string gymName = 8;</code>
-       *
        * <pre>
        * 场馆名 地点
        * </pre>
+       *
+       * <code>optional string gymName = 8;</code>
        */
       public Builder setGymName(
           java.lang.String value) {
@@ -13673,11 +13667,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 8;</code>
-       *
        * <pre>
        * 场馆名 地点
        * </pre>
+       *
+       * <code>optional string gymName = 8;</code>
        */
       public Builder clearGymName() {
         
@@ -13686,11 +13680,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string gymName = 8;</code>
-       *
        * <pre>
        * 场馆名 地点
        * </pre>
+       *
+       * <code>optional string gymName = 8;</code>
        */
       public Builder setGymNameBytes(
           com.google.protobuf.ByteString value) {
@@ -13733,16 +13727,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new Comment(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -13766,38 +13751,38 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional string lastAvatar = 1;</code>
-     *
      * <pre>
      * 显示的头像
      * </pre>
+     *
+     * <code>optional string lastAvatar = 1;</code>
      */
     java.lang.String getLastAvatar();
     /**
-     * <code>optional string lastAvatar = 1;</code>
-     *
      * <pre>
      * 显示的头像
      * </pre>
+     *
+     * <code>optional string lastAvatar = 1;</code>
      */
     com.google.protobuf.ByteString
         getLastAvatarBytes();
 
     /**
-     * <code>optional int32 count = 2;</code>
-     *
      * <pre>
      * 消息数量
      * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
      */
     int getCount();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
-   *
    * <pre>
    * trend 的简要评论信息
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
    */
   public  static final class TrendBriefMessage extends
       com.google.protobuf.GeneratedMessage implements
@@ -13819,7 +13804,8 @@ public final class Common {
     }
     private TrendBriefMessage(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -13837,7 +13823,7 @@ public final class Common {
               break;
             }
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               lastAvatar_ = s;
               break;
@@ -13850,11 +13836,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         makeExtensionsImmutable();
       }
@@ -13874,11 +13859,11 @@ public final class Common {
     public static final int LASTAVATAR_FIELD_NUMBER = 1;
     private volatile java.lang.Object lastAvatar_;
     /**
-     * <code>optional string lastAvatar = 1;</code>
-     *
      * <pre>
      * 显示的头像
      * </pre>
+     *
+     * <code>optional string lastAvatar = 1;</code>
      */
     public java.lang.String getLastAvatar() {
       java.lang.Object ref = lastAvatar_;
@@ -13893,11 +13878,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string lastAvatar = 1;</code>
-     *
      * <pre>
      * 显示的头像
      * </pre>
+     *
+     * <code>optional string lastAvatar = 1;</code>
      */
     public com.google.protobuf.ByteString
         getLastAvatarBytes() {
@@ -13916,11 +13901,11 @@ public final class Common {
     public static final int COUNT_FIELD_NUMBER = 2;
     private int count_;
     /**
-     * <code>optional int32 count = 2;</code>
-     *
      * <pre>
      * 消息数量
      * </pre>
+     *
+     * <code>optional int32 count = 2;</code>
      */
     public int getCount() {
       return count_;
@@ -13986,34 +13971,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.TrendBriefMessage parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -14035,11 +14026,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
-     *
      * <pre>
      * trend 的简要评论信息
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.TrendBriefMessage}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -14140,7 +14131,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.TrendBriefMessage) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -14151,11 +14142,11 @@ public final class Common {
 
       private java.lang.Object lastAvatar_ = "";
       /**
-       * <code>optional string lastAvatar = 1;</code>
-       *
        * <pre>
        * 显示的头像
        * </pre>
+       *
+       * <code>optional string lastAvatar = 1;</code>
        */
       public java.lang.String getLastAvatar() {
         java.lang.Object ref = lastAvatar_;
@@ -14170,11 +14161,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string lastAvatar = 1;</code>
-       *
        * <pre>
        * 显示的头像
        * </pre>
+       *
+       * <code>optional string lastAvatar = 1;</code>
        */
       public com.google.protobuf.ByteString
           getLastAvatarBytes() {
@@ -14190,11 +14181,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string lastAvatar = 1;</code>
-       *
        * <pre>
        * 显示的头像
        * </pre>
+       *
+       * <code>optional string lastAvatar = 1;</code>
        */
       public Builder setLastAvatar(
           java.lang.String value) {
@@ -14207,11 +14198,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string lastAvatar = 1;</code>
-       *
        * <pre>
        * 显示的头像
        * </pre>
+       *
+       * <code>optional string lastAvatar = 1;</code>
        */
       public Builder clearLastAvatar() {
         
@@ -14220,11 +14211,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string lastAvatar = 1;</code>
-       *
        * <pre>
        * 显示的头像
        * </pre>
+       *
+       * <code>optional string lastAvatar = 1;</code>
        */
       public Builder setLastAvatarBytes(
           com.google.protobuf.ByteString value) {
@@ -14240,21 +14231,21 @@ public final class Common {
 
       private int count_ ;
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 消息数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public int getCount() {
         return count_;
       }
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 消息数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public Builder setCount(int value) {
         
@@ -14263,11 +14254,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 count = 2;</code>
-       *
        * <pre>
        * 消息数量
        * </pre>
+       *
+       * <code>optional int32 count = 2;</code>
        */
       public Builder clearCount() {
         
@@ -14305,16 +14296,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new TrendBriefMessage(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -14338,180 +14320,180 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * 用户id
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     int getUserId();
 
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     java.lang.String getUserName();
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     com.google.protobuf.ByteString
         getUserNameBytes();
 
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     java.lang.String getUserAvatar();
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     com.google.protobuf.ByteString
         getUserAvatarBytes();
 
     /**
-     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-     *
      * <pre>
      * 性别
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
      */
     int getSexValue();
     /**
-     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-     *
      * <pre>
      * 性别
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
      */
     com.xiang.proto.Common.Sex getSex();
 
     /**
-     * <code>optional string sign = 5;</code>
-     *
      * <pre>
      * 签名
      * </pre>
+     *
+     * <code>optional string sign = 5;</code>
      */
     java.lang.String getSign();
     /**
-     * <code>optional string sign = 5;</code>
-     *
      * <pre>
      * 签名
      * </pre>
+     *
+     * <code>optional string sign = 5;</code>
      */
     com.google.protobuf.ByteString
         getSignBytes();
 
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     java.util.List<com.xiang.proto.Common.Trend> 
         getTrendsList();
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     com.xiang.proto.Common.Trend getTrends(int index);
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     int getTrendsCount();
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
         getTrendsOrBuilderList();
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
         int index);
 
     /**
-     * <code>optional bool isFollowed = 7;</code>
-     *
      * <pre>
      * 是否已经关注
      * </pre>
+     *
+     * <code>optional bool isFollowed = 7;</code>
      */
     boolean getIsFollowed();
 
     /**
-     * <code>optional int32 guanzhuCount = 8;</code>
-     *
      * <pre>
      * 他关注的人的数量
      * </pre>
+     *
+     * <code>optional int32 guanzhuCount = 8;</code>
      */
     int getGuanzhuCount();
 
     /**
-     * <code>optional int32 fensiCount = 9;</code>
-     *
      * <pre>
      * 他的粉丝数量
      * </pre>
+     *
+     * <code>optional int32 fensiCount = 9;</code>
      */
     int getFensiCount();
 
     /**
-     * <code>optional int32 trendCount = 10;</code>
-     *
      * <pre>
      * 动态的数量
      * </pre>
+     *
+     * <code>optional int32 trendCount = 10;</code>
      */
     int getTrendCount();
 
     /**
-     * <code>optional int32 trendMaxCountPerPage = 11;</code>
-     *
      * <pre>
      * 判断能否加载更多（加载更多请调用10005）
      * </pre>
+     *
+     * <code>optional int32 trendMaxCountPerPage = 11;</code>
      */
     int getTrendMaxCountPerPage();
   }
   /**
-   * Protobuf type {@code com.xiang.proto.DetailUser}
-   *
    * <pre>
    * 一般用作看到的别人的详情
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.DetailUser}
    */
   public  static final class DetailUser extends
       com.google.protobuf.GeneratedMessage implements
@@ -14542,7 +14524,8 @@ public final class Common {
     }
     private DetailUser(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -14565,13 +14548,13 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userName_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userAvatar_ = s;
               break;
@@ -14583,7 +14566,7 @@ public final class Common {
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               sign_ = s;
               break;
@@ -14624,11 +14607,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           trends_ = java.util.Collections.unmodifiableList(trends_);
@@ -14652,11 +14634,11 @@ public final class Common {
     public static final int USERID_FIELD_NUMBER = 1;
     private int userId_;
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * 用户id
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     public int getUserId() {
       return userId_;
@@ -14665,11 +14647,11 @@ public final class Common {
     public static final int USERNAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object userName_;
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     public java.lang.String getUserName() {
       java.lang.Object ref = userName_;
@@ -14684,11 +14666,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string userName = 2;</code>
-     *
      * <pre>
      * 用户名
      * </pre>
+     *
+     * <code>optional string userName = 2;</code>
      */
     public com.google.protobuf.ByteString
         getUserNameBytes() {
@@ -14707,11 +14689,11 @@ public final class Common {
     public static final int USERAVATAR_FIELD_NUMBER = 3;
     private volatile java.lang.Object userAvatar_;
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     public java.lang.String getUserAvatar() {
       java.lang.Object ref = userAvatar_;
@@ -14726,11 +14708,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string userAvatar = 3;</code>
-     *
      * <pre>
      * 用户头像
      * </pre>
+     *
+     * <code>optional string userAvatar = 3;</code>
      */
     public com.google.protobuf.ByteString
         getUserAvatarBytes() {
@@ -14749,35 +14731,35 @@ public final class Common {
     public static final int SEX_FIELD_NUMBER = 4;
     private int sex_;
     /**
-     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-     *
      * <pre>
      * 性别
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
      */
     public int getSexValue() {
       return sex_;
     }
     /**
-     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-     *
      * <pre>
      * 性别
      * </pre>
+     *
+     * <code>optional .com.xiang.proto.Sex sex = 4;</code>
      */
     public com.xiang.proto.Common.Sex getSex() {
-      com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+      com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
       return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
     }
 
     public static final int SIGN_FIELD_NUMBER = 5;
     private volatile java.lang.Object sign_;
     /**
-     * <code>optional string sign = 5;</code>
-     *
      * <pre>
      * 签名
      * </pre>
+     *
+     * <code>optional string sign = 5;</code>
      */
     public java.lang.String getSign() {
       java.lang.Object ref = sign_;
@@ -14792,11 +14774,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string sign = 5;</code>
-     *
      * <pre>
      * 签名
      * </pre>
+     *
+     * <code>optional string sign = 5;</code>
      */
     public com.google.protobuf.ByteString
         getSignBytes() {
@@ -14815,52 +14797,52 @@ public final class Common {
     public static final int TRENDS_FIELD_NUMBER = 6;
     private java.util.List<com.xiang.proto.Common.Trend> trends_;
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     public java.util.List<com.xiang.proto.Common.Trend> getTrendsList() {
       return trends_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     public java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
         getTrendsOrBuilderList() {
       return trends_;
     }
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     public int getTrendsCount() {
       return trends_.size();
     }
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     public com.xiang.proto.Common.Trend getTrends(int index) {
       return trends_.get(index);
     }
     /**
-     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-     *
      * <pre>
      * 最近态列表
      * </pre>
+     *
+     * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
      */
     public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
         int index) {
@@ -14870,11 +14852,11 @@ public final class Common {
     public static final int ISFOLLOWED_FIELD_NUMBER = 7;
     private boolean isFollowed_;
     /**
-     * <code>optional bool isFollowed = 7;</code>
-     *
      * <pre>
      * 是否已经关注
      * </pre>
+     *
+     * <code>optional bool isFollowed = 7;</code>
      */
     public boolean getIsFollowed() {
       return isFollowed_;
@@ -14883,11 +14865,11 @@ public final class Common {
     public static final int GUANZHUCOUNT_FIELD_NUMBER = 8;
     private int guanzhuCount_;
     /**
-     * <code>optional int32 guanzhuCount = 8;</code>
-     *
      * <pre>
      * 他关注的人的数量
      * </pre>
+     *
+     * <code>optional int32 guanzhuCount = 8;</code>
      */
     public int getGuanzhuCount() {
       return guanzhuCount_;
@@ -14896,11 +14878,11 @@ public final class Common {
     public static final int FENSICOUNT_FIELD_NUMBER = 9;
     private int fensiCount_;
     /**
-     * <code>optional int32 fensiCount = 9;</code>
-     *
      * <pre>
      * 他的粉丝数量
      * </pre>
+     *
+     * <code>optional int32 fensiCount = 9;</code>
      */
     public int getFensiCount() {
       return fensiCount_;
@@ -14909,11 +14891,11 @@ public final class Common {
     public static final int TRENDCOUNT_FIELD_NUMBER = 10;
     private int trendCount_;
     /**
-     * <code>optional int32 trendCount = 10;</code>
-     *
      * <pre>
      * 动态的数量
      * </pre>
+     *
+     * <code>optional int32 trendCount = 10;</code>
      */
     public int getTrendCount() {
       return trendCount_;
@@ -14922,11 +14904,11 @@ public final class Common {
     public static final int TRENDMAXCOUNTPERPAGE_FIELD_NUMBER = 11;
     private int trendMaxCountPerPage_;
     /**
-     * <code>optional int32 trendMaxCountPerPage = 11;</code>
-     *
      * <pre>
      * 判断能否加载更多（加载更多请调用10005）
      * </pre>
+     *
+     * <code>optional int32 trendMaxCountPerPage = 11;</code>
      */
     public int getTrendMaxCountPerPage() {
       return trendMaxCountPerPage_;
@@ -15053,34 +15035,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.DetailUser parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailUser parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.DetailUser parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailUser parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.DetailUser parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.DetailUser parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -15102,11 +15090,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.DetailUser}
-     *
      * <pre>
      * 一般用作看到的别人的详情
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.DetailUser}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -15302,7 +15290,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.DetailUser) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -15314,21 +15302,21 @@ public final class Common {
 
       private int userId_ ;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 用户id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 用户id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder setUserId(int value) {
         
@@ -15337,11 +15325,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * 用户id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder clearUserId() {
         
@@ -15352,11 +15340,11 @@ public final class Common {
 
       private java.lang.Object userName_ = "";
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public java.lang.String getUserName() {
         java.lang.Object ref = userName_;
@@ -15371,11 +15359,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public com.google.protobuf.ByteString
           getUserNameBytes() {
@@ -15391,11 +15379,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder setUserName(
           java.lang.String value) {
@@ -15408,11 +15396,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder clearUserName() {
         
@@ -15421,11 +15409,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userName = 2;</code>
-       *
        * <pre>
        * 用户名
        * </pre>
+       *
+       * <code>optional string userName = 2;</code>
        */
       public Builder setUserNameBytes(
           com.google.protobuf.ByteString value) {
@@ -15441,11 +15429,11 @@ public final class Common {
 
       private java.lang.Object userAvatar_ = "";
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public java.lang.String getUserAvatar() {
         java.lang.Object ref = userAvatar_;
@@ -15460,11 +15448,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public com.google.protobuf.ByteString
           getUserAvatarBytes() {
@@ -15480,11 +15468,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder setUserAvatar(
           java.lang.String value) {
@@ -15497,11 +15485,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder clearUserAvatar() {
         
@@ -15510,11 +15498,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string userAvatar = 3;</code>
-       *
        * <pre>
        * 用户头像
        * </pre>
+       *
+       * <code>optional string userAvatar = 3;</code>
        */
       public Builder setUserAvatarBytes(
           com.google.protobuf.ByteString value) {
@@ -15530,21 +15518,21 @@ public final class Common {
 
       private int sex_ = 0;
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 性别
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public int getSexValue() {
         return sex_;
       }
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 性别
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public Builder setSexValue(int value) {
         sex_ = value;
@@ -15552,22 +15540,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 性别
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public com.xiang.proto.Common.Sex getSex() {
-        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.valueOf(sex_);
+        com.xiang.proto.Common.Sex result = com.xiang.proto.Common.Sex.forNumber(sex_);
         return result == null ? com.xiang.proto.Common.Sex.UNRECOGNIZED : result;
       }
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 性别
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public Builder setSex(com.xiang.proto.Common.Sex value) {
         if (value == null) {
@@ -15579,11 +15567,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
-       *
        * <pre>
        * 性别
        * </pre>
+       *
+       * <code>optional .com.xiang.proto.Sex sex = 4;</code>
        */
       public Builder clearSex() {
         
@@ -15594,11 +15582,11 @@ public final class Common {
 
       private java.lang.Object sign_ = "";
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public java.lang.String getSign() {
         java.lang.Object ref = sign_;
@@ -15613,11 +15601,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public com.google.protobuf.ByteString
           getSignBytes() {
@@ -15633,11 +15621,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public Builder setSign(
           java.lang.String value) {
@@ -15650,11 +15638,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public Builder clearSign() {
         
@@ -15663,11 +15651,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string sign = 5;</code>
-       *
        * <pre>
        * 签名
        * </pre>
+       *
+       * <code>optional string sign = 5;</code>
        */
       public Builder setSignBytes(
           com.google.protobuf.ByteString value) {
@@ -15694,11 +15682,11 @@ public final class Common {
           com.xiang.proto.Common.Trend, com.xiang.proto.Common.Trend.Builder, com.xiang.proto.Common.TrendOrBuilder> trendsBuilder_;
 
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public java.util.List<com.xiang.proto.Common.Trend> getTrendsList() {
         if (trendsBuilder_ == null) {
@@ -15708,11 +15696,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public int getTrendsCount() {
         if (trendsBuilder_ == null) {
@@ -15722,11 +15710,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public com.xiang.proto.Common.Trend getTrends(int index) {
         if (trendsBuilder_ == null) {
@@ -15736,11 +15724,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder setTrends(
           int index, com.xiang.proto.Common.Trend value) {
@@ -15757,11 +15745,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder setTrends(
           int index, com.xiang.proto.Common.Trend.Builder builderForValue) {
@@ -15775,11 +15763,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder addTrends(com.xiang.proto.Common.Trend value) {
         if (trendsBuilder_ == null) {
@@ -15795,11 +15783,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder addTrends(
           int index, com.xiang.proto.Common.Trend value) {
@@ -15816,11 +15804,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder addTrends(
           com.xiang.proto.Common.Trend.Builder builderForValue) {
@@ -15834,11 +15822,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder addTrends(
           int index, com.xiang.proto.Common.Trend.Builder builderForValue) {
@@ -15852,11 +15840,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder addAllTrends(
           java.lang.Iterable<? extends com.xiang.proto.Common.Trend> values) {
@@ -15871,11 +15859,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder clearTrends() {
         if (trendsBuilder_ == null) {
@@ -15888,11 +15876,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public Builder removeTrends(int index) {
         if (trendsBuilder_ == null) {
@@ -15905,22 +15893,22 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public com.xiang.proto.Common.Trend.Builder getTrendsBuilder(
           int index) {
         return getTrendsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public com.xiang.proto.Common.TrendOrBuilder getTrendsOrBuilder(
           int index) {
@@ -15930,11 +15918,11 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public java.util.List<? extends com.xiang.proto.Common.TrendOrBuilder> 
            getTrendsOrBuilderList() {
@@ -15945,22 +15933,22 @@ public final class Common {
         }
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public com.xiang.proto.Common.Trend.Builder addTrendsBuilder() {
         return getTrendsFieldBuilder().addBuilder(
             com.xiang.proto.Common.Trend.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public com.xiang.proto.Common.Trend.Builder addTrendsBuilder(
           int index) {
@@ -15968,11 +15956,11 @@ public final class Common {
             index, com.xiang.proto.Common.Trend.getDefaultInstance());
       }
       /**
-       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
-       *
        * <pre>
        * 最近态列表
        * </pre>
+       *
+       * <code>repeated .com.xiang.proto.Trend trends = 6;</code>
        */
       public java.util.List<com.xiang.proto.Common.Trend.Builder> 
            getTrendsBuilderList() {
@@ -15995,21 +15983,21 @@ public final class Common {
 
       private boolean isFollowed_ ;
       /**
-       * <code>optional bool isFollowed = 7;</code>
-       *
        * <pre>
        * 是否已经关注
        * </pre>
+       *
+       * <code>optional bool isFollowed = 7;</code>
        */
       public boolean getIsFollowed() {
         return isFollowed_;
       }
       /**
-       * <code>optional bool isFollowed = 7;</code>
-       *
        * <pre>
        * 是否已经关注
        * </pre>
+       *
+       * <code>optional bool isFollowed = 7;</code>
        */
       public Builder setIsFollowed(boolean value) {
         
@@ -16018,11 +16006,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional bool isFollowed = 7;</code>
-       *
        * <pre>
        * 是否已经关注
        * </pre>
+       *
+       * <code>optional bool isFollowed = 7;</code>
        */
       public Builder clearIsFollowed() {
         
@@ -16033,21 +16021,21 @@ public final class Common {
 
       private int guanzhuCount_ ;
       /**
-       * <code>optional int32 guanzhuCount = 8;</code>
-       *
        * <pre>
        * 他关注的人的数量
        * </pre>
+       *
+       * <code>optional int32 guanzhuCount = 8;</code>
        */
       public int getGuanzhuCount() {
         return guanzhuCount_;
       }
       /**
-       * <code>optional int32 guanzhuCount = 8;</code>
-       *
        * <pre>
        * 他关注的人的数量
        * </pre>
+       *
+       * <code>optional int32 guanzhuCount = 8;</code>
        */
       public Builder setGuanzhuCount(int value) {
         
@@ -16056,11 +16044,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 guanzhuCount = 8;</code>
-       *
        * <pre>
        * 他关注的人的数量
        * </pre>
+       *
+       * <code>optional int32 guanzhuCount = 8;</code>
        */
       public Builder clearGuanzhuCount() {
         
@@ -16071,21 +16059,21 @@ public final class Common {
 
       private int fensiCount_ ;
       /**
-       * <code>optional int32 fensiCount = 9;</code>
-       *
        * <pre>
        * 他的粉丝数量
        * </pre>
+       *
+       * <code>optional int32 fensiCount = 9;</code>
        */
       public int getFensiCount() {
         return fensiCount_;
       }
       /**
-       * <code>optional int32 fensiCount = 9;</code>
-       *
        * <pre>
        * 他的粉丝数量
        * </pre>
+       *
+       * <code>optional int32 fensiCount = 9;</code>
        */
       public Builder setFensiCount(int value) {
         
@@ -16094,11 +16082,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 fensiCount = 9;</code>
-       *
        * <pre>
        * 他的粉丝数量
        * </pre>
+       *
+       * <code>optional int32 fensiCount = 9;</code>
        */
       public Builder clearFensiCount() {
         
@@ -16109,21 +16097,21 @@ public final class Common {
 
       private int trendCount_ ;
       /**
-       * <code>optional int32 trendCount = 10;</code>
-       *
        * <pre>
        * 动态的数量
        * </pre>
+       *
+       * <code>optional int32 trendCount = 10;</code>
        */
       public int getTrendCount() {
         return trendCount_;
       }
       /**
-       * <code>optional int32 trendCount = 10;</code>
-       *
        * <pre>
        * 动态的数量
        * </pre>
+       *
+       * <code>optional int32 trendCount = 10;</code>
        */
       public Builder setTrendCount(int value) {
         
@@ -16132,11 +16120,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 trendCount = 10;</code>
-       *
        * <pre>
        * 动态的数量
        * </pre>
+       *
+       * <code>optional int32 trendCount = 10;</code>
        */
       public Builder clearTrendCount() {
         
@@ -16147,21 +16135,21 @@ public final class Common {
 
       private int trendMaxCountPerPage_ ;
       /**
-       * <code>optional int32 trendMaxCountPerPage = 11;</code>
-       *
        * <pre>
        * 判断能否加载更多（加载更多请调用10005）
        * </pre>
+       *
+       * <code>optional int32 trendMaxCountPerPage = 11;</code>
        */
       public int getTrendMaxCountPerPage() {
         return trendMaxCountPerPage_;
       }
       /**
-       * <code>optional int32 trendMaxCountPerPage = 11;</code>
-       *
        * <pre>
        * 判断能否加载更多（加载更多请调用10005）
        * </pre>
+       *
+       * <code>optional int32 trendMaxCountPerPage = 11;</code>
        */
       public Builder setTrendMaxCountPerPage(int value) {
         
@@ -16170,11 +16158,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 trendMaxCountPerPage = 11;</code>
-       *
        * <pre>
        * 判断能否加载更多（加载更多请调用10005）
        * </pre>
+       *
+       * <code>optional int32 trendMaxCountPerPage = 11;</code>
        */
       public Builder clearTrendMaxCountPerPage() {
         
@@ -16212,16 +16200,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new DetailUser(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -16245,11 +16224,11 @@ public final class Common {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * id
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     int getUserId();
 
@@ -16274,64 +16253,64 @@ public final class Common {
         getUserAvatarBytes();
 
     /**
-     * <code>optional string sign = 4;</code>
-     *
      * <pre>
      * 用户签名
      * </pre>
+     *
+     * <code>optional string sign = 4;</code>
      */
     java.lang.String getSign();
     /**
-     * <code>optional string sign = 4;</code>
-     *
      * <pre>
      * 用户签名
      * </pre>
+     *
+     * <code>optional string sign = 4;</code>
      */
     com.google.protobuf.ByteString
         getSignBytes();
 
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     com.google.protobuf.ProtocolStringList
         getImagesList();
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     int getImagesCount();
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     java.lang.String getImages(int index);
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     com.google.protobuf.ByteString
         getImagesBytes(int index);
   }
   /**
-   * Protobuf type {@code com.xiang.proto.SearchedUser}
-   *
    * <pre>
    * 搜索得到的用户简要信息
    * </pre>
+   *
+   * Protobuf type {@code com.xiang.proto.SearchedUser}
    */
   public  static final class SearchedUser extends
       com.google.protobuf.GeneratedMessage implements
@@ -16356,7 +16335,8 @@ public final class Common {
     }
     private SearchedUser(
         com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       int mutable_bitField0_ = 0;
       try {
@@ -16379,25 +16359,25 @@ public final class Common {
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userName_ = s;
               break;
             }
             case 26: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               userAvatar_ = s;
               break;
             }
             case 34: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               sign_ = s;
               break;
             }
             case 42: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 images_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000010;
@@ -16408,11 +16388,10 @@ public final class Common {
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw new RuntimeException(e.setUnfinishedMessage(this));
+        throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new RuntimeException(
-            new com.google.protobuf.InvalidProtocolBufferException(
-                e.getMessage()).setUnfinishedMessage(this));
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           images_ = images_.getUnmodifiableView();
@@ -16436,11 +16415,11 @@ public final class Common {
     public static final int USERID_FIELD_NUMBER = 1;
     private int userId_;
     /**
-     * <code>optional int32 userId = 1;</code>
-     *
      * <pre>
      * id
      * </pre>
+     *
+     * <code>optional int32 userId = 1;</code>
      */
     public int getUserId() {
       return userId_;
@@ -16517,11 +16496,11 @@ public final class Common {
     public static final int SIGN_FIELD_NUMBER = 4;
     private volatile java.lang.Object sign_;
     /**
-     * <code>optional string sign = 4;</code>
-     *
      * <pre>
      * 用户签名
      * </pre>
+     *
+     * <code>optional string sign = 4;</code>
      */
     public java.lang.String getSign() {
       java.lang.Object ref = sign_;
@@ -16536,11 +16515,11 @@ public final class Common {
       }
     }
     /**
-     * <code>optional string sign = 4;</code>
-     *
      * <pre>
      * 用户签名
      * </pre>
+     *
+     * <code>optional string sign = 4;</code>
      */
     public com.google.protobuf.ByteString
         getSignBytes() {
@@ -16559,42 +16538,42 @@ public final class Common {
     public static final int IMAGES_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList images_;
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getImagesList() {
       return images_;
     }
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     public int getImagesCount() {
       return images_.size();
     }
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     public java.lang.String getImages(int index) {
       return images_.get(index);
     }
     /**
-     * <code>repeated string images = 5;</code>
-     *
      * <pre>
      * 图片数组，一般需要三个，但有可能少于3个
      * </pre>
+     *
+     * <code>repeated string images = 5;</code>
      */
     public com.google.protobuf.ByteString
         getImagesBytes(int index) {
@@ -16684,34 +16663,40 @@ public final class Common {
     }
     public static com.xiang.proto.Common.SearchedUser parseFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.SearchedUser parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.SearchedUser parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.SearchedUser parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
     public static com.xiang.proto.Common.SearchedUser parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
-      return PARSER.parseFrom(input);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
     }
     public static com.xiang.proto.Common.SearchedUser parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
     public Builder newBuilderForType() { return newBuilder(); }
@@ -16733,11 +16718,11 @@ public final class Common {
       return builder;
     }
     /**
-     * Protobuf type {@code com.xiang.proto.SearchedUser}
-     *
      * <pre>
      * 搜索得到的用户简要信息
      * </pre>
+     *
+     * Protobuf type {@code com.xiang.proto.SearchedUser}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
@@ -16872,7 +16857,7 @@ public final class Common {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (com.xiang.proto.Common.SearchedUser) e.getUnfinishedMessage();
-          throw e;
+          throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
             mergeFrom(parsedMessage);
@@ -16884,21 +16869,21 @@ public final class Common {
 
       private int userId_ ;
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public int getUserId() {
         return userId_;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder setUserId(int value) {
         
@@ -16907,11 +16892,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional int32 userId = 1;</code>
-       *
        * <pre>
        * id
        * </pre>
+       *
+       * <code>optional int32 userId = 1;</code>
        */
       public Builder clearUserId() {
         
@@ -17060,11 +17045,11 @@ public final class Common {
 
       private java.lang.Object sign_ = "";
       /**
-       * <code>optional string sign = 4;</code>
-       *
        * <pre>
        * 用户签名
        * </pre>
+       *
+       * <code>optional string sign = 4;</code>
        */
       public java.lang.String getSign() {
         java.lang.Object ref = sign_;
@@ -17079,11 +17064,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string sign = 4;</code>
-       *
        * <pre>
        * 用户签名
        * </pre>
+       *
+       * <code>optional string sign = 4;</code>
        */
       public com.google.protobuf.ByteString
           getSignBytes() {
@@ -17099,11 +17084,11 @@ public final class Common {
         }
       }
       /**
-       * <code>optional string sign = 4;</code>
-       *
        * <pre>
        * 用户签名
        * </pre>
+       *
+       * <code>optional string sign = 4;</code>
        */
       public Builder setSign(
           java.lang.String value) {
@@ -17116,11 +17101,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string sign = 4;</code>
-       *
        * <pre>
        * 用户签名
        * </pre>
+       *
+       * <code>optional string sign = 4;</code>
        */
       public Builder clearSign() {
         
@@ -17129,11 +17114,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>optional string sign = 4;</code>
-       *
        * <pre>
        * 用户签名
        * </pre>
+       *
+       * <code>optional string sign = 4;</code>
        */
       public Builder setSignBytes(
           com.google.protobuf.ByteString value) {
@@ -17155,53 +17140,53 @@ public final class Common {
          }
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getImagesList() {
         return images_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public int getImagesCount() {
         return images_.size();
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public java.lang.String getImages(int index) {
         return images_.get(index);
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public com.google.protobuf.ByteString
           getImagesBytes(int index) {
         return images_.getByteString(index);
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public Builder setImages(
           int index, java.lang.String value) {
@@ -17214,11 +17199,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public Builder addImages(
           java.lang.String value) {
@@ -17231,11 +17216,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public Builder addAllImages(
           java.lang.Iterable<java.lang.String> values) {
@@ -17246,11 +17231,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public Builder clearImages() {
         images_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -17259,11 +17244,11 @@ public final class Common {
         return this;
       }
       /**
-       * <code>repeated string images = 5;</code>
-       *
        * <pre>
        * 图片数组，一般需要三个，但有可能少于3个
        * </pre>
+       *
+       * <code>repeated string images = 5;</code>
        */
       public Builder addImagesBytes(
           com.google.protobuf.ByteString value) {
@@ -17306,16 +17291,7 @@ public final class Common {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        try {
           return new SearchedUser(input, extensionRegistry);
-        } catch (RuntimeException e) {
-          if (e.getCause() instanceof
-              com.google.protobuf.InvalidProtocolBufferException) {
-            throw (com.google.protobuf.InvalidProtocolBufferException)
-                e.getCause();
-          }
-          throw e;
-        }
       }
     };
 
@@ -17334,84 +17310,84 @@ public final class Common {
 
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_RequestCommon_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_RequestCommon_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_ResponseCommon_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_ResponseCommon_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_Trend_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Trend_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_Banner_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Banner_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_BriefUser_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_BriefUser_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_BriefGym_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_BriefGym_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_DetailGym_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_DetailGym_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_Equipment_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Equipment_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_Course_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Course_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_CourseTime_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_CourseTime_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_GymCard_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_GymCard_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_CommentMessage_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_CommentMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_Comment_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_Comment_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_TrendBriefMessage_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_DetailUser_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_DetailUser_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_xiang_proto_SearchedUser_descriptor;
-  private static
+  private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_xiang_proto_SearchedUser_fieldAccessorTable;
 
@@ -17419,7 +17395,7 @@ public final class Common {
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
