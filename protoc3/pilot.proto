@@ -277,7 +277,7 @@ message Response10015 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
-		repeated string keys = 1;
+		repeated string keys = 1;     // 注意，如果该数组为空，则data会是null，客户端做好判空准备
 	}
 }
 

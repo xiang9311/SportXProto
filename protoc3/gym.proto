@@ -20,7 +20,7 @@ message Response13001 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
-		repeated BriefGym briefGyms = 1;
+		repeated BriefGym briefGyms = 1;                // 如果列表为空，data可能为null，客户端做好判空准备
 	}
 }
 
