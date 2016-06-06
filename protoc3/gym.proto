@@ -50,6 +50,7 @@ message Request13003 {
 	RequestCommon common = 1;
 	Params params = 2;
 	message Params {
+		int32 gymId = 3;
 		float longitude = 1;
 		float latitude = 2;
 	}
