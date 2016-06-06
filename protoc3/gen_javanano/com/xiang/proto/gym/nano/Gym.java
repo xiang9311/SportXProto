@@ -251,12 +251,16 @@ public interface Gym {
       // repeated .com.xiang.proto.BriefGym briefGyms = 1;
       public com.xiang.proto.nano.Common.BriefGym[] briefGyms;
 
+      // optional int32 maxCountPerPage = 2;
+      public int maxCountPerPage;
+
       public Data() {
         clear();
       }
 
       public Data clear() {
         briefGyms = com.xiang.proto.nano.Common.BriefGym.emptyArray();
+        maxCountPerPage = 0;
         cachedSize = -1;
         return this;
       }
@@ -272,6 +276,9 @@ public interface Gym {
             }
           }
         }
+        if (this.maxCountPerPage != 0) {
+          output.writeInt32(2, this.maxCountPerPage);
+        }
         super.writeTo(output);
       }
 
@@ -286,6 +293,10 @@ public interface Gym {
                 .computeMessageSize(1, element);
             }
           }
+        }
+        if (this.maxCountPerPage != 0) {
+          size += com.google.protobuf.nano.CodedOutputByteBufferNano
+              .computeInt32Size(2, this.maxCountPerPage);
         }
         return size;
       }
@@ -323,6 +334,10 @@ public interface Gym {
               newArray[i] = new com.xiang.proto.nano.Common.BriefGym();
               input.readMessage(newArray[i]);
               this.briefGyms = newArray;
+              break;
+            }
+            case 16: {
+              this.maxCountPerPage = input.readInt32();
               break;
             }
           }
@@ -658,6 +673,9 @@ public interface Gym {
       // repeated .com.xiang.proto.BriefUser briefUsers = 2;
       public com.xiang.proto.nano.Common.BriefUser[] briefUsers;
 
+      // repeated string gymCover = 3;
+      public java.lang.String[] gymCover;
+
       public Data() {
         clear();
       }
@@ -665,6 +683,7 @@ public interface Gym {
       public Data clear() {
         detailGym = null;
         briefUsers = com.xiang.proto.nano.Common.BriefUser.emptyArray();
+        gymCover = com.google.protobuf.nano.WireFormatNano.EMPTY_STRING_ARRAY;
         cachedSize = -1;
         return this;
       }
@@ -680,6 +699,14 @@ public interface Gym {
             com.xiang.proto.nano.Common.BriefUser element = this.briefUsers[i];
             if (element != null) {
               output.writeMessage(2, element);
+            }
+          }
+        }
+        if (this.gymCover != null && this.gymCover.length > 0) {
+          for (int i = 0; i < this.gymCover.length; i++) {
+            java.lang.String element = this.gymCover[i];
+            if (element != null) {
+              output.writeString(3, element);
             }
           }
         }
@@ -701,6 +728,20 @@ public interface Gym {
                 .computeMessageSize(2, element);
             }
           }
+        }
+        if (this.gymCover != null && this.gymCover.length > 0) {
+          int dataCount = 0;
+          int dataSize = 0;
+          for (int i = 0; i < this.gymCover.length; i++) {
+            java.lang.String element = this.gymCover[i];
+            if (element != null) {
+              dataCount++;
+              dataSize += com.google.protobuf.nano.CodedOutputByteBufferNano
+                  .computeStringSizeNoTag(element);
+            }
+          }
+          size += dataSize;
+          size += 1 * dataCount;
         }
         return size;
       }
@@ -745,6 +786,23 @@ public interface Gym {
               newArray[i] = new com.xiang.proto.nano.Common.BriefUser();
               input.readMessage(newArray[i]);
               this.briefUsers = newArray;
+              break;
+            }
+            case 26: {
+              int arrayLength = com.google.protobuf.nano.WireFormatNano
+                  .getRepeatedFieldArrayLength(input, 26);
+              int i = this.gymCover == null ? 0 : this.gymCover.length;
+              java.lang.String[] newArray = new java.lang.String[i + arrayLength];
+              if (i != 0) {
+                java.lang.System.arraycopy(this.gymCover, 0, newArray, 0, i);
+              }
+              for (; i < newArray.length - 1; i++) {
+                newArray[i] = input.readString();
+                input.readTag();
+              }
+              // Last one without readTag.
+              newArray[i] = input.readString();
+              this.gymCover = newArray;
               break;
             }
           }
@@ -1096,8 +1154,11 @@ public interface Gym {
       // optional .com.xiang.proto.DetailGym detailGym = 1;
       public com.xiang.proto.nano.Common.DetailGym detailGym;
 
-      // repeated .com.xiang.proto.BriefUser briefUsers = 2;
-      public com.xiang.proto.nano.Common.BriefUser[] briefUsers;
+      // optional int32 userNum = 2;
+      public int userNum;
+
+      // optional int32 trendNum = 3;
+      public int trendNum;
 
       public Data() {
         clear();
@@ -1105,7 +1166,8 @@ public interface Gym {
 
       public Data clear() {
         detailGym = null;
-        briefUsers = com.xiang.proto.nano.Common.BriefUser.emptyArray();
+        userNum = 0;
+        trendNum = 0;
         cachedSize = -1;
         return this;
       }
@@ -1116,13 +1178,11 @@ public interface Gym {
         if (this.detailGym != null) {
           output.writeMessage(1, this.detailGym);
         }
-        if (this.briefUsers != null && this.briefUsers.length > 0) {
-          for (int i = 0; i < this.briefUsers.length; i++) {
-            com.xiang.proto.nano.Common.BriefUser element = this.briefUsers[i];
-            if (element != null) {
-              output.writeMessage(2, element);
-            }
-          }
+        if (this.userNum != 0) {
+          output.writeInt32(2, this.userNum);
+        }
+        if (this.trendNum != 0) {
+          output.writeInt32(3, this.trendNum);
         }
         super.writeTo(output);
       }
@@ -1134,14 +1194,13 @@ public interface Gym {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
             .computeMessageSize(1, this.detailGym);
         }
-        if (this.briefUsers != null && this.briefUsers.length > 0) {
-          for (int i = 0; i < this.briefUsers.length; i++) {
-            com.xiang.proto.nano.Common.BriefUser element = this.briefUsers[i];
-            if (element != null) {
-              size += com.google.protobuf.nano.CodedOutputByteBufferNano
-                .computeMessageSize(2, element);
-            }
-          }
+        if (this.userNum != 0) {
+          size += com.google.protobuf.nano.CodedOutputByteBufferNano
+              .computeInt32Size(2, this.userNum);
+        }
+        if (this.trendNum != 0) {
+          size += com.google.protobuf.nano.CodedOutputByteBufferNano
+              .computeInt32Size(3, this.trendNum);
         }
         return size;
       }
@@ -1168,24 +1227,12 @@ public interface Gym {
               input.readMessage(this.detailGym);
               break;
             }
-            case 18: {
-              int arrayLength = com.google.protobuf.nano.WireFormatNano
-                  .getRepeatedFieldArrayLength(input, 18);
-              int i = this.briefUsers == null ? 0 : this.briefUsers.length;
-              com.xiang.proto.nano.Common.BriefUser[] newArray =
-                  new com.xiang.proto.nano.Common.BriefUser[i + arrayLength];
-              if (i != 0) {
-                java.lang.System.arraycopy(this.briefUsers, 0, newArray, 0, i);
-              }
-              for (; i < newArray.length - 1; i++) {
-                newArray[i] = new com.xiang.proto.nano.Common.BriefUser();
-                input.readMessage(newArray[i]);
-                input.readTag();
-              }
-              // Last one without readTag.
-              newArray[i] = new com.xiang.proto.nano.Common.BriefUser();
-              input.readMessage(newArray[i]);
-              this.briefUsers = newArray;
+            case 16: {
+              this.userNum = input.readInt32();
+              break;
+            }
+            case 24: {
+              this.trendNum = input.readInt32();
               break;
             }
           }

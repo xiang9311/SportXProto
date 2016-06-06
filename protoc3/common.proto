@@ -69,27 +69,24 @@ message BriefUser {
 message BriefGym {
   int32 id = 1;                // 场馆id
   string gymName = 2;          // 场馆名字
-  repeated string gymCover = 3;// 场馆图片
   string place = 4;            // 场馆所在位置
   string gymAvatar = 8;        // 场馆头像
   
   float latitude = 5;          // 纬度
   float longitude = 6;         // 经度
-
-  bool isCoop = 7;             // 是否合作（可以在线购买健身卡）
-
-  repeated Equipment equipments = 9;    // 设备信息
+  string gymIntro = 7;          //宣传文字
 }
 
 // DetailGym 场馆详情
 message DetailGym{
 	BriefGym briefGym = 1;     // 场馆简要信息
-
+  //器材
+  string eqm = 2;
 	// 课程
-	repeated Course courses = 3;  // 课程信息
-
+	string courses = 3;  // 课程信息
 	// 健身卡
-	repeated GymCard gymCards = 4; // 健身卡信息
+	string gymCards = 4; // 健身卡信息
+  
 }
 
 message Equipment{

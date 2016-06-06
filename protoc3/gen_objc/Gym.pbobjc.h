@@ -107,6 +107,7 @@ typedef GPB_ENUM(Response13001_FieldNumber) {
 
 typedef GPB_ENUM(Response13001_Data_FieldNumber) {
   Response13001_Data_FieldNumber_BriefGymsArray = 1,
+  Response13001_Data_FieldNumber_MaxCountPerPage = 2,
 };
 
 @interface Response13001_Data : GPBMessage
@@ -115,6 +116,9 @@ typedef GPB_ENUM(Response13001_Data_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefGym*> *briefGymsArray;
 /// The number of items in @c briefGymsArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger briefGymsArray_Count;
+
+///需不需要分页?
+@property(nonatomic, readwrite) int32_t maxCountPerPage;
 
 @end
 
@@ -175,6 +179,7 @@ typedef GPB_ENUM(Response13002_FieldNumber) {
 typedef GPB_ENUM(Response13002_Data_FieldNumber) {
   Response13002_Data_FieldNumber_DetailGym = 1,
   Response13002_Data_FieldNumber_BriefUsersArray = 2,
+  Response13002_Data_FieldNumber_GymCoverArray = 3,
 };
 
 @interface Response13002_Data : GPBMessage
@@ -187,6 +192,11 @@ typedef GPB_ENUM(Response13002_Data_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefUser*> *briefUsersArray;
 /// The number of items in @c briefUsersArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger briefUsersArray_Count;
+
+/// 场馆图片
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *gymCoverArray;
+/// The number of items in @c gymCoverArray without causing the array to be created.
+@property(nonatomic, readonly) NSUInteger gymCoverArray_Count;
 
 @end
 
@@ -249,7 +259,8 @@ typedef GPB_ENUM(Response13003_FieldNumber) {
 
 typedef GPB_ENUM(Response13003_Data_FieldNumber) {
   Response13003_Data_FieldNumber_DetailGym = 1,
-  Response13003_Data_FieldNumber_BriefUsersArray = 2,
+  Response13003_Data_FieldNumber_UserNum = 2,
+  Response13003_Data_FieldNumber_TrendNum = 3,
 };
 
 @interface Response13003_Data : GPBMessage
@@ -258,10 +269,11 @@ typedef GPB_ENUM(Response13003_Data_FieldNumber) {
 /// Test to see if @c detailGym has been set.
 @property(nonatomic, readwrite) BOOL hasDetailGym;
 
-/// 附近的人列表
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefUser*> *briefUsersArray;
-/// The number of items in @c briefUsersArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger briefUsersArray_Count;
+///repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+///repeated trend trends = 3;//这个直传数量就好
+@property(nonatomic, readwrite) int32_t userNum;
+
+@property(nonatomic, readwrite) int32_t trendNum;
 
 @end
 

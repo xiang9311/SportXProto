@@ -16,10 +16,7 @@ CF_EXTERN_C_BEGIN
 
 @class BriefGym;
 @class BriefUser;
-@class Course;
 @class CourseTime;
-@class Equipment;
-@class GymCard;
 @class Trend;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -301,13 +298,11 @@ typedef GPB_ENUM(BriefUser_FieldNumber) {
 typedef GPB_ENUM(BriefGym_FieldNumber) {
   BriefGym_FieldNumber_Id_p = 1,
   BriefGym_FieldNumber_GymName = 2,
-  BriefGym_FieldNumber_GymCoverArray = 3,
   BriefGym_FieldNumber_Place = 4,
   BriefGym_FieldNumber_Latitude = 5,
   BriefGym_FieldNumber_Longitude = 6,
-  BriefGym_FieldNumber_IsCoop = 7,
+  BriefGym_FieldNumber_GymIntro = 7,
   BriefGym_FieldNumber_GymAvatar = 8,
-  BriefGym_FieldNumber_EquipmentsArray = 9,
 };
 
 /// BriefGym 场馆
@@ -318,11 +313,6 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 
 /// 场馆名字
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gymName;
-
-/// 场馆图片
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *gymCoverArray;
-/// The number of items in @c gymCoverArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger gymCoverArray_Count;
 
 /// 场馆所在位置
 @property(nonatomic, readwrite, copy, null_resettable) NSString *place;
@@ -336,13 +326,8 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 /// 经度
 @property(nonatomic, readwrite) float longitude;
 
-/// 是否合作（可以在线购买健身卡）
-@property(nonatomic, readwrite) BOOL isCoop;
-
-/// 设备信息
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Equipment*> *equipmentsArray;
-/// The number of items in @c equipmentsArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger equipmentsArray_Count;
+///宣传文字
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gymIntro;
 
 @end
 
@@ -350,8 +335,9 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 
 typedef GPB_ENUM(DetailGym_FieldNumber) {
   DetailGym_FieldNumber_BriefGym = 1,
-  DetailGym_FieldNumber_CoursesArray = 3,
-  DetailGym_FieldNumber_GymCardsArray = 4,
+  DetailGym_FieldNumber_Eqm = 2,
+  DetailGym_FieldNumber_Courses = 3,
+  DetailGym_FieldNumber_GymCards = 4,
 };
 
 /// DetailGym 场馆详情
@@ -362,15 +348,14 @@ typedef GPB_ENUM(DetailGym_FieldNumber) {
 /// Test to see if @c briefGym has been set.
 @property(nonatomic, readwrite) BOOL hasBriefGym;
 
+///器材
+@property(nonatomic, readwrite, copy, null_resettable) NSString *eqm;
+
 /// 课程
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<Course*> *coursesArray;
-/// The number of items in @c coursesArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger coursesArray_Count;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *courses;
 
 /// 健身卡
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<GymCard*> *gymCardsArray;
-/// The number of items in @c gymCardsArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger gymCardsArray_Count;
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gymCards;
 
 @end
 

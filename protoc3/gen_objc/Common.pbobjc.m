@@ -694,13 +694,11 @@ typedef struct BriefUser__storage_ {
 
 @dynamic id_p;
 @dynamic gymName;
-@dynamic gymCoverArray, gymCoverArray_Count;
 @dynamic place;
 @dynamic gymAvatar;
 @dynamic latitude;
 @dynamic longitude;
-@dynamic isCoop;
-@dynamic equipmentsArray, equipmentsArray_Count;
+@dynamic gymIntro;
 
 typedef struct BriefGym__storage_ {
   uint32_t _has_storage_[1];
@@ -708,10 +706,9 @@ typedef struct BriefGym__storage_ {
   float latitude;
   float longitude;
   NSString *gymName;
-  NSMutableArray *gymCoverArray;
   NSString *place;
+  NSString *gymIntro;
   NSString *gymAvatar;
-  NSMutableArray *equipmentsArray;
 } BriefGym__storage_;
 
 // This method is threadsafe because it is initially called
@@ -736,15 +733,6 @@ typedef struct BriefGym__storage_ {
         .hasIndex = 1,
         .offset = (uint32_t)offsetof(BriefGym__storage_, gymName),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "gymCoverArray",
-        .dataTypeSpecific.className = NULL,
-        .number = BriefGym_FieldNumber_GymCoverArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(BriefGym__storage_, gymCoverArray),
-        .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
       {
@@ -775,13 +763,13 @@ typedef struct BriefGym__storage_ {
         .dataType = GPBDataTypeFloat,
       },
       {
-        .name = "isCoop",
+        .name = "gymIntro",
         .dataTypeSpecific.className = NULL,
-        .number = BriefGym_FieldNumber_IsCoop,
+        .number = BriefGym_FieldNumber_GymIntro,
         .hasIndex = 6,
-        .offset = 7,  // Stored in _has_storage_ to save space.
+        .offset = (uint32_t)offsetof(BriefGym__storage_, gymIntro),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeBool,
+        .dataType = GPBDataTypeString,
       },
       {
         .name = "gymAvatar",
@@ -791,15 +779,6 @@ typedef struct BriefGym__storage_ {
         .offset = (uint32_t)offsetof(BriefGym__storage_, gymAvatar),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "equipmentsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(Equipment),
-        .number = BriefGym_FieldNumber_EquipmentsArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(BriefGym__storage_, equipmentsArray),
-        .flags = GPBFieldRepeated,
-        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -812,7 +791,7 @@ typedef struct BriefGym__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\004\002\007\000\003\000gymCover\000\007\006\000\010\t\000";
+        "\003\002\007\000\007\010\000\010\t\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -828,14 +807,16 @@ typedef struct BriefGym__storage_ {
 @implementation DetailGym
 
 @dynamic hasBriefGym, briefGym;
-@dynamic coursesArray, coursesArray_Count;
-@dynamic gymCardsArray, gymCardsArray_Count;
+@dynamic eqm;
+@dynamic courses;
+@dynamic gymCards;
 
 typedef struct DetailGym__storage_ {
   uint32_t _has_storage_[1];
   BriefGym *briefGym;
-  NSMutableArray *coursesArray;
-  NSMutableArray *gymCardsArray;
+  NSString *eqm;
+  NSString *courses;
+  NSString *gymCards;
 } DetailGym__storage_;
 
 // This method is threadsafe because it is initially called
@@ -854,22 +835,31 @@ typedef struct DetailGym__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "coursesArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(Course),
-        .number = DetailGym_FieldNumber_CoursesArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(DetailGym__storage_, coursesArray),
-        .flags = GPBFieldRepeated,
-        .dataType = GPBDataTypeMessage,
+        .name = "eqm",
+        .dataTypeSpecific.className = NULL,
+        .number = DetailGym_FieldNumber_Eqm,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, eqm),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
       },
       {
-        .name = "gymCardsArray",
-        .dataTypeSpecific.className = GPBStringifySymbol(GymCard),
-        .number = DetailGym_FieldNumber_GymCardsArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(DetailGym__storage_, gymCardsArray),
-        .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeMessage,
+        .name = "courses",
+        .dataTypeSpecific.className = NULL,
+        .number = DetailGym_FieldNumber_Courses,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, courses),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "gymCards",
+        .dataTypeSpecific.className = NULL,
+        .number = DetailGym_FieldNumber_GymCards,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, gymCards),
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -882,7 +872,7 @@ typedef struct DetailGym__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\002\001\010\000\004\000gymCards\000";
+        "\002\001\010\000\004\010\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

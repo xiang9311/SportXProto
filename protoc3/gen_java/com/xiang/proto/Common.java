@@ -5505,41 +5505,6 @@ public final class Common {
 
     /**
      * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    com.google.protobuf.ProtocolStringList
-        getGymCoverList();
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    int getGymCoverCount();
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    java.lang.String getGymCover(int index);
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getGymCoverBytes(int index);
-
-    /**
-     * <pre>
      * 场馆所在位置
      * </pre>
      *
@@ -5594,56 +5559,21 @@ public final class Common {
 
     /**
      * <pre>
-     * 是否合作（可以在线购买健身卡）
+     *宣传文字
      * </pre>
      *
-     * <code>optional bool isCoop = 7;</code>
+     * <code>optional string gymIntro = 7;</code>
      */
-    boolean getIsCoop();
-
+    java.lang.String getGymIntro();
     /**
      * <pre>
-     * 设备信息
+     *宣传文字
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
+     * <code>optional string gymIntro = 7;</code>
      */
-    java.util.List<com.xiang.proto.Common.Equipment> 
-        getEquipmentsList();
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    com.xiang.proto.Common.Equipment getEquipments(int index);
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    int getEquipmentsCount();
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
-        getEquipmentsOrBuilderList();
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getGymIntroBytes();
   }
   /**
    * <pre>
@@ -5663,13 +5593,11 @@ public final class Common {
     private BriefGym() {
       id_ = 0;
       gymName_ = "";
-      gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       place_ = "";
       gymAvatar_ = "";
       latitude_ = 0F;
       longitude_ = 0F;
-      isCoop_ = false;
-      equipments_ = java.util.Collections.emptyList();
+      gymIntro_ = "";
     }
 
     @java.lang.Override
@@ -5708,15 +5636,6 @@ public final class Common {
               gymName_ = s;
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                gymCover_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              gymCover_.add(s);
-              break;
-            }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -5733,23 +5652,16 @@ public final class Common {
               longitude_ = input.readFloat();
               break;
             }
-            case 56: {
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              isCoop_ = input.readBool();
+              gymIntro_ = s;
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
 
               gymAvatar_ = s;
-              break;
-            }
-            case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-                equipments_ = new java.util.ArrayList<com.xiang.proto.Common.Equipment>();
-                mutable_bitField0_ |= 0x00000100;
-              }
-              equipments_.add(input.readMessage(com.xiang.proto.Common.Equipment.parser(), extensionRegistry));
               break;
             }
           }
@@ -5760,12 +5672,6 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          gymCover_ = gymCover_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-          equipments_ = java.util.Collections.unmodifiableList(equipments_);
-        }
         makeExtensionsImmutable();
       }
     }
@@ -5781,7 +5687,6 @@ public final class Common {
               com.xiang.proto.Common.BriefGym.class, com.xiang.proto.Common.BriefGym.Builder.class);
     }
 
-    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private int id_;
     /**
@@ -5835,51 +5740,6 @@ public final class Common {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int GYMCOVER_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList gymCover_;
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    public com.google.protobuf.ProtocolStringList
-        getGymCoverList() {
-      return gymCover_;
-    }
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    public int getGymCoverCount() {
-      return gymCover_.size();
-    }
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    public java.lang.String getGymCover(int index) {
-      return gymCover_.get(index);
-    }
-    /**
-     * <pre>
-     * 场馆图片
-     * </pre>
-     *
-     * <code>repeated string gymCover = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getGymCoverBytes(int index) {
-      return gymCover_.getByteString(index);
     }
 
     public static final int PLACE_FIELD_NUMBER = 4;
@@ -5992,72 +5852,46 @@ public final class Common {
       return longitude_;
     }
 
-    public static final int ISCOOP_FIELD_NUMBER = 7;
-    private boolean isCoop_;
+    public static final int GYMINTRO_FIELD_NUMBER = 7;
+    private volatile java.lang.Object gymIntro_;
     /**
      * <pre>
-     * 是否合作（可以在线购买健身卡）
+     *宣传文字
      * </pre>
      *
-     * <code>optional bool isCoop = 7;</code>
+     * <code>optional string gymIntro = 7;</code>
      */
-    public boolean getIsCoop() {
-      return isCoop_;
-    }
-
-    public static final int EQUIPMENTS_FIELD_NUMBER = 9;
-    private java.util.List<com.xiang.proto.Common.Equipment> equipments_;
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    public java.util.List<com.xiang.proto.Common.Equipment> getEquipmentsList() {
-      return equipments_;
+    public java.lang.String getGymIntro() {
+      java.lang.Object ref = gymIntro_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gymIntro_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * 设备信息
+     *宣传文字
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
+     * <code>optional string gymIntro = 7;</code>
      */
-    public java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
-        getEquipmentsOrBuilderList() {
-      return equipments_;
-    }
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    public int getEquipmentsCount() {
-      return equipments_.size();
-    }
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    public com.xiang.proto.Common.Equipment getEquipments(int index) {
-      return equipments_.get(index);
-    }
-    /**
-     * <pre>
-     * 设备信息
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-     */
-    public com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
-        int index) {
-      return equipments_.get(index);
+    public com.google.protobuf.ByteString
+        getGymIntroBytes() {
+      java.lang.Object ref = gymIntro_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gymIntro_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6078,9 +5912,6 @@ public final class Common {
       if (!getGymNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 2, gymName_);
       }
-      for (int i = 0; i < gymCover_.size(); i++) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 3, gymCover_.getRaw(i));
-      }
       if (!getPlaceBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 4, place_);
       }
@@ -6090,14 +5921,11 @@ public final class Common {
       if (longitude_ != 0F) {
         output.writeFloat(6, longitude_);
       }
-      if (isCoop_ != false) {
-        output.writeBool(7, isCoop_);
+      if (!getGymIntroBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, gymIntro_);
       }
       if (!getGymAvatarBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 8, gymAvatar_);
-      }
-      for (int i = 0; i < equipments_.size(); i++) {
-        output.writeMessage(9, equipments_.get(i));
       }
     }
 
@@ -6113,14 +5941,6 @@ public final class Common {
       if (!getGymNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(2, gymName_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < gymCover_.size(); i++) {
-          dataSize += computeStringSizeNoTag(gymCover_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getGymCoverList().size();
-      }
       if (!getPlaceBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(4, place_);
       }
@@ -6132,16 +5952,11 @@ public final class Common {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(6, longitude_);
       }
-      if (isCoop_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isCoop_);
+      if (!getGymIntroBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, gymIntro_);
       }
       if (!getGymAvatarBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(8, gymAvatar_);
-      }
-      for (int i = 0; i < equipments_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, equipments_.get(i));
       }
       memoizedSize = size;
       return size;
@@ -6260,7 +6075,6 @@ public final class Common {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getEquipmentsFieldBuilder();
         }
       }
       public Builder clear() {
@@ -6269,8 +6083,6 @@ public final class Common {
 
         gymName_ = "";
 
-        gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
         place_ = "";
 
         gymAvatar_ = "";
@@ -6279,14 +6091,8 @@ public final class Common {
 
         longitude_ = 0F;
 
-        isCoop_ = false;
+        gymIntro_ = "";
 
-        if (equipmentsBuilder_ == null) {
-          equipments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
-        } else {
-          equipmentsBuilder_.clear();
-        }
         return this;
       }
 
@@ -6309,30 +6115,13 @@ public final class Common {
 
       public com.xiang.proto.Common.BriefGym buildPartial() {
         com.xiang.proto.Common.BriefGym result = new com.xiang.proto.Common.BriefGym(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.id_ = id_;
         result.gymName_ = gymName_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          gymCover_ = gymCover_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        }
-        result.gymCover_ = gymCover_;
         result.place_ = place_;
         result.gymAvatar_ = gymAvatar_;
         result.latitude_ = latitude_;
         result.longitude_ = longitude_;
-        result.isCoop_ = isCoop_;
-        if (equipmentsBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
-            equipments_ = java.util.Collections.unmodifiableList(equipments_);
-            bitField0_ = (bitField0_ & ~0x00000100);
-          }
-          result.equipments_ = equipments_;
-        } else {
-          result.equipments_ = equipmentsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
+        result.gymIntro_ = gymIntro_;
         onBuilt();
         return result;
       }
@@ -6355,16 +6144,6 @@ public final class Common {
           gymName_ = other.gymName_;
           onChanged();
         }
-        if (!other.gymCover_.isEmpty()) {
-          if (gymCover_.isEmpty()) {
-            gymCover_ = other.gymCover_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureGymCoverIsMutable();
-            gymCover_.addAll(other.gymCover_);
-          }
-          onChanged();
-        }
         if (!other.getPlace().isEmpty()) {
           place_ = other.place_;
           onChanged();
@@ -6379,34 +6158,9 @@ public final class Common {
         if (other.getLongitude() != 0F) {
           setLongitude(other.getLongitude());
         }
-        if (other.getIsCoop() != false) {
-          setIsCoop(other.getIsCoop());
-        }
-        if (equipmentsBuilder_ == null) {
-          if (!other.equipments_.isEmpty()) {
-            if (equipments_.isEmpty()) {
-              equipments_ = other.equipments_;
-              bitField0_ = (bitField0_ & ~0x00000100);
-            } else {
-              ensureEquipmentsIsMutable();
-              equipments_.addAll(other.equipments_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.equipments_.isEmpty()) {
-            if (equipmentsBuilder_.isEmpty()) {
-              equipmentsBuilder_.dispose();
-              equipmentsBuilder_ = null;
-              equipments_ = other.equipments_;
-              bitField0_ = (bitField0_ & ~0x00000100);
-              equipmentsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getEquipmentsFieldBuilder() : null;
-            } else {
-              equipmentsBuilder_.addAllMessages(other.equipments_);
-            }
-          }
+        if (!other.getGymIntro().isEmpty()) {
+          gymIntro_ = other.gymIntro_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -6433,7 +6187,6 @@ public final class Common {
         }
         return this;
       }
-      private int bitField0_;
 
       private int id_ ;
       /**
@@ -6558,136 +6311,6 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         gymName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.LazyStringList gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureGymCoverIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          gymCover_ = new com.google.protobuf.LazyStringArrayList(gymCover_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getGymCoverList() {
-        return gymCover_.getUnmodifiableView();
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public int getGymCoverCount() {
-        return gymCover_.size();
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public java.lang.String getGymCover(int index) {
-        return gymCover_.get(index);
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getGymCoverBytes(int index) {
-        return gymCover_.getByteString(index);
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public Builder setGymCover(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGymCoverIsMutable();
-        gymCover_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public Builder addGymCover(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureGymCoverIsMutable();
-        gymCover_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public Builder addAllGymCover(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureGymCoverIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, gymCover_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public Builder clearGymCover() {
-        gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * 场馆图片
-       * </pre>
-       *
-       * <code>repeated string gymCover = 3;</code>
-       */
-      public Builder addGymCoverBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureGymCoverIsMutable();
-        gymCover_.add(value);
         onChanged();
         return this;
       }
@@ -6946,354 +6569,93 @@ public final class Common {
         return this;
       }
 
-      private boolean isCoop_ ;
+      private java.lang.Object gymIntro_ = "";
       /**
        * <pre>
-       * 是否合作（可以在线购买健身卡）
+       *宣传文字
        * </pre>
        *
-       * <code>optional bool isCoop = 7;</code>
+       * <code>optional string gymIntro = 7;</code>
        */
-      public boolean getIsCoop() {
-        return isCoop_;
+      public java.lang.String getGymIntro() {
+        java.lang.Object ref = gymIntro_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gymIntro_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * 是否合作（可以在线购买健身卡）
+       *宣传文字
        * </pre>
        *
-       * <code>optional bool isCoop = 7;</code>
+       * <code>optional string gymIntro = 7;</code>
        */
-      public Builder setIsCoop(boolean value) {
-        
-        isCoop_ = value;
+      public com.google.protobuf.ByteString
+          getGymIntroBytes() {
+        java.lang.Object ref = gymIntro_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gymIntro_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *宣传文字
+       * </pre>
+       *
+       * <code>optional string gymIntro = 7;</code>
+       */
+      public Builder setGymIntro(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gymIntro_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * 是否合作（可以在线购买健身卡）
+       *宣传文字
        * </pre>
        *
-       * <code>optional bool isCoop = 7;</code>
+       * <code>optional string gymIntro = 7;</code>
        */
-      public Builder clearIsCoop() {
+      public Builder clearGymIntro() {
         
-        isCoop_ = false;
+        gymIntro_ = getDefaultInstance().getGymIntro();
         onChanged();
         return this;
       }
-
-      private java.util.List<com.xiang.proto.Common.Equipment> equipments_ =
-        java.util.Collections.emptyList();
-      private void ensureEquipmentsIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
-          equipments_ = new java.util.ArrayList<com.xiang.proto.Common.Equipment>(equipments_);
-          bitField0_ |= 0x00000100;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.Equipment, com.xiang.proto.Common.Equipment.Builder, com.xiang.proto.Common.EquipmentOrBuilder> equipmentsBuilder_;
-
       /**
        * <pre>
-       * 设备信息
+       *宣传文字
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
+       * <code>optional string gymIntro = 7;</code>
        */
-      public java.util.List<com.xiang.proto.Common.Equipment> getEquipmentsList() {
-        if (equipmentsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(equipments_);
-        } else {
-          return equipmentsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public int getEquipmentsCount() {
-        if (equipmentsBuilder_ == null) {
-          return equipments_.size();
-        } else {
-          return equipmentsBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public com.xiang.proto.Common.Equipment getEquipments(int index) {
-        if (equipmentsBuilder_ == null) {
-          return equipments_.get(index);
-        } else {
-          return equipmentsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder setEquipments(
-          int index, com.xiang.proto.Common.Equipment value) {
-        if (equipmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEquipmentsIsMutable();
-          equipments_.set(index, value);
-          onChanged();
-        } else {
-          equipmentsBuilder_.setMessage(index, value);
-        }
+      public Builder setGymIntroBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gymIntro_ = value;
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder setEquipments(
-          int index, com.xiang.proto.Common.Equipment.Builder builderForValue) {
-        if (equipmentsBuilder_ == null) {
-          ensureEquipmentsIsMutable();
-          equipments_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          equipmentsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder addEquipments(com.xiang.proto.Common.Equipment value) {
-        if (equipmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEquipmentsIsMutable();
-          equipments_.add(value);
-          onChanged();
-        } else {
-          equipmentsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder addEquipments(
-          int index, com.xiang.proto.Common.Equipment value) {
-        if (equipmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureEquipmentsIsMutable();
-          equipments_.add(index, value);
-          onChanged();
-        } else {
-          equipmentsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder addEquipments(
-          com.xiang.proto.Common.Equipment.Builder builderForValue) {
-        if (equipmentsBuilder_ == null) {
-          ensureEquipmentsIsMutable();
-          equipments_.add(builderForValue.build());
-          onChanged();
-        } else {
-          equipmentsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder addEquipments(
-          int index, com.xiang.proto.Common.Equipment.Builder builderForValue) {
-        if (equipmentsBuilder_ == null) {
-          ensureEquipmentsIsMutable();
-          equipments_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          equipmentsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder addAllEquipments(
-          java.lang.Iterable<? extends com.xiang.proto.Common.Equipment> values) {
-        if (equipmentsBuilder_ == null) {
-          ensureEquipmentsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, equipments_);
-          onChanged();
-        } else {
-          equipmentsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder clearEquipments() {
-        if (equipmentsBuilder_ == null) {
-          equipments_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
-          onChanged();
-        } else {
-          equipmentsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public Builder removeEquipments(int index) {
-        if (equipmentsBuilder_ == null) {
-          ensureEquipmentsIsMutable();
-          equipments_.remove(index);
-          onChanged();
-        } else {
-          equipmentsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public com.xiang.proto.Common.Equipment.Builder getEquipmentsBuilder(
-          int index) {
-        return getEquipmentsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public com.xiang.proto.Common.EquipmentOrBuilder getEquipmentsOrBuilder(
-          int index) {
-        if (equipmentsBuilder_ == null) {
-          return equipments_.get(index);  } else {
-          return equipmentsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public java.util.List<? extends com.xiang.proto.Common.EquipmentOrBuilder> 
-           getEquipmentsOrBuilderList() {
-        if (equipmentsBuilder_ != null) {
-          return equipmentsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(equipments_);
-        }
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public com.xiang.proto.Common.Equipment.Builder addEquipmentsBuilder() {
-        return getEquipmentsFieldBuilder().addBuilder(
-            com.xiang.proto.Common.Equipment.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public com.xiang.proto.Common.Equipment.Builder addEquipmentsBuilder(
-          int index) {
-        return getEquipmentsFieldBuilder().addBuilder(
-            index, com.xiang.proto.Common.Equipment.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 设备信息
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Equipment equipments = 9;</code>
-       */
-      public java.util.List<com.xiang.proto.Common.Equipment.Builder> 
-           getEquipmentsBuilderList() {
-        return getEquipmentsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.Equipment, com.xiang.proto.Common.Equipment.Builder, com.xiang.proto.Common.EquipmentOrBuilder> 
-          getEquipmentsFieldBuilder() {
-        if (equipmentsBuilder_ == null) {
-          equipmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.xiang.proto.Common.Equipment, com.xiang.proto.Common.Equipment.Builder, com.xiang.proto.Common.EquipmentOrBuilder>(
-                  equipments_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
-                  getParentForChildren(),
-                  isClean());
-          equipments_ = null;
-        }
-        return equipmentsBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7375,91 +6737,57 @@ public final class Common {
 
     /**
      * <pre>
-     * 课程
+     *器材
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+     * <code>optional string eqm = 2;</code>
      */
-    java.util.List<com.xiang.proto.Common.Course> 
-        getCoursesList();
+    java.lang.String getEqm();
+    /**
+     * <pre>
+     *器材
+     * </pre>
+     *
+     * <code>optional string eqm = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getEqmBytes();
+
     /**
      * <pre>
      * 课程
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+     * <code>optional string courses = 3;</code>
      */
-    com.xiang.proto.Common.Course getCourses(int index);
+    java.lang.String getCourses();
     /**
      * <pre>
      * 课程
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+     * <code>optional string courses = 3;</code>
      */
-    int getCoursesCount();
-    /**
-     * <pre>
-     * 课程
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     */
-    java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
-        getCoursesOrBuilderList();
-    /**
-     * <pre>
-     * 课程
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     */
-    com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getCoursesBytes();
 
     /**
      * <pre>
      * 健身卡
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+     * <code>optional string gymCards = 4;</code>
      */
-    java.util.List<com.xiang.proto.Common.GymCard> 
-        getGymCardsList();
+    java.lang.String getGymCards();
     /**
      * <pre>
      * 健身卡
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+     * <code>optional string gymCards = 4;</code>
      */
-    com.xiang.proto.Common.GymCard getGymCards(int index);
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    int getGymCardsCount();
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
-        getGymCardsOrBuilderList();
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
-        int index);
+    com.google.protobuf.ByteString
+        getGymCardsBytes();
   }
   /**
    * <pre>
@@ -7477,8 +6805,9 @@ public final class Common {
       super(builder);
     }
     private DetailGym() {
-      courses_ = java.util.Collections.emptyList();
-      gymCards_ = java.util.Collections.emptyList();
+      eqm_ = "";
+      courses_ = "";
+      gymCards_ = "";
     }
 
     @java.lang.Override
@@ -7519,20 +6848,22 @@ public final class Common {
 
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              eqm_ = s;
+              break;
+            }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                courses_ = new java.util.ArrayList<com.xiang.proto.Common.Course>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              courses_.add(input.readMessage(com.xiang.proto.Common.Course.parser(), extensionRegistry));
+              java.lang.String s = input.readStringRequireUtf8();
+
+              courses_ = s;
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                gymCards_ = new java.util.ArrayList<com.xiang.proto.Common.GymCard>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              gymCards_.add(input.readMessage(com.xiang.proto.Common.GymCard.parser(), extensionRegistry));
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gymCards_ = s;
               break;
             }
           }
@@ -7543,12 +6874,6 @@ public final class Common {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          courses_ = java.util.Collections.unmodifiableList(courses_);
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          gymCards_ = java.util.Collections.unmodifiableList(gymCards_);
-        }
         makeExtensionsImmutable();
       }
     }
@@ -7564,7 +6889,6 @@ public final class Common {
               com.xiang.proto.Common.DetailGym.class, com.xiang.proto.Common.DetailGym.Builder.class);
     }
 
-    private int bitField0_;
     public static final int BRIEFGYM_FIELD_NUMBER = 1;
     private com.xiang.proto.Common.BriefGym briefGym_;
     /**
@@ -7598,114 +6922,130 @@ public final class Common {
       return getBriefGym();
     }
 
+    public static final int EQM_FIELD_NUMBER = 2;
+    private volatile java.lang.Object eqm_;
+    /**
+     * <pre>
+     *器材
+     * </pre>
+     *
+     * <code>optional string eqm = 2;</code>
+     */
+    public java.lang.String getEqm() {
+      java.lang.Object ref = eqm_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eqm_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *器材
+     * </pre>
+     *
+     * <code>optional string eqm = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getEqmBytes() {
+      java.lang.Object ref = eqm_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eqm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int COURSES_FIELD_NUMBER = 3;
-    private java.util.List<com.xiang.proto.Common.Course> courses_;
+    private volatile java.lang.Object courses_;
     /**
      * <pre>
      * 课程
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+     * <code>optional string courses = 3;</code>
      */
-    public java.util.List<com.xiang.proto.Common.Course> getCoursesList() {
-      return courses_;
+    public java.lang.String getCourses() {
+      java.lang.Object ref = courses_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        courses_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * 课程
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+     * <code>optional string courses = 3;</code>
      */
-    public java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
-        getCoursesOrBuilderList() {
-      return courses_;
-    }
-    /**
-     * <pre>
-     * 课程
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     */
-    public int getCoursesCount() {
-      return courses_.size();
-    }
-    /**
-     * <pre>
-     * 课程
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     */
-    public com.xiang.proto.Common.Course getCourses(int index) {
-      return courses_.get(index);
-    }
-    /**
-     * <pre>
-     * 课程
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-     */
-    public com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
-        int index) {
-      return courses_.get(index);
+    public com.google.protobuf.ByteString
+        getCoursesBytes() {
+      java.lang.Object ref = courses_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        courses_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int GYMCARDS_FIELD_NUMBER = 4;
-    private java.util.List<com.xiang.proto.Common.GymCard> gymCards_;
+    private volatile java.lang.Object gymCards_;
     /**
      * <pre>
      * 健身卡
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+     * <code>optional string gymCards = 4;</code>
      */
-    public java.util.List<com.xiang.proto.Common.GymCard> getGymCardsList() {
-      return gymCards_;
+    public java.lang.String getGymCards() {
+      java.lang.Object ref = gymCards_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gymCards_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * 健身卡
      * </pre>
      *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+     * <code>optional string gymCards = 4;</code>
      */
-    public java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
-        getGymCardsOrBuilderList() {
-      return gymCards_;
-    }
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    public int getGymCardsCount() {
-      return gymCards_.size();
-    }
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    public com.xiang.proto.Common.GymCard getGymCards(int index) {
-      return gymCards_.get(index);
-    }
-    /**
-     * <pre>
-     * 健身卡
-     * </pre>
-     *
-     * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-     */
-    public com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
-        int index) {
-      return gymCards_.get(index);
+    public com.google.protobuf.ByteString
+        getGymCardsBytes() {
+      java.lang.Object ref = gymCards_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gymCards_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7723,11 +7063,14 @@ public final class Common {
       if (briefGym_ != null) {
         output.writeMessage(1, getBriefGym());
       }
-      for (int i = 0; i < courses_.size(); i++) {
-        output.writeMessage(3, courses_.get(i));
+      if (!getEqmBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, eqm_);
       }
-      for (int i = 0; i < gymCards_.size(); i++) {
-        output.writeMessage(4, gymCards_.get(i));
+      if (!getCoursesBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, courses_);
+      }
+      if (!getGymCardsBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 4, gymCards_);
       }
     }
 
@@ -7740,13 +7083,14 @@ public final class Common {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBriefGym());
       }
-      for (int i = 0; i < courses_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, courses_.get(i));
+      if (!getEqmBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, eqm_);
       }
-      for (int i = 0; i < gymCards_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, gymCards_.get(i));
+      if (!getCoursesBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, courses_);
+      }
+      if (!getGymCardsBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(4, gymCards_);
       }
       memoizedSize = size;
       return size;
@@ -7865,8 +7209,6 @@ public final class Common {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-          getCoursesFieldBuilder();
-          getGymCardsFieldBuilder();
         }
       }
       public Builder clear() {
@@ -7877,18 +7219,12 @@ public final class Common {
           briefGym_ = null;
           briefGymBuilder_ = null;
         }
-        if (coursesBuilder_ == null) {
-          courses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          coursesBuilder_.clear();
-        }
-        if (gymCardsBuilder_ == null) {
-          gymCards_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          gymCardsBuilder_.clear();
-        }
+        eqm_ = "";
+
+        courses_ = "";
+
+        gymCards_ = "";
+
         return this;
       }
 
@@ -7911,32 +7247,14 @@ public final class Common {
 
       public com.xiang.proto.Common.DetailGym buildPartial() {
         com.xiang.proto.Common.DetailGym result = new com.xiang.proto.Common.DetailGym(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (briefGymBuilder_ == null) {
           result.briefGym_ = briefGym_;
         } else {
           result.briefGym_ = briefGymBuilder_.build();
         }
-        if (coursesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            courses_ = java.util.Collections.unmodifiableList(courses_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.courses_ = courses_;
-        } else {
-          result.courses_ = coursesBuilder_.build();
-        }
-        if (gymCardsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            gymCards_ = java.util.Collections.unmodifiableList(gymCards_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.gymCards_ = gymCards_;
-        } else {
-          result.gymCards_ = gymCardsBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
+        result.eqm_ = eqm_;
+        result.courses_ = courses_;
+        result.gymCards_ = gymCards_;
         onBuilt();
         return result;
       }
@@ -7955,57 +7273,17 @@ public final class Common {
         if (other.hasBriefGym()) {
           mergeBriefGym(other.getBriefGym());
         }
-        if (coursesBuilder_ == null) {
-          if (!other.courses_.isEmpty()) {
-            if (courses_.isEmpty()) {
-              courses_ = other.courses_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureCoursesIsMutable();
-              courses_.addAll(other.courses_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.courses_.isEmpty()) {
-            if (coursesBuilder_.isEmpty()) {
-              coursesBuilder_.dispose();
-              coursesBuilder_ = null;
-              courses_ = other.courses_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              coursesBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getCoursesFieldBuilder() : null;
-            } else {
-              coursesBuilder_.addAllMessages(other.courses_);
-            }
-          }
+        if (!other.getEqm().isEmpty()) {
+          eqm_ = other.eqm_;
+          onChanged();
         }
-        if (gymCardsBuilder_ == null) {
-          if (!other.gymCards_.isEmpty()) {
-            if (gymCards_.isEmpty()) {
-              gymCards_ = other.gymCards_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureGymCardsIsMutable();
-              gymCards_.addAll(other.gymCards_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.gymCards_.isEmpty()) {
-            if (gymCardsBuilder_.isEmpty()) {
-              gymCardsBuilder_.dispose();
-              gymCardsBuilder_ = null;
-              gymCards_ = other.gymCards_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              gymCardsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getGymCardsFieldBuilder() : null;
-            } else {
-              gymCardsBuilder_.addAllMessages(other.gymCards_);
-            }
-          }
+        if (!other.getCourses().isEmpty()) {
+          courses_ = other.courses_;
+          onChanged();
+        }
+        if (!other.getGymCards().isEmpty()) {
+          gymCards_ = other.gymCards_;
+          onChanged();
         }
         onChanged();
         return this;
@@ -8032,7 +7310,6 @@ public final class Common {
         }
         return this;
       }
-      private int bitField0_;
 
       private com.xiang.proto.Common.BriefGym briefGym_ = null;
       private com.google.protobuf.SingleFieldBuilder<
@@ -8187,30 +7464,113 @@ public final class Common {
         return briefGymBuilder_;
       }
 
-      private java.util.List<com.xiang.proto.Common.Course> courses_ =
-        java.util.Collections.emptyList();
-      private void ensureCoursesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          courses_ = new java.util.ArrayList<com.xiang.proto.Common.Course>(courses_);
-          bitField0_ |= 0x00000002;
-         }
+      private java.lang.Object eqm_ = "";
+      /**
+       * <pre>
+       *器材
+       * </pre>
+       *
+       * <code>optional string eqm = 2;</code>
+       */
+      public java.lang.String getEqm() {
+        java.lang.Object ref = eqm_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eqm_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *器材
+       * </pre>
+       *
+       * <code>optional string eqm = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEqmBytes() {
+        java.lang.Object ref = eqm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eqm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *器材
+       * </pre>
+       *
+       * <code>optional string eqm = 2;</code>
+       */
+      public Builder setEqm(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        eqm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *器材
+       * </pre>
+       *
+       * <code>optional string eqm = 2;</code>
+       */
+      public Builder clearEqm() {
+        
+        eqm_ = getDefaultInstance().getEqm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *器材
+       * </pre>
+       *
+       * <code>optional string eqm = 2;</code>
+       */
+      public Builder setEqmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        eqm_ = value;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.Course, com.xiang.proto.Common.Course.Builder, com.xiang.proto.Common.CourseOrBuilder> coursesBuilder_;
-
+      private java.lang.Object courses_ = "";
       /**
        * <pre>
        * 课程
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+       * <code>optional string courses = 3;</code>
        */
-      public java.util.List<com.xiang.proto.Common.Course> getCoursesList() {
-        if (coursesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(courses_);
+      public java.lang.String getCourses() {
+        java.lang.Object ref = courses_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          courses_ = s;
+          return s;
         } else {
-          return coursesBuilder_.getMessageList();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -8218,13 +7578,19 @@ public final class Common {
        * 课程
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+       * <code>optional string courses = 3;</code>
        */
-      public int getCoursesCount() {
-        if (coursesBuilder_ == null) {
-          return courses_.size();
+      public com.google.protobuf.ByteString
+          getCoursesBytes() {
+        java.lang.Object ref = courses_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          courses_ = b;
+          return b;
         } else {
-          return coursesBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
@@ -8232,34 +7598,16 @@ public final class Common {
        * 课程
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public com.xiang.proto.Common.Course getCourses(int index) {
-        if (coursesBuilder_ == null) {
-          return courses_.get(index);
-        } else {
-          return coursesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+       * <code>optional string courses = 3;</code>
        */
       public Builder setCourses(
-          int index, com.xiang.proto.Common.Course value) {
-        if (coursesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCoursesIsMutable();
-          courses_.set(index, value);
-          onChanged();
-        } else {
-          coursesBuilder_.setMessage(index, value);
-        }
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        courses_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -8267,130 +7615,12 @@ public final class Common {
        * 课程
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder setCourses(
-          int index, com.xiang.proto.Common.Course.Builder builderForValue) {
-        if (coursesBuilder_ == null) {
-          ensureCoursesIsMutable();
-          courses_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          coursesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder addCourses(com.xiang.proto.Common.Course value) {
-        if (coursesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCoursesIsMutable();
-          courses_.add(value);
-          onChanged();
-        } else {
-          coursesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder addCourses(
-          int index, com.xiang.proto.Common.Course value) {
-        if (coursesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCoursesIsMutable();
-          courses_.add(index, value);
-          onChanged();
-        } else {
-          coursesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder addCourses(
-          com.xiang.proto.Common.Course.Builder builderForValue) {
-        if (coursesBuilder_ == null) {
-          ensureCoursesIsMutable();
-          courses_.add(builderForValue.build());
-          onChanged();
-        } else {
-          coursesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder addCourses(
-          int index, com.xiang.proto.Common.Course.Builder builderForValue) {
-        if (coursesBuilder_ == null) {
-          ensureCoursesIsMutable();
-          courses_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          coursesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public Builder addAllCourses(
-          java.lang.Iterable<? extends com.xiang.proto.Common.Course> values) {
-        if (coursesBuilder_ == null) {
-          ensureCoursesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, courses_);
-          onChanged();
-        } else {
-          coursesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+       * <code>optional string courses = 3;</code>
        */
       public Builder clearCourses() {
-        if (coursesBuilder_ == null) {
-          courses_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          coursesBuilder_.clear();
-        }
+        
+        courses_ = getDefaultInstance().getCourses();
+        onChanged();
         return this;
       }
       /**
@@ -8398,131 +7628,38 @@ public final class Common {
        * 课程
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
+       * <code>optional string courses = 3;</code>
        */
-      public Builder removeCourses(int index) {
-        if (coursesBuilder_ == null) {
-          ensureCoursesIsMutable();
-          courses_.remove(index);
-          onChanged();
-        } else {
-          coursesBuilder_.remove(index);
-        }
+      public Builder setCoursesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        courses_ = value;
+        onChanged();
         return this;
       }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public com.xiang.proto.Common.Course.Builder getCoursesBuilder(
-          int index) {
-        return getCoursesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public com.xiang.proto.Common.CourseOrBuilder getCoursesOrBuilder(
-          int index) {
-        if (coursesBuilder_ == null) {
-          return courses_.get(index);  } else {
-          return coursesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public java.util.List<? extends com.xiang.proto.Common.CourseOrBuilder> 
-           getCoursesOrBuilderList() {
-        if (coursesBuilder_ != null) {
-          return coursesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(courses_);
-        }
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public com.xiang.proto.Common.Course.Builder addCoursesBuilder() {
-        return getCoursesFieldBuilder().addBuilder(
-            com.xiang.proto.Common.Course.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public com.xiang.proto.Common.Course.Builder addCoursesBuilder(
-          int index) {
-        return getCoursesFieldBuilder().addBuilder(
-            index, com.xiang.proto.Common.Course.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 课程
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.Course courses = 3;</code>
-       */
-      public java.util.List<com.xiang.proto.Common.Course.Builder> 
-           getCoursesBuilderList() {
-        return getCoursesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.Course, com.xiang.proto.Common.Course.Builder, com.xiang.proto.Common.CourseOrBuilder> 
-          getCoursesFieldBuilder() {
-        if (coursesBuilder_ == null) {
-          coursesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.xiang.proto.Common.Course, com.xiang.proto.Common.Course.Builder, com.xiang.proto.Common.CourseOrBuilder>(
-                  courses_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          courses_ = null;
-        }
-        return coursesBuilder_;
-      }
 
-      private java.util.List<com.xiang.proto.Common.GymCard> gymCards_ =
-        java.util.Collections.emptyList();
-      private void ensureGymCardsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          gymCards_ = new java.util.ArrayList<com.xiang.proto.Common.GymCard>(gymCards_);
-          bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.GymCard, com.xiang.proto.Common.GymCard.Builder, com.xiang.proto.Common.GymCardOrBuilder> gymCardsBuilder_;
-
+      private java.lang.Object gymCards_ = "";
       /**
        * <pre>
        * 健身卡
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+       * <code>optional string gymCards = 4;</code>
        */
-      public java.util.List<com.xiang.proto.Common.GymCard> getGymCardsList() {
-        if (gymCardsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(gymCards_);
+      public java.lang.String getGymCards() {
+        java.lang.Object ref = gymCards_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gymCards_ = s;
+          return s;
         } else {
-          return gymCardsBuilder_.getMessageList();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -8530,13 +7667,19 @@ public final class Common {
        * 健身卡
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+       * <code>optional string gymCards = 4;</code>
        */
-      public int getGymCardsCount() {
-        if (gymCardsBuilder_ == null) {
-          return gymCards_.size();
+      public com.google.protobuf.ByteString
+          getGymCardsBytes() {
+        java.lang.Object ref = gymCards_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gymCards_ = b;
+          return b;
         } else {
-          return gymCardsBuilder_.getCount();
+          return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
@@ -8544,34 +7687,16 @@ public final class Common {
        * 健身卡
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public com.xiang.proto.Common.GymCard getGymCards(int index) {
-        if (gymCardsBuilder_ == null) {
-          return gymCards_.get(index);
-        } else {
-          return gymCardsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+       * <code>optional string gymCards = 4;</code>
        */
       public Builder setGymCards(
-          int index, com.xiang.proto.Common.GymCard value) {
-        if (gymCardsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGymCardsIsMutable();
-          gymCards_.set(index, value);
-          onChanged();
-        } else {
-          gymCardsBuilder_.setMessage(index, value);
-        }
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gymCards_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -8579,130 +7704,12 @@ public final class Common {
        * 健身卡
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder setGymCards(
-          int index, com.xiang.proto.Common.GymCard.Builder builderForValue) {
-        if (gymCardsBuilder_ == null) {
-          ensureGymCardsIsMutable();
-          gymCards_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          gymCardsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder addGymCards(com.xiang.proto.Common.GymCard value) {
-        if (gymCardsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGymCardsIsMutable();
-          gymCards_.add(value);
-          onChanged();
-        } else {
-          gymCardsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder addGymCards(
-          int index, com.xiang.proto.Common.GymCard value) {
-        if (gymCardsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureGymCardsIsMutable();
-          gymCards_.add(index, value);
-          onChanged();
-        } else {
-          gymCardsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder addGymCards(
-          com.xiang.proto.Common.GymCard.Builder builderForValue) {
-        if (gymCardsBuilder_ == null) {
-          ensureGymCardsIsMutable();
-          gymCards_.add(builderForValue.build());
-          onChanged();
-        } else {
-          gymCardsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder addGymCards(
-          int index, com.xiang.proto.Common.GymCard.Builder builderForValue) {
-        if (gymCardsBuilder_ == null) {
-          ensureGymCardsIsMutable();
-          gymCards_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          gymCardsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public Builder addAllGymCards(
-          java.lang.Iterable<? extends com.xiang.proto.Common.GymCard> values) {
-        if (gymCardsBuilder_ == null) {
-          ensureGymCardsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, gymCards_);
-          onChanged();
-        } else {
-          gymCardsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+       * <code>optional string gymCards = 4;</code>
        */
       public Builder clearGymCards() {
-        if (gymCardsBuilder_ == null) {
-          gymCards_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          gymCardsBuilder_.clear();
-        }
+        
+        gymCards_ = getDefaultInstance().getGymCards();
+        onChanged();
         return this;
       }
       /**
@@ -8710,105 +7717,18 @@ public final class Common {
        * 健身卡
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
+       * <code>optional string gymCards = 4;</code>
        */
-      public Builder removeGymCards(int index) {
-        if (gymCardsBuilder_ == null) {
-          ensureGymCardsIsMutable();
-          gymCards_.remove(index);
-          onChanged();
-        } else {
-          gymCardsBuilder_.remove(index);
-        }
+      public Builder setGymCardsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gymCards_ = value;
+        onChanged();
         return this;
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public com.xiang.proto.Common.GymCard.Builder getGymCardsBuilder(
-          int index) {
-        return getGymCardsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public com.xiang.proto.Common.GymCardOrBuilder getGymCardsOrBuilder(
-          int index) {
-        if (gymCardsBuilder_ == null) {
-          return gymCards_.get(index);  } else {
-          return gymCardsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public java.util.List<? extends com.xiang.proto.Common.GymCardOrBuilder> 
-           getGymCardsOrBuilderList() {
-        if (gymCardsBuilder_ != null) {
-          return gymCardsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(gymCards_);
-        }
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public com.xiang.proto.Common.GymCard.Builder addGymCardsBuilder() {
-        return getGymCardsFieldBuilder().addBuilder(
-            com.xiang.proto.Common.GymCard.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public com.xiang.proto.Common.GymCard.Builder addGymCardsBuilder(
-          int index) {
-        return getGymCardsFieldBuilder().addBuilder(
-            index, com.xiang.proto.Common.GymCard.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * 健身卡
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.GymCard gymCards = 4;</code>
-       */
-      public java.util.List<com.xiang.proto.Common.GymCard.Builder> 
-           getGymCardsBuilderList() {
-        return getGymCardsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          com.xiang.proto.Common.GymCard, com.xiang.proto.Common.GymCard.Builder, com.xiang.proto.Common.GymCardOrBuilder> 
-          getGymCardsFieldBuilder() {
-        if (gymCardsBuilder_ == null) {
-          gymCardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              com.xiang.proto.Common.GymCard, com.xiang.proto.Common.GymCard.Builder, com.xiang.proto.Common.GymCardOrBuilder>(
-                  gymCards_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
-                  getParentForChildren(),
-                  isClean());
-          gymCards_ = null;
-        }
-        return gymCardsBuilder_;
       }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -17416,46 +16336,43 @@ public final class Common {
       "\030\004 \001(\t\022\017\n\007trendId\030\005 \001(\005\022\016\n\006userId\030\006 \001(\005\"" +
       "*\n\nBannerType\022\007\n\003URL\020\000\022\t\n\005TREND\020\001\022\010\n\004USE" +
       "R\020\002\"A\n\tBriefUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010user" +
-      "Name\030\002 \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\"\300\001\n\010Brief" +
-      "Gym\022\n\n\002id\030\001 \001(\005\022\017\n\007gymName\030\002 \001(\t\022\020\n\010gymC" +
-      "over\030\003 \003(\t\022\r\n\005place\030\004 \001(\t\022\021\n\tgymAvatar\030\010",
-      " \001(\t\022\020\n\010latitude\030\005 \001(\002\022\021\n\tlongitude\030\006 \001(" +
-      "\002\022\016\n\006isCoop\030\007 \001(\010\022.\n\nequipments\030\t \003(\0132\032." +
-      "com.xiang.proto.Equipment\"\216\001\n\tDetailGym\022" +
-      "+\n\010briefGym\030\001 \001(\0132\031.com.xiang.proto.Brie" +
-      "fGym\022(\n\007courses\030\003 \003(\0132\027.com.xiang.proto." +
-      "Course\022*\n\010gymCards\030\004 \003(\0132\030.com.xiang.pro" +
-      "to.GymCard\"_\n\tEquipment\022\014\n\004name\030\001 \001(\t\022\r\n" +
-      "\005count\030\002 \001(\005\0225\n\requipmentType\030\003 \001(\0162\036.co" +
-      "m.xiang.proto.EquipmentType\"U\n\006Course\022\014\n" +
-      "\004name\030\001 \001(\t\022\014\n\004week\030\002 \001(\005\022/\n\ncourseTime\030",
-      "\003 \001(\0132\033.com.xiang.proto.CourseTime\"T\n\nCo" +
-      "urseTime\022\020\n\010fromHour\030\001 \001(\005\022\022\n\nfromMinite" +
-      "\030\002 \001(\005\022\016\n\006toHour\030\003 \001(\005\022\020\n\010toMinite\030\004 \001(\005" +
-      "\"E\n\007GymCard\022+\n\010cardType\030\001 \001(\0162\031.com.xian" +
-      "g.proto.CardType\022\r\n\005price\030\002 \001(\002\"p\n\016Comme" +
-      "ntMessage\022\021\n\tmessageId\030\001 \001(\005\022\026\n\016messageC" +
-      "ontent\030\002 \001(\t\022\016\n\006avatar\030\003 \001(\t\022\022\n\ncreateTi" +
-      "me\030\004 \001(\003\022\017\n\007trendId\030\005 \001(\005\"\277\001\n\007Comment\022-\n" +
-      "\tbriefUser\030\001 \001(\0132\032.com.xiang.proto.Brief" +
-      "User\022\021\n\tcommentId\030\002 \001(\005\022\026\n\016commentConten",
-      "t\030\003 \001(\t\022\017\n\007trendId\030\004 \001(\005\022\020\n\010toUserid\030\005 \001" +
-      "(\005\022\022\n\ntoUserName\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001" +
-      "(\003\022\017\n\007gymName\030\010 \001(\t\"6\n\021TrendBriefMessage" +
-      "\022\022\n\nlastAvatar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\"\213\002\n\n" +
-      "DetailUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030\002" +
-      " \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024." +
-      "com.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022&\n\006tre" +
-      "nds\030\006 \003(\0132\026.com.xiang.proto.Trend\022\022\n\nisF" +
-      "ollowed\030\007 \001(\010\022\024\n\014guanzhuCount\030\010 \001(\005\022\022\n\nf" +
-      "ensiCount\030\t \001(\005\022\022\n\ntrendCount\030\n \001(\005\022\034\n\024t",
-      "rendMaxCountPerPage\030\013 \001(\005\"b\n\014SearchedUse" +
-      "r\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030\002 \001(\t\022\022\n\nu" +
-      "serAvatar\030\003 \001(\t\022\014\n\004sign\030\004 \001(\t\022\016\n\006images\030" +
-      "\005 \003(\t*,\n\010CardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013" +
-      "\n\007Quarter\020\002*/\n\rEquipmentType\022\r\n\tPAO_BU_J" +
-      "I\020\000\022\017\n\013LIN_YU_FANG\020\001*\033\n\003Sex\022\010\n\004MALE\020\000\022\n\n" +
-      "\006FEMALE\020\001b\006proto3"
+      "Name\030\002 \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\"\200\001\n\010Brief" +
+      "Gym\022\n\n\002id\030\001 \001(\005\022\017\n\007gymName\030\002 \001(\t\022\r\n\005plac" +
+      "e\030\004 \001(\t\022\021\n\tgymAvatar\030\010 \001(\t\022\020\n\010latitude\030\005",
+      " \001(\002\022\021\n\tlongitude\030\006 \001(\002\022\020\n\010gymIntro\030\007 \001(" +
+      "\t\"h\n\tDetailGym\022+\n\010briefGym\030\001 \001(\0132\031.com.x" +
+      "iang.proto.BriefGym\022\013\n\003eqm\030\002 \001(\t\022\017\n\007cour" +
+      "ses\030\003 \001(\t\022\020\n\010gymCards\030\004 \001(\t\"_\n\tEquipment" +
+      "\022\014\n\004name\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\0225\n\requipme" +
+      "ntType\030\003 \001(\0162\036.com.xiang.proto.Equipment" +
+      "Type\"U\n\006Course\022\014\n\004name\030\001 \001(\t\022\014\n\004week\030\002 \001" +
+      "(\005\022/\n\ncourseTime\030\003 \001(\0132\033.com.xiang.proto" +
+      ".CourseTime\"T\n\nCourseTime\022\020\n\010fromHour\030\001 " +
+      "\001(\005\022\022\n\nfromMinite\030\002 \001(\005\022\016\n\006toHour\030\003 \001(\005\022",
+      "\020\n\010toMinite\030\004 \001(\005\"E\n\007GymCard\022+\n\010cardType" +
+      "\030\001 \001(\0162\031.com.xiang.proto.CardType\022\r\n\005pri" +
+      "ce\030\002 \001(\002\"p\n\016CommentMessage\022\021\n\tmessageId\030" +
+      "\001 \001(\005\022\026\n\016messageContent\030\002 \001(\t\022\016\n\006avatar\030" +
+      "\003 \001(\t\022\022\n\ncreateTime\030\004 \001(\003\022\017\n\007trendId\030\005 \001" +
+      "(\005\"\277\001\n\007Comment\022-\n\tbriefUser\030\001 \001(\0132\032.com." +
+      "xiang.proto.BriefUser\022\021\n\tcommentId\030\002 \001(\005" +
+      "\022\026\n\016commentContent\030\003 \001(\t\022\017\n\007trendId\030\004 \001(" +
+      "\005\022\020\n\010toUserid\030\005 \001(\005\022\022\n\ntoUserName\030\006 \001(\t\022" +
+      "\022\n\ncreateTime\030\007 \001(\003\022\017\n\007gymName\030\010 \001(\t\"6\n\021",
+      "TrendBriefMessage\022\022\n\nlastAvatar\030\001 \001(\t\022\r\n" +
+      "\005count\030\002 \001(\005\"\213\002\n\nDetailUser\022\016\n\006userId\030\001 " +
+      "\001(\005\022\020\n\010userName\030\002 \001(\t\022\022\n\nuserAvatar\030\003 \001(" +
+      "\t\022!\n\003sex\030\004 \001(\0162\024.com.xiang.proto.Sex\022\014\n\004" +
+      "sign\030\005 \001(\t\022&\n\006trends\030\006 \003(\0132\026.com.xiang.p" +
+      "roto.Trend\022\022\n\nisFollowed\030\007 \001(\010\022\024\n\014guanzh" +
+      "uCount\030\010 \001(\005\022\022\n\nfensiCount\030\t \001(\005\022\022\n\ntren" +
+      "dCount\030\n \001(\005\022\034\n\024trendMaxCountPerPage\030\013 \001" +
+      "(\005\"b\n\014SearchedUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010us" +
+      "erName\030\002 \001(\t\022\022\n\nuserAvatar\030\003 \001(\t\022\014\n\004sign",
+      "\030\004 \001(\t\022\016\n\006images\030\005 \003(\t*,\n\010CardType\022\010\n\004On" +
+      "ce\020\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020\002*/\n\rEquipmen" +
+      "tType\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN_YU_FANG\020\001*\033\n" +
+      "\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17504,13 +16421,13 @@ public final class Common {
     internal_static_com_xiang_proto_BriefGym_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_BriefGym_descriptor,
-        new java.lang.String[] { "Id", "GymName", "GymCover", "Place", "GymAvatar", "Latitude", "Longitude", "IsCoop", "Equipments", });
+        new java.lang.String[] { "Id", "GymName", "Place", "GymAvatar", "Latitude", "Longitude", "GymIntro", });
     internal_static_com_xiang_proto_DetailGym_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_xiang_proto_DetailGym_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_DetailGym_descriptor,
-        new java.lang.String[] { "BriefGym", "Courses", "GymCards", });
+        new java.lang.String[] { "BriefGym", "Eqm", "Courses", "GymCards", });
     internal_static_com_xiang_proto_Equipment_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_xiang_proto_Equipment_fieldAccessorTable = new

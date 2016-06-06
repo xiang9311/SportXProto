@@ -21,6 +21,7 @@ message Response13001 {
 	Data data = 2;
 	message Data {
 		repeated BriefGym briefGyms = 1;                // 如果列表为空，data可能为null，客户端做好判空准备
+		int32 maxCountPerPage = 2;//需不需要分页?
 	}
 }
 
@@ -40,6 +41,7 @@ message Response13002 {
 	message Data {
 		DetailGym detailGym = 1;
 		repeated BriefUser briefUsers = 2;                        // 健身房附近的人列表
+		repeated string gymCover = 3;// 场馆图片
 	}
 }
 
@@ -59,7 +61,10 @@ message Response13003 {
 	Data data = 2;
 	message Data {
 		DetailGym detailGym = 1;
-		repeated BriefUser briefUsers = 2;                        // 附近的人列表
+		//repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+		//repeated trend trends = 3;//这个直传数量就好
+		int32 userNum = 2;
+		int32 trendNum = 3;
 	}
 }
 

@@ -1376,6 +1376,15 @@ public final class Gym {
        */
       com.xiang.proto.Common.BriefGymOrBuilder getBriefGymsOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       *需不需要分页?
+       * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
+       */
+      int getMaxCountPerPage();
     }
     /**
      * Protobuf type {@code com.xiang.proto.gym.Response13001.Data}
@@ -1390,6 +1399,7 @@ public final class Gym {
       }
       private Data() {
         briefGyms_ = java.util.Collections.emptyList();
+        maxCountPerPage_ = 0;
       }
 
       @java.lang.Override
@@ -1425,6 +1435,11 @@ public final class Gym {
                 briefGyms_.add(input.readMessage(com.xiang.proto.Common.BriefGym.parser(), extensionRegistry));
                 break;
               }
+              case 16: {
+
+                maxCountPerPage_ = input.readInt32();
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1451,6 +1466,7 @@ public final class Gym {
                 com.xiang.proto.gym.Gym.Response13001.Data.class, com.xiang.proto.gym.Gym.Response13001.Data.Builder.class);
       }
 
+      private int bitField0_;
       public static final int BRIEFGYMS_FIELD_NUMBER = 1;
       private java.util.List<com.xiang.proto.Common.BriefGym> briefGyms_;
       /**
@@ -1506,6 +1522,19 @@ public final class Gym {
         return briefGyms_.get(index);
       }
 
+      public static final int MAXCOUNTPERPAGE_FIELD_NUMBER = 2;
+      private int maxCountPerPage_;
+      /**
+       * <pre>
+       *需不需要分页?
+       * </pre>
+       *
+       * <code>optional int32 maxCountPerPage = 2;</code>
+       */
+      public int getMaxCountPerPage() {
+        return maxCountPerPage_;
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -1521,6 +1550,9 @@ public final class Gym {
         for (int i = 0; i < briefGyms_.size(); i++) {
           output.writeMessage(1, briefGyms_.get(i));
         }
+        if (maxCountPerPage_ != 0) {
+          output.writeInt32(2, maxCountPerPage_);
+        }
       }
 
       public int getSerializedSize() {
@@ -1531,6 +1563,10 @@ public final class Gym {
         for (int i = 0; i < briefGyms_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, briefGyms_.get(i));
+        }
+        if (maxCountPerPage_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, maxCountPerPage_);
         }
         memoizedSize = size;
         return size;
@@ -1656,6 +1692,8 @@ public final class Gym {
           } else {
             briefGymsBuilder_.clear();
           }
+          maxCountPerPage_ = 0;
+
           return this;
         }
 
@@ -1679,6 +1717,7 @@ public final class Gym {
         public com.xiang.proto.gym.Gym.Response13001.Data buildPartial() {
           com.xiang.proto.gym.Gym.Response13001.Data result = new com.xiang.proto.gym.Gym.Response13001.Data(this);
           int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
           if (briefGymsBuilder_ == null) {
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               briefGyms_ = java.util.Collections.unmodifiableList(briefGyms_);
@@ -1688,6 +1727,8 @@ public final class Gym {
           } else {
             result.briefGyms_ = briefGymsBuilder_.build();
           }
+          result.maxCountPerPage_ = maxCountPerPage_;
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -1728,6 +1769,9 @@ public final class Gym {
                 briefGymsBuilder_.addAllMessages(other.briefGyms_);
               }
             }
+          }
+          if (other.getMaxCountPerPage() != 0) {
+            setMaxCountPerPage(other.getMaxCountPerPage());
           }
           onChanged();
           return this;
@@ -2066,6 +2110,44 @@ public final class Gym {
             briefGyms_ = null;
           }
           return briefGymsBuilder_;
+        }
+
+        private int maxCountPerPage_ ;
+        /**
+         * <pre>
+         *需不需要分页?
+         * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
+         */
+        public int getMaxCountPerPage() {
+          return maxCountPerPage_;
+        }
+        /**
+         * <pre>
+         *需不需要分页?
+         * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
+         */
+        public Builder setMaxCountPerPage(int value) {
+          
+          maxCountPerPage_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *需不需要分页?
+         * </pre>
+         *
+         * <code>optional int32 maxCountPerPage = 2;</code>
+         */
+        public Builder clearMaxCountPerPage() {
+          
+          maxCountPerPage_ = 0;
+          onChanged();
+          return this;
         }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3924,6 +4006,41 @@ public final class Gym {
        */
       com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
           int index);
+
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      com.google.protobuf.ProtocolStringList
+          getGymCoverList();
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      int getGymCoverCount();
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      java.lang.String getGymCover(int index);
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      com.google.protobuf.ByteString
+          getGymCoverBytes(int index);
     }
     /**
      * Protobuf type {@code com.xiang.proto.gym.Response13002.Data}
@@ -3938,6 +4055,7 @@ public final class Gym {
       }
       private Data() {
         briefUsers_ = java.util.Collections.emptyList();
+        gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       }
 
       @java.lang.Override
@@ -3986,6 +4104,15 @@ public final class Gym {
                 briefUsers_.add(input.readMessage(com.xiang.proto.Common.BriefUser.parser(), extensionRegistry));
                 break;
               }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  gymCover_ = new com.google.protobuf.LazyStringArrayList();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                gymCover_.add(s);
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3996,6 +4123,9 @@ public final class Gym {
         } finally {
           if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
             briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
+          }
+          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            gymCover_ = gymCover_.getUnmodifiableView();
           }
           makeExtensionsImmutable();
         }
@@ -4089,6 +4219,51 @@ public final class Gym {
         return briefUsers_.get(index);
       }
 
+      public static final int GYMCOVER_FIELD_NUMBER = 3;
+      private com.google.protobuf.LazyStringList gymCover_;
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getGymCoverList() {
+        return gymCover_;
+      }
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      public int getGymCoverCount() {
+        return gymCover_.size();
+      }
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      public java.lang.String getGymCover(int index) {
+        return gymCover_.get(index);
+      }
+      /**
+       * <pre>
+       * 场馆图片
+       * </pre>
+       *
+       * <code>repeated string gymCover = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGymCoverBytes(int index) {
+        return gymCover_.getByteString(index);
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -4107,6 +4282,9 @@ public final class Gym {
         for (int i = 0; i < briefUsers_.size(); i++) {
           output.writeMessage(2, briefUsers_.get(i));
         }
+        for (int i = 0; i < gymCover_.size(); i++) {
+          com.google.protobuf.GeneratedMessage.writeString(output, 3, gymCover_.getRaw(i));
+        }
       }
 
       public int getSerializedSize() {
@@ -4121,6 +4299,14 @@ public final class Gym {
         for (int i = 0; i < briefUsers_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(2, briefUsers_.get(i));
+        }
+        {
+          int dataSize = 0;
+          for (int i = 0; i < gymCover_.size(); i++) {
+            dataSize += computeStringSizeNoTag(gymCover_.getRaw(i));
+          }
+          size += dataSize;
+          size += 1 * getGymCoverList().size();
         }
         memoizedSize = size;
         return size;
@@ -4252,6 +4438,8 @@ public final class Gym {
           } else {
             briefUsersBuilder_.clear();
           }
+          gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000004);
           return this;
         }
 
@@ -4290,6 +4478,11 @@ public final class Gym {
           } else {
             result.briefUsers_ = briefUsersBuilder_.build();
           }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            gymCover_ = gymCover_.getUnmodifiableView();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.gymCover_ = gymCover_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -4334,6 +4527,16 @@ public final class Gym {
                 briefUsersBuilder_.addAllMessages(other.briefUsers_);
               }
             }
+          }
+          if (!other.gymCover_.isEmpty()) {
+            if (gymCover_.isEmpty()) {
+              gymCover_ = other.gymCover_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureGymCoverIsMutable();
+              gymCover_.addAll(other.gymCover_);
+            }
+            onChanged();
           }
           onChanged();
           return this;
@@ -4789,6 +4992,136 @@ public final class Gym {
             briefUsers_ = null;
           }
           return briefUsersBuilder_;
+        }
+
+        private com.google.protobuf.LazyStringList gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private void ensureGymCoverIsMutable() {
+          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+            gymCover_ = new com.google.protobuf.LazyStringArrayList(gymCover_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public com.google.protobuf.ProtocolStringList
+            getGymCoverList() {
+          return gymCover_.getUnmodifiableView();
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public int getGymCoverCount() {
+          return gymCover_.size();
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public java.lang.String getGymCover(int index) {
+          return gymCover_.get(index);
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public com.google.protobuf.ByteString
+            getGymCoverBytes(int index) {
+          return gymCover_.getByteString(index);
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public Builder setGymCover(
+            int index, java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGymCoverIsMutable();
+          gymCover_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public Builder addGymCover(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureGymCoverIsMutable();
+          gymCover_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public Builder addAllGymCover(
+            java.lang.Iterable<java.lang.String> values) {
+          ensureGymCoverIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, gymCover_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public Builder clearGymCover() {
+          gymCover_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 场馆图片
+         * </pre>
+         *
+         * <code>repeated string gymCover = 3;</code>
+         */
+        public Builder addGymCoverBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          ensureGymCoverIsMutable();
+          gymCover_.add(value);
+          onChanged();
+          return this;
         }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6665,47 +6998,18 @@ public final class Gym {
 
       /**
        * <pre>
-       * 附近的人列表
+       *repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+       *repeated trend trends = 3;//这个直传数量就好
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+       * <code>optional int32 userNum = 2;</code>
        */
-      java.util.List<com.xiang.proto.Common.BriefUser> 
-          getBriefUsersList();
+      int getUserNum();
+
       /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+       * <code>optional int32 trendNum = 3;</code>
        */
-      com.xiang.proto.Common.BriefUser getBriefUsers(int index);
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      int getBriefUsersCount();
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
-          getBriefUsersOrBuilderList();
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
-          int index);
+      int getTrendNum();
     }
     /**
      * Protobuf type {@code com.xiang.proto.gym.Response13003.Data}
@@ -6719,7 +7023,8 @@ public final class Gym {
         super(builder);
       }
       private Data() {
-        briefUsers_ = java.util.Collections.emptyList();
+        userNum_ = 0;
+        trendNum_ = 0;
       }
 
       @java.lang.Override
@@ -6760,12 +7065,14 @@ public final class Gym {
 
                 break;
               }
-              case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  briefUsers_ = new java.util.ArrayList<com.xiang.proto.Common.BriefUser>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                briefUsers_.add(input.readMessage(com.xiang.proto.Common.BriefUser.parser(), extensionRegistry));
+              case 16: {
+
+                userNum_ = input.readInt32();
+                break;
+              }
+              case 24: {
+
+                trendNum_ = input.readInt32();
                 break;
               }
             }
@@ -6776,9 +7083,6 @@ public final class Gym {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
-          }
           makeExtensionsImmutable();
         }
       }
@@ -6794,7 +7098,6 @@ public final class Gym {
                 com.xiang.proto.gym.Gym.Response13003.Data.class, com.xiang.proto.gym.Gym.Response13003.Data.Builder.class);
       }
 
-      private int bitField0_;
       public static final int DETAILGYM_FIELD_NUMBER = 1;
       private com.xiang.proto.Common.DetailGym detailGym_;
       /**
@@ -6816,59 +7119,27 @@ public final class Gym {
         return getDetailGym();
       }
 
-      public static final int BRIEFUSERS_FIELD_NUMBER = 2;
-      private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_;
+      public static final int USERNUM_FIELD_NUMBER = 2;
+      private int userNum_;
       /**
        * <pre>
-       * 附近的人列表
+       *repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+       *repeated trend trends = 3;//这个直传数量就好
        * </pre>
        *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+       * <code>optional int32 userNum = 2;</code>
        */
-      public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
-        return briefUsers_;
+      public int getUserNum() {
+        return userNum_;
       }
+
+      public static final int TRENDNUM_FIELD_NUMBER = 3;
+      private int trendNum_;
       /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+       * <code>optional int32 trendNum = 3;</code>
        */
-      public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
-          getBriefUsersOrBuilderList() {
-        return briefUsers_;
-      }
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      public int getBriefUsersCount() {
-        return briefUsers_.size();
-      }
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
-        return briefUsers_.get(index);
-      }
-      /**
-       * <pre>
-       * 附近的人列表
-       * </pre>
-       *
-       * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-       */
-      public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
-          int index) {
-        return briefUsers_.get(index);
+      public int getTrendNum() {
+        return trendNum_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -6886,8 +7157,11 @@ public final class Gym {
         if (detailGym_ != null) {
           output.writeMessage(1, getDetailGym());
         }
-        for (int i = 0; i < briefUsers_.size(); i++) {
-          output.writeMessage(2, briefUsers_.get(i));
+        if (userNum_ != 0) {
+          output.writeInt32(2, userNum_);
+        }
+        if (trendNum_ != 0) {
+          output.writeInt32(3, trendNum_);
         }
       }
 
@@ -6900,9 +7174,13 @@ public final class Gym {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(1, getDetailGym());
         }
-        for (int i = 0; i < briefUsers_.size(); i++) {
+        if (userNum_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, briefUsers_.get(i));
+            .computeInt32Size(2, userNum_);
+        }
+        if (trendNum_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, trendNum_);
         }
         memoizedSize = size;
         return size;
@@ -7017,7 +7295,6 @@ public final class Gym {
         }
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-            getBriefUsersFieldBuilder();
           }
         }
         public Builder clear() {
@@ -7028,12 +7305,10 @@ public final class Gym {
             detailGym_ = null;
             detailGymBuilder_ = null;
           }
-          if (briefUsersBuilder_ == null) {
-            briefUsers_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            briefUsersBuilder_.clear();
-          }
+          userNum_ = 0;
+
+          trendNum_ = 0;
+
           return this;
         }
 
@@ -7056,23 +7331,13 @@ public final class Gym {
 
         public com.xiang.proto.gym.Gym.Response13003.Data buildPartial() {
           com.xiang.proto.gym.Gym.Response13003.Data result = new com.xiang.proto.gym.Gym.Response13003.Data(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
           if (detailGymBuilder_ == null) {
             result.detailGym_ = detailGym_;
           } else {
             result.detailGym_ = detailGymBuilder_.build();
           }
-          if (briefUsersBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) == 0x00000002)) {
-              briefUsers_ = java.util.Collections.unmodifiableList(briefUsers_);
-              bitField0_ = (bitField0_ & ~0x00000002);
-            }
-            result.briefUsers_ = briefUsers_;
-          } else {
-            result.briefUsers_ = briefUsersBuilder_.build();
-          }
-          result.bitField0_ = to_bitField0_;
+          result.userNum_ = userNum_;
+          result.trendNum_ = trendNum_;
           onBuilt();
           return result;
         }
@@ -7091,31 +7356,11 @@ public final class Gym {
           if (other.hasDetailGym()) {
             mergeDetailGym(other.getDetailGym());
           }
-          if (briefUsersBuilder_ == null) {
-            if (!other.briefUsers_.isEmpty()) {
-              if (briefUsers_.isEmpty()) {
-                briefUsers_ = other.briefUsers_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-              } else {
-                ensureBriefUsersIsMutable();
-                briefUsers_.addAll(other.briefUsers_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.briefUsers_.isEmpty()) {
-              if (briefUsersBuilder_.isEmpty()) {
-                briefUsersBuilder_.dispose();
-                briefUsersBuilder_ = null;
-                briefUsers_ = other.briefUsers_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                briefUsersBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                     getBriefUsersFieldBuilder() : null;
-              } else {
-                briefUsersBuilder_.addAllMessages(other.briefUsers_);
-              }
-            }
+          if (other.getUserNum() != 0) {
+            setUserNum(other.getUserNum());
+          }
+          if (other.getTrendNum() != 0) {
+            setTrendNum(other.getTrendNum());
           }
           onChanged();
           return this;
@@ -7142,7 +7387,6 @@ public final class Gym {
           }
           return this;
         }
-        private int bitField0_;
 
         private com.xiang.proto.Common.DetailGym detailGym_ = null;
         private com.google.protobuf.SingleFieldBuilder<
@@ -7261,316 +7505,71 @@ public final class Gym {
           return detailGymBuilder_;
         }
 
-        private java.util.List<com.xiang.proto.Common.BriefUser> briefUsers_ =
-          java.util.Collections.emptyList();
-        private void ensureBriefUsersIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            briefUsers_ = new java.util.ArrayList<com.xiang.proto.Common.BriefUser>(briefUsers_);
-            bitField0_ |= 0x00000002;
-           }
+        private int userNum_ ;
+        /**
+         * <pre>
+         *repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+         *repeated trend trends = 3;//这个直传数量就好
+         * </pre>
+         *
+         * <code>optional int32 userNum = 2;</code>
+         */
+        public int getUserNum() {
+          return userNum_;
+        }
+        /**
+         * <pre>
+         *repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+         *repeated trend trends = 3;//这个直传数量就好
+         * </pre>
+         *
+         * <code>optional int32 userNum = 2;</code>
+         */
+        public Builder setUserNum(int value) {
+          
+          userNum_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         *repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
+         *repeated trend trends = 3;//这个直传数量就好
+         * </pre>
+         *
+         * <code>optional int32 userNum = 2;</code>
+         */
+        public Builder clearUserNum() {
+          
+          userNum_ = 0;
+          onChanged();
+          return this;
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
-            com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> briefUsersBuilder_;
-
+        private int trendNum_ ;
         /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+         * <code>optional int32 trendNum = 3;</code>
          */
-        public java.util.List<com.xiang.proto.Common.BriefUser> getBriefUsersList() {
-          if (briefUsersBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(briefUsers_);
-          } else {
-            return briefUsersBuilder_.getMessageList();
-          }
+        public int getTrendNum() {
+          return trendNum_;
         }
         /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+         * <code>optional int32 trendNum = 3;</code>
          */
-        public int getBriefUsersCount() {
-          if (briefUsersBuilder_ == null) {
-            return briefUsers_.size();
-          } else {
-            return briefUsersBuilder_.getCount();
-          }
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public com.xiang.proto.Common.BriefUser getBriefUsers(int index) {
-          if (briefUsersBuilder_ == null) {
-            return briefUsers_.get(index);
-          } else {
-            return briefUsersBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder setBriefUsers(
-            int index, com.xiang.proto.Common.BriefUser value) {
-          if (briefUsersBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureBriefUsersIsMutable();
-            briefUsers_.set(index, value);
-            onChanged();
-          } else {
-            briefUsersBuilder_.setMessage(index, value);
-          }
+        public Builder setTrendNum(int value) {
+          
+          trendNum_ = value;
+          onChanged();
           return this;
         }
         /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
+         * <code>optional int32 trendNum = 3;</code>
          */
-        public Builder setBriefUsers(
-            int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
-          if (briefUsersBuilder_ == null) {
-            ensureBriefUsersIsMutable();
-            briefUsers_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            briefUsersBuilder_.setMessage(index, builderForValue.build());
-          }
+        public Builder clearTrendNum() {
+          
+          trendNum_ = 0;
+          onChanged();
           return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder addBriefUsers(com.xiang.proto.Common.BriefUser value) {
-          if (briefUsersBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureBriefUsersIsMutable();
-            briefUsers_.add(value);
-            onChanged();
-          } else {
-            briefUsersBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder addBriefUsers(
-            int index, com.xiang.proto.Common.BriefUser value) {
-          if (briefUsersBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureBriefUsersIsMutable();
-            briefUsers_.add(index, value);
-            onChanged();
-          } else {
-            briefUsersBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder addBriefUsers(
-            com.xiang.proto.Common.BriefUser.Builder builderForValue) {
-          if (briefUsersBuilder_ == null) {
-            ensureBriefUsersIsMutable();
-            briefUsers_.add(builderForValue.build());
-            onChanged();
-          } else {
-            briefUsersBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder addBriefUsers(
-            int index, com.xiang.proto.Common.BriefUser.Builder builderForValue) {
-          if (briefUsersBuilder_ == null) {
-            ensureBriefUsersIsMutable();
-            briefUsers_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            briefUsersBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder addAllBriefUsers(
-            java.lang.Iterable<? extends com.xiang.proto.Common.BriefUser> values) {
-          if (briefUsersBuilder_ == null) {
-            ensureBriefUsersIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, briefUsers_);
-            onChanged();
-          } else {
-            briefUsersBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder clearBriefUsers() {
-          if (briefUsersBuilder_ == null) {
-            briefUsers_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-            onChanged();
-          } else {
-            briefUsersBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public Builder removeBriefUsers(int index) {
-          if (briefUsersBuilder_ == null) {
-            ensureBriefUsersIsMutable();
-            briefUsers_.remove(index);
-            onChanged();
-          } else {
-            briefUsersBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public com.xiang.proto.Common.BriefUser.Builder getBriefUsersBuilder(
-            int index) {
-          return getBriefUsersFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public com.xiang.proto.Common.BriefUserOrBuilder getBriefUsersOrBuilder(
-            int index) {
-          if (briefUsersBuilder_ == null) {
-            return briefUsers_.get(index);  } else {
-            return briefUsersBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public java.util.List<? extends com.xiang.proto.Common.BriefUserOrBuilder> 
-             getBriefUsersOrBuilderList() {
-          if (briefUsersBuilder_ != null) {
-            return briefUsersBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(briefUsers_);
-          }
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder() {
-          return getBriefUsersFieldBuilder().addBuilder(
-              com.xiang.proto.Common.BriefUser.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public com.xiang.proto.Common.BriefUser.Builder addBriefUsersBuilder(
-            int index) {
-          return getBriefUsersFieldBuilder().addBuilder(
-              index, com.xiang.proto.Common.BriefUser.getDefaultInstance());
-        }
-        /**
-         * <pre>
-         * 附近的人列表
-         * </pre>
-         *
-         * <code>repeated .com.xiang.proto.BriefUser briefUsers = 2;</code>
-         */
-        public java.util.List<com.xiang.proto.Common.BriefUser.Builder> 
-             getBriefUsersBuilderList() {
-          return getBriefUsersFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilder<
-            com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder> 
-            getBriefUsersFieldBuilder() {
-          if (briefUsersBuilder_ == null) {
-            briefUsersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-                com.xiang.proto.Common.BriefUser, com.xiang.proto.Common.BriefUser.Builder, com.xiang.proto.Common.BriefUserOrBuilder>(
-                    briefUsers_,
-                    ((bitField0_ & 0x00000002) == 0x00000002),
-                    getParentForChildren(),
-                    isClean());
-            briefUsers_ = null;
-          }
-          return briefUsersBuilder_;
         }
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10824,40 +10823,41 @@ public final class Gym {
       "\036.com.xiang.proto.RequestCommon\0228\n\006param" +
       "s\030\002 \001(\0132(.com.xiang.proto.gym.Request130" +
       "01.Params\032@\n\006Params\022\021\n\tlongitude\030\001 \001(\002\022\020" +
-      "\n\010latitude\030\002 \001(\002\022\021\n\tpageIndex\030\003 \001(\005\"\255\001\n\r" +
+      "\n\010latitude\030\002 \001(\002\022\021\n\tpageIndex\030\003 \001(\005\"\306\001\n\r" +
       "Response13001\022/\n\006common\030\001 \001(\0132\037.com.xian" +
       "g.proto.ResponseCommon\0225\n\004data\030\002 \001(\0132\'.c" +
-      "om.xiang.proto.gym.Response13001.Data\0324\n" +
+      "om.xiang.proto.gym.Response13001.Data\032M\n" +
       "\004Data\022,\n\tbriefGyms\030\001 \003(\0132\031.com.xiang.pro",
-      "to.BriefGym\"\221\001\n\014Request13002\022.\n\006common\030\001" +
-      " \001(\0132\036.com.xiang.proto.RequestCommon\0228\n\006" +
-      "params\030\002 \001(\0132(.com.xiang.proto.gym.Reque" +
-      "st13002.Params\032\027\n\006Params\022\r\n\005gymId\030\001 \001(\005\"" +
-      "\336\001\n\rResponse13002\022/\n\006common\030\001 \001(\0132\037.com." +
-      "xiang.proto.ResponseCommon\0225\n\004data\030\002 \001(\013" +
-      "2\'.com.xiang.proto.gym.Response13002.Dat" +
-      "a\032e\n\004Data\022-\n\tdetailGym\030\001 \001(\0132\032.com.xiang" +
-      ".proto.DetailGym\022.\n\nbriefUsers\030\002 \003(\0132\032.c" +
-      "om.xiang.proto.BriefUser\"\247\001\n\014Request1300",
-      "3\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Requ" +
-      "estCommon\0228\n\006params\030\002 \001(\0132(.com.xiang.pr" +
-      "oto.gym.Request13003.Params\032-\n\006Params\022\021\n" +
-      "\tlongitude\030\001 \001(\002\022\020\n\010latitude\030\002 \001(\002\"\336\001\n\rR" +
-      "esponse13003\022/\n\006common\030\001 \001(\0132\037.com.xiang" +
-      ".proto.ResponseCommon\0225\n\004data\030\002 \001(\0132\'.co" +
-      "m.xiang.proto.gym.Response13003.Data\032e\n\004" +
-      "Data\022-\n\tdetailGym\030\001 \001(\0132\032.com.xiang.prot" +
-      "o.DetailGym\022.\n\nbriefUsers\030\002 \003(\0132\032.com.xi" +
-      "ang.proto.BriefUser\"\244\001\n\014Request13004\022.\n\006",
-      "common\030\001 \001(\0132\036.com.xiang.proto.RequestCo" +
-      "mmon\0228\n\006params\030\002 \001(\0132(.com.xiang.proto.g" +
-      "ym.Request13004.Params\032*\n\006Params\022\r\n\005gymI" +
-      "d\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\300\001\n\rResponse1" +
-      "3004\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.R" +
-      "esponseCommon\0225\n\004data\030\002 \001(\0132\'.com.xiang." +
-      "proto.gym.Response13004.Data\032G\n\004Data\022&\n\006" +
-      "trends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n\017" +
-      "maxCountPerPage\030\002 \001(\005b\006proto3"
+      "to.BriefGym\022\027\n\017maxCountPerPage\030\002 \001(\005\"\221\001\n" +
+      "\014Request13002\022.\n\006common\030\001 \001(\0132\036.com.xian" +
+      "g.proto.RequestCommon\0228\n\006params\030\002 \001(\0132(." +
+      "com.xiang.proto.gym.Request13002.Params\032" +
+      "\027\n\006Params\022\r\n\005gymId\030\001 \001(\005\"\360\001\n\rResponse130" +
+      "02\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
+      "ponseCommon\0225\n\004data\030\002 \001(\0132\'.com.xiang.pr" +
+      "oto.gym.Response13002.Data\032w\n\004Data\022-\n\tde" +
+      "tailGym\030\001 \001(\0132\032.com.xiang.proto.DetailGy" +
+      "m\022.\n\nbriefUsers\030\002 \003(\0132\032.com.xiang.proto.",
+      "BriefUser\022\020\n\010gymCover\030\003 \003(\t\"\247\001\n\014Request1" +
+      "3003\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.R" +
+      "equestCommon\0228\n\006params\030\002 \001(\0132(.com.xiang" +
+      ".proto.gym.Request13003.Params\032-\n\006Params" +
+      "\022\021\n\tlongitude\030\001 \001(\002\022\020\n\010latitude\030\002 \001(\002\"\321\001" +
+      "\n\rResponse13003\022/\n\006common\030\001 \001(\0132\037.com.xi" +
+      "ang.proto.ResponseCommon\0225\n\004data\030\002 \001(\0132\'" +
+      ".com.xiang.proto.gym.Response13003.Data\032" +
+      "X\n\004Data\022-\n\tdetailGym\030\001 \001(\0132\032.com.xiang.p" +
+      "roto.DetailGym\022\017\n\007userNum\030\002 \001(\005\022\020\n\010trend",
+      "Num\030\003 \001(\005\"\244\001\n\014Request13004\022.\n\006common\030\001 \001" +
+      "(\0132\036.com.xiang.proto.RequestCommon\0228\n\006pa" +
+      "rams\030\002 \001(\0132(.com.xiang.proto.gym.Request" +
+      "13004.Params\032*\n\006Params\022\r\n\005gymId\030\001 \001(\005\022\021\n" +
+      "\tpageIndex\030\002 \001(\005\"\300\001\n\rResponse13004\022/\n\006co" +
+      "mmon\030\001 \001(\0132\037.com.xiang.proto.ResponseCom" +
+      "mon\0225\n\004data\030\002 \001(\0132\'.com.xiang.proto.gym." +
+      "Response13004.Data\032G\n\004Data\022&\n\006trends\030\001 \003" +
+      "(\0132\026.com.xiang.proto.Trend\022\027\n\017maxCountPe" +
+      "rPage\030\002 \001(\005b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10895,7 +10895,7 @@ public final class Gym {
     internal_static_com_xiang_proto_gym_Response13001_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_gym_Response13001_Data_descriptor,
-        new java.lang.String[] { "BriefGyms", });
+        new java.lang.String[] { "BriefGyms", "MaxCountPerPage", });
     internal_static_com_xiang_proto_gym_Request13002_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_xiang_proto_gym_Request13002_fieldAccessorTable = new
@@ -10919,7 +10919,7 @@ public final class Gym {
     internal_static_com_xiang_proto_gym_Response13002_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_gym_Response13002_Data_descriptor,
-        new java.lang.String[] { "DetailGym", "BriefUsers", });
+        new java.lang.String[] { "DetailGym", "BriefUsers", "GymCover", });
     internal_static_com_xiang_proto_gym_Request13003_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_com_xiang_proto_gym_Request13003_fieldAccessorTable = new
@@ -10943,7 +10943,7 @@ public final class Gym {
     internal_static_com_xiang_proto_gym_Response13003_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_gym_Response13003_Data_descriptor,
-        new java.lang.String[] { "DetailGym", "BriefUsers", });
+        new java.lang.String[] { "DetailGym", "UserNum", "TrendNum", });
     internal_static_com_xiang_proto_gym_Request13004_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_xiang_proto_gym_Request13004_fieldAccessorTable = new
