@@ -696,9 +696,10 @@ typedef struct BriefUser__storage_ {
 @dynamic gymName;
 @dynamic place;
 @dynamic gymAvatar;
+@dynamic gymCover;
 @dynamic latitude;
 @dynamic longitude;
-@dynamic gymIntro;
+@dynamic eqm;
 
 typedef struct BriefGym__storage_ {
   uint32_t _has_storage_[1];
@@ -707,8 +708,9 @@ typedef struct BriefGym__storage_ {
   float longitude;
   NSString *gymName;
   NSString *place;
-  NSString *gymIntro;
+  NSString *eqm;
   NSString *gymAvatar;
+  NSString *gymCover;
 } BriefGym__storage_;
 
 // This method is threadsafe because it is initially called
@@ -748,7 +750,7 @@ typedef struct BriefGym__storage_ {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Latitude,
-        .hasIndex = 4,
+        .hasIndex = 5,
         .offset = (uint32_t)offsetof(BriefGym__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -757,18 +759,18 @@ typedef struct BriefGym__storage_ {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
         .number = BriefGym_FieldNumber_Longitude,
-        .hasIndex = 5,
+        .hasIndex = 6,
         .offset = (uint32_t)offsetof(BriefGym__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
       },
       {
-        .name = "gymIntro",
+        .name = "eqm",
         .dataTypeSpecific.className = NULL,
-        .number = BriefGym_FieldNumber_GymIntro,
-        .hasIndex = 6,
-        .offset = (uint32_t)offsetof(BriefGym__storage_, gymIntro),
-        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .number = BriefGym_FieldNumber_Eqm,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, eqm),
+        .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
       {
@@ -777,6 +779,15 @@ typedef struct BriefGym__storage_ {
         .number = BriefGym_FieldNumber_GymAvatar,
         .hasIndex = 3,
         .offset = (uint32_t)offsetof(BriefGym__storage_, gymAvatar),
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "gymCover",
+        .dataTypeSpecific.className = NULL,
+        .number = BriefGym_FieldNumber_GymCover,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(BriefGym__storage_, gymCover),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
@@ -791,7 +802,7 @@ typedef struct BriefGym__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\002\007\000\007\010\000\010\t\000";
+        "\003\002\007\000\010\t\000\t\010\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

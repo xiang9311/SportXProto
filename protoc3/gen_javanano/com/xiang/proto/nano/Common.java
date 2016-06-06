@@ -885,14 +885,17 @@ public interface Common {
     // optional string gymAvatar = 8;
     public java.lang.String gymAvatar;
 
+    // optional string gymCover = 9;
+    public java.lang.String gymCover;
+
     // optional float latitude = 5;
     public float latitude;
 
     // optional float longitude = 6;
     public float longitude;
 
-    // optional string gymIntro = 7;
-    public java.lang.String gymIntro;
+    // optional string eqm = 7;
+    public java.lang.String eqm;
 
     public BriefGym() {
       clear();
@@ -903,9 +906,10 @@ public interface Common {
       gymName = "";
       place = "";
       gymAvatar = "";
+      gymCover = "";
       latitude = 0F;
       longitude = 0F;
-      gymIntro = "";
+      eqm = "";
       cachedSize = -1;
       return this;
     }
@@ -930,11 +934,14 @@ public interface Common {
           != java.lang.Float.floatToIntBits(0F)) {
         output.writeFloat(6, this.longitude);
       }
-      if (!this.gymIntro.equals("")) {
-        output.writeString(7, this.gymIntro);
+      if (!this.eqm.equals("")) {
+        output.writeString(7, this.eqm);
       }
       if (!this.gymAvatar.equals("")) {
         output.writeString(8, this.gymAvatar);
+      }
+      if (!this.gymCover.equals("")) {
+        output.writeString(9, this.gymCover);
       }
       super.writeTo(output);
     }
@@ -964,13 +971,17 @@ public interface Common {
         size += com.google.protobuf.nano.CodedOutputByteBufferNano
             .computeFloatSize(6, this.longitude);
       }
-      if (!this.gymIntro.equals("")) {
+      if (!this.eqm.equals("")) {
         size += com.google.protobuf.nano.CodedOutputByteBufferNano
-            .computeStringSize(7, this.gymIntro);
+            .computeStringSize(7, this.eqm);
       }
       if (!this.gymAvatar.equals("")) {
         size += com.google.protobuf.nano.CodedOutputByteBufferNano
             .computeStringSize(8, this.gymAvatar);
+      }
+      if (!this.gymCover.equals("")) {
+        size += com.google.protobuf.nano.CodedOutputByteBufferNano
+            .computeStringSize(9, this.gymCover);
       }
       return size;
     }
@@ -1011,11 +1022,15 @@ public interface Common {
             break;
           }
           case 58: {
-            this.gymIntro = input.readString();
+            this.eqm = input.readString();
             break;
           }
           case 66: {
             this.gymAvatar = input.readString();
+            break;
+          }
+          case 74: {
+            this.gymCover = input.readString();
             break;
           }
         }

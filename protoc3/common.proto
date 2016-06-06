@@ -70,17 +70,18 @@ message BriefGym {
   int32 id = 1;                // 场馆id
   string gymName = 2;          // 场馆名字
   string place = 4;            // 场馆所在位置
-  string gymAvatar = 8;        // 场馆头像
+  string gymAvatar = 8;        // 场馆头像 小图
+  string gymCover = 9;         // 场馆使用的cover大图
   
   float latitude = 5;          // 纬度
   float longitude = 6;         // 经度
-  string gymIntro = 7;          //宣传文字
+  string eqm = 7;              // 器材
 }
 
 // DetailGym 场馆详情
 message DetailGym{
 	BriefGym briefGym = 1;     // 场馆简要信息
-  //器材
+  // 器材
   string eqm = 2;
 	// 课程
 	string courses = 3;  // 课程信息

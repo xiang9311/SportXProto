@@ -301,8 +301,9 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
   BriefGym_FieldNumber_Place = 4,
   BriefGym_FieldNumber_Latitude = 5,
   BriefGym_FieldNumber_Longitude = 6,
-  BriefGym_FieldNumber_GymIntro = 7,
+  BriefGym_FieldNumber_Eqm = 7,
   BriefGym_FieldNumber_GymAvatar = 8,
+  BriefGym_FieldNumber_GymCover = 9,
 };
 
 /// BriefGym 场馆
@@ -317,8 +318,11 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 /// 场馆所在位置
 @property(nonatomic, readwrite, copy, null_resettable) NSString *place;
 
-/// 场馆头像
+/// 场馆头像 小图
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gymAvatar;
+
+/// 场馆使用的cover大图
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gymCover;
 
 /// 纬度
 @property(nonatomic, readwrite) float latitude;
@@ -326,8 +330,8 @@ typedef GPB_ENUM(BriefGym_FieldNumber) {
 /// 经度
 @property(nonatomic, readwrite) float longitude;
 
-///宣传文字
-@property(nonatomic, readwrite, copy, null_resettable) NSString *gymIntro;
+/// 器材
+@property(nonatomic, readwrite, copy, null_resettable) NSString *eqm;
 
 @end
 
@@ -348,7 +352,7 @@ typedef GPB_ENUM(DetailGym_FieldNumber) {
 /// Test to see if @c briefGym has been set.
 @property(nonatomic, readwrite) BOOL hasBriefGym;
 
-///器材
+/// 器材
 @property(nonatomic, readwrite, copy, null_resettable) NSString *eqm;
 
 /// 课程
