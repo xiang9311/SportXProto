@@ -81,13 +81,12 @@ message BriefGym {
 // DetailGym 场馆详情
 message DetailGym{
 	BriefGym briefGym = 1;     // 场馆简要信息
-  // 器材
-  string eqm = 2;
 	// 课程
 	string courses = 3;  // 课程信息
 	// 健身卡
 	string gymCards = 4; // 健身卡信息
-  
+
+  repeated string gymCovers = 5;// 场馆图片
 }
 
 message Equipment{

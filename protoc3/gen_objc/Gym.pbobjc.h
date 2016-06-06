@@ -179,7 +179,6 @@ typedef GPB_ENUM(Response13002_FieldNumber) {
 typedef GPB_ENUM(Response13002_Data_FieldNumber) {
   Response13002_Data_FieldNumber_DetailGym = 1,
   Response13002_Data_FieldNumber_BriefUsersArray = 2,
-  Response13002_Data_FieldNumber_GymCoverArray = 3,
 };
 
 @interface Response13002_Data : GPBMessage
@@ -192,11 +191,6 @@ typedef GPB_ENUM(Response13002_Data_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefUser*> *briefUsersArray;
 /// The number of items in @c briefUsersArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger briefUsersArray_Count;
-
-/// 场馆图片
-@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *gymCoverArray;
-/// The number of items in @c gymCoverArray without causing the array to be created.
-@property(nonatomic, readonly) NSUInteger gymCoverArray_Count;
 
 @end
 
@@ -258,22 +252,26 @@ typedef GPB_ENUM(Response13003_FieldNumber) {
 #pragma mark - Response13003_Data
 
 typedef GPB_ENUM(Response13003_Data_FieldNumber) {
-  Response13003_Data_FieldNumber_DetailGym = 1,
+  Response13003_Data_FieldNumber_BriefGym = 1,
   Response13003_Data_FieldNumber_UserNum = 2,
   Response13003_Data_FieldNumber_TrendNum = 3,
+  Response13003_Data_FieldNumber_BriefUsersArray = 4,
 };
 
 @interface Response13003_Data : GPBMessage
 
-@property(nonatomic, readwrite, strong, null_resettable) DetailGym *detailGym;
-/// Test to see if @c detailGym has been set.
-@property(nonatomic, readwrite) BOOL hasDetailGym;
+@property(nonatomic, readwrite, strong, null_resettable) BriefGym *briefGym;
+/// Test to see if @c briefGym has been set.
+@property(nonatomic, readwrite) BOOL hasBriefGym;
 
-///repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
-///repeated trend trends = 3;//这个直传数量就好
 @property(nonatomic, readwrite) int32_t userNum;
 
 @property(nonatomic, readwrite) int32_t trendNum;
+
+/// 目前后台限制数量10个，以后会增加专门的页面
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefUser*> *briefUsersArray;
+/// The number of items in @c briefUsersArray without causing the array to be created.
+@property(nonatomic, readonly) NSUInteger briefUsersArray_Count;
 
 @end
 

@@ -41,7 +41,6 @@ message Response13002 {
 	message Data {
 		DetailGym detailGym = 1;
 		repeated BriefUser briefUsers = 2;                        // 健身房附近的人列表
-		repeated string gymCover = 3;// 场馆图片
 	}
 }
 
@@ -60,11 +59,10 @@ message Response13003 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {
-		DetailGym detailGym = 1;
-		//repeated BriefUser briefUsers = 2;                        // 附近的人列表———》改成数量怎样
-		//repeated trend trends = 3;//这个直传数量就好
+		BriefGym briefGym  = 1;
 		int32 userNum = 2;
 		int32 trendNum = 3;
+		repeated BriefUser briefUsers = 4;         // 目前后台限制数量10个，以后会增加专门的页面
 	}
 }
 

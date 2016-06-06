@@ -440,13 +440,11 @@ typedef struct Response13002__storage_ {
 
 @dynamic hasDetailGym, detailGym;
 @dynamic briefUsersArray, briefUsersArray_Count;
-@dynamic gymCoverArray, gymCoverArray_Count;
 
 typedef struct Response13002_Data__storage_ {
   uint32_t _has_storage_[1];
   DetailGym *detailGym;
   NSMutableArray *briefUsersArray;
-  NSMutableArray *gymCoverArray;
 } Response13002_Data__storage_;
 
 // This method is threadsafe because it is initially called
@@ -473,15 +471,6 @@ typedef struct Response13002_Data__storage_ {
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
-      {
-        .name = "gymCoverArray",
-        .dataTypeSpecific.className = NULL,
-        .number = Response13002_Data_FieldNumber_GymCoverArray,
-        .hasIndex = GPBNoHasBit,
-        .offset = (uint32_t)offsetof(Response13002_Data__storage_, gymCoverArray),
-        .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
-        .dataType = GPBDataTypeString,
-      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13002_Data class]
@@ -493,7 +482,7 @@ typedef struct Response13002_Data__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\001\t\000\002\000briefUsers\000\003\000gymCover\000";
+        "\002\001\t\000\002\000briefUsers\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -670,15 +659,17 @@ typedef struct Response13003__storage_ {
 
 @implementation Response13003_Data
 
-@dynamic hasDetailGym, detailGym;
+@dynamic hasBriefGym, briefGym;
 @dynamic userNum;
 @dynamic trendNum;
+@dynamic briefUsersArray, briefUsersArray_Count;
 
 typedef struct Response13003_Data__storage_ {
   uint32_t _has_storage_[1];
   int32_t userNum;
   int32_t trendNum;
-  DetailGym *detailGym;
+  BriefGym *briefGym;
+  NSMutableArray *briefUsersArray;
 } Response13003_Data__storage_;
 
 // This method is threadsafe because it is initially called
@@ -688,11 +679,11 @@ typedef struct Response13003_Data__storage_ {
   if (!descriptor) {
     static GPBMessageFieldDescription fields[] = {
       {
-        .name = "detailGym",
-        .dataTypeSpecific.className = GPBStringifySymbol(DetailGym),
-        .number = Response13003_Data_FieldNumber_DetailGym,
+        .name = "briefGym",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefGym),
+        .number = Response13003_Data_FieldNumber_BriefGym,
         .hasIndex = 0,
-        .offset = (uint32_t)offsetof(Response13003_Data__storage_, detailGym),
+        .offset = (uint32_t)offsetof(Response13003_Data__storage_, briefGym),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeMessage,
       },
@@ -714,6 +705,15 @@ typedef struct Response13003_Data__storage_ {
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
+      {
+        .name = "briefUsersArray",
+        .dataTypeSpecific.className = GPBStringifySymbol(BriefUser),
+        .number = Response13003_Data_FieldNumber_BriefUsersArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(Response13003_Data__storage_, briefUsersArray),
+        .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeMessage,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Response13003_Data class]
@@ -725,7 +725,7 @@ typedef struct Response13003_Data__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\001\t\000\002\007\000\003\010\000";
+        "\004\001\010\000\002\007\000\003\010\000\004\000briefUsers\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

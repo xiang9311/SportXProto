@@ -818,16 +818,16 @@ typedef struct BriefGym__storage_ {
 @implementation DetailGym
 
 @dynamic hasBriefGym, briefGym;
-@dynamic eqm;
 @dynamic courses;
 @dynamic gymCards;
+@dynamic gymCoversArray, gymCoversArray_Count;
 
 typedef struct DetailGym__storage_ {
   uint32_t _has_storage_[1];
   BriefGym *briefGym;
-  NSString *eqm;
   NSString *courses;
   NSString *gymCards;
+  NSMutableArray *gymCoversArray;
 } DetailGym__storage_;
 
 // This method is threadsafe because it is initially called
@@ -846,19 +846,10 @@ typedef struct DetailGym__storage_ {
         .dataType = GPBDataTypeMessage,
       },
       {
-        .name = "eqm",
-        .dataTypeSpecific.className = NULL,
-        .number = DetailGym_FieldNumber_Eqm,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(DetailGym__storage_, eqm),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeString,
-      },
-      {
         .name = "courses",
         .dataTypeSpecific.className = NULL,
         .number = DetailGym_FieldNumber_Courses,
-        .hasIndex = 2,
+        .hasIndex = 1,
         .offset = (uint32_t)offsetof(DetailGym__storage_, courses),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
@@ -867,9 +858,18 @@ typedef struct DetailGym__storage_ {
         .name = "gymCards",
         .dataTypeSpecific.className = NULL,
         .number = DetailGym_FieldNumber_GymCards,
-        .hasIndex = 3,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(DetailGym__storage_, gymCards),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "gymCoversArray",
+        .dataTypeSpecific.className = NULL,
+        .number = DetailGym_FieldNumber_GymCoversArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, gymCoversArray),
+        .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
     };
@@ -883,7 +883,7 @@ typedef struct DetailGym__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\002\001\010\000\004\010\000";
+        "\003\001\010\000\004\010\000\005\000gymCovers\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
