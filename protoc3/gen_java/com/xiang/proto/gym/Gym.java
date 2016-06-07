@@ -5622,6 +5622,11 @@ public final class Gym {
        * <code>optional float latitude = 2;</code>
        */
       float getLatitude();
+
+      /**
+       * <code>optional int32 wantGymId = 3;</code>
+       */
+      int getWantGymId();
     }
     /**
      * Protobuf type {@code com.xiang.proto.gym.Request13003.Params}
@@ -5637,6 +5642,7 @@ public final class Gym {
       private Params() {
         longitude_ = 0F;
         latitude_ = 0F;
+        wantGymId_ = 0;
       }
 
       @java.lang.Override
@@ -5672,6 +5678,11 @@ public final class Gym {
               case 21: {
 
                 latitude_ = input.readFloat();
+                break;
+              }
+              case 24: {
+
+                wantGymId_ = input.readInt32();
                 break;
               }
             }
@@ -5715,6 +5726,15 @@ public final class Gym {
         return latitude_;
       }
 
+      public static final int WANTGYMID_FIELD_NUMBER = 3;
+      private int wantGymId_;
+      /**
+       * <code>optional int32 wantGymId = 3;</code>
+       */
+      public int getWantGymId() {
+        return wantGymId_;
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -5733,6 +5753,9 @@ public final class Gym {
         if (latitude_ != 0F) {
           output.writeFloat(2, latitude_);
         }
+        if (wantGymId_ != 0) {
+          output.writeInt32(3, wantGymId_);
+        }
       }
 
       public int getSerializedSize() {
@@ -5747,6 +5770,10 @@ public final class Gym {
         if (latitude_ != 0F) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, latitude_);
+        }
+        if (wantGymId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, wantGymId_);
         }
         memoizedSize = size;
         return size;
@@ -5869,6 +5896,8 @@ public final class Gym {
 
           latitude_ = 0F;
 
+          wantGymId_ = 0;
+
           return this;
         }
 
@@ -5893,6 +5922,7 @@ public final class Gym {
           com.xiang.proto.gym.Gym.Request13003.Params result = new com.xiang.proto.gym.Gym.Request13003.Params(this);
           result.longitude_ = longitude_;
           result.latitude_ = latitude_;
+          result.wantGymId_ = wantGymId_;
           onBuilt();
           return result;
         }
@@ -5913,6 +5943,9 @@ public final class Gym {
           }
           if (other.getLatitude() != 0F) {
             setLatitude(other.getLatitude());
+          }
+          if (other.getWantGymId() != 0) {
+            setWantGymId(other.getWantGymId());
           }
           onChanged();
           return this;
@@ -5988,6 +6021,32 @@ public final class Gym {
         public Builder clearLatitude() {
           
           latitude_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int wantGymId_ ;
+        /**
+         * <code>optional int32 wantGymId = 3;</code>
+         */
+        public int getWantGymId() {
+          return wantGymId_;
+        }
+        /**
+         * <code>optional int32 wantGymId = 3;</code>
+         */
+        public Builder setWantGymId(int value) {
+          
+          wantGymId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 wantGymId = 3;</code>
+         */
+        public Builder clearWantGymId() {
+          
+          wantGymId_ = 0;
           onChanged();
           return this;
         }
@@ -11039,27 +11098,27 @@ public final class Gym {
       "oto.gym.Response13002.Data\032e\n\004Data\022-\n\tde" +
       "tailGym\030\001 \001(\0132\032.com.xiang.proto.DetailGy" +
       "m\022.\n\nbriefUsers\030\002 \003(\0132\032.com.xiang.proto.",
-      "BriefUser\"\247\001\n\014Request13003\022.\n\006common\030\001 \001" +
+      "BriefUser\"\272\001\n\014Request13003\022.\n\006common\030\001 \001" +
       "(\0132\036.com.xiang.proto.RequestCommon\0228\n\006pa" +
       "rams\030\002 \001(\0132(.com.xiang.proto.gym.Request" +
-      "13003.Params\032-\n\006Params\022\021\n\tlongitude\030\001 \001(" +
-      "\002\022\020\n\010latitude\030\002 \001(\002\"\200\002\n\rResponse13003\022/\n" +
-      "\006common\030\001 \001(\0132\037.com.xiang.proto.Response" +
-      "Common\0225\n\004data\030\002 \001(\0132\'.com.xiang.proto.g" +
-      "ym.Response13003.Data\032\206\001\n\004Data\022+\n\010briefG" +
-      "ym\030\001 \001(\0132\031.com.xiang.proto.BriefGym\022\017\n\007u" +
-      "serNum\030\002 \001(\005\022\020\n\010trendNum\030\003 \001(\005\022.\n\nbriefU",
-      "sers\030\004 \003(\0132\032.com.xiang.proto.BriefUser\"\244" +
-      "\001\n\014Request13004\022.\n\006common\030\001 \001(\0132\036.com.xi" +
-      "ang.proto.RequestCommon\0228\n\006params\030\002 \001(\0132" +
-      "(.com.xiang.proto.gym.Request13004.Param" +
-      "s\032*\n\006Params\022\r\n\005gymId\030\001 \001(\005\022\021\n\tpageIndex\030" +
-      "\002 \001(\005\"\300\001\n\rResponse13004\022/\n\006common\030\001 \001(\0132" +
-      "\037.com.xiang.proto.ResponseCommon\0225\n\004data" +
-      "\030\002 \001(\0132\'.com.xiang.proto.gym.Response130" +
-      "04.Data\032G\n\004Data\022&\n\006trends\030\001 \003(\0132\026.com.xi" +
-      "ang.proto.Trend\022\027\n\017maxCountPerPage\030\002 \001(\005",
-      "b\006proto3"
+      "13003.Params\032@\n\006Params\022\021\n\tlongitude\030\001 \001(" +
+      "\002\022\020\n\010latitude\030\002 \001(\002\022\021\n\twantGymId\030\003 \001(\005\"\200" +
+      "\002\n\rResponse13003\022/\n\006common\030\001 \001(\0132\037.com.x" +
+      "iang.proto.ResponseCommon\0225\n\004data\030\002 \001(\0132" +
+      "\'.com.xiang.proto.gym.Response13003.Data" +
+      "\032\206\001\n\004Data\022+\n\010briefGym\030\001 \001(\0132\031.com.xiang." +
+      "proto.BriefGym\022\017\n\007userNum\030\002 \001(\005\022\020\n\010trend",
+      "Num\030\003 \001(\005\022.\n\nbriefUsers\030\004 \003(\0132\032.com.xian" +
+      "g.proto.BriefUser\"\244\001\n\014Request13004\022.\n\006co" +
+      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm" +
+      "on\0228\n\006params\030\002 \001(\0132(.com.xiang.proto.gym" +
+      ".Request13004.Params\032*\n\006Params\022\r\n\005gymId\030" +
+      "\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\300\001\n\rResponse130" +
+      "04\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
+      "ponseCommon\0225\n\004data\030\002 \001(\0132\'.com.xiang.pr" +
+      "oto.gym.Response13004.Data\032G\n\004Data\022&\n\006tr" +
+      "ends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n\017ma",
+      "xCountPerPage\030\002 \001(\005b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11133,7 +11192,7 @@ public final class Gym {
     internal_static_com_xiang_proto_gym_Request13003_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_gym_Request13003_Params_descriptor,
-        new java.lang.String[] { "Longitude", "Latitude", });
+        new java.lang.String[] { "Longitude", "Latitude", "WantGymId", });
     internal_static_com_xiang_proto_gym_Response13003_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_xiang_proto_gym_Response13003_fieldAccessorTable = new

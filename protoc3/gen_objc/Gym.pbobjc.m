@@ -553,11 +553,13 @@ typedef struct Request13003__storage_ {
 
 @dynamic longitude;
 @dynamic latitude;
+@dynamic wantGymId;
 
 typedef struct Request13003_Params__storage_ {
   uint32_t _has_storage_[1];
   float longitude;
   float latitude;
+  int32_t wantGymId;
 } Request13003_Params__storage_;
 
 // This method is threadsafe because it is initially called
@@ -584,6 +586,15 @@ typedef struct Request13003_Params__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
       },
+      {
+        .name = "wantGymId",
+        .dataTypeSpecific.className = NULL,
+        .number = Request13003_Params_FieldNumber_WantGymId,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(Request13003_Params__storage_, wantGymId),
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request13003_Params class]
@@ -593,6 +604,11 @@ typedef struct Request13003_Params__storage_ {
                                     fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
                                    storageSize:sizeof(Request13003_Params__storage_)
                                          flags:0];
+#if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
+    static const char *extraTextFormatInfo =
+        "\001\003\t\000";
+    [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
+#endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
     descriptor = localDescriptor;
   }

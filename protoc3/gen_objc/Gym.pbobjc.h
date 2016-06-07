@@ -220,6 +220,7 @@ typedef GPB_ENUM(Request13003_FieldNumber) {
 typedef GPB_ENUM(Request13003_Params_FieldNumber) {
   Request13003_Params_FieldNumber_Longitude = 1,
   Request13003_Params_FieldNumber_Latitude = 2,
+  Request13003_Params_FieldNumber_WantGymId = 3,
 };
 
 @interface Request13003_Params : GPBMessage
@@ -227,6 +228,8 @@ typedef GPB_ENUM(Request13003_Params_FieldNumber) {
 @property(nonatomic, readwrite) float longitude;
 
 @property(nonatomic, readwrite) float latitude;
+
+@property(nonatomic, readwrite) int32_t wantGymId;
 
 @end
 

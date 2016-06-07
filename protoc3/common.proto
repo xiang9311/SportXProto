@@ -84,7 +84,7 @@ message DetailGym{
 	// 课程
 	string courses = 3;  // 课程信息
 	// 健身卡
-	string gymCards = 4; // 健身卡信息
+	string gymCards = 4; // 健身卡信息 价格信息，例如""
 
   repeated string gymCovers = 5;// 场馆图片
 }

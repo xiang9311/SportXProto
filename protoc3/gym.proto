@@ -53,6 +53,7 @@ message Request13003 {
 		int32 gymId = 3;
 		float longitude = 1;
 		float latitude = 2;
+		int32 wantGymId = 3;                      //如果客户端有常用的gymId，传给后台
 	}
 }
 
