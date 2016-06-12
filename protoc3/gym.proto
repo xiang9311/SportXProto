@@ -53,7 +53,7 @@ message Request13003 {
 		int32 gymId = 3;
 		float longitude = 1;
 		float latitude = 2;
-		int32 wantGymId = 3;                      //如果客户端有常用的gymId，传给后台
+		int32 wantGymId = 4;                      //如果客户端有常用的gymId，传给后台
 	}
 }
 
@@ -69,7 +69,7 @@ message Response13003 {
 }
 
 // 获取健身房内trend
-// /gym/getRecommendGym
+// /gym/getGymTrend
 message Request13004 {
 	RequestCommon common = 1;
 	Params params = 2;

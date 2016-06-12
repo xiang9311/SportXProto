@@ -664,6 +664,7 @@ typedef struct Request10004__storage_ {
 @dynamic sex;
 @dynamic sign;
 @dynamic phone;
+@dynamic sexChanged;
 
 typedef struct Request10004_Params__storage_ {
   uint32_t _has_storage_[1];
@@ -735,6 +736,15 @@ typedef struct Request10004_Params__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeString,
       },
+      {
+        .name = "sexChanged",
+        .dataTypeSpecific.className = NULL,
+        .number = Request10004_Params_FieldNumber_SexChanged,
+        .hasIndex = 6,
+        .offset = 7,  // Stored in _has_storage_ to save space.
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeBool,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Request10004_Params class]
@@ -746,7 +756,7 @@ typedef struct Request10004_Params__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\001\010\000\002\t\000\003\n\000";
+        "\004\001\010\000\002\t\000\003\n\000\007\n\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

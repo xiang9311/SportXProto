@@ -6607,6 +6607,15 @@ public final class Pilot {
        */
       com.google.protobuf.ByteString
           getPhoneBytes();
+
+      /**
+       * <pre>
+       * 只有当sexChanged为true时，才更改sex
+       * </pre>
+       *
+       * <code>optional bool sexChanged = 7;</code>
+       */
+      boolean getSexChanged();
     }
     /**
      * Protobuf type {@code com.xiang.proto.pilot.Request10004.Params}
@@ -6626,6 +6635,7 @@ public final class Pilot {
         sex_ = 0;
         sign_ = "";
         phone_ = "";
+        sexChanged_ = false;
       }
 
       @java.lang.Override
@@ -6687,6 +6697,11 @@ public final class Pilot {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 phone_ = s;
+                break;
+              }
+              case 56: {
+
+                sexChanged_ = input.readBool();
                 break;
               }
             }
@@ -6922,6 +6937,19 @@ public final class Pilot {
         }
       }
 
+      public static final int SEXCHANGED_FIELD_NUMBER = 7;
+      private boolean sexChanged_;
+      /**
+       * <pre>
+       * 只有当sexChanged为true时，才更改sex
+       * </pre>
+       *
+       * <code>optional bool sexChanged = 7;</code>
+       */
+      public boolean getSexChanged() {
+        return sexChanged_;
+      }
+
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
@@ -6952,6 +6980,9 @@ public final class Pilot {
         if (!getPhoneBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessage.writeString(output, 6, phone_);
         }
+        if (sexChanged_ != false) {
+          output.writeBool(7, sexChanged_);
+        }
       }
 
       public int getSerializedSize() {
@@ -6977,6 +7008,10 @@ public final class Pilot {
         }
         if (!getPhoneBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessage.computeStringSize(6, phone_);
+        }
+        if (sexChanged_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(7, sexChanged_);
         }
         memoizedSize = size;
         return size;
@@ -7107,6 +7142,8 @@ public final class Pilot {
 
           phone_ = "";
 
+          sexChanged_ = false;
+
           return this;
         }
 
@@ -7135,6 +7172,7 @@ public final class Pilot {
           result.sex_ = sex_;
           result.sign_ = sign_;
           result.phone_ = phone_;
+          result.sexChanged_ = sexChanged_;
           onBuilt();
           return result;
         }
@@ -7172,6 +7210,9 @@ public final class Pilot {
           if (!other.getPhone().isEmpty()) {
             phone_ = other.phone_;
             onChanged();
+          }
+          if (other.getSexChanged() != false) {
+            setSexChanged(other.getSexChanged());
           }
           onChanged();
           return this;
@@ -7644,6 +7685,44 @@ public final class Pilot {
   checkByteStringIsUtf8(value);
           
           phone_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean sexChanged_ ;
+        /**
+         * <pre>
+         * 只有当sexChanged为true时，才更改sex
+         * </pre>
+         *
+         * <code>optional bool sexChanged = 7;</code>
+         */
+        public boolean getSexChanged() {
+          return sexChanged_;
+        }
+        /**
+         * <pre>
+         * 只有当sexChanged为true时，才更改sex
+         * </pre>
+         *
+         * <code>optional bool sexChanged = 7;</code>
+         */
+        public Builder setSexChanged(boolean value) {
+          
+          sexChanged_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 只有当sexChanged为true时，才更改sex
+         * </pre>
+         *
+         * <code>optional bool sexChanged = 7;</code>
+         */
+        public Builder clearSexChanged() {
+          
+          sexChanged_ = false;
           onChanged();
           return this;
         }
@@ -42926,132 +43005,133 @@ public final class Pilot {
       "om.xiang.proto.BriefUser\022\017\n\007userKey\030\002 \001(" +
       "\t\022\024\n\014rongyunToken\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024.c" +
       "om.xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022\r\n\005phon" +
-      "e\030\006 \001(\t\"\376\001\n\014Request10004\022.\n\006common\030\001 \001(\013" +
+      "e\030\006 \001(\t\"\222\002\n\014Request10004\022.\n\006common\030\001 \001(\013" +
       "2\036.com.xiang.proto.RequestCommon\022:\n\006para" +
       "ms\030\002 \001(\0132*.com.xiang.proto.pilot.Request" +
-      "10004.Params\032\201\001\n\006Params\022\020\n\010userName\030\001 \001(" +
+      "10004.Params\032\225\001\n\006Params\022\020\n\010userName\030\001 \001(" +
       "\t\022\021\n\tavatarKey\030\002 \001(\t\022\022\n\nbucketName\030\003 \001(\t" +
       "\022!\n\003sex\030\004 \001(\0162\024.com.xiang.proto.Sex\022\014\n\004s" +
-      "ign\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\"\224\001\n\rResponse100",
-      "04\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
-      "ponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
-      "oto.pilot.Response10004.Data\032\031\n\004Data\022\021\n\t" +
-      "avatarUrl\030\001 \001(\t\"\247\001\n\014Request10005\022.\n\006comm" +
-      "on\030\001 \001(\0132\036.com.xiang.proto.RequestCommon" +
-      "\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilot" +
-      ".Request10005.Params\032+\n\006Params\022\021\n\tpageIn" +
-      "dex\030\001 \001(\005\022\016\n\006userId\030\002 \001(\005\"\302\001\n\rResponse10" +
-      "005\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Re" +
-      "sponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.p",
-      "roto.pilot.Response10005.Data\032G\n\004Data\022&\n" +
-      "\006trends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n" +
-      "\017maxCountPerPage\030\002 \001(\005\"\227\001\n\014Request10006\022" +
-      ".\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reques" +
-      "tCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.prot" +
-      "o.pilot.Request10006.Params\032\033\n\006Params\022\021\n" +
-      "\tpageIndex\030\001 \001(\005\"\324\001\n\rResponse10006\022/\n\006co" +
-      "mmon\030\001 \001(\0132\037.com.xiang.proto.ResponseCom" +
-      "mon\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pilo" +
-      "t.Response10006.Data\032Y\n\004Data\0228\n\017commentM",
-      "essages\030\001 \003(\0132\037.com.xiang.proto.CommentM" +
-      "essage\022\027\n\017maxCountPerPage\030\002 \001(\005\"\252\001\n\014Requ" +
-      "est10007\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
-      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x" +
-      "iang.proto.pilot.Request10007.Params\032.\n\006" +
-      "Params\022\020\n\010clearAll\030\001 \001(\010\022\022\n\nmessageIds\030\002" +
-      " \003(\005\"\201\001\n\rResponse10007\022/\n\006common\030\001 \001(\0132\037" +
+      "ign\030\005 \001(\t\022\r\n\005phone\030\006 \001(\t\022\022\n\nsexChanged\030\007",
+      " \001(\010\"\224\001\n\rResponse10004\022/\n\006common\030\001 \001(\0132\037" +
       ".com.xiang.proto.ResponseCommon\0227\n\004data\030" +
       "\002 \001(\0132).com.xiang.proto.pilot.Response10" +
-      "007.Data\032\006\n\004Data\"\204\001\n\014Request10008\022.\n\006com",
-      "mon\030\001 \001(\0132\036.com.xiang.proto.RequestCommo" +
-      "n\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilo" +
-      "t.Request10008.Params\032\010\n\006Params\"\220\001\n\rResp" +
-      "onse10008\022/\n\006common\030\001 \001(\0132\037.com.xiang.pr" +
-      "oto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.x" +
-      "iang.proto.pilot.Response10008.Data\032\025\n\004D" +
-      "ata\022\r\n\005count\030\001 \001(\005\"\224\001\n\014Request10009\022.\n\006c" +
-      "ommon\030\001 \001(\0132\036.com.xiang.proto.RequestCom" +
-      "mon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pi" +
-      "lot.Request10009.Params\032\030\n\006Params\022\016\n\006use",
-      "rId\030\001 \001(\005\"\261\001\n\rResponse10009\022/\n\006common\030\001 " +
-      "\001(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004" +
-      "data\030\002 \001(\0132).com.xiang.proto.pilot.Respo" +
-      "nse10009.Data\0326\n\004Data\022.\n\nbriefUsers\030\001 \003(" +
-      "\0132\032.com.xiang.proto.BriefUser\"\224\001\n\014Reques" +
-      "t10010\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto" +
-      ".RequestCommon\022:\n\006params\030\002 \001(\0132*.com.xia" +
-      "ng.proto.pilot.Request10010.Params\032\030\n\006Pa" +
-      "rams\022\016\n\006userId\030\001 \001(\005\"\261\001\n\rResponse10010\022/" +
-      "\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respons",
-      "eCommon\0227\n\004data\030\002 \001(\0132).com.xiang.proto." +
-      "pilot.Response10010.Data\0326\n\004Data\022.\n\nbrie" +
-      "fUsers\030\001 \003(\0132\032.com.xiang.proto.BriefUser" +
-      "\"\250\001\n\014Request10011\022.\n\006common\030\001 \001(\0132\036.com." +
-      "xiang.proto.RequestCommon\022:\n\006params\030\002 \001(" +
-      "\0132*.com.xiang.proto.pilot.Request10011.P" +
-      "arams\032,\n\006Params\022\020\n\010toUserId\030\001 \001(\005\022\020\n\010isF" +
-      "ollow\030\002 \001(\010\"\201\001\n\rResponse10011\022/\n\006common\030" +
-      "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227" +
-      "\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Res",
-      "ponse10011.Data\032\006\n\004Data\"\224\001\n\014Request10012" +
-      "\022.\n\006common\030\001 \001(\0132\036.com.xiang.proto.Reque" +
-      "stCommon\022:\n\006params\030\002 \001(\0132*.com.xiang.pro" +
-      "to.pilot.Request10012.Params\032\030\n\006Params\022\016" +
-      "\n\006userId\030\001 \001(\005\"\262\001\n\rResponse10012\022/\n\006comm" +
-      "on\030\001 \001(\0132\037.com.xiang.proto.ResponseCommo" +
-      "n\0227\n\004data\030\002 \001(\0132).com.xiang.proto.pilot." +
-      "Response10012.Data\0327\n\004Data\022/\n\ndetailUser" +
-      "\030\001 \001(\0132\033.com.xiang.proto.DetailUser\"\250\001\n\014" +
-      "Request10013\022.\n\006common\030\001 \001(\0132\036.com.xiang",
+      "004.Data\032\031\n\004Data\022\021\n\tavatarUrl\030\001 \001(\t\"\247\001\n\014" +
+      "Request10005\022.\n\006common\030\001 \001(\0132\036.com.xiang" +
       ".proto.RequestCommon\022:\n\006params\030\002 \001(\0132*.c" +
-      "om.xiang.proto.pilot.Request10013.Params" +
-      "\032,\n\006Params\022\017\n\007keyword\030\001 \001(\t\022\021\n\tpageIndex" +
-      "\030\002 \001(\005\"\320\001\n\rResponse10013\022/\n\006common\030\001 \001(\013" +
-      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
-      "a\030\002 \001(\0132).com.xiang.proto.pilot.Response" +
-      "10013.Data\032U\n\004Data\0224\n\rsearchedUsers\030\001 \003(" +
-      "\0132\035.com.xiang.proto.SearchedUser\022\027\n\017maxC" +
-      "ountPerPage\030\002 \001(\005\"\250\001\n\014Request10014\022.\n\006co" +
-      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm",
-      "on\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pil" +
-      "ot.Request10014.Params\032,\n\006Params\022\017\n\007keyw" +
-      "ord\030\001 \001(\t\022\021\n\tpageIndex\030\002 \001(\005\"\310\001\n\rRespons" +
-      "e10014\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto" +
-      ".ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xian" +
-      "g.proto.pilot.Response10014.Data\032M\n\004Data" +
-      "\022,\n\tbriefGyms\030\001 \003(\0132\031.com.xiang.proto.Br" +
-      "iefGym\022\027\n\017maxCountPerPage\030\002 \001(\005\"\204\001\n\014Requ" +
-      "est10015\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
-      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x",
-      "iang.proto.pilot.Request10015.Params\032\010\n\006" +
-      "Params\"\217\001\n\rResponse10015\022/\n\006common\030\001 \001(\013" +
-      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
-      "a\030\002 \001(\0132).com.xiang.proto.pilot.Response" +
-      "10015.Data\032\024\n\004Data\022\014\n\004keys\030\001 \003(\t\"\223\001\n\014Req" +
-      "uest10016\022.\n\006common\030\001 \001(\0132\036.com.xiang.pr" +
-      "oto.RequestCommon\022:\n\006params\030\002 \001(\0132*.com." +
-      "xiang.proto.pilot.Request10016.Params\032\027\n" +
-      "\006Params\022\r\n\005phone\030\001 \001(\t\"\222\001\n\rResponse10016" +
-      "\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Respo",
-      "nseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.prot" +
-      "o.pilot.Response10016.Data\032\027\n\004Data\022\017\n\007ca" +
-      "nUser\030\001 \001(\010\"\204\001\n\014Request10017\022.\n\006common\030\001" +
+      "om.xiang.proto.pilot.Request10005.Params" +
+      "\032+\n\006Params\022\021\n\tpageIndex\030\001 \001(\005\022\016\n\006userId\030" +
+      "\002 \001(\005\"\302\001\n\rResponse10005\022/\n\006common\030\001 \001(\0132" +
+      "\037.com.xiang.proto.ResponseCommon\0227\n\004data",
+      "\030\002 \001(\0132).com.xiang.proto.pilot.Response1" +
+      "0005.Data\032G\n\004Data\022&\n\006trends\030\001 \003(\0132\026.com." +
+      "xiang.proto.Trend\022\027\n\017maxCountPerPage\030\002 \001" +
+      "(\005\"\227\001\n\014Request10006\022.\n\006common\030\001 \001(\0132\036.co" +
+      "m.xiang.proto.RequestCommon\022:\n\006params\030\002 " +
+      "\001(\0132*.com.xiang.proto.pilot.Request10006" +
+      ".Params\032\033\n\006Params\022\021\n\tpageIndex\030\001 \001(\005\"\324\001\n" +
+      "\rResponse10006\022/\n\006common\030\001 \001(\0132\037.com.xia" +
+      "ng.proto.ResponseCommon\0227\n\004data\030\002 \001(\0132)." +
+      "com.xiang.proto.pilot.Response10006.Data",
+      "\032Y\n\004Data\0228\n\017commentMessages\030\001 \003(\0132\037.com." +
+      "xiang.proto.CommentMessage\022\027\n\017maxCountPe" +
+      "rPage\030\002 \001(\005\"\252\001\n\014Request10007\022.\n\006common\030\001" +
       " \001(\0132\036.com.xiang.proto.RequestCommon\022:\n\006" +
       "params\030\002 \001(\0132*.com.xiang.proto.pilot.Req" +
-      "uest10017.Params\032\010\n\006Params\"\300\001\n\rResponse1" +
-      "0017\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.R" +
+      "uest10007.Params\032.\n\006Params\022\020\n\010clearAll\030\001" +
+      " \001(\010\022\022\n\nmessageIds\030\002 \003(\005\"\201\001\n\rResponse100" +
+      "07\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
+      "ponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang.pr" +
+      "oto.pilot.Response10007.Data\032\006\n\004Data\"\204\001\n",
+      "\014Request10008\022.\n\006common\030\001 \001(\0132\036.com.xian" +
+      "g.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*." +
+      "com.xiang.proto.pilot.Request10008.Param" +
+      "s\032\010\n\006Params\"\220\001\n\rResponse10008\022/\n\006common\030" +
+      "\001 \001(\0132\037.com.xiang.proto.ResponseCommon\0227" +
+      "\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Res" +
+      "ponse10008.Data\032\025\n\004Data\022\r\n\005count\030\001 \001(\005\"\224" +
+      "\001\n\014Request10009\022.\n\006common\030\001 \001(\0132\036.com.xi" +
+      "ang.proto.RequestCommon\022:\n\006params\030\002 \001(\0132" +
+      "*.com.xiang.proto.pilot.Request10009.Par",
+      "ams\032\030\n\006Params\022\016\n\006userId\030\001 \001(\005\"\261\001\n\rRespon" +
+      "se10009\022/\n\006common\030\001 \001(\0132\037.com.xiang.prot" +
+      "o.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.xia" +
+      "ng.proto.pilot.Response10009.Data\0326\n\004Dat" +
+      "a\022.\n\nbriefUsers\030\001 \003(\0132\032.com.xiang.proto." +
+      "BriefUser\"\224\001\n\014Request10010\022.\n\006common\030\001 \001" +
+      "(\0132\036.com.xiang.proto.RequestCommon\022:\n\006pa" +
+      "rams\030\002 \001(\0132*.com.xiang.proto.pilot.Reque" +
+      "st10010.Params\032\030\n\006Params\022\016\n\006userId\030\001 \001(\005" +
+      "\"\261\001\n\rResponse10010\022/\n\006common\030\001 \001(\0132\037.com",
+      ".xiang.proto.ResponseCommon\0227\n\004data\030\002 \001(" +
+      "\0132).com.xiang.proto.pilot.Response10010." +
+      "Data\0326\n\004Data\022.\n\nbriefUsers\030\001 \003(\0132\032.com.x" +
+      "iang.proto.BriefUser\"\250\001\n\014Request10011\022.\n" +
+      "\006common\030\001 \001(\0132\036.com.xiang.proto.RequestC" +
+      "ommon\022:\n\006params\030\002 \001(\0132*.com.xiang.proto." +
+      "pilot.Request10011.Params\032,\n\006Params\022\020\n\010t" +
+      "oUserId\030\001 \001(\005\022\020\n\010isFollow\030\002 \001(\010\"\201\001\n\rResp" +
+      "onse10011\022/\n\006common\030\001 \001(\0132\037.com.xiang.pr" +
+      "oto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com.x",
+      "iang.proto.pilot.Response10011.Data\032\006\n\004D" +
+      "ata\"\224\001\n\014Request10012\022.\n\006common\030\001 \001(\0132\036.c" +
+      "om.xiang.proto.RequestCommon\022:\n\006params\030\002" +
+      " \001(\0132*.com.xiang.proto.pilot.Request1001" +
+      "2.Params\032\030\n\006Params\022\016\n\006userId\030\001 \001(\005\"\262\001\n\rR" +
+      "esponse10012\022/\n\006common\030\001 \001(\0132\037.com.xiang" +
+      ".proto.ResponseCommon\0227\n\004data\030\002 \001(\0132).co" +
+      "m.xiang.proto.pilot.Response10012.Data\0327" +
+      "\n\004Data\022/\n\ndetailUser\030\001 \001(\0132\033.com.xiang.p" +
+      "roto.DetailUser\"\250\001\n\014Request10013\022.\n\006comm",
+      "on\030\001 \001(\0132\036.com.xiang.proto.RequestCommon" +
+      "\022:\n\006params\030\002 \001(\0132*.com.xiang.proto.pilot" +
+      ".Request10013.Params\032,\n\006Params\022\017\n\007keywor" +
+      "d\030\001 \001(\t\022\021\n\tpageIndex\030\002 \001(\005\"\320\001\n\rResponse1" +
+      "0013\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.R" +
       "esponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang." +
-      "proto.pilot.Response10017.Data\032E\n\004Data\022=" +
-      "\n\021trendBriefMessage\030\001 \001(\0132\".com.xiang.pr",
-      "oto.TrendBriefMessage\"\224\001\n\014Request10018\022." +
-      "\n\006common\030\001 \001(\0132\036.com.xiang.proto.Request" +
-      "Common\022:\n\006params\030\002 \001(\0132*.com.xiang.proto" +
-      ".pilot.Request10018.Params\032\030\n\006Params\022\016\n\006" +
-      "userId\030\001 \001(\005\"\260\001\n\rResponse10018\022/\n\006common" +
-      "\030\001 \001(\0132\037.com.xiang.proto.ResponseCommon\022" +
-      "7\n\004data\030\002 \001(\0132).com.xiang.proto.pilot.Re" +
-      "sponse10018.Data\0325\n\004Data\022-\n\tbriefUser\030\001 " +
-      "\001(\0132\032.com.xiang.proto.BriefUserb\006proto3"
+      "proto.pilot.Response10013.Data\032U\n\004Data\0224" +
+      "\n\rsearchedUsers\030\001 \003(\0132\035.com.xiang.proto." +
+      "SearchedUser\022\027\n\017maxCountPerPage\030\002 \001(\005\"\250\001" +
+      "\n\014Request10014\022.\n\006common\030\001 \001(\0132\036.com.xia",
+      "ng.proto.RequestCommon\022:\n\006params\030\002 \001(\0132*" +
+      ".com.xiang.proto.pilot.Request10014.Para" +
+      "ms\032,\n\006Params\022\017\n\007keyword\030\001 \001(\t\022\021\n\tpageInd" +
+      "ex\030\002 \001(\005\"\310\001\n\rResponse10014\022/\n\006common\030\001 \001" +
+      "(\0132\037.com.xiang.proto.ResponseCommon\0227\n\004d" +
+      "ata\030\002 \001(\0132).com.xiang.proto.pilot.Respon" +
+      "se10014.Data\032M\n\004Data\022,\n\tbriefGyms\030\001 \003(\0132" +
+      "\031.com.xiang.proto.BriefGym\022\027\n\017maxCountPe" +
+      "rPage\030\002 \001(\005\"\204\001\n\014Request10015\022.\n\006common\030\001" +
+      " \001(\0132\036.com.xiang.proto.RequestCommon\022:\n\006",
+      "params\030\002 \001(\0132*.com.xiang.proto.pilot.Req" +
+      "uest10015.Params\032\010\n\006Params\"\217\001\n\rResponse1" +
+      "0015\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.R" +
+      "esponseCommon\0227\n\004data\030\002 \001(\0132).com.xiang." +
+      "proto.pilot.Response10015.Data\032\024\n\004Data\022\014" +
+      "\n\004keys\030\001 \003(\t\"\223\001\n\014Request10016\022.\n\006common\030" +
+      "\001 \001(\0132\036.com.xiang.proto.RequestCommon\022:\n" +
+      "\006params\030\002 \001(\0132*.com.xiang.proto.pilot.Re" +
+      "quest10016.Params\032\027\n\006Params\022\r\n\005phone\030\001 \001" +
+      "(\t\"\222\001\n\rResponse10016\022/\n\006common\030\001 \001(\0132\037.c",
+      "om.xiang.proto.ResponseCommon\0227\n\004data\030\002 " +
+      "\001(\0132).com.xiang.proto.pilot.Response1001" +
+      "6.Data\032\027\n\004Data\022\017\n\007canUser\030\001 \001(\010\"\204\001\n\014Requ" +
+      "est10017\022.\n\006common\030\001 \001(\0132\036.com.xiang.pro" +
+      "to.RequestCommon\022:\n\006params\030\002 \001(\0132*.com.x" +
+      "iang.proto.pilot.Request10017.Params\032\010\n\006" +
+      "Params\"\300\001\n\rResponse10017\022/\n\006common\030\001 \001(\013" +
+      "2\037.com.xiang.proto.ResponseCommon\0227\n\004dat" +
+      "a\030\002 \001(\0132).com.xiang.proto.pilot.Response" +
+      "10017.Data\032E\n\004Data\022=\n\021trendBriefMessage\030",
+      "\001 \001(\0132\".com.xiang.proto.TrendBriefMessag" +
+      "e\"\224\001\n\014Request10018\022.\n\006common\030\001 \001(\0132\036.com" +
+      ".xiang.proto.RequestCommon\022:\n\006params\030\002 \001" +
+      "(\0132*.com.xiang.proto.pilot.Request10018." +
+      "Params\032\030\n\006Params\022\016\n\006userId\030\001 \001(\005\"\260\001\n\rRes" +
+      "ponse10018\022/\n\006common\030\001 \001(\0132\037.com.xiang.p" +
+      "roto.ResponseCommon\0227\n\004data\030\002 \001(\0132).com." +
+      "xiang.proto.pilot.Response10018.Data\0325\n\004" +
+      "Data\022-\n\tbriefUser\030\001 \001(\0132\032.com.xiang.prot" +
+      "o.BriefUserb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -43125,7 +43205,7 @@ public final class Pilot {
     internal_static_com_xiang_proto_pilot_Request10004_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_pilot_Request10004_Params_descriptor,
-        new java.lang.String[] { "UserName", "AvatarKey", "BucketName", "Sex", "Sign", "Phone", });
+        new java.lang.String[] { "UserName", "AvatarKey", "BucketName", "Sex", "Sign", "Phone", "SexChanged", });
     internal_static_com_xiang_proto_pilot_Response10004_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_xiang_proto_pilot_Response10004_fieldAccessorTable = new

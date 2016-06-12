@@ -296,6 +296,7 @@ typedef GPB_ENUM(Request10004_Params_FieldNumber) {
   Request10004_Params_FieldNumber_Sex = 4,
   Request10004_Params_FieldNumber_Sign = 5,
   Request10004_Params_FieldNumber_Phone = 6,
+  Request10004_Params_FieldNumber_SexChanged = 7,
 };
 
 @interface Request10004_Params : GPBMessage
@@ -314,6 +315,9 @@ typedef GPB_ENUM(Request10004_Params_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sign;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *phone;
+
+/// 只有当sexChanged为true时，才更改sex
+@property(nonatomic, readwrite) BOOL sexChanged;
 
 @end
 

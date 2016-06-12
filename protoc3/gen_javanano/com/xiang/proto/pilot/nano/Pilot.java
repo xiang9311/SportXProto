@@ -994,6 +994,9 @@ public interface Pilot {
       // optional string phone = 6;
       public java.lang.String phone;
 
+      // optional bool sexChanged = 7;
+      public boolean sexChanged;
+
       public Params() {
         clear();
       }
@@ -1005,6 +1008,7 @@ public interface Pilot {
         sex = com.xiang.proto.nano.Common.MALE;
         sign = "";
         phone = "";
+        sexChanged = false;
         cachedSize = -1;
         return this;
       }
@@ -1029,6 +1033,9 @@ public interface Pilot {
         }
         if (!this.phone.equals("")) {
           output.writeString(6, this.phone);
+        }
+        if (this.sexChanged != false) {
+          output.writeBool(7, this.sexChanged);
         }
         super.writeTo(output);
       }
@@ -1059,6 +1066,10 @@ public interface Pilot {
         if (!this.phone.equals("")) {
           size += com.google.protobuf.nano.CodedOutputByteBufferNano
               .computeStringSize(6, this.phone);
+        }
+        if (this.sexChanged != false) {
+          size += com.google.protobuf.nano.CodedOutputByteBufferNano
+              .computeBoolSize(7, this.sexChanged);
         }
         return size;
       }
@@ -1106,6 +1117,10 @@ public interface Pilot {
             }
             case 50: {
               this.phone = input.readString();
+              break;
+            }
+            case 56: {
+              this.sexChanged = input.readBool();
               break;
             }
           }

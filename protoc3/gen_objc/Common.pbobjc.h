@@ -342,6 +342,7 @@ typedef GPB_ENUM(DetailGym_FieldNumber) {
   DetailGym_FieldNumber_Courses = 3,
   DetailGym_FieldNumber_GymCards = 4,
   DetailGym_FieldNumber_GymCoversArray = 5,
+  DetailGym_FieldNumber_GymIntro = 6,
 };
 
 /// DetailGym 场馆详情
@@ -362,6 +363,9 @@ typedef GPB_ENUM(DetailGym_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *gymCoversArray;
 /// The number of items in @c gymCoversArray without causing the array to be created.
 @property(nonatomic, readonly) NSUInteger gymCoversArray_Count;
+
+/// 场馆介绍
+@property(nonatomic, readwrite, copy, null_resettable) NSString *gymIntro;
 
 @end
 
@@ -508,6 +512,7 @@ typedef GPB_ENUM(Comment_FieldNumber) {
   Comment_FieldNumber_ToUserName = 6,
   Comment_FieldNumber_CreateTime = 7,
   Comment_FieldNumber_GymName = 8,
+  Comment_FieldNumber_GymId = 9,
 };
 
 /// trend(动态) 的评论
@@ -537,6 +542,9 @@ typedef GPB_ENUM(Comment_FieldNumber) {
 
 /// 场馆名 地点
 @property(nonatomic, readwrite, copy, null_resettable) NSString *gymName;
+
+/// 场馆id
+@property(nonatomic, readwrite) int32_t gymId;
 
 @end
 

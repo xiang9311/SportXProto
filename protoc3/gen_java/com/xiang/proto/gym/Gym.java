@@ -5614,6 +5614,11 @@ public final class Gym {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <code>optional int32 gymId = 3;</code>
+       */
+      int getGymId();
+
+      /**
        * <code>optional float longitude = 1;</code>
        */
       float getLongitude();
@@ -5624,7 +5629,11 @@ public final class Gym {
       float getLatitude();
 
       /**
-       * <code>optional int32 wantGymId = 3;</code>
+       * <pre>
+       *如果客户端有常用的gymId，传给后台
+       * </pre>
+       *
+       * <code>optional int32 wantGymId = 4;</code>
        */
       int getWantGymId();
     }
@@ -5640,6 +5649,7 @@ public final class Gym {
         super(builder);
       }
       private Params() {
+        gymId_ = 0;
         longitude_ = 0F;
         latitude_ = 0F;
         wantGymId_ = 0;
@@ -5682,6 +5692,11 @@ public final class Gym {
               }
               case 24: {
 
+                gymId_ = input.readInt32();
+                break;
+              }
+              case 32: {
+
                 wantGymId_ = input.readInt32();
                 break;
               }
@@ -5708,6 +5723,15 @@ public final class Gym {
                 com.xiang.proto.gym.Gym.Request13003.Params.class, com.xiang.proto.gym.Gym.Request13003.Params.Builder.class);
       }
 
+      public static final int GYMID_FIELD_NUMBER = 3;
+      private int gymId_;
+      /**
+       * <code>optional int32 gymId = 3;</code>
+       */
+      public int getGymId() {
+        return gymId_;
+      }
+
       public static final int LONGITUDE_FIELD_NUMBER = 1;
       private float longitude_;
       /**
@@ -5726,10 +5750,14 @@ public final class Gym {
         return latitude_;
       }
 
-      public static final int WANTGYMID_FIELD_NUMBER = 3;
+      public static final int WANTGYMID_FIELD_NUMBER = 4;
       private int wantGymId_;
       /**
-       * <code>optional int32 wantGymId = 3;</code>
+       * <pre>
+       *如果客户端有常用的gymId，传给后台
+       * </pre>
+       *
+       * <code>optional int32 wantGymId = 4;</code>
        */
       public int getWantGymId() {
         return wantGymId_;
@@ -5753,8 +5781,11 @@ public final class Gym {
         if (latitude_ != 0F) {
           output.writeFloat(2, latitude_);
         }
+        if (gymId_ != 0) {
+          output.writeInt32(3, gymId_);
+        }
         if (wantGymId_ != 0) {
-          output.writeInt32(3, wantGymId_);
+          output.writeInt32(4, wantGymId_);
         }
       }
 
@@ -5771,9 +5802,13 @@ public final class Gym {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(2, latitude_);
         }
+        if (gymId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, gymId_);
+        }
         if (wantGymId_ != 0) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(3, wantGymId_);
+            .computeInt32Size(4, wantGymId_);
         }
         memoizedSize = size;
         return size;
@@ -5892,6 +5927,8 @@ public final class Gym {
         }
         public Builder clear() {
           super.clear();
+          gymId_ = 0;
+
           longitude_ = 0F;
 
           latitude_ = 0F;
@@ -5920,6 +5957,7 @@ public final class Gym {
 
         public com.xiang.proto.gym.Gym.Request13003.Params buildPartial() {
           com.xiang.proto.gym.Gym.Request13003.Params result = new com.xiang.proto.gym.Gym.Request13003.Params(this);
+          result.gymId_ = gymId_;
           result.longitude_ = longitude_;
           result.latitude_ = latitude_;
           result.wantGymId_ = wantGymId_;
@@ -5938,6 +5976,9 @@ public final class Gym {
 
         public Builder mergeFrom(com.xiang.proto.gym.Gym.Request13003.Params other) {
           if (other == com.xiang.proto.gym.Gym.Request13003.Params.getDefaultInstance()) return this;
+          if (other.getGymId() != 0) {
+            setGymId(other.getGymId());
+          }
           if (other.getLongitude() != 0F) {
             setLongitude(other.getLongitude());
           }
@@ -5970,6 +6011,32 @@ public final class Gym {
               mergeFrom(parsedMessage);
             }
           }
+          return this;
+        }
+
+        private int gymId_ ;
+        /**
+         * <code>optional int32 gymId = 3;</code>
+         */
+        public int getGymId() {
+          return gymId_;
+        }
+        /**
+         * <code>optional int32 gymId = 3;</code>
+         */
+        public Builder setGymId(int value) {
+          
+          gymId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 gymId = 3;</code>
+         */
+        public Builder clearGymId() {
+          
+          gymId_ = 0;
+          onChanged();
           return this;
         }
 
@@ -6027,13 +6094,21 @@ public final class Gym {
 
         private int wantGymId_ ;
         /**
-         * <code>optional int32 wantGymId = 3;</code>
+         * <pre>
+         *如果客户端有常用的gymId，传给后台
+         * </pre>
+         *
+         * <code>optional int32 wantGymId = 4;</code>
          */
         public int getWantGymId() {
           return wantGymId_;
         }
         /**
-         * <code>optional int32 wantGymId = 3;</code>
+         * <pre>
+         *如果客户端有常用的gymId，传给后台
+         * </pre>
+         *
+         * <code>optional int32 wantGymId = 4;</code>
          */
         public Builder setWantGymId(int value) {
           
@@ -6042,7 +6117,11 @@ public final class Gym {
           return this;
         }
         /**
-         * <code>optional int32 wantGymId = 3;</code>
+         * <pre>
+         *如果客户端有常用的gymId，传给后台
+         * </pre>
+         *
+         * <code>optional int32 wantGymId = 4;</code>
          */
         public Builder clearWantGymId() {
           
@@ -8478,7 +8557,7 @@ public final class Gym {
   /**
    * <pre>
    * 获取健身房内trend
-   * /gym/getRecommendGym
+   * /gym/getGymTrend
    * </pre>
    *
    * Protobuf type {@code com.xiang.proto.gym.Request13004}
@@ -9159,7 +9238,7 @@ public final class Gym {
     /**
      * <pre>
      * 获取健身房内trend
-     * /gym/getRecommendGym
+     * /gym/getGymTrend
      * </pre>
      *
      * Protobuf type {@code com.xiang.proto.gym.Request13004}
@@ -11098,27 +11177,28 @@ public final class Gym {
       "oto.gym.Response13002.Data\032e\n\004Data\022-\n\tde" +
       "tailGym\030\001 \001(\0132\032.com.xiang.proto.DetailGy" +
       "m\022.\n\nbriefUsers\030\002 \003(\0132\032.com.xiang.proto.",
-      "BriefUser\"\272\001\n\014Request13003\022.\n\006common\030\001 \001" +
+      "BriefUser\"\311\001\n\014Request13003\022.\n\006common\030\001 \001" +
       "(\0132\036.com.xiang.proto.RequestCommon\0228\n\006pa" +
       "rams\030\002 \001(\0132(.com.xiang.proto.gym.Request" +
-      "13003.Params\032@\n\006Params\022\021\n\tlongitude\030\001 \001(" +
-      "\002\022\020\n\010latitude\030\002 \001(\002\022\021\n\twantGymId\030\003 \001(\005\"\200" +
-      "\002\n\rResponse13003\022/\n\006common\030\001 \001(\0132\037.com.x" +
-      "iang.proto.ResponseCommon\0225\n\004data\030\002 \001(\0132" +
-      "\'.com.xiang.proto.gym.Response13003.Data" +
-      "\032\206\001\n\004Data\022+\n\010briefGym\030\001 \001(\0132\031.com.xiang." +
-      "proto.BriefGym\022\017\n\007userNum\030\002 \001(\005\022\020\n\010trend",
-      "Num\030\003 \001(\005\022.\n\nbriefUsers\030\004 \003(\0132\032.com.xian" +
-      "g.proto.BriefUser\"\244\001\n\014Request13004\022.\n\006co" +
-      "mmon\030\001 \001(\0132\036.com.xiang.proto.RequestComm" +
-      "on\0228\n\006params\030\002 \001(\0132(.com.xiang.proto.gym" +
-      ".Request13004.Params\032*\n\006Params\022\r\n\005gymId\030" +
-      "\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"\300\001\n\rResponse130" +
-      "04\022/\n\006common\030\001 \001(\0132\037.com.xiang.proto.Res" +
-      "ponseCommon\0225\n\004data\030\002 \001(\0132\'.com.xiang.pr" +
-      "oto.gym.Response13004.Data\032G\n\004Data\022&\n\006tr" +
-      "ends\030\001 \003(\0132\026.com.xiang.proto.Trend\022\027\n\017ma",
-      "xCountPerPage\030\002 \001(\005b\006proto3"
+      "13003.Params\032O\n\006Params\022\r\n\005gymId\030\003 \001(\005\022\021\n" +
+      "\tlongitude\030\001 \001(\002\022\020\n\010latitude\030\002 \001(\002\022\021\n\twa" +
+      "ntGymId\030\004 \001(\005\"\200\002\n\rResponse13003\022/\n\006commo" +
+      "n\030\001 \001(\0132\037.com.xiang.proto.ResponseCommon" +
+      "\0225\n\004data\030\002 \001(\0132\'.com.xiang.proto.gym.Res" +
+      "ponse13003.Data\032\206\001\n\004Data\022+\n\010briefGym\030\001 \001" +
+      "(\0132\031.com.xiang.proto.BriefGym\022\017\n\007userNum",
+      "\030\002 \001(\005\022\020\n\010trendNum\030\003 \001(\005\022.\n\nbriefUsers\030\004" +
+      " \003(\0132\032.com.xiang.proto.BriefUser\"\244\001\n\014Req" +
+      "uest13004\022.\n\006common\030\001 \001(\0132\036.com.xiang.pr" +
+      "oto.RequestCommon\0228\n\006params\030\002 \001(\0132(.com." +
+      "xiang.proto.gym.Request13004.Params\032*\n\006P" +
+      "arams\022\r\n\005gymId\030\001 \001(\005\022\021\n\tpageIndex\030\002 \001(\005\"" +
+      "\300\001\n\rResponse13004\022/\n\006common\030\001 \001(\0132\037.com." +
+      "xiang.proto.ResponseCommon\0225\n\004data\030\002 \001(\013" +
+      "2\'.com.xiang.proto.gym.Response13004.Dat" +
+      "a\032G\n\004Data\022&\n\006trends\030\001 \003(\0132\026.com.xiang.pr",
+      "oto.Trend\022\027\n\017maxCountPerPage\030\002 \001(\005b\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11192,7 +11272,7 @@ public final class Gym {
     internal_static_com_xiang_proto_gym_Request13003_Params_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_gym_Request13003_Params_descriptor,
-        new java.lang.String[] { "Longitude", "Latitude", "WantGymId", });
+        new java.lang.String[] { "GymId", "Longitude", "Latitude", "WantGymId", });
     internal_static_com_xiang_proto_gym_Response13003_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_com_xiang_proto_gym_Response13003_fieldAccessorTable = new
