@@ -334,3 +334,21 @@ message Response10018 {
 		BriefUser briefUser = 1;
 	}
 }
+
+//获取推荐用户周围——动态最多的人
+// /pilot/getRecommendUser
+message Request10019 {
+	RequestCommon common = 1;
+	Params params = 2;
+	message Params {
+		float longitude = 1;
+		float latitude = 2;
+	}
+}
+message Response10018 {
+	ResponseCommon common = 1;
+	Data data = 2;
+	message Data {
+		repeated BriefUser briefUser = 1;
+	}
+}
