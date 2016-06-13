@@ -87,6 +87,8 @@ message DetailGym{
 	string gymCards = 4; // 健身卡信息 价格信息，例如""
 
   repeated string gymCovers = 5;// 场馆图片
+
+  string gymIntro = 6;           // 场馆介绍
 }
 
 message Equipment{
@@ -152,6 +154,7 @@ message Comment {
 
 	int64 createTime = 7;            // 时间
 	string gymName = 8;              // 场馆名 地点
+  int32 gymId = 9;                 // 场馆id
 }
 
 // trend 的简要评论信息

@@ -821,6 +821,7 @@ typedef struct BriefGym__storage_ {
 @dynamic courses;
 @dynamic gymCards;
 @dynamic gymCoversArray, gymCoversArray_Count;
+@dynamic gymIntro;
 
 typedef struct DetailGym__storage_ {
   uint32_t _has_storage_[1];
@@ -828,6 +829,7 @@ typedef struct DetailGym__storage_ {
   NSString *courses;
   NSString *gymCards;
   NSMutableArray *gymCoversArray;
+  NSString *gymIntro;
 } DetailGym__storage_;
 
 // This method is threadsafe because it is initially called
@@ -872,6 +874,15 @@ typedef struct DetailGym__storage_ {
         .flags = GPBFieldRepeated | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
+      {
+        .name = "gymIntro",
+        .dataTypeSpecific.className = NULL,
+        .number = DetailGym_FieldNumber_GymIntro,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(DetailGym__storage_, gymIntro),
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeString,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[DetailGym class]
@@ -883,7 +894,7 @@ typedef struct DetailGym__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\003\001\010\000\004\010\000\005\000gymCovers\000";
+        "\004\001\010\000\004\010\000\005\000gymCovers\000\006\010\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");
@@ -1302,12 +1313,14 @@ typedef struct CommentMessage__storage_ {
 @dynamic toUserName;
 @dynamic createTime;
 @dynamic gymName;
+@dynamic gymId;
 
 typedef struct Comment__storage_ {
   uint32_t _has_storage_[1];
   int32_t commentId;
   int32_t trendId;
   int32_t toUserid;
+  int32_t gymId;
   BriefUser *briefUser;
   NSString *commentContent;
   NSString *toUserName;
@@ -1393,6 +1406,15 @@ typedef struct Comment__storage_ {
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeString,
       },
+      {
+        .name = "gymId",
+        .dataTypeSpecific.className = NULL,
+        .number = Comment_FieldNumber_GymId,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(Comment__storage_, gymId),
+        .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
+        .dataType = GPBDataTypeInt32,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[Comment class]
@@ -1404,7 +1426,7 @@ typedef struct Comment__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\010\001\t\000\002\t\000\003\016\000\004\007\000\005\010\000\006\n\000\007\n\000\010\007\000";
+        "\t\001\t\000\002\t\000\003\016\000\004\007\000\005\010\000\006\n\000\007\n\000\010\007\000\t\005\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

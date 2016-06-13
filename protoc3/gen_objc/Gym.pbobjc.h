@@ -220,16 +220,17 @@ typedef GPB_ENUM(Request13003_FieldNumber) {
 typedef GPB_ENUM(Request13003_Params_FieldNumber) {
   Request13003_Params_FieldNumber_Longitude = 1,
   Request13003_Params_FieldNumber_Latitude = 2,
-  Request13003_Params_FieldNumber_WantGymId = 3,
+  Request13003_Params_FieldNumber_GymId = 3,
 };
 
 @interface Request13003_Params : GPBMessage
 
+@property(nonatomic, readwrite) int32_t gymId;
+
+///如果客户端有常用的gymId，传给后台
 @property(nonatomic, readwrite) float longitude;
 
 @property(nonatomic, readwrite) float latitude;
-
-@property(nonatomic, readwrite) int32_t wantGymId;
 
 @end
 
@@ -286,7 +287,7 @@ typedef GPB_ENUM(Request13004_FieldNumber) {
 };
 
 /// 获取健身房内trend
-/// /gym/getRecommendGym
+/// /gym/getGymTrend
 @interface Request13004 : GPBMessage
 
 @property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;

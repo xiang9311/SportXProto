@@ -551,15 +551,15 @@ typedef struct Request13003__storage_ {
 
 @implementation Request13003_Params
 
+@dynamic gymId;
 @dynamic longitude;
 @dynamic latitude;
-@dynamic wantGymId;
 
 typedef struct Request13003_Params__storage_ {
   uint32_t _has_storage_[1];
   float longitude;
   float latitude;
-  int32_t wantGymId;
+  int32_t gymId;
 } Request13003_Params__storage_;
 
 // This method is threadsafe because it is initially called
@@ -572,7 +572,7 @@ typedef struct Request13003_Params__storage_ {
         .name = "longitude",
         .dataTypeSpecific.className = NULL,
         .number = Request13003_Params_FieldNumber_Longitude,
-        .hasIndex = 0,
+        .hasIndex = 1,
         .offset = (uint32_t)offsetof(Request13003_Params__storage_, longitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
@@ -581,17 +581,17 @@ typedef struct Request13003_Params__storage_ {
         .name = "latitude",
         .dataTypeSpecific.className = NULL,
         .number = Request13003_Params_FieldNumber_Latitude,
-        .hasIndex = 1,
+        .hasIndex = 2,
         .offset = (uint32_t)offsetof(Request13003_Params__storage_, latitude),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeFloat,
       },
       {
-        .name = "wantGymId",
+        .name = "gymId",
         .dataTypeSpecific.className = NULL,
-        .number = Request13003_Params_FieldNumber_WantGymId,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(Request13003_Params__storage_, wantGymId),
+        .number = Request13003_Params_FieldNumber_GymId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(Request13003_Params__storage_, gymId),
         .flags = GPBFieldOptional | GPBFieldTextFormatNameCustom,
         .dataType = GPBDataTypeInt32,
       },
@@ -606,7 +606,7 @@ typedef struct Request13003_Params__storage_ {
                                          flags:0];
 #if !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     static const char *extraTextFormatInfo =
-        "\001\003\t\000";
+        "\001\003\005\000";
     [localDescriptor setupExtraTextInfo:extraTextFormatInfo];
 #endif  // !GPBOBJC_SKIP_MESSAGE_TEXTFORMAT_EXTRAS
     NSAssert(descriptor == nil, @"Startup recursed!");

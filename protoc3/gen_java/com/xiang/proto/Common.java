@@ -6974,6 +6974,24 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getGymCoversBytes(int index);
+
+    /**
+     * <pre>
+     * 场馆介绍
+     * </pre>
+     *
+     * <code>optional string gymIntro = 6;</code>
+     */
+    java.lang.String getGymIntro();
+    /**
+     * <pre>
+     * 场馆介绍
+     * </pre>
+     *
+     * <code>optional string gymIntro = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getGymIntroBytes();
   }
   /**
    * <pre>
@@ -6994,6 +7012,7 @@ public final class Common {
       courses_ = "";
       gymCards_ = "";
       gymCovers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      gymIntro_ = "";
     }
 
     @java.lang.Override
@@ -7053,6 +7072,12 @@ public final class Common {
                 mutable_bitField0_ |= 0x00000008;
               }
               gymCovers_.add(s);
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              gymIntro_ = s;
               break;
             }
           }
@@ -7244,6 +7269,48 @@ public final class Common {
       return gymCovers_.getByteString(index);
     }
 
+    public static final int GYMINTRO_FIELD_NUMBER = 6;
+    private volatile java.lang.Object gymIntro_;
+    /**
+     * <pre>
+     * 场馆介绍
+     * </pre>
+     *
+     * <code>optional string gymIntro = 6;</code>
+     */
+    public java.lang.String getGymIntro() {
+      java.lang.Object ref = gymIntro_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gymIntro_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * 场馆介绍
+     * </pre>
+     *
+     * <code>optional string gymIntro = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getGymIntroBytes() {
+      java.lang.Object ref = gymIntro_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gymIntro_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -7267,6 +7334,9 @@ public final class Common {
       }
       for (int i = 0; i < gymCovers_.size(); i++) {
         com.google.protobuf.GeneratedMessage.writeString(output, 5, gymCovers_.getRaw(i));
+      }
+      if (!getGymIntroBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, gymIntro_);
       }
     }
 
@@ -7292,6 +7362,9 @@ public final class Common {
         }
         size += dataSize;
         size += 1 * getGymCoversList().size();
+      }
+      if (!getGymIntroBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, gymIntro_);
       }
       memoizedSize = size;
       return size;
@@ -7426,6 +7499,8 @@ public final class Common {
 
         gymCovers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
+        gymIntro_ = "";
+
         return this;
       }
 
@@ -7462,6 +7537,7 @@ public final class Common {
           bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.gymCovers_ = gymCovers_;
+        result.gymIntro_ = gymIntro_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7497,6 +7573,10 @@ public final class Common {
             ensureGymCoversIsMutable();
             gymCovers_.addAll(other.gymCovers_);
           }
+          onChanged();
+        }
+        if (!other.getGymIntro().isEmpty()) {
+          gymIntro_ = other.gymIntro_;
           onChanged();
         }
         onChanged();
@@ -7983,6 +8063,95 @@ public final class Common {
   checkByteStringIsUtf8(value);
         ensureGymCoversIsMutable();
         gymCovers_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gymIntro_ = "";
+      /**
+       * <pre>
+       * 场馆介绍
+       * </pre>
+       *
+       * <code>optional string gymIntro = 6;</code>
+       */
+      public java.lang.String getGymIntro() {
+        java.lang.Object ref = gymIntro_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gymIntro_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 场馆介绍
+       * </pre>
+       *
+       * <code>optional string gymIntro = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGymIntroBytes() {
+        java.lang.Object ref = gymIntro_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gymIntro_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * 场馆介绍
+       * </pre>
+       *
+       * <code>optional string gymIntro = 6;</code>
+       */
+      public Builder setGymIntro(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        gymIntro_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 场馆介绍
+       * </pre>
+       *
+       * <code>optional string gymIntro = 6;</code>
+       */
+      public Builder clearGymIntro() {
+        
+        gymIntro_ = getDefaultInstance().getGymIntro();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 场馆介绍
+       * </pre>
+       *
+       * <code>optional string gymIntro = 6;</code>
+       */
+      public Builder setGymIntroBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        gymIntro_ = value;
         onChanged();
         return this;
       }
@@ -11679,6 +11848,15 @@ public final class Common {
      */
     com.google.protobuf.ByteString
         getGymNameBytes();
+
+    /**
+     * <pre>
+     * 场馆id
+     * </pre>
+     *
+     * <code>optional int32 gymId = 9;</code>
+     */
+    int getGymId();
   }
   /**
    * <pre>
@@ -11703,6 +11881,7 @@ public final class Common {
       toUserName_ = "";
       createTime_ = 0L;
       gymName_ = "";
+      gymId_ = 0;
     }
 
     @java.lang.Override
@@ -11779,6 +11958,11 @@ public final class Common {
               java.lang.String s = input.readStringRequireUtf8();
 
               gymName_ = s;
+              break;
+            }
+            case 72: {
+
+              gymId_ = input.readInt32();
               break;
             }
           }
@@ -12007,6 +12191,19 @@ public final class Common {
       }
     }
 
+    public static final int GYMID_FIELD_NUMBER = 9;
+    private int gymId_;
+    /**
+     * <pre>
+     * 场馆id
+     * </pre>
+     *
+     * <code>optional int32 gymId = 9;</code>
+     */
+    public int getGymId() {
+      return gymId_;
+    }
+
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -12043,6 +12240,9 @@ public final class Common {
       if (!getGymNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessage.writeString(output, 8, gymName_);
       }
+      if (gymId_ != 0) {
+        output.writeInt32(9, gymId_);
+      }
     }
 
     public int getSerializedSize() {
@@ -12078,6 +12278,10 @@ public final class Common {
       }
       if (!getGymNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(8, gymName_);
+      }
+      if (gymId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(9, gymId_);
       }
       memoizedSize = size;
       return size;
@@ -12220,6 +12424,8 @@ public final class Common {
 
         gymName_ = "";
 
+        gymId_ = 0;
+
         return this;
       }
 
@@ -12254,6 +12460,7 @@ public final class Common {
         result.toUserName_ = toUserName_;
         result.createTime_ = createTime_;
         result.gymName_ = gymName_;
+        result.gymId_ = gymId_;
         onBuilt();
         return result;
       }
@@ -12295,6 +12502,9 @@ public final class Common {
         if (!other.getGymName().isEmpty()) {
           gymName_ = other.gymName_;
           onChanged();
+        }
+        if (other.getGymId() != 0) {
+          setGymId(other.getGymId());
         }
         onChanged();
         return this;
@@ -12870,6 +13080,44 @@ public final class Common {
   checkByteStringIsUtf8(value);
         
         gymName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int gymId_ ;
+      /**
+       * <pre>
+       * 场馆id
+       * </pre>
+       *
+       * <code>optional int32 gymId = 9;</code>
+       */
+      public int getGymId() {
+        return gymId_;
+      }
+      /**
+       * <pre>
+       * 场馆id
+       * </pre>
+       *
+       * <code>optional int32 gymId = 9;</code>
+       */
+      public Builder setGymId(int value) {
+        
+        gymId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 场馆id
+       * </pre>
+       *
+       * <code>optional int32 gymId = 9;</code>
+       */
+      public Builder clearGymId() {
+        
+        gymId_ = 0;
         onChanged();
         return this;
       }
@@ -16596,40 +16844,41 @@ public final class Common {
       "Gym\022\n\n\002id\030\001 \001(\005\022\017\n\007gymName\030\002 \001(\t\022\r\n\005plac" +
       "e\030\004 \001(\t\022\021\n\tgymAvatar\030\010 \001(\t\022\020\n\010gymCover\030\t",
       " \001(\t\022\020\n\010latitude\030\005 \001(\002\022\021\n\tlongitude\030\006 \001(" +
-      "\002\022\013\n\003eqm\030\007 \001(\t\"n\n\tDetailGym\022+\n\010briefGym\030" +
-      "\001 \001(\0132\031.com.xiang.proto.BriefGym\022\017\n\007cour" +
-      "ses\030\003 \001(\t\022\020\n\010gymCards\030\004 \001(\t\022\021\n\tgymCovers" +
-      "\030\005 \003(\t\"_\n\tEquipment\022\014\n\004name\030\001 \001(\t\022\r\n\005cou" +
-      "nt\030\002 \001(\005\0225\n\requipmentType\030\003 \001(\0162\036.com.xi" +
-      "ang.proto.EquipmentType\"U\n\006Course\022\014\n\004nam" +
-      "e\030\001 \001(\t\022\014\n\004week\030\002 \001(\005\022/\n\ncourseTime\030\003 \001(" +
-      "\0132\033.com.xiang.proto.CourseTime\"T\n\nCourse" +
-      "Time\022\020\n\010fromHour\030\001 \001(\005\022\022\n\nfromMinite\030\002 \001",
-      "(\005\022\016\n\006toHour\030\003 \001(\005\022\020\n\010toMinite\030\004 \001(\005\"E\n\007" +
-      "GymCard\022+\n\010cardType\030\001 \001(\0162\031.com.xiang.pr" +
-      "oto.CardType\022\r\n\005price\030\002 \001(\002\"p\n\016CommentMe" +
-      "ssage\022\021\n\tmessageId\030\001 \001(\005\022\026\n\016messageConte" +
-      "nt\030\002 \001(\t\022\016\n\006avatar\030\003 \001(\t\022\022\n\ncreateTime\030\004" +
-      " \001(\003\022\017\n\007trendId\030\005 \001(\005\"\277\001\n\007Comment\022-\n\tbri" +
-      "efUser\030\001 \001(\0132\032.com.xiang.proto.BriefUser" +
-      "\022\021\n\tcommentId\030\002 \001(\005\022\026\n\016commentContent\030\003 " +
-      "\001(\t\022\017\n\007trendId\030\004 \001(\005\022\020\n\010toUserid\030\005 \001(\005\022\022" +
-      "\n\ntoUserName\030\006 \001(\t\022\022\n\ncreateTime\030\007 \001(\003\022\017",
-      "\n\007gymName\030\010 \001(\t\"6\n\021TrendBriefMessage\022\022\n\n" +
-      "lastAvatar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\"\213\002\n\nDeta" +
-      "ilUser\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030\002 \001(\t" +
-      "\022\022\n\nuserAvatar\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024.com." +
-      "xiang.proto.Sex\022\014\n\004sign\030\005 \001(\t\022&\n\006trends\030" +
-      "\006 \003(\0132\026.com.xiang.proto.Trend\022\022\n\nisFollo" +
-      "wed\030\007 \001(\010\022\024\n\014guanzhuCount\030\010 \001(\005\022\022\n\nfensi" +
-      "Count\030\t \001(\005\022\022\n\ntrendCount\030\n \001(\005\022\034\n\024trend" +
-      "MaxCountPerPage\030\013 \001(\005\"b\n\014SearchedUser\022\016\n" +
-      "\006userId\030\001 \001(\005\022\020\n\010userName\030\002 \001(\t\022\022\n\nuserA",
-      "vatar\030\003 \001(\t\022\014\n\004sign\030\004 \001(\t\022\016\n\006images\030\005 \003(" +
-      "\t*,\n\010CardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013\n\007Qu" +
-      "arter\020\002*/\n\rEquipmentType\022\r\n\tPAO_BU_JI\020\000\022" +
-      "\017\n\013LIN_YU_FANG\020\001*\033\n\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEM" +
-      "ALE\020\001b\006proto3"
+      "\002\022\013\n\003eqm\030\007 \001(\t\"\200\001\n\tDetailGym\022+\n\010briefGym" +
+      "\030\001 \001(\0132\031.com.xiang.proto.BriefGym\022\017\n\007cou" +
+      "rses\030\003 \001(\t\022\020\n\010gymCards\030\004 \001(\t\022\021\n\tgymCover" +
+      "s\030\005 \003(\t\022\020\n\010gymIntro\030\006 \001(\t\"_\n\tEquipment\022\014" +
+      "\n\004name\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\0225\n\requipment" +
+      "Type\030\003 \001(\0162\036.com.xiang.proto.EquipmentTy" +
+      "pe\"U\n\006Course\022\014\n\004name\030\001 \001(\t\022\014\n\004week\030\002 \001(\005" +
+      "\022/\n\ncourseTime\030\003 \001(\0132\033.com.xiang.proto.C" +
+      "ourseTime\"T\n\nCourseTime\022\020\n\010fromHour\030\001 \001(",
+      "\005\022\022\n\nfromMinite\030\002 \001(\005\022\016\n\006toHour\030\003 \001(\005\022\020\n" +
+      "\010toMinite\030\004 \001(\005\"E\n\007GymCard\022+\n\010cardType\030\001" +
+      " \001(\0162\031.com.xiang.proto.CardType\022\r\n\005price" +
+      "\030\002 \001(\002\"p\n\016CommentMessage\022\021\n\tmessageId\030\001 " +
+      "\001(\005\022\026\n\016messageContent\030\002 \001(\t\022\016\n\006avatar\030\003 " +
+      "\001(\t\022\022\n\ncreateTime\030\004 \001(\003\022\017\n\007trendId\030\005 \001(\005" +
+      "\"\316\001\n\007Comment\022-\n\tbriefUser\030\001 \001(\0132\032.com.xi" +
+      "ang.proto.BriefUser\022\021\n\tcommentId\030\002 \001(\005\022\026" +
+      "\n\016commentContent\030\003 \001(\t\022\017\n\007trendId\030\004 \001(\005\022" +
+      "\020\n\010toUserid\030\005 \001(\005\022\022\n\ntoUserName\030\006 \001(\t\022\022\n",
+      "\ncreateTime\030\007 \001(\003\022\017\n\007gymName\030\010 \001(\t\022\r\n\005gy" +
+      "mId\030\t \001(\005\"6\n\021TrendBriefMessage\022\022\n\nlastAv" +
+      "atar\030\001 \001(\t\022\r\n\005count\030\002 \001(\005\"\213\002\n\nDetailUser" +
+      "\022\016\n\006userId\030\001 \001(\005\022\020\n\010userName\030\002 \001(\t\022\022\n\nus" +
+      "erAvatar\030\003 \001(\t\022!\n\003sex\030\004 \001(\0162\024.com.xiang." +
+      "proto.Sex\022\014\n\004sign\030\005 \001(\t\022&\n\006trends\030\006 \003(\0132" +
+      "\026.com.xiang.proto.Trend\022\022\n\nisFollowed\030\007 " +
+      "\001(\010\022\024\n\014guanzhuCount\030\010 \001(\005\022\022\n\nfensiCount\030" +
+      "\t \001(\005\022\022\n\ntrendCount\030\n \001(\005\022\034\n\024trendMaxCou" +
+      "ntPerPage\030\013 \001(\005\"b\n\014SearchedUser\022\016\n\006userI",
+      "d\030\001 \001(\005\022\020\n\010userName\030\002 \001(\t\022\022\n\nuserAvatar\030" +
+      "\003 \001(\t\022\014\n\004sign\030\004 \001(\t\022\016\n\006images\030\005 \003(\t*,\n\010C" +
+      "ardType\022\010\n\004Once\020\000\022\t\n\005Month\020\001\022\013\n\007Quarter\020" +
+      "\002*/\n\rEquipmentType\022\r\n\tPAO_BU_JI\020\000\022\017\n\013LIN" +
+      "_YU_FANG\020\001*\033\n\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001b" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16684,7 +16933,7 @@ public final class Common {
     internal_static_com_xiang_proto_DetailGym_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_DetailGym_descriptor,
-        new java.lang.String[] { "BriefGym", "Courses", "GymCards", "GymCovers", });
+        new java.lang.String[] { "BriefGym", "Courses", "GymCards", "GymCovers", "GymIntro", });
     internal_static_com_xiang_proto_Equipment_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_com_xiang_proto_Equipment_fieldAccessorTable = new
@@ -16720,7 +16969,7 @@ public final class Common {
     internal_static_com_xiang_proto_Comment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_xiang_proto_Comment_descriptor,
-        new java.lang.String[] { "BriefUser", "CommentId", "CommentContent", "TrendId", "ToUserid", "ToUserName", "CreateTime", "GymName", });
+        new java.lang.String[] { "BriefUser", "CommentId", "CommentContent", "TrendId", "ToUserid", "ToUserName", "CreateTime", "GymName", "GymId", });
     internal_static_com_xiang_proto_TrendBriefMessage_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_com_xiang_proto_TrendBriefMessage_fieldAccessorTable = new

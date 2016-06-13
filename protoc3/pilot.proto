@@ -66,6 +66,7 @@ message Request10004 {
 		Sex sex = 4;                                  // 待测试，如果不传性别会不会得到默认为男性
 		string sign = 5;                              // 个性签名
 		string phone = 6;
+		bool sexChanged = 7;                          // 只有当sexChanged为true时，才更改sex
 	}
 }
 
@@ -345,7 +346,7 @@ message Request10019 {
 		float latitude = 2;
 	}
 }
-message Response10018 {
+message Response10019 {
 	ResponseCommon common = 1;
 	Data data = 2;
 	message Data {

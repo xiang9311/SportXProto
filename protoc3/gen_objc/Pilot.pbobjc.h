@@ -35,6 +35,7 @@ CF_EXTERN_C_BEGIN
 @class Request10016_Params;
 @class Request10017_Params;
 @class Request10018_Params;
+@class Request10019_Params;
 @class RequestCommon;
 @class Response10001_Data;
 @class Response10002_Data;
@@ -53,6 +54,7 @@ CF_EXTERN_C_BEGIN
 @class Response10016_Data;
 @class Response10017_Data;
 @class Response10018_Data;
+@class Response10019_Data;
 @class ResponseCommon;
 @class SearchedUser;
 @class Trend;
@@ -296,6 +298,7 @@ typedef GPB_ENUM(Request10004_Params_FieldNumber) {
   Request10004_Params_FieldNumber_Sex = 4,
   Request10004_Params_FieldNumber_Sign = 5,
   Request10004_Params_FieldNumber_Phone = 6,
+  Request10004_Params_FieldNumber_SexChanged = 7,
 };
 
 @interface Request10004_Params : GPBMessage
@@ -314,6 +317,9 @@ typedef GPB_ENUM(Request10004_Params_FieldNumber) {
 @property(nonatomic, readwrite, copy, null_resettable) NSString *sign;
 
 @property(nonatomic, readwrite, copy, null_resettable) NSString *phone;
+
+/// 只有当sexChanged为true时，才更改sex
+@property(nonatomic, readwrite) BOOL sexChanged;
 
 @end
 
@@ -1283,6 +1289,75 @@ typedef GPB_ENUM(Response10018_Data_FieldNumber) {
 @property(nonatomic, readwrite, strong, null_resettable) BriefUser *briefUser;
 /// Test to see if @c briefUser has been set.
 @property(nonatomic, readwrite) BOOL hasBriefUser;
+
+@end
+
+#pragma mark - Request10019
+
+typedef GPB_ENUM(Request10019_FieldNumber) {
+  Request10019_FieldNumber_Common = 1,
+  Request10019_FieldNumber_Params = 2,
+};
+
+///获取推荐用户周围——动态最多的人
+/// /pilot/getRecommendUser
+@interface Request10019 : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) RequestCommon *common;
+/// Test to see if @c common has been set.
+@property(nonatomic, readwrite) BOOL hasCommon;
+
+@property(nonatomic, readwrite, strong, null_resettable) Request10019_Params *params;
+/// Test to see if @c params has been set.
+@property(nonatomic, readwrite) BOOL hasParams;
+
+@end
+
+#pragma mark - Request10019_Params
+
+typedef GPB_ENUM(Request10019_Params_FieldNumber) {
+  Request10019_Params_FieldNumber_Longitude = 1,
+  Request10019_Params_FieldNumber_Latitude = 2,
+};
+
+@interface Request10019_Params : GPBMessage
+
+@property(nonatomic, readwrite) float longitude;
+
+@property(nonatomic, readwrite) float latitude;
+
+@end
+
+#pragma mark - Response10019
+
+typedef GPB_ENUM(Response10019_FieldNumber) {
+  Response10019_FieldNumber_Common = 1,
+  Response10019_FieldNumber_Data_p = 2,
+};
+
+@interface Response10019 : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) ResponseCommon *common;
+/// Test to see if @c common has been set.
+@property(nonatomic, readwrite) BOOL hasCommon;
+
+@property(nonatomic, readwrite, strong, null_resettable) Response10019_Data *data_p;
+/// Test to see if @c data_p has been set.
+@property(nonatomic, readwrite) BOOL hasData_p;
+
+@end
+
+#pragma mark - Response10019_Data
+
+typedef GPB_ENUM(Response10019_Data_FieldNumber) {
+  Response10019_Data_FieldNumber_BriefUserArray = 1,
+};
+
+@interface Response10019_Data : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<BriefUser*> *briefUserArray;
+/// The number of items in @c briefUserArray without causing the array to be created.
+@property(nonatomic, readonly) NSUInteger briefUserArray_Count;
 
 @end
 
