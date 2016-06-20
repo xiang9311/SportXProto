@@ -300,7 +300,7 @@ message Response10016 {
 	}
 }
 
-// 获取简要消息内容
+// 获取简要消息内容 （当接收到消息推送是需要获取这个内容，并显示）
 // /pilot/getTrendBriefMessage
 message Request10017 {
 	RequestCommon common = 1;
